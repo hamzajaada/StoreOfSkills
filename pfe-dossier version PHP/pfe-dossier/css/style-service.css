@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* background-color:black; */
+}
+
+body{
+    background-color:rgb(31 41 55 );
+}
+
+::-webkit-scrollbar{
+    width: 6px;
+}
+
+::-webkit-scrollbar-track{
+    background:#CECEFE;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #8546BB;
+    border-radius: 50px;
+}
+
+ul{
+    display: flex;
+}
+header{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    background-color:rgb(31 41 55 );
+    top: 0;
+}
+nav{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 3px;
+}
+.logo img{
+    width: 114px;
+    height: 110px;
+}
+li{
+    list-style: none;
+}
+.inscription{
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3em;
+    font-weight: 400;
+    margin-right: 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size:18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background:orangered;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+nav h3{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    font-weight: 400;
+}
+
+.contenue{
+    margin-top: 110px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px;
+}
+
+.contenue article{
+    margin: 10px;
+    padding: 16px;
+    text-align: center;
+    width: 200px;
+    height: 305px;
+    border-radius: 22px;
+    background: black;
+    /* box-shadow:  32px 32px 70px #290101,-32px -32px 70px #300101; */
+}
+
+.contenue article img{
+    width: 80%;
+    height: 130px;
+}
+
+.contenue article h3, .contenue article p{
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+.contenue article button{
+    width: 90%;
+    height: 30px;
+    background-color: orangered;
+    margin: 2px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+

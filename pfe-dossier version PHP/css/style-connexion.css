@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+ }
+ body{
+    background-color:rgb(31 41 55 );
+ }
+ 
+ ::-webkit-scrollbar{
+    width: 6px;
+ }
+ 
+ ::-webkit-scrollbar-track{
+    background:#CECEFE;
+    border-radius: 50px;
+}
+ 
+ ::-webkit-scrollbar-thumb{
+    background: #8546BB;
+    border-radius: 50px;
+ }
+ 
+ ul{
+    display: flex;
+ }
+ header{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    background-color:rgb(9, 18, 29);
+ }
+ nav{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 3px;
+ }
+ .logo img{
+    width: 97px;
+    height: 90px;
+ }
+ li{
+    list-style: none;
+ }
+ .inscription{
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3em;
+    font-weight: 400;
+    margin-left: 25px;   
+ }
+  a{
+    color: #fff;
+    text-decoration: none;
+    font-size:18px;
+    position: relative;
+ }
+  a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background:orangered;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+ }
+  a:hover::after{
+    width: 100%;
+   }
+   section{
+      display: flex;
+   }
+   .barre{
+      position: fixed;
+      margin-left: 1310px;
+      margin-top: 100px;
+      width: 220px;
+      height: 100%;
+      background-color:rgb(9, 18, 29);
+      z-index: 999;
+      padding: 10px;
+   }
+   .logo1 img{
+      width: 500px;
+      height: 500px;
+   }
+   span{
+      color: orangered;
+   }
+   h2{
+      margin-top: 180px;
+      color: #fff;
+      font-family: 'Unbounded', cursive;
+      font-size: 2em;
+      font-weight: 700;
+   }
+   .p1{
+       margin-top: 100px;
+      display: flex;
+      /* margin-left: 160px; */
+   }
+   .infoper img{
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+   }
+   .infoper{
+      display: flex;
+      align-items: center;
+   }
+   h3{
+      color: #fff;
+      margin-left: 16px;
+   }
+   .profil,.vosdemande,.vosservice{
+      
+      color: white;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.3em;
+      font-weight: 400;
+      margin-left: 20px; 
+   }
+   .botton{
+      margin-top: 40px;
+   }
+   i{
+      color: #fff;
+      font-size: 1.3em;
+      margin-left: 10px;
+   }
+   .p2{
+      display: flex;
+      justify-content: space-evenly;
+      /* margin-left: 450px; */
+   }
+   a{
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.3em;
+      font-weight: 800;
+   }
+   .button1,.button2{
+      width: 226px;
+      height: 30px;
+      border-radius: 6px;
+      background-color: orangered;
+      padding: 10px;
+      text-align: center;
+      margin-top: 50px;
+   }  
+   
+footer{
+   bottom: 0;
+   position: fixed;
+   padding-left: 600px;
+   background-color:rgb(9, 18, 29);
+   width: 100%;
+}
+
+footer a i{
+   margin: 10px;
+}
+
+footer a i:hover{
+   color: orangered;
+}
