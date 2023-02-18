@@ -8,7 +8,8 @@ body{
 } 
 .container-h2{
    font-family: 'Open Sans', sans-serif;
-}
+   margin-left: 40px;
+} 
 .main-header {
    width: 100%;
    background-color: #ffffff;
@@ -18,6 +19,7 @@ body{
    padding: 0 30px;
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
    position: fixed;
+   z-index: 999;
  }
  
  
@@ -59,35 +61,48 @@ body{
 .part1{
    margin-top: 100px;
    display: flex;
-   margin-left: 160px;
+   margin-left: 5%;
+   margin-right: 5%;
 }
 .logo-part1 img{
-   width: 400px;
-   height: 400px;
+   width: 100%;
+   height: 500px;
 }
 span{
    color: #3cb626;
 }
 #text-part1{
-   margin-top: 134px;
-   
-   font-family: 'Unbounded', cursive;
-   font-size: 2em;
-   font-weight: 700;
+   margin-top: 125px;
+   font-family: 'Open Sans', sans-serif;  
+   font-size: 4em;
+   font-weight: 500;
+}
+.PROPOSER {
+   color:#3cb626;
+}
+.TROUVER{
+   color:#ff3c74;
 }
 .part2{
    display: flex;
    justify-content: space-around;
 }
 
+.lien-part1{
+   color: #fff;
+   text-decoration: none;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 1.2em;
+   font-weight: 400;
+}
 .lien-part2{
    color: #fff;
    text-decoration: none;
-   font-family: 'Poppins', sans-serif;
-   font-size: 1.3em;
-   font-weight: 800;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 1.2em;
+   font-weight: 400;
 }
-.button-part2,.button-part2{
+.button-part1{
    width: 226px;
    height: 30px;
    border-radius: 6px;
@@ -96,6 +111,102 @@ span{
    text-align: center;
    margin-top: 50px;
 }
+.button-part2{
+   width: 226px;
+   height: 30px;
+   border-radius: 6px;
+   background-color:#ff3c74;
+   padding: 10px;
+   text-align: center;
+   margin-top: 50px;
+}
+.P-2{
+   margin-top: 50px;
+   background-color:#fafafa;
+   margin-bottom: 20px;
+   height: 550px;
+}
+
+.titre-part3{
+
+   text-align: center;
+   font-family: 'Open Sans', sans-serif;  
+   font-size: 2em;
+   font-weight: 700;
+
+}
+.services{
+   display: flex;
+   justify-content: space-around;
+   margin-top: 40px;
+   margin-bottom: -143px;
+   height: 500px;
+   flex-wrap: wrap;
+   
+}
+article{
+   width: 300px;
+   height: 380px;
+   
+   border-radius: 7px;
+   box-shadow: 0 0 5px gray;
+   
+   background-color: #fff;
+}
+.logo-article img{
+   width: 288px;
+   height: 160px;
+   margin-top: 10px;
+}
+.image-profil img{
+   width: 50px;
+   height: 50px;
+   border-radius: 10px;
+   margin-left: 7px;
+}
+.info{
+   align-items: center;
+   display: flex;
+   margin-left: 50px;
+
+}
+.prenom_art{
+   margin-left: 15px;
+}
+p{
+   text-align: center;
+   font-family: 'Open Sans', sans-serif;  
+   font-size: 1.2em;
+   font-weight: 200;
+}
+button{
+   background-color: #3cb626 ;
+   width: 200px;
+   height: 40px;
+   margin-left: 50px;
+   text-align: center;
+   border: none;
+   margin-top: 5px;
+   border-radius: 7px;
+}
+.button3{
+   width: 226px;
+   height: 30px;
+   border-radius: 6px;
+   background-color: #3cb626;
+   padding: 10px;
+   text-align: center;
+   margin-top: 50px;
+}
+.plu-ser{
+   color: #fff;
+   text-decoration: none;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 1.2em;
+   font-weight: 400;
+}
+
+
 /*
 .service, .demande{
    display: flex;

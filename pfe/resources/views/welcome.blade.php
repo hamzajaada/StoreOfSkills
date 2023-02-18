@@ -11,7 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Phudu&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;1,100&family=Poiret+One&family=Poppins:wght@100&family=Raleway:ital,wght@0,100;0,200;1,100;1,200&family=Rowdies:wght@700&family=Slabo+27px&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Acme&family=Alegreya+Sans+SC:ital@1&family=Bebas+Neue&family=Dosis&family=Kanit:ital,wght@0,100;0,200;1,100&family=Open+Sans&family=Oswald&family=Poiret+One&family=Poppins:wght@500&family=Prompt:ital,wght@1,200&family=Questrial&family=Roboto+Condensed&family=Rowdies:wght@700&family=Slabo+27px&family=Unbounded:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="main-header">
@@ -24,19 +26,125 @@
             </ul>
           </nav> 
         </div>
-      </header>
-<div class="main-part1">
-    <div class="part1">
-        <div class="logo-part1"><img src="images/logodelogin.png" alt="" srcset=""></div>
-        <h2 id="text-part1"> <span>Proposez</span>  & <span>trouvez</span> <br>
-            les services et les emplois près de chez vous.</h2>
-    </div>
-</div>
-<div class="part2">
-    <a class="lien-part2" href="login.php"><div class="button-part2">proposer un service</div></a>
-    <a class="lien-part2" href="login.php"><div class="button-part2">demander un service</div></a>
+      </header> 
+      <section class="P-1">
+        <div class="main-part1">
+                 <div class="part1">
+                        <div class="logo-part1"><img src="images/logodelogin.png" alt="" srcset=""></div>
+                        <h2 id="text-part1"> <span class="PROPOSER">Proposez</span>  & <span class="TROUVER">Trouvez</span> <br>
+                            Les services et Les emplois près de chez vous.
+                        </h2>
+                </div>
+        </div>
+        <div class="part2">
+                <a class="lien-part1" href="login.php"><div class="button-part1">Proposer un service</div></a>
+                <a class="lien-part2" href="login.php"><div class="button-part2">Demander un service</div></a>
+        </div>
+    </section>
+    <section class="P-2">
+        <h2 class="titre-part3">Les dernières <span>services</span></h2>
+   <div class="services">
+    <article>
+        <div class="logo-article"><img src="images/personne.jpg" alt="" srcset=""></div>
+         <div class="info">
+         <div class="image-profil">
+            <img src="images/moi.png" alt="" srcset=""> 
+           </div> 
+           <div class="prenom_art">
+            <h3>PRENOM Nom</h3>
+            </div>
+        </div>
+        <p>Email</p>
+        <p>Location</p>
+        <p>Service</p>
+        <button type="submit">Demander</button>
+    </article>
+    <article>
+        <div class="logo-article"><img src="images/personne.jpg" alt="" srcset=""></div>
+         <div class="info">
+         <div class="image-profil">
+            <img src="images/moi.png" alt="" srcset=""> 
+           </div> 
+           <div class="prenom_art">
+            <h3>Prenom Nom</h3>
+            </div>
+        </div>
+        <p>Email</p>
+        <p>Location</p>
+        <p>Service</p>
+        <button type="submit">Demander</button>
+    </article>
+    <article>
+        <div class="logo-article"><img src="images/personne.jpg" alt="" srcset=""></div>
+         <div class="info">
+         <div class="image-profil">
+            <img src="images/moi.png" alt="" srcset=""> 
+           </div> 
+           <div class="prenom_art">
+            <h3>PRENOM Nom</h3>
+            </div>
+        </div>
+        <p>Email</p>
+        <p>Location</p>
+        <p>Service</p>
+        <button type="submit">Demander</button>
+    </article>
+   </div>
+
+                    <center><div class="button-ser"><a class="plu-ser" href="login.php"><div class="button3">Voir plus</div></a></div></center>
+    </section>
+<section class="P-3">
+  <h2 class="titre-part4">Les dernières <span>services</span></h2>
+<div class="services">
+<article>
+  <div class="logo-article"><img src="images/personne.jpg" alt="" srcset=""></div>
+   <div class="info">
+   <div class="image-profil">
+      <img src="images/moi.png" alt="" srcset=""> 
+     </div> 
+     <div class="prenom_art">
+      <h3>PRENOM Nom</h3>
+      </div>
+  </div>
+  <p>Email</p>
+  <p>Location</p>
+  <p>Service</p>
+  <button type="submit">Demander</button>
+</article>
+<article>
+  <div class="logo-article"><img src="images/personne.jpg" alt="" srcset=""></div>
+   <div class="info">
+   <div class="image-profil">
+      <img src="images/moi.png" alt="" srcset=""> 
+     </div> 
+     <div class="prenom_art">
+      <h3>Prenom Nom</h3>
+      </div>
+  </div>
+  <p>Email</p>
+  <p>Location</p>
+  <p>Service</p>
+  <button type="submit">Demander</button>
+</article>
+<article>
+  <div class="logo-article"><img src="images/personne.jpg" alt="" srcset=""></div>
+   <div class="info">
+   <div class="image-profil">
+      <img src="images/moi.png" alt="" srcset=""> 
+     </div> 
+     <div class="prenom_art">
+      <h3>PRENOM Nom</h3>
+      </div>
+  </div>
+  <p>Email</p>
+  <p>Location</p>
+  <p>Service</p>
+  <button type="submit">Demander</button>
+</article>
 </div>
 
+              <center><div class="button-ser"><a class="plu-ser" href="login.php"><div class="button3">Voir plus</div></a></div></center>
+</section>
 
 
 
