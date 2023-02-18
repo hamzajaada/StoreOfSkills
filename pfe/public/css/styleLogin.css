@@ -1,0 +1,49 @@
+
+/*body{
+    background-image: url("../images/background.jpg");
+    background-size: 1538px 845px ;
+    background-repeat: no-repeat;
+    
+}*/
+.card-body{
+    display: flex;
+}
+.card{
+    box-shadow:rgb(205, 202, 202) 3px 3px 0px 0px;
+    border-radius: 10px;
+}
+.logo img{
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+input{
+    margin-left: 50px;
+}
+form{
+    margin-top: 70px;
+}
+#email ,#password{
+    width: 145%;
+}
+.logo{
+    padding-bottom: 15px;
+}
+.card-header{
+    text-align: center;
+}
+button{
+    margin-left: 55px;
+}
+.form-check{
+    margin-left: 50px;
+}
+ .forgout{
+    margin-left: 36px;
+}
+.card{
+    margin-top: 110px;
+}
+.strong{
+    margin-left: 10px;
+}

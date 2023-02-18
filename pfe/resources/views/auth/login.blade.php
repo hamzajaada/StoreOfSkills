@@ -1,13 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styleLogin.css">
+</head>
+<body>
+    <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
+                    <div class="logo">
+                       <img src="/images/logodeloginremove.png" alt="" srcset="">
+                    </div>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -58,9 +70,9 @@
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                   <div class="forgout"> <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
-                                    </a>
+                                    </a></div>
                                 @endif
                             </div>
                         </div>
@@ -71,3 +83,6 @@
     </div>
 </div>
 @endsection
+</body>
+</html>
+
