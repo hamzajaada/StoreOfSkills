@@ -14,27 +14,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=Kanit:ital,wght@0,100;0,200;1,100&family=Poiret+One&family=Poppins:wght@100&family=Raleway:ital,wght@0,100;0,200;1,100;1,200&family=Rowdies:wght@700&family=Slabo+27px&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-    <nav>
-        <h1>Store of skills</h1>
-        <ul>
-            <li><a class="inscription" href="{{ route('register') }}">inscription</a></li>
-            <li><a class="inscription" href="{{ route('login') }}">connexion</a></li>
-        </ul>
-    </nav>
-</header>
-
-<div class="sec1">
-    <div class="p1">
-        <div class="logo1"><img src="images/logo2.png" alt="" srcset=""></div>
-        <h2> <span>Proposez</span>  & <span>trouvez</span> <br>
+    <header class="main-header">
+        <div class="container">
+            <h2 class="container-h2">Store of  Skills</h2>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="#">Connexion</a></li>
+              <li><a href="#">Inscription</a></li>
+            </ul>
+          </nav> 
+        </div>
+      </header>
+<div class="main-part1">
+    <div class="part1">
+        <div class="logo-part1"><img src="images/logodelogin.png" alt="" srcset=""></div>
+        <h2 id="text-part1"> <span>Proposez</span>  & <span>trouvez</span> <br>
             les services et les emplois près de chez vous.</h2>
     </div>
 </div>
-<div class="p2">
-    <a href="login.php"><div class="button1">proposer un service</div></a>
-    <a href="login.php"><div class="button2">demander un service</div></a>
+<div class="part2">
+    <a class="lien-part2" href="login.php"><div class="button-part2">proposer un service</div></a>
+    <a class="lien-part2" href="login.php"><div class="button-part2">demander un service</div></a>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
 <center>
     <h2>Les dernières <span>services</span></h2>
     <div class="service">
@@ -94,6 +115,6 @@
     </div>
     <br>
     <a href="login.php"><div class="button2">Voir plus</div></a>
-</center>
+</center>-->
 </body>
 </html>
