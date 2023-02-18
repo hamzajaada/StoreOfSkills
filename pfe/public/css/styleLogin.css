@@ -1,10 +1,6 @@
 
-/*body{
-    background-image: url("../images/background.jpg");
-    background-size: 1538px 845px ;
-    background-repeat: no-repeat;
-    
-}*/
+
+
 .card-body{
     display: flex;
 }
