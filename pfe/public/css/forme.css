@@ -1,0 +1,144 @@
+*{
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f6f6;
+}
+
+body{
+    overflow: auto;
+}
+.header-h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+header {
+    padding: 10px;
+    width: 100%;
+    height: 30px;
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.header-nav ul {
+    list-style: none;
+    display: flex;
+
+}
+
+.header-nav ul li {
+    margin: 0 20px;
+}
+
+.header-nav ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 400;
+    font-family: TT Chocolates,sans-serif;
+
+}
+.header-nav ul li a:hover{
+    color: orangered;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+.container{
+    width: 97%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form {
+    width: 60%;
+    margin: 130px 0px 20% 20%;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.forme_user{
+    margin-top: 50px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="file"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: #f3f3f3;
+    font-size: 14px;
+    color: #444;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:hover,
+input[type="file"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+textarea:hover {
+    box-shadow: 0 0 3px deepskyblue;
+}
+
+select{
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: #f3f3f3;
+    font-size: 14px;
+    color: #444;
+    box-shadow: 0 0 3px deepskyblue;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #3cb626;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    width: 50%;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
