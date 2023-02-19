@@ -21,8 +21,8 @@
             <h2 class="container-h2">Store of  Skills</h2>
           <nav class="main-nav">
             <ul>
-              <li><a href="#">Connexion</a></li>
-              <li><a href="#">Inscription</a></li>
+              <li><a href="{{ route('login') }}">Connexion</a></li>
+              <li><a href="{{ route('register') }}">Inscription</a></li>
             </ul>
           </nav> 
         </div>

@@ -153,7 +153,7 @@ article{
    width: 480px;
    height: 380px;
    border-radius: 7px;
-   box-shadow: 0 0 5px gray;
+   box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
    background-color: #fff;
 }
 .info-per{

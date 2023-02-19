@@ -1,0 +1,26 @@
+.card-body{
+    display: flex;
+}
+.card{
+    box-shadow:rgb(205, 202, 202) 3px 3px 0px 0px;
+    border-radius: 10px;
+}
+.logo img{
+    margin-top: 50px;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+input{
+    margin-left: 50px;
+}
+form{
+    margin-top: 70px;
+}
+.form-control{
+    width: 180%;
+
+}
+button{
+    margin-left: 50px;
+}
