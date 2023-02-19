@@ -160,7 +160,7 @@
    <center><h1  class="store">Store Of <span class="skills">Skills</span></h1></center>
    <div class="cont-img">
     <div class="img-1"> <img src="images/homepage-bricolage-l.png" alt="" srcset="">
-        <h3>1. Je réponds aux demandes et réalise <br> des prestations. </h3>
+        <h3>1. Je réponds aux demandes <br> et réalise des prestations. </h3>
     </div>
     <div class="img-1">
         <img src="images/homepage-telephone-l.png" alt="" srcset="">
@@ -170,7 +170,7 @@
     </div>
     <div class="img1">
         <img src="images/homepage-telephone-vibre-l.png" alt="" srcset="">
-        <h3>3. Je suis alerté en temps réel des demandes <br> postées autour de moi.</h3>
+        <h3>3. Je suis alerté en temps réel des <br> demandes postées autour de moi.</h3>
     </div>
    </div>
    <center><div class="button-pre-ser"><a href="" class="texte-pre-ser"> Je propose mes services</a></div></center>
