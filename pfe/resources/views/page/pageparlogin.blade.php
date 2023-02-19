@@ -14,7 +14,7 @@
           <nav class="main-nav">
             <ul>
               <li><a href="{{ route('welcome') }}">Accueil</a></li>
-              <li><a href="{{ route('login') }}">logout</a></li>
+              <li><a href="{{ route('welcome') }}">logout</a></li>
             </ul>
           </nav> 
         </div>
