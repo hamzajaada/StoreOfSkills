@@ -77,7 +77,6 @@
 
         <main class="py-4">
             @yield('content')
-
         </main>
     </div>
     <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>

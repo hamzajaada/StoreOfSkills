@@ -33,3 +33,7 @@ Route::get('/profil',function (){
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/admin/users', function () {
+    return view('admin.user');
+});
