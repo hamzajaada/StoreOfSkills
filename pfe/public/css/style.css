@@ -157,7 +157,7 @@ span{
 }
 article{
    width: 480px;
-   height: 380px;
+   height: 390px;
    border-radius: 7px;
    box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
    background-color: #fff;
@@ -165,19 +165,58 @@ article{
 .info-per{
    width: 440px;
    height: 80px;
-   border-bottom: 0.3px solid gray;
    margin-left: 20px;
+   display: flex;
+   align-items: center;
 }
 .image-dem{
    width: 440px;
    height: 200px;
-   border-bottom: 0.3px solid gray;
    margin-left: 20px;
+}
+.image-ser img{
+   width: 408px;
+   height: 187px;
+   margin-left: 10px;
+   border-radius: 10px;
 }
 .desc-dem{
    width: 440px;
    height: 90px;
    margin-left: 20px;
+}
+.desc-ser{
+   width: 440px;
+   height: 90px;
+   margin-left: 20px;
+}
+.img-prfl img{
+   width: 40px;
+   height: 40px;
+   border-radius: 10px;
+}
+.info-prfl{
+   margin-left: 10px;
+   font-family: 'Open Sans', sans-serif;  
+}
+.image-dem img{
+   width: 440px;
+   height: 200px;
+   border-radius: 7px;
+}
+.image-dem img{
+   width: 440px;
+   height: 200px;
+   border-radius: 7px;
+}
+.text-dem{
+   margin-top: 10px;
+   font-family: 'Open Sans', sans-serif;  
+}
+.text-ser{
+   margin-top: 10px;
+   font-family: 'Open Sans', sans-serif;
+   margin-left: 10px;
 }
 button{
    background-color: #3cb626 ;
@@ -222,7 +261,6 @@ button{
 .image-ser{
    width: 440px;
    height: 200px;
-   border-bottom: 0.3px solid gray;
    margin-left: 20px;
 }
 .desc-ser{

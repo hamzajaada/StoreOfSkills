@@ -114,19 +114,48 @@
    <div class="services">
 
                 <article>
-                    <div class="info-per"></div>
-                    <div class="image-dem"></div>
-                    <div class="desc-dem"></div>
+                    <div class="info-per">
+                         <div class="img-prfl"><img src="images/profil1.jpg" alt="" srcset=""></div>
+                         <h4 class="info-prfl">Alyan GETEREZ</h4>
+                    </div>
+                    <div class="image-dem">
+                            <img src="images/dem1.jpg" alt="" srcset="">
+                    </div>
+                    <div class="desc-dem">
+                              <p class="text-dem">Bonjour, nous avons un problème de toilette bouché impossible de le débouché 
+                                on apprécierait un coup de main pour ceux qui le peuvent
+                              </p>
+                    </div>
                 </article>
                 <article>
-                    <div class="info-per"></div>
-                    <div class="image-dem"></div>
-                    <div class="desc-dem"></div>
+                    <div class="info-per">
+                        <div class="img-prfl"><img src="images/profil2.jpg" alt="" srcset=""></div>
+                        <h4 class="info-prfl">Mamado Sedebi</h4>
+                    </div>
+                    <div class="image-dem">
+                        <img src="images/dem2.jpg" alt="" srcset="">
+                    </div>
+                    <div class="desc-dem">
+                        <p class="text-dem">Bonjour, nous ne sommes pas véhiculé du coup nous recherchons
+                             une personne véhiculé pour nous aider à récupérer un salon de jardin au 6 rue Clau
+                          </p>
+                    </div>
                 </article>
                 <article>
-                    <div class="info-per"></div>
-                    <div class="image-dem"></div>
-                    <div class="desc-dem"></div>
+                    <div class="info-per">
+                        <div class="img-prfl"><img src="images/profil3.jpg" alt="" srcset=""></div>
+                        <h4 class="info-prfl">Mamado Sedebi</h4>
+                    </div>
+                    <div class="image-dem">
+                        <img src="images/dem3.jpg" alt="" srcset="">
+
+                    </div>
+                    <div class="desc-dem">
+                        <p class="text-dem">
+                            Bonjour, Je souhaiterai que quelqu'un m'installe les étagères murales comme indiqué sur le croquis.
+                             Notre mur est en placo, nous avons donc achete
+                          </p>
+                    </div>
                 </article>
 
    </div>
@@ -138,19 +167,47 @@
   <h2 class="titre-part4">Les dernières <span>services</span></h2>
 <div class="demandes">
             <article>
-                <div class="info-per"></div>
-                <div class="image-ser"></div>
-                <div class="desc-ser"></div>
+                <div class="info-per">
+                    <div class="img-prfl"><img src="images/profil4.jpg" alt="" srcset=""></div>
+                    <h4 class="info-prfl">Ahmad FERAH</h4>
+                </div>
+                <div class="image-ser">
+                    <img src="images/ser11.jpg" alt="" srcset="">
+                </div>
+                <div class="desc-ser">
+                    <p class="text-ser">
+                        Électricien de formation, je me propose de vous accompagner dans tous vos travaux d'électricité. Du simple dépannage aux travaux de rénovation ou d'installations les plus complexes. N'hésitez pas à me contacter
+                      </p>
+                </div>
             </article>
             <article>
-                <div class="info-per"></div>
-                <div class="image-ser"></div>
-                <div class="desc-ser"></div>
+                <div class="info-per">
+                    <div class="img-prfl"><img src="images/moi.png" alt="" srcset=""></div>
+                    <h4 class="info-prfl">Gabriel MARTINELY</h4>
+                </div>
+                <div class="image-ser">
+                    <img src="images/plombier.png" alt="" srcset="">
+                </div>
+                <div class="desc-ser">
+                    <p class="text-ser">
+                        Notre entreprise de plomberie est fière de proposer un service professionnel et fiable à tous nos clients. Nous sommes spécialisés dans la réparation et l'installation de toutes sortes de systèmes de plomberie.
+                      </p>
+                </div>
             </article>
             <article>
-                <div class="info-per"></div>
-                <div class="image-ser"></div>
-                <div class="desc-ser"></div>
+                <div class="info-per">
+                    <div class="img-prfl"><img src="images/photo-nurse.png" alt="" srcset=""></div>
+                    <h4 class="info-prfl">Aya MOUZID</h4>
+                </div>
+                <div class="image-ser">
+                    <img src="images/nurse.png" alt="" srcset="">
+                </div>
+                <div class="desc-ser">
+                    <p class="text-ser">
+                        En tant qu'infirmière, mon service est axé sur les soins et le bien-être de mes patients. J'ai une formation approfondie en anatomie, en physiologie et en pharmacologie, ce qui me permet de fournir des soins adaptés à chaque patient. 
+                       
+                      </p>
+                </div>
             </article>
 </div>
 
