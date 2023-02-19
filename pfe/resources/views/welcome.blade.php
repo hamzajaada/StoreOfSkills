@@ -110,9 +110,30 @@
 <section class="P-5">
   <center> <h1 class="notif-titre">Développez votre activité avec <span class="S">Store </span> of <span class="K">Skills</span> </h1></center>
     <div class="notif">
-        <div class="not1"></div>
-        <div class="not2"></div>
-        <div class="not3"></div>
+        <div class="not1">
+             <h1 class="titre-not1">Trouvez <br> des clients</h1>
+             <div class="desc">
+             <h3 class="h3-notif"><i class="fa-sharp fa-regular fa-handshake"></i>4 millions de membres</h3>
+             <h3 class="h3-notif"><i class="fa-brands fa-shopify"></i> Des milliers de demandes chaque jour</h3>
+             <h3 class="h3-notif"><i class="fa-solid fa-globe"></i>Partout en Maroc</h3>
+            </div>
+        </div>
+        <div class="not2">
+            <h1 class="titre-not2">Développez <br> votre visibilité</h1>
+            <div class="desc">
+            <h3 class="h3-notif"><i class="fa-solid fa-magnifying-glass"></i>Référencement de votre profil sur les moteurs de recherche</h3>
+             <h3 class="h3-notif"><i class="fa-regular fa-star"></i>Collecte de vos avis clients</h3>
+             <h3 class="h3-notif"><i class="fa-regular fa-address-card"></i>Cartes de visite et prospectus personnalisés</h3>
+            </div>
+        </div>
+        <div class="not3">
+            <h1 class="titre-not3">Gérez <br> votre activité</h1>
+            <div class="desc">
+            <h3 class="h3-notif"><i class="fa-solid fa-file-invoice"></i>Création et envoi de vos devis et factures à tous vos clients</h3>
+             <h3 class="h3-notif"><i class="fa-regular fa-credit-card"></i>Paiement par carte bancaire sans commission</h3>
+             <h3 class="h3-notif"><i class="fa-solid fa-arrow-up-right-dots"></i>Suivi de votre chiffre d'affaires</h3>
+            </div>
+        </div>
 </div>
 
 </section>
@@ -195,5 +216,6 @@
     <br>
     <a href="login.php"><div class="button2">Voir plus</div></a>
 </center>-->
+<script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
 </body>
 </html>

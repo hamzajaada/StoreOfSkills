@@ -280,6 +280,7 @@ h3{
    padding: 10px;
    text-align: center;
    margin-top: 50px;
+   margin-right: 10px;
 }
 .button-pre-ser:hover{
    background-color:#d02c5a;
@@ -315,19 +316,39 @@ h3{
 }
 .not1{
       width: 480px;
-      height: 380px;
+      height: 248px;
       
       border-right: 0.3px solid #a09f9f;
 }
 .not2{
    width: 480px;
-   height: 380px;
+   height: 248px;
 }
 .not3{
    width: 480px;
-   height: 380px;
+   height: 248px;
    
    border-left: 0.3px solid #a09f9f;
+}
+.titre-not1 ,.titre-not2 ,.titre-not3{
+   text-align: center;
+   font-family: 'Open Sans', sans-serif;  
+   color: #172433;
+   font-size: 1.8em;
+   font-weight: 500;
+}
+.desc{
+   margin-top: 20px;
+   
+}
+.h3-notif{
+   font-family: 'Open Sans', sans-serif;  
+   color: #172433;
+   text-align: center;
+   
+}
+i{
+   margin-right: 7px;
 }
 /*
 .service, .demande{
