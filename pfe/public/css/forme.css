@@ -2,6 +2,7 @@
     overflow: auto;
     margin: 0;
     padding: 0;
+    overflow: auto;
 }
 body {
     font-family: Arial, sans-serif;

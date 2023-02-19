@@ -14,7 +14,7 @@ class OffreController extends Controller
      */
     public function index(): Response
     {
-        //
+        return view('home');
     }
 
     /**
@@ -22,7 +22,7 @@ class OffreController extends Controller
      */
     public function create(): Response
     {
-        //
+        return view('offres.create');
     }
 
     /**
