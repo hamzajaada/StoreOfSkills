@@ -21,8 +21,8 @@
             <h2 class="container-h2">Store of  Skills</h2>
           <nav class="main-nav">
             <ul>
-              <li><a href="#">Connexion</a></li>
-              <li><a href="#">Inscription</a></li>
+              <li><a href="{{ route('login') }}">Connexion</a></li>
+              <li><a href="{{ route('register') }}">Inscription</a></li>
             </ul>
           </nav> 
         </div>
@@ -30,7 +30,7 @@
       <section class="P-1">
         <div class="main-part1">
                  <div class="part1">
-                        <div class="logo-part1"><img src="images/logodelogin.png" alt="" srcset=""></div>
+                        <div class="logo-part1"><img src="images/pinse.jpg" alt="" srcset=""></div>
                         <h2 id="text-part1"> <span class="PROPOSER">Proposez</span>  & <span class="TROUVER">Trouvez</span> <br>
                             Les services et Les emplois près de chez vous.
                         </h2>
@@ -42,187 +42,106 @@
         </div>
     </section>
     <section class="P-2">
-        <h2 class="titre-part3">Les dernières <span>services</span></h2>
+        <h2 class="titre-part3">Les dernières <span id="span-t2">demandes</span></h2>
    <div class="services">
-    <article>
-        <div class="logo-article"><img src="images/personne.jpg" alt="" srcset=""></div>
-         <div class="info">
-         <div class="image-profil">
-            <img src="images/moi.png" alt="" srcset=""> 
-           </div> 
-           <div class="prenom_art">
-            <h3>PRENOM Nom</h3>
-            </div>
-        </div>
-        <p>Email</p>
-        <p>Location</p>
-        <p>Service</p>
-        <button type="submit">Demander</button>
-    </article>
-    <article>
-        <div class="logo-article"><img src="images/personne.jpg" alt="" srcset=""></div>
-         <div class="info">
-         <div class="image-profil">
-            <img src="images/moi.png" alt="" srcset=""> 
-           </div> 
-           <div class="prenom_art">
-            <h3>Prenom Nom</h3>
-            </div>
-        </div>
-        <p>Email</p>
-        <p>Location</p>
-        <p>Service</p>
-        <button type="submit">Demander</button>
-    </article>
-    <article>
-        <div class="logo-article"><img src="images/personne.jpg" alt="" srcset=""></div>
-         <div class="info">
-         <div class="image-profil">
-            <img src="images/moi.png" alt="" srcset=""> 
-           </div> 
-           <div class="prenom_art">
-            <h3>PRENOM Nom</h3>
-            </div>
-        </div>
-        <p>Email</p>
-        <p>Location</p>
-        <p>Service</p>
-        <button type="submit">Demander</button>
-    </article>
+        
+                <article>  
+                    <div class="info-per"></div>
+                    <div class="image-dem"></div>
+                    <div class="desc-dem"></div>  
+                </article>
+                <article>  
+                    <div class="info-per"></div>
+                    <div class="image-dem"></div>
+                    <div class="desc-dem"></div>  
+                </article>
+                <article>  
+                    <div class="info-per"></div>
+                    <div class="image-dem"></div>
+                    <div class="desc-dem"></div>  
+                </article>
+                      
    </div>
 
-                    <center><div class="button-ser"><a class="plu-ser" href="login.php"><div class="button3">Voir plus</div></a></div></center>
+                    <center><div class="button-serv"><a href="" class="texte-butser">Voir plus</a></div></center>
     </section>
+
 <section class="P-3">
   <h2 class="titre-part4">Les dernières <span>services</span></h2>
-<div class="services">
-<article>
-  <div class="logo-article"><img src="images/personne.jpg" alt="" srcset=""></div>
-   <div class="info">
-   <div class="image-profil">
-      <img src="images/moi.png" alt="" srcset=""> 
-     </div> 
-     <div class="prenom_art">
-      <h3>PRENOM Nom</h3>
-      </div>
-  </div>
-  <p>Email</p>
-  <p>Location</p>
-  <p>Service</p>
-  <button type="submit">Demander</button>
-</article>
-<article>
-  <div class="logo-article"><img src="images/personne.jpg" alt="" srcset=""></div>
-   <div class="info">
-   <div class="image-profil">
-      <img src="images/moi.png" alt="" srcset=""> 
-     </div> 
-     <div class="prenom_art">
-      <h3>Prenom Nom</h3>
-      </div>
-  </div>
-  <p>Email</p>
-  <p>Location</p>
-  <p>Service</p>
-  <button type="submit">Demander</button>
-</article>
-<article>
-  <div class="logo-article"><img src="images/personne.jpg" alt="" srcset=""></div>
-   <div class="info">
-   <div class="image-profil">
-      <img src="images/moi.png" alt="" srcset=""> 
-     </div> 
-     <div class="prenom_art">
-      <h3>PRENOM Nom</h3>
-      </div>
-  </div>
-  <p>Email</p>
-  <p>Location</p>
-  <p>Service</p>
-  <button type="submit">Demander</button>
-</article>
+<div class="demandes">
+            <article>  
+                <div class="info-per"></div>
+                <div class="image-ser"></div>
+                <div class="desc-ser"></div>  
+            </article>
+            <article>  
+                <div class="info-per"></div>
+                <div class="image-ser"></div>
+                <div class="desc-ser"></div>  
+            </article>
+            <article>  
+                <div class="info-per"></div>
+                <div class="image-ser"></div>
+                <div class="desc-ser"></div>  
+            </article>
 </div>
 
-              <center><div class="button-ser"><a class="plu-ser" href="login.php"><div class="button3">Voir plus</div></a></div></center>
+              <center><div class="button-dem"><a href="" class="texte-butdem">Voir plus</a></div></center>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
-<center>
-    <h2>Les dernières <span>services</span></h2>
-    <div class="service">
-        <article>
-            <img src="images/personne.jpg" alt="" srcset="">
-            <h3>PRENOM Nom</h3>
-            <p>Email</p>
-            <p>Location</p>
-            <p>Service</p>
-            <button type="submit">Demander</button>
-        </article>
-        <article>
-            <img src="images/personne.jpg" alt="" srcset="">
-            <h3>PRENOM Nom</h3>
-            <p>Email</p>
-            <p>Location</p>
-            <p>Service</p>
-            <button type="submit">Demander</button>
-        </article>
-        <article>
-            <img src="images/personne.jpg" alt="" srcset="">
-            <h3>PRENOM Nom</h3>
-            <p>Email</p>
-            <p>Location</p>
-            <p>Service</p>
-            <button type="submit">Demander</button>
-        </article>
+<section class="P-4">
+   <center><h1  class="store">Store Of <span class="skills">Skills</span></h1></center>
+   <div class="cont-img">
+    <div class="img-1"> <img src="images/homepage-bricolage-l.png" alt="" srcset=""> 
+        <h3>1. Je réponds aux demandes et réalise <br> des prestations. </h3>
     </div>
-    <br>
-    <a href="login.php"><div class="button1">Voir plus</div></a>
-    <h2>Les dernières <span>demandes</span></h2>
-    <div class="demande">
-        <article>
-            <img src="images/personne.jpg" alt="" srcset="">
-            <h3>PRENOM Nom</h3>
-            <p>Email</p>
-            <p>Location</p>
-            <p>Demande</p>
-            <button type="submit">Repondre</button>
-        </article>
-        <article>
-            <img src="images/personne.jpg" alt="" srcset="">
-            <h3>PRENOM Nom</h3>
-            <p>Email</p>
-            <p>Location</p>
-            <p>Demande</p>
-            <button type="submit">Repondre</button>
-        </article>
-        <article>
-            <img src="images/personne.jpg" alt="" srcset="">
-            <h3>PRENOM Nom</h3>
-            <p>Email</p>
-            <p>Location</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae dolore perferendis quod laboriosam voluptates commodi possimus. Optio ipsa, explicabo nulla odit quod asperiores, dolores minima ex voluptatem blanditiis eveniet? Quo!</p>
-            <button type="submit">Repondre</button>
-        </article>
+    <div class="img-1">
+        <img src="images/homepage-telephone-l.png" alt="" srcset="">
+        <h3>2. Je suis payé et évalué.
+
+        </h3>
     </div>
-    <br>
-    <a href="login.php"><div class="button2">Voir plus</div></a>
-</center>-->
+    <div class="img1">
+        <img src="images/homepage-telephone-vibre-l.png" alt="" srcset="">
+        <h3>3. Je suis alerté en temps réel des demandes <br> postées autour de moi.</h3>
+    </div>
+   </div>
+   <center><div class="button-pre-ser"><a href="" class="texte-pre-ser"> Je propose mes services</a></div></center>
+</section>
+<section class="P-5">
+  <center> <h1 class="notif-titre">Développez votre activité avec <span class="S">Store </span> of <span class="K">Skills</span> </h1></center>
+    <div class="notif">
+        <div class="not1">
+             <h1 class="titre-not1">Trouvez <br> des clients</h1>
+             <div class="desc">
+             <h3 class="h3-notif"><i class="fa-sharp fa-regular fa-handshake"></i>4 millions de membres</h3>
+             <h3 class="h3-notif"><i class="fa-brands fa-shopify"></i> Des milliers de demandes chaque jour</h3>
+             <h3 class="h3-notif"><i class="fa-solid fa-globe"></i>Partout en Maroc</h3>
+            </div>
+        </div>
+        <div class="not2">
+            <h1 class="titre-not2">Développez <br> votre visibilité</h1>
+            <div class="desc">
+            <h3 class="h3-notif"><i class="fa-solid fa-magnifying-glass"></i>Référencement de votre profil sur les moteurs de recherche</h3>
+             <h3 class="h3-notif"><i class="fa-regular fa-star"></i>Collecte de vos avis clients</h3>
+             <h3 class="h3-notif"><i class="fa-regular fa-address-card"></i>Cartes de visite et prospectus personnalisés</h3>
+            </div>
+        </div>
+        <div class="not3">
+            <h1 class="titre-not3">Gérez <br> votre activité</h1>
+            <div class="desc">
+            <h3 class="h3-notif"><i class="fa-solid fa-file-invoice"></i>Création et envoi de vos devis et factures à tous vos clients</h3>
+             <h3 class="h3-notif"><i class="fa-regular fa-credit-card"></i>Paiement par carte bancaire sans commission</h3>
+             <h3 class="h3-notif"><i class="fa-solid fa-arrow-up-right-dots"></i>Suivi de votre chiffre d'affaires</h3>
+            </div>
+        </div>
+</div>
+<center><div class="button-inscr"><a href="" class="texte-inscr"> Je m'inscrire</a></div></center>
+
+</section>
+<footer>
+    <div class="logo-footer"><img src="images/logodeloginremove.png" alt="" srcset=""></div>
+    <div class="social"><h3>Retrouvez-nous  <br> <a class="link-a" href=""><i class="fa-brands fa-instagram"></i></a> <a class="link-a" href=""><i class="fa-brands fa-facebook"></i></a> <a class="link-a" href=""><i class="fa-brands fa-linkedin"></i></a> <a class="link-a" href=""><i class="fa-solid fa-location-dot"></i></a></h3></div>
+</footer>
+<script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
 </body>
 </html>

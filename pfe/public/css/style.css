@@ -5,6 +5,7 @@
 }
 body{
    overflow: auto;
+   flex-wrap: wrap;
 } 
 .container-h2{
    font-family: 'Open Sans', sans-serif;
@@ -75,7 +76,7 @@ span{
    margin-top: 125px;
    font-family: 'Open Sans', sans-serif;  
    font-size: 4em;
-   font-weight: 500;
+   font-weight: 900;
 }
 .PROPOSER {
    color:#3cb626;
@@ -111,6 +112,9 @@ span{
    text-align: center;
    margin-top: 50px;
 }
+.button-part1:hover{
+   background-color:#22910f;
+}
 .button-part2{
    width: 226px;
    height: 30px;
@@ -119,6 +123,9 @@ span{
    padding: 10px;
    text-align: center;
    margin-top: 50px;
+}
+.button-part2:hover{
+   background-color:#d02c5a;
 }
 .P-2{
    margin-top: 50px;
@@ -141,43 +148,30 @@ span{
    margin-top: 40px;
    margin-bottom: -143px;
    height: 500px;
-   flex-wrap: wrap;
-   
 }
 article{
-   width: 300px;
+   width: 480px;
    height: 380px;
-   
    border-radius: 7px;
-   box-shadow: 0 0 5px gray;
-   
+   box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
    background-color: #fff;
 }
-.logo-article img{
-   width: 288px;
-   height: 160px;
-   margin-top: 10px;
+.info-per{
+   width: 440px;
+   height: 80px;
+   border-bottom: 0.3px solid gray;
+   margin-left: 20px;
 }
-.image-profil img{
-   width: 50px;
-   height: 50px;
-   border-radius: 10px;
-   margin-left: 7px;
+.image-dem{
+   width: 440px;
+   height: 200px;
+   border-bottom: 0.3px solid gray;
+   margin-left: 20px;
 }
-.info{
-   align-items: center;
-   display: flex;
-   margin-left: 50px;
-
-}
-.prenom_art{
-   margin-left: 15px;
-}
-p{
-   text-align: center;
-   font-family: 'Open Sans', sans-serif;  
-   font-size: 1.2em;
-   font-weight: 200;
+.desc-dem{
+   width: 440px;
+   height: 90px;
+   margin-left: 20px;
 }
 button{
    background-color: #3cb626 ;
@@ -189,72 +183,212 @@ button{
    margin-top: 5px;
    border-radius: 7px;
 }
-.button3{
+.button-serv{
    width: 226px;
    height: 30px;
-   border-radius: 6px;
-   background-color: #3cb626;
+   border-radius: 16px;
+   background-color:#ff3c74;
    padding: 10px;
    text-align: center;
    margin-top: 50px;
 }
-.plu-ser{
+.button-serv:hover{
+   background-color:#d02c5a;
+   
+}
+.texte-butser{
    color: #fff;
    text-decoration: none;
    font-family: 'Open Sans', sans-serif;
    font-size: 1.2em;
    font-weight: 400;
 }
-
-
-/*
-.service, .demande{
+.demandes{
    display: flex;
-   flex-wrap: wrap;
-   justify-content: space-between;
-   padding: 2px;
-   width: 70%;
-   height: 350px;
+   justify-content: space-around;
+   margin-top: 40px;
+   margin-bottom: -143px;
+   height: 500px;
 }
-
-.service article, .demande article{
-   margin: 10px;
-   padding: 16px;
+.image-ser{
+   width: 440px;
+   height: 200px;
+   border-bottom: 0.3px solid gray;
+   margin-left: 20px;
+}
+.desc-ser{
+   width: 440px;
+   height: 90px;
+   margin-left: 20px;
+}
+.titre-part4{
    text-align: center;
-   width: 300px;
-   height: 355px;
-   border-radius: 22px;
-   background: black;
-   overflow: auto;
+   font-family: 'Open Sans', sans-serif;  
+   font-size: 2em;
+   font-weight: 700;
+}
+#span-t2{
+   color: #ff3c74;
+}
+.button-dem{
+   width: 226px;
+   height: 30px;
+   border-radius: 16px;
+   background-color:#3cb626;
+   padding: 10px;
+   text-align: center;
+   margin-top: 50px;
+}
+.button-dem:hover{
+   background-color:#22910f;
+   border: 0.5px solid grey;
 }
 
-.service article img, .demande article img{
-   width: 80%;
+.texte-butdem{
+   color: #fff;
+   text-decoration: none;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 1.2em;
+   font-weight: 400;
+}
+.P-4{
+   margin-top: 30px;
+   width: 100%;
+   height: 511px;
+   background-color: #f3e1e6;
+}
+.store{
+   text-align: center;
+   font-family: 'Open Sans', sans-serif;  
+   font-size: 2em;
+   font-weight: 700;
+}
+.skills{
+   color: #ff3c74;
+}
+.cont-img{
+   margin-top: 65px;
+   display: flex;
+   justify-content: space-around;
+}
+.cont-img img{
+   margin-bottom: 30px;
+}
+h3{
+   font-family: 'Open Sans', sans-serif;  
+   color: #172433;
+}
+.button-pre-ser{
+   width: 226px;
+   height: 30px;
+   border-radius: 30px;
+   background-color:#ff3c74;
+   padding: 10px;
+   text-align: center;
+   margin-top: 50px;
+   margin-right: 10px;
+}
+.button-pre-ser:hover{
+   background-color:#d02c5a;
+   
+}
+.texte-pre-ser{
+   color: #fff;
+   text-decoration: none;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 1.2em;
+   font-weight: 400;
+}
+.P-5{
+   margin-top: 30px;
+   margin-bottom: 30px;
+}
+.notif{
+   margin-top: 30px;
+   display: flex;
+   justify-content: space-around;
+}
+.notif-titre{
+   text-align: center;
+   font-family: 'Open Sans', sans-serif;  
+   font-size: 2em;
+   font-weight: 700;
+}
+.S{
+   color: #3cb626;
+}
+.K{
+   color: #ff3c74;
+}
+.not1{
+      width: 480px;
+      height: 248px;
+      
+      border-right: 0.3px solid #a09f9f;
+}
+.not2{
+   width: 480px;
+   height: 248px;
+}
+.not3{
+   width: 480px;
+   height: 248px;
+   
+   border-left: 0.3px solid #a09f9f;
+}
+.titre-not1 ,.titre-not2 ,.titre-not3{
+   text-align: center;
+   font-family: 'Open Sans', sans-serif;  
+   color: #172433;
+   font-size: 1.8em;
+   font-weight: 500;
+}
+.desc{
+   margin-top: 20px;
+   
+}
+.h3-notif{
+   font-family: 'Open Sans', sans-serif;  
+   color: #172433;
+   text-align: center;
+   
+}
+i{
+   margin-right: 7px;
+}
+.button-inscr{
+   width: 226px;
+   height: 30px;
+   border-radius: 16px;
+   background-color:#7622e4;
+   padding: 10px;
+   text-align: center;
+   margin-top: 50px;
+}
+.button-inscr:hover{
+   background-color:#6317c5;
+   border: 0.5px solid grey;
+}
+
+.texte-inscr{
+   color: #fff;
+   text-decoration: none;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 1.2em;
+   font-weight: 400;
+}
+footer{
+   border-top: 0.3px solid grey;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.logo-footer img{
+   width: 150px;
    height: 150px;
 }
 
-.service article h3, .service article p, .demande article h3, .demande article p{
-   color: #ffffff;
-   font-family: 'Poppins', sans-serif;
-   font-size: 1.3em;
-   font-weight: 400;
+.link-a{
+   color: #333333;
 }
 
-.service article button, .demande article button{
-   width: 90%;
-   height: 30px;
-   background-color: orangered;
-   margin: 2px;
-   border-radius: 6px;
-   margin-top: 10px;
-
-}
-section{
-   display: flex;
-   background-color: black;
-}
-.barre{
-   width: 50px;
-   height: 100%;
-   background-color: black;
-}

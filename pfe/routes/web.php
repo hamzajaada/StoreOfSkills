@@ -17,7 +17,7 @@ use App\Http\Controllers\HomeControlle;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Auth::routes();
 
@@ -28,5 +28,8 @@ Route::get('/ajoute/offres',function (){
 Route::get('/ajoute/users',function (){
     return view('formulaire.ajouteUser');
 });
+Route::get('/profil',function (){
+    return view('page.pageparlogin');
+});
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
