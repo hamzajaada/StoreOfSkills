@@ -112,6 +112,9 @@ span{
    text-align: center;
    margin-top: 50px;
 }
+.button-part1:hover{
+   background-color:#22910f;
+}
 .button-part2{
    width: 226px;
    height: 30px;
@@ -120,6 +123,9 @@ span{
    padding: 10px;
    text-align: center;
    margin-top: 50px;
+}
+.button-part2:hover{
+   background-color:#d02c5a;
 }
 .P-2{
    margin-top: 50px;
@@ -349,6 +355,41 @@ h3{
 }
 i{
    margin-right: 7px;
+}
+.button-inscr{
+   width: 226px;
+   height: 30px;
+   border-radius: 16px;
+   background-color:#7622e4;
+   padding: 10px;
+   text-align: center;
+   margin-top: 50px;
+}
+.button-inscr:hover{
+   background-color:#6317c5;
+   border: 0.5px solid grey;
+}
+
+.texte-inscr{
+   color: #fff;
+   text-decoration: none;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 1.2em;
+   font-weight: 400;
+}
+footer{
+   border-top: 0.3px solid grey;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.logo-footer img{
+   width: 150px;
+   height: 150px;
+}
+
+.link-a{
+   color: #333333;
 }
 /*
 .service, .demande{
