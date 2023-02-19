@@ -1,0 +1,25 @@
+.barre{
+    position: fixed;
+    margin-top: 55px;
+    width: 220px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    border-left: 0.1em solid lightgray;
+    z-index: 999;
+    padding: 10px;
+}
+
+.vos{
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3em;
+    font-weight: 400;
+    color: #333333;
+    margin-left: 18px;
+}
+
+i{
+    font-size: 1.6em;
+    font-weight: 400;
+}

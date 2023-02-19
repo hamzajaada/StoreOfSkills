@@ -1,10 +1,25 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+
+    <!-- Scripts -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    {{--<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Store of skills</title>
+    <title>Store of skills</title>--}}
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +31,60 @@
 <link href="https://fonts.googleapis.com/css2?family=Acme&family=Alegreya+Sans+SC:ital@1&family=Bebas+Neue&family=Dosis&family=Kanit:ital,wght@0,100;0,200;1,100&family=Open+Sans&family=Oswald&family=Poiret+One&family=Poppins:wght@500&family=Prompt:ital,wght@1,200&family=Questrial&family=Roboto+Condensed&family=Rowdies:wght@700&family=Slabo+27px&family=Unbounded:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="main-header">
+    <nav style="position: fixed;width: 100%" class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="{{ url('/') }}" >
+            Store <span style="color:#ff3c74">of</span>  Skills
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Left Side Of Navbar -->
+            <ul class="navbar-nav me-auto">
+
+            </ul>
+
+            <!-- Right Side Of Navbar -->
+            <ul class="navbar-nav ms-auto">
+                <!-- Authentication Links -->
+                @guest
+                    @if (Route::has('login'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        </li>
+                    @endif
+
+                    @if (Route::has('register'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        </li>
+                    @endif
+                @else
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->nom}} {{ Auth::user()->prenom}}
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                @endguest
+            </ul>
+        </div>
+    </div>
+</nav>
+    {{--<header class="main-header">
         <div class="container">
             <h2 class="container-h2">Store of  Skills</h2>
           <nav class="main-nav">
@@ -24,9 +92,9 @@
               <li><a href="{{ route('login') }}">Connexion</a></li>
               <li><a href="{{ route('register') }}">Inscription</a></li>
             </ul>
-          </nav> 
+          </nav>
         </div>
-      </header> 
+      </header>--}}
       <section class="P-1">
         <div class="main-part1">
                  <div class="part1">
@@ -44,23 +112,23 @@
     <section class="P-2">
         <h2 class="titre-part3">Les dernières <span id="span-t2">demandes</span></h2>
    <div class="services">
-        
-                <article>  
+
+                <article>
                     <div class="info-per"></div>
                     <div class="image-dem"></div>
-                    <div class="desc-dem"></div>  
+                    <div class="desc-dem"></div>
                 </article>
-                <article>  
+                <article>
                     <div class="info-per"></div>
                     <div class="image-dem"></div>
-                    <div class="desc-dem"></div>  
+                    <div class="desc-dem"></div>
                 </article>
-                <article>  
+                <article>
                     <div class="info-per"></div>
                     <div class="image-dem"></div>
-                    <div class="desc-dem"></div>  
+                    <div class="desc-dem"></div>
                 </article>
-                      
+
    </div>
 
                     <center><div class="button-serv"><a href="" class="texte-butser">Voir plus</a></div></center>
@@ -69,20 +137,20 @@
 <section class="P-3">
   <h2 class="titre-part4">Les dernières <span>services</span></h2>
 <div class="demandes">
-            <article>  
+            <article>
                 <div class="info-per"></div>
                 <div class="image-ser"></div>
-                <div class="desc-ser"></div>  
+                <div class="desc-ser"></div>
             </article>
-            <article>  
+            <article>
                 <div class="info-per"></div>
                 <div class="image-ser"></div>
-                <div class="desc-ser"></div>  
+                <div class="desc-ser"></div>
             </article>
-            <article>  
+            <article>
                 <div class="info-per"></div>
                 <div class="image-ser"></div>
-                <div class="desc-ser"></div>  
+                <div class="desc-ser"></div>
             </article>
 </div>
 
@@ -91,7 +159,7 @@
 <section class="P-4">
    <center><h1  class="store">Store Of <span class="skills">Skills</span></h1></center>
    <div class="cont-img">
-    <div class="img-1"> <img src="images/homepage-bricolage-l.png" alt="" srcset=""> 
+    <div class="img-1"> <img src="images/homepage-bricolage-l.png" alt="" srcset="">
         <h3>1. Je réponds aux demandes et réalise <br> des prestations. </h3>
     </div>
     <div class="img-1">

@@ -1,16 +1,16 @@
 *{
     margin: 0;
     padding: 0;
-   
+
  }
  body{
     overflow: auto;
     flex-wrap: wrap;
- } 
+ }
  .container-h2{
     font-family: 'Open Sans', sans-serif;
     margin-left: 40px;
- } 
+ }
  .main-header {
     width: 100%;
     background-color: #ffffff;
@@ -22,54 +22,57 @@
     position: fixed;
     z-index: 999;
   }
-  
-  
+
+
   .main-nav ul {
     list-style: none;
     display: flex;
-    
+
   }
-  
+
   .main-nav ul li {
     margin: 0 20px;
   }
-  
+
   .main-nav ul li a {
     text-decoration: none;
     color: #333333;
     font-weight: 600;
     font-family: 'Open Sans', sans-serif;
-   
+
   }
   .main-nav ul li a:hover{
     color: orangered;
   }
-  
+
   .logo {
     width: 150px;
     height: auto;
   }
+
+
   .container{
     width: 97%;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  .barre{
-    position: fixed;
-    margin-left: 1360px;
-    margin-top: 81px;
-    width: 220px;
-    height: 100%;
-    /*border-left: 0.3px solid grey;*/
-    box-shadow: 0 0px 10px 5px rgb(55 74 97 / 10%);
-
-    z-index: 999;
-    padding: 10px;
- } 
- .main-part1{
+   .main-part1{
     display: flex;
  }
+
+  .barre{
+    position: fixed;
+    margin-top: 55px;
+    width: 220px;
+    height: 100%;
+      top: 0;
+      right: 0;
+      border-left: 0.1em solid lightgray;
+    z-index: 999;
+    padding: 10px;
+ }
+
  .part1{
     margin-top: 100px;
     display: flex;
@@ -85,7 +88,7 @@
  }
  #text-part1{
     margin-top: 125px;
-    font-family: 'Open Sans', sans-serif;  
+    font-family: 'Open Sans', sans-serif;
     font-size: 4em;
     font-weight: 900;
  }
@@ -99,7 +102,7 @@
     display: flex;
     justify-content: space-around;
  }
- 
+
  .lien-part1{
     color: #fff;
     text-decoration: none;
@@ -122,7 +125,7 @@
     padding: 10px;
     text-align: center;
     margin-top: 50px;
-    
+
  }
  .button-part1:hover{
     background-color:#22910f;
@@ -140,7 +143,7 @@
     background-color:#d02c5a;
  }
  h3{
-    font-family: 'Open Sans', sans-serif;  
+    font-family: 'Open Sans', sans-serif;
    font-size: 1.3em;
    font-weight: 400;
    color: #333333;
@@ -149,7 +152,7 @@
  }
  .vos{
    text-decoration: none;
-   font-family: 'Open Sans', sans-serif;  
+   font-family: 'Open Sans', sans-serif;
    font-size: 1.3em;
    font-weight: 400;
    color: #333333;

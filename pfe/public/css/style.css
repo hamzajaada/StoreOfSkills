@@ -1,16 +1,16 @@
 *{
    margin: 0;
    padding: 0;
-  
+
 }
 body{
    overflow: auto;
    flex-wrap: wrap;
-} 
+}
 .container-h2{
    font-family: 'Open Sans', sans-serif;
    margin-left: 40px;
-} 
+}
 .main-header {
    width: 100%;
    background-color: #ffffff;
@@ -22,29 +22,29 @@ body{
    position: fixed;
    z-index: 999;
  }
- 
- 
+
+
  .main-nav ul {
    list-style: none;
    display: flex;
-   
+
  }
- 
+
  .main-nav ul li {
    margin: 0 20px;
  }
- 
+
  .main-nav ul li a {
    text-decoration: none;
    color: #333333;
    font-weight: 600;
    font-family: 'Open Sans', sans-serif;
-  
+
  }
  .main-nav ul li a:hover{
    color: orangered;
  }
- 
+
  .logo {
    width: 150px;
    height: auto;
@@ -74,7 +74,7 @@ span{
 }
 #text-part1{
    margin-top: 125px;
-   font-family: 'Open Sans', sans-serif;  
+   font-family: 'Open Sans', sans-serif;
    font-size: 4em;
    font-weight: 900;
 }
@@ -105,7 +105,7 @@ span{
 }
 .button-part1{
    width: 226px;
-   height: 30px;
+   height: 45px;
    border-radius: 6px;
    background-color: #3cb626;
    padding: 10px;
@@ -117,7 +117,7 @@ span{
 }
 .button-part2{
    width: 226px;
-   height: 30px;
+   height: 45px;
    border-radius: 6px;
    background-color:#ff3c74;
    padding: 10px;
@@ -137,7 +137,7 @@ span{
 .titre-part3{
 
    text-align: center;
-   font-family: 'Open Sans', sans-serif;  
+   font-family: 'Open Sans', sans-serif;
    font-size: 2em;
    font-weight: 700;
 
@@ -185,7 +185,7 @@ button{
 }
 .button-serv{
    width: 226px;
-   height: 30px;
+   height: 45px;
    border-radius: 16px;
    background-color:#ff3c74;
    padding: 10px;
@@ -194,7 +194,7 @@ button{
 }
 .button-serv:hover{
    background-color:#d02c5a;
-   
+
 }
 .texte-butser{
    color: #fff;
@@ -223,7 +223,7 @@ button{
 }
 .titre-part4{
    text-align: center;
-   font-family: 'Open Sans', sans-serif;  
+   font-family: 'Open Sans', sans-serif;
    font-size: 2em;
    font-weight: 700;
 }
@@ -232,7 +232,7 @@ button{
 }
 .button-dem{
    width: 226px;
-   height: 30px;
+   height: 45px;
    border-radius: 16px;
    background-color:#3cb626;
    padding: 10px;
@@ -259,7 +259,7 @@ button{
 }
 .store{
    text-align: center;
-   font-family: 'Open Sans', sans-serif;  
+   font-family: 'Open Sans', sans-serif;
    font-size: 2em;
    font-weight: 700;
 }
@@ -275,12 +275,12 @@ button{
    margin-bottom: 30px;
 }
 h3{
-   font-family: 'Open Sans', sans-serif;  
+   font-family: 'Open Sans', sans-serif;
    color: #172433;
 }
 .button-pre-ser{
    width: 226px;
-   height: 30px;
+   height: 45px;
    border-radius: 30px;
    background-color:#ff3c74;
    padding: 10px;
@@ -290,7 +290,7 @@ h3{
 }
 .button-pre-ser:hover{
    background-color:#d02c5a;
-   
+
 }
 .texte-pre-ser{
    color: #fff;
@@ -310,7 +310,7 @@ h3{
 }
 .notif-titre{
    text-align: center;
-   font-family: 'Open Sans', sans-serif;  
+   font-family: 'Open Sans', sans-serif;
    font-size: 2em;
    font-weight: 700;
 }
@@ -323,7 +323,7 @@ h3{
 .not1{
       width: 480px;
       height: 248px;
-      
+
       border-right: 0.3px solid #a09f9f;
 }
 .not2{
@@ -333,32 +333,32 @@ h3{
 .not3{
    width: 480px;
    height: 248px;
-   
+
    border-left: 0.3px solid #a09f9f;
 }
 .titre-not1 ,.titre-not2 ,.titre-not3{
    text-align: center;
-   font-family: 'Open Sans', sans-serif;  
+   font-family: 'Open Sans', sans-serif;
    color: #172433;
    font-size: 1.8em;
    font-weight: 500;
 }
 .desc{
    margin-top: 20px;
-   
+
 }
 .h3-notif{
-   font-family: 'Open Sans', sans-serif;  
+   font-family: 'Open Sans', sans-serif;
    color: #172433;
    text-align: center;
-   
+
 }
 i{
    margin-right: 7px;
 }
 .button-inscr{
    width: 226px;
-   height: 30px;
+   height: 45px;
    border-radius: 16px;
    background-color:#7622e4;
    padding: 10px;
