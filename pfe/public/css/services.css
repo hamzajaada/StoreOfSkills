@@ -1,0 +1,160 @@
+.barre{
+    position: fixed;
+    margin-top: 55px;
+    width: 220px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    border-left: 0.1em solid lightgray;
+    z-index: 999;
+    padding: 10px;
+}
+
+.vos{
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3em;
+    font-weight: 400;
+    color: #333333;
+    margin-left: 18px;
+}
+
+i{
+    font-size: 1.6em;
+    font-weight: 400;
+}
+.P-2{
+    margin-top: 50px;
+    background-color:#fafafa;
+    margin-bottom: 20px;
+    height: 550px;
+ }
+ 
+ .titre-part3{
+ 
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;  
+    font-size: 2em;
+    font-weight: 700;
+ 
+ }
+ .services{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin-bottom: -143px;
+    height: 500px;
+ }
+ article{
+    width: 480px;
+    height: 390px;
+    border-radius: 7px;
+    box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
+    background-color: #fff;
+ }
+ .info-per{
+    width: 440px;
+    height: 80px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+ }
+ .image-dem{
+    width: 440px;
+    height: 200px;
+    margin-left: 20px;
+ }
+ .image-ser img{
+    width: 408px;
+    height: 187px;
+    margin-left: 10px;
+    border-radius: 10px;
+ }
+ .desc-dem{
+    width: 440px;
+    height: 90px;
+    margin-left: 20px;
+ }
+ .desc-ser{
+    width: 440px;
+    height: 90px;
+    margin-left: 20px;
+ }
+ .img-prfl img{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+ }
+ .info-prfl{
+    margin-left: 10px;
+    font-family: 'Open Sans', sans-serif;  
+ }
+ .image-dem img{
+    width: 440px;
+    height: 200px;
+    border-radius: 7px;
+ }
+ .image-dem img{
+    width: 440px;
+    height: 200px;
+    border-radius: 7px;
+ }
+ .text-dem{
+    margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;  
+ }
+ .text-ser{
+    margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 10px;
+ }
+ button{
+    background-color: #3cb626 ;
+    width: 200px;
+    height: 45px;
+    margin-left: 50px;
+    text-align: center;
+    border: none;
+    margin-top: 5px;
+    border-radius: 7px;
+ }
+ .button-serv{
+    width: 226px;
+    height: 45px;
+    border-radius: 16px;
+    background-color:#ff3c74;
+    padding: 10px;
+    text-align: center;
+    margin-top: 50px;
+ }
+ .button-serv:hover{
+    background-color:#d02c5a;
+    
+ }
+ .texte-butser{
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+ }
+ .texte-butser:hover{
+    color:white;
+ }
+ .demandes{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin-bottom: -143px;
+    height: 500px;
+ }
+ .image-ser{
+    width: 440px;
+    height: 200px;
+    margin-left: 20px;
+ }
+ .desc-ser{
+    width: 440px;
+    height: 90px;
+    margin-left: 20px;
+ }

@@ -41,3 +41,6 @@ Route::get('/admin/users', function () {
 Route::get('/admin/offres', function () {
     return view('admin.offre');
 });
+Route::get('/services', function () {
+    return view('page.services');
+});
