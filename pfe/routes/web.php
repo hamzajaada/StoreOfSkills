@@ -37,3 +37,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/admin/users', function () {
     return view('admin.user');
 });
+
+Route::get('/admin/offres', function () {
+    return view('admin.offre');
+});
