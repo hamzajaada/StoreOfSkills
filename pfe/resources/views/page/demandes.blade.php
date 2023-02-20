@@ -74,7 +74,8 @@
                 </ul>
             </div>
         </div>
-    </nav> <section class="services-p">
+    </nav> 
+    <section class="services-p">
                 @extends('page.fixeBarre')
 
         <section class="P-2">
@@ -226,7 +227,6 @@
                   
          </section> 
         </section>
-    
 
 
 <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
