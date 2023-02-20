@@ -22,8 +22,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/ajoute/offres',function (){
-    return view('formulaire.ajouteOffre');
-});
+    return view('page.ajouteOffre');
+})->name('page.ajouteOffre');
 
 Route::get('/ajoute/users',function (){
     return view('formulaire.ajouteUser');
