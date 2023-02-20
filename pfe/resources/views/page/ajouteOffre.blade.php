@@ -26,21 +26,13 @@
     @extends('page.fixeHeader')
     <section class="services-p">
     <section class="main-sec1">
-        <div class="barre">
-            <div class="botton">
-                <i class="fa-sharp fa-solid fa-address-card"></i><a class="vos" href="profil.php">Profil</a><br>
-                <i class="fa-solid fa-wrench"></i><a class="vos" href="profil.php">Services</a><br>
-                <i class="fa-solid fa-toolbox"></i><a class="vos" href="profil.php">Demandes</a><br>
-                <i class="fa-solid fa-wrench"></i><a class="vos" href="profil.php">vos services</a><br>
-                <i class="fa-solid fa-toolbox"></i><a class="vos" href="profil.php">vos demandes</a><br>
-            </div>
-        </div>
+       @extends('page.fixeBarre')
     </section>
     <section class="P-2" >
-        <h1 class="titre-part3" style="margin-top: 70px;text-align:center;margin-right:295px">Offres</h1>
-    <div class="info-compte">
+        <h1 class="titre-part3" style="margin-top: 70px;margin-left:493px;">Ajoute <span style="color:rgb(36, 189, 36)">d'offre</span> </h1>
+    <div class="info-compte" style="margin-left: 238px;">
         <form class="row g-3">
-            <h2>Ajoute d'offre</h2>
+            
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Type:</label>
                 <select class="form-control" id="exampleFormControlSelect1">
@@ -73,7 +65,7 @@
               </div>
 
             <div class="col-12">
-                <center><button type="submit" class="btn btn-primary" style="width: 50%;">Ajouter</button></center>
+                <center><button type="submit" class="btn btn-primary" style="width: 50%">Ajouter</button></center>
             </div>
           </form>
     </div>

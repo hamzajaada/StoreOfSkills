@@ -5,9 +5,10 @@
     height: 100%;
     top: 0;
     right: 0;
-    border-left: 0.1em solid lightgray;
+    border-left: 0.1em solid rgb(244, 242, 242);
     z-index: 999;
     padding: 10px;
+    background-color: rgb(244, 242, 242);
 }
 
 .vos{
@@ -18,7 +19,9 @@
     color: #333333;
     margin-left: 18px;
 }
-
+.vos:hover{
+   color: orange;
+}
 i{
     font-size: 1.6em;
     font-weight: 400;

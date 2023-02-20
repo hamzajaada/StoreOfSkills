@@ -10,6 +10,7 @@
 </head>
 <body>
     @extends('page.fixeHeader')
+    
     <form>
         <h2>Ajoute d'offre</h2>
         <label for="type">type:</label>
