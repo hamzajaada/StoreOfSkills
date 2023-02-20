@@ -43,15 +43,19 @@ Route::get('/admin/offres', function () {
 });
 Route::get('/services', function () {
     return view('page.services');
-});
+})->name('pageservices');
 Route::get('/demandes', function () {
     return view('page.demandes');
-});
+})->name('pagedemanes');
 
 Route::get('/profile', function () {
     return view('page.profile');
+<<<<<<< HEAD
 });
 
 Route::get('/offres', function () {
     return view('page.ajouteOffre');
 });
+=======
+})->name('profil');
+>>>>>>> 6d7658e554261af3e40fa0d0ed8aa1d7367d0e79

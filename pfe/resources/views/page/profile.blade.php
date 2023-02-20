@@ -76,17 +76,7 @@
             </div>
         </div>
     </nav> <section class="services-p">
-    <section class="main-sec1">
-        <div class="barre">
-            <div class="botton">
-                <i class="fa-sharp fa-solid fa-address-card"></i><a class="vos" href="profil.php">Profil</a><br>
-                <i class="fa-solid fa-wrench"></i><a class="vos" href="profil.php">Services</a><br>
-                <i class="fa-solid fa-toolbox"></i><a class="vos" href="profil.php">Demandes</a><br>
-                <i class="fa-solid fa-wrench"></i><a class="vos" href="profil.php">vos services</a><br>
-                <i class="fa-solid fa-toolbox"></i><a class="vos" href="profil.php">vos demandes</a><br>
-            </div>
-        </div>
-    </section>
+    @extends('page.fixeBarre')
     <section class="P-2" >
         <h1 class="titre-part3" style="margin-top: 70px;text-align:center;margin-right:295px">Profile</h1>
     <div class="info-compte">
@@ -141,58 +131,7 @@
     </div>
     </section>
 </section>
-{{--
-<section class="P-3">
-  <h2 class="titre-part4">Les dernières <span>services</span></h2>
-<div class="demandes">
-            <article>
-                <div class="info-per">
-                    <div class="img-prfl"><img src="images/profil4.jpg" alt="" srcset=""></div>
-                    <h4 class="info-prfl">Ahmad FERAH</h4>
-                </div>
-                <div class="image-ser">
-                    <img src="images/ser11.jpg" alt="" srcset="">
-                </div>
-                <div class="desc-ser">
-                    <p class="text-ser">
-                        Électricien de formation, je me propose de vous accompagner dans tous vos travaux d'électricité. Du simple dépannage aux travaux de rénovation ou d'installations les plus complexes. N'hésitez pas à me contacter
-                      </p>
-                </div>
-            </article>
-            <article>
-                <div class="info-per">
-                    <div class="img-prfl"><img src="images/moi.png" alt="" srcset=""></div>
-                    <h4 class="info-prfl">Gabriel MARTINELY</h4>
-                </div>
-                <div class="image-ser">
-                    <img src="images/plombier.png" alt="" srcset="">
-                </div>
-                <div class="desc-ser">
-                    <p class="text-ser">
-                        Notre entreprise de plomberie est fière de proposer un service professionnel et fiable à tous nos clients. Nous sommes spécialisés dans la réparation et l'installation de toutes sortes de systèmes de plomberie.
-                      </p>
-                </div>
-            </article>
-            <article>
-                <div class="info-per">
-                    <div class="img-prfl"><img src="images/photo-nurse.png" alt="" srcset=""></div>
-                    <h4 class="info-prfl">Aya MOUZID</h4>
-                </div>
-                <div class="image-ser">
-                    <img src="images/nurse.png" alt="" srcset="">
-                </div>
-                <div class="desc-ser">
-                    <p class="text-ser">
-                        En tant qu'infirmière, mon service est axé sur les soins et le bien-être de mes patients. J'ai une formation approfondie en anatomie, en physiologie et en pharmacologie, ce qui me permet de fournir des soins adaptés à chaque patient.
-
-                      </p>
-                </div>
-            </article>
-</div>
-
-</section>
-
-</div>--}}
+  
 <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
 </body>
 </html>
