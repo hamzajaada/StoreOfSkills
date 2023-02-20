@@ -87,7 +87,8 @@
         </div>
     </section>
     <section class="P-2">
-        <h2 class="titre-part3">Les dernières <span id="span-t2">demandes</span></h2>
+   
+   <h2 class="titre-part3">Les dernières <span id="span-t2" style="color:#ff3c74">Services</span></h2>
    <div class="demandes">
 
                 <article>
@@ -103,7 +104,7 @@
                                 on apprécierait un coup de main pour ceux qui le peuvent
                               </p>
                     </div>
-                    <center><div class="button-postuller"><a href="" class="but-post">Postuler</a></div></center>
+                    <center><div class="button-commander"><a href="" class="but-post">commander</a></div></center>
 
                 </article>
                 <article>
@@ -119,7 +120,7 @@
                              une personne véhiculé pour nous aider à récupérer un salon de jardin au 6 rue Clau
                           </p>
                     </div>
-                    <center><div class="button-postuller"><a href="" class="but-post">Postuler</a></div></center>
+                    <center><div class="button-commander"><a href="" class="but-post">commander</a></div></center>
 
                 </article>
                 <article>
@@ -137,7 +138,7 @@
                              Notre mur est en placo, nous avons donc achete
                           </p>
                     </div>
-                    <center><div class="button-postuller"><a href="" class="but-post">Postuler</a></div></center>
+                    <center><div class="button-commander"><a href="" class="but-post">commander</a></div></center>
 
                 </article>
                 <article>
@@ -155,7 +156,7 @@
                              Notre mur est en placo, nous avons donc achete
                           </p>
                     </div>
-                    <center><div class="button-postuller"><a href="" class="but-post">Postuler</a></div></center>
+                    <center><div class="button-commander"><a href="" class="but-post">commander</a></div></center>
 
                 </article>
                 <article>
@@ -173,7 +174,7 @@
                              Notre mur est en placo, nous avons donc achete
                           </p>
                     </div>
-                    <center><div class="button-postuller"><a href="" class="but-post">Postuler</a></div></center>
+                    <center><div class="button-commander"><a href="" class="but-post">commander</a></div></center>
 
                 </article>
                 <article>
@@ -191,7 +192,7 @@
                              Notre mur est en placo, nous avons donc achete
                           </p>
                     </div>
-                    <center><div class="button-postuller"><a href="" class="but-post">Postuler</a></div></center>
+                    <center><div class="button-commander"><a href="" class="but-post">commander</a></div></center>
 
                 </article>
                 <article>
@@ -209,7 +210,7 @@
                              Notre mur est en placo, nous avons donc achete
                           </p>
                     </div>
-                    <center><div class="button-postuller"><a href="" class="but-post">Postuler</a></div></center>
+                    <center><div class="button-commander"><a href="" class="but-post">commander</a></div></center>
 
                 </article>
                 <article>
@@ -227,7 +228,7 @@
                              Notre mur est en placo, nous avons donc achete
                           </p>
                     </div>
-                    <center><div class="button-postuller"><a href="" class="but-post">Postuler</a></div></center>
+                    <center><div class="button-commander"><a href="" class="but-post">commander</a></div></center>
                 </article>
                 
 
