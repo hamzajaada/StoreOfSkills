@@ -14,11 +14,8 @@
                 <i class="fa-solid fa-user-gear"></i><a class="vos" href="{{ route('profil') }}">Profil</a><br>
                 <i class="fa-solid fa-wrench"></i><a class="vos" href="{{ route('pageservices') }}">Services</a><br>
                 <i class="fa-solid fa-toolbox"></i><a class="vos" href="{{ route('pagedemanes') }}">Demandes</a><br>
-                <i class="fa-solid fa-paint-roller"></i><a class="vos" href="profil.php">vos services</a><br>
-                <i class="fa-regular fa-pen-to-square"></i><a class="vos" href="profil.php">vos demandes</a><br>
                 <i class="fa-solid fa-reply"></i><a class="vos" href="profil.php">les reponses</a><br>
-                <i class="fa-solid fa-plus"></i><a class="vos" href="{{ route('page.ajouteOffre') }}">Ajouter un service</a><br>
-                <i class="fa-solid fa-plus"></i><a class="vos" href="{{ route('page.ajouteOffre') }}">Ajouter un demande</a><br>
+                <i class="fa-solid fa-plus"></i><a class="vos" href="{{ route('page.ajouteOffre') }}">Ajout d'offre</a><br>
             </div>
         </div>
     </section>
