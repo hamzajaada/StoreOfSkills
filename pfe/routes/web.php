@@ -47,3 +47,7 @@ Route::get('/services', function () {
 Route::get('/demandes', function () {
     return view('page.demandes');
 });
+
+Route::get('/profile', function () {
+    return view('page.profile');
+});
