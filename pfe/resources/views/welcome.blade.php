@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Store of Skills</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -105,8 +105,8 @@
                 </div>
         </div>
         <div class="part2">
-                <a class="lien-part1" href="login.php"><div class="button-part1">Proposer un service</div></a>
-                <a class="lien-part2" href="login.php"><div class="button-part2">Demander un service</div></a>
+                <a class="lien-part1" href="{{ route('login') }}"><div class="button-part1">Proposer un service</div></a>
+                <a class="lien-part2" href="{{ route('login') }}"><div class="button-part2">Demander un service</div></a>
         </div>
     </section>
     <section class="P-2">
@@ -159,7 +159,7 @@
                             </article>
 
             </div>
-               <center><div class="button-serv"><a href="" class="texte-butser">Voir plus</a></div></center>
+               <center><div class="button-serv"><a href="{{ route('login') }}" class="texte-butser">Voir plus</a></div></center>
     </section>
 
 <section class="P-3">
@@ -210,7 +210,7 @@
             </article>
 </div>
 
-              <center><div class="button-dem"><a href="" class="texte-butdem">Voir plus</a></div></center>
+              <center><div class="button-dem"><a href="{{ route('login') }}" class="texte-butdem">Voir plus</a></div></center>
 </section>
 <section class="P-4">
    <center><h1  class="store">Store Of <span class="skills">Skills</span></h1></center>
@@ -229,7 +229,7 @@
         <h3>3. Je suis alerté en temps réel des <br> demandes postées autour de moi.</h3>
     </div>
    </div>
-   <center><div class="button-pre-ser"><a href="" class="texte-pre-ser"> Je propose mes services</a></div></center>
+   <center><div class="button-pre-ser"><a href="{{ route('login') }}" class="texte-pre-ser"> Je propose mes services</a></div></center>
 </section>
 <section class="P-5">
   <center> <h1 class="notif-titre">Développez votre activité avec <span class="S">Store </span> of <span class="K">Skills</span> </h1></center>
@@ -259,7 +259,7 @@
             </div>
         </div>
 </div>
-<center><div class="button-inscr"><a href="" class="texte-inscr"> Je m'inscrire</a></div></center>
+<center><div class="button-inscr"><a href="{{ route('register') }}" class="texte-inscr"> Je m'inscrire</a></div></center>
 
 </section>
 @extends('page.footer')
