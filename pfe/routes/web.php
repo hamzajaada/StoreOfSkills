@@ -44,3 +44,6 @@ Route::get('/admin/offres', function () {
 Route::get('/services', function () {
     return view('page.services');
 });
+Route::get('/demandes', function () {
+    return view('page.demandes');
+});
