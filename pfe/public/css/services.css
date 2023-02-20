@@ -29,13 +29,14 @@ i{
     margin-bottom: 20px;
     height: 550px;
  }
- 
+
  .titre-part3{
    margin-top: 30px;
     text-align: center;
-    font-family: 'Open Sans', sans-serif;  
+    font-family: 'Open Sans', sans-serif;
     font-size: 2em;
     font-weight: 700;
+    margin-right: 212px;
  }
  .demandes{
     display: flex;
@@ -44,8 +45,8 @@ i{
     margin-top: 40px;
     margin-bottom: -143px;
     height: 500px;
-    width: 1367px;
-    
+    width: 85%;
+
  }
  article{
     width: 400px;
@@ -87,7 +88,7 @@ i{
 .but-post:hover{
    color: #fafafa;
 }
- 
+
  .info-per{
     width: 360px;
     height: 80px;
@@ -123,7 +124,7 @@ i{
  }
  .info-prfl{
     margin-left: 10px;
-    font-family: 'Open Sans', sans-serif;  
+    font-family: 'Open Sans', sans-serif;
  }
  .image-dem img{
     width: 360px;
@@ -133,14 +134,14 @@ i{
 
  .text-dem{
     margin-top: 10px;
-    font-family: 'Open Sans', sans-serif;  
+    font-family: 'Open Sans', sans-serif;
  }
  /*.text-ser{
     margin-top: 10px;
     font-family: 'Open Sans', sans-serif;
     margin-left: 10px;
  }*/
- 
+
  /*.demandes{
     display: flex;
     justify-content: space-around;
