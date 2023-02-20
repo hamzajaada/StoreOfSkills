@@ -51,3 +51,7 @@ Route::get('/demandes', function () {
 Route::get('/profile', function () {
     return view('page.profile');
 });
+
+Route::get('/offres', function () {
+    return view('page.ajouteOffre');
+});
