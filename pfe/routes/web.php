@@ -43,11 +43,11 @@ Route::get('/admin/offres', function () {
 });
 Route::get('/services', function () {
     return view('page.services');
-});
+})->name('pageservices');
 Route::get('/demandes', function () {
     return view('page.demandes');
-});
+})->name('pagedemanes');
 
 Route::get('/profile', function () {
     return view('page.profile');
-});
+})->name('profil');
