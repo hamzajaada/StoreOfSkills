@@ -25,27 +25,47 @@
 <div id="app">
     @extends('page.fixeHeader')
     <section class="services-p">
-    @extends('page.fixeBarre')
+    <section class="main-sec1">
+        <div class="barre">
+            <div class="botton">
+                <i class="fa-sharp fa-solid fa-address-card"></i><a class="vos" href="profil.php">Profil</a><br>
+                <i class="fa-solid fa-wrench"></i><a class="vos" href="profil.php">Services</a><br>
+                <i class="fa-solid fa-toolbox"></i><a class="vos" href="profil.php">Demandes</a><br>
+                <i class="fa-solid fa-wrench"></i><a class="vos" href="profil.php">vos services</a><br>
+                <i class="fa-solid fa-toolbox"></i><a class="vos" href="profil.php">vos demandes</a><br>
+            </div>
+        </div>
+    </section>
     <section class="P-2" >
-        <h1 class="titre-part3" style="margin-top: 70px;text-align:center;margin-right:295px">Profile</h1>
+        <h1 class="titre-part3" style="margin-top: 70px;text-align:center;margin-right:295px">Offres</h1>
     <div class="info-compte">
         <form class="row g-3">
-            <h2>Informations de compte</h2>
-            <div class="col-md-6">
-              <label for="inputNom" class="form-label">Nom</label>
-              <input type="text" class="form-control" id="inputNom">
+            <h2>Ajoute d'offre</h2>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Type:</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Service</option>
+                    <option>Demande</option>
+                </select>
             </div>
-            <div class="col-md-6">
-              <label for="inputPrenom" class="form-label">Prenom</label>
-              <input type="text" class="form-control" id="inputPrenom">
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Categorie:</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
             </div>
-            <div class="col-12">
-              <label for="inputEmail" class="form-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail">
-            </div>
-            <div class="col-12">
-                <label for="inputAddress" class="form-label">Address</label>
-                <input type="text" class="form-control" id="inputAddress">
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Offre:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
               </div>
               <div class="col-12">
                 <label for="inputImage" class="form-label">Image</label>
@@ -53,34 +73,11 @@
               </div>
 
             <div class="col-12">
-                <center><button type="submit" class="btn btn-primary" style="width: 50%;">Modifer</button></center>
+                <center><button type="submit" class="btn btn-primary" style="width: 50%;">Ajouter</button></center>
             </div>
           </form>
     </div>
-    <div class="mot_passe" style="margin-bottom: 30px">
-        <form class="row g-3">
-            <h2>Modification de mot de passe</h2>
-            <div class="col-12">
-                <label for="inputPassword4" class="form-label">Mot de passe actuelle</label>
-                <input type="password" class="form-control" id="inputPassword4">
-            </div>
-            <div class="col-12">
-                <label for="inputPassword4" class="form-label">Nouveau mot de passe</label>
-                <input type="password" class="form-control" id="inputPassword4">
-            </div>
-            <div class="col-12">
-                <label for="inputPassword4" class="form-label">Confirmer le mot de passe</label>
-                <input type="password" class="form-control" id="inputPassword4">
-            </div>
-
-            <div class="col-12">
-                <center><button type="submit" class="btn btn-primary" style="width: 50%;">Modifer</button></center>
-            </div>
-        </form>
-    </div>
-    </section>
 </section>
-
 <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
 </body>
 </html>

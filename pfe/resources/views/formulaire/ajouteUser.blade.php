@@ -9,15 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,400;1,500&family=Phudu:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-    <h2 class="header-h2">Store of  skills</h2>
-    <nav class="header-nav">
-        <ul>
-            <li><a href="#">Acceuil</a></li>
-            <li><a href="#">Logout</a></li>
-        </ul>
-    </nav>
-</header>
+    @extends('page.fixeHeader')
 <form class="forme_user">
     <h2>Ajoute d'utilisateur</h2>
     <label for="nom">Nom:</label>
