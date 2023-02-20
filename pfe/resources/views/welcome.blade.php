@@ -31,16 +31,78 @@
 <link href="https://fonts.googleapis.com/css2?family=Acme&family=Alegreya+Sans+SC:ital@1&family=Bebas+Neue&family=Dosis&family=Kanit:ital,wght@0,100;0,200;1,100&family=Open+Sans&family=Oswald&family=Poiret+One&family=Poppins:wght@500&family=Prompt:ital,wght@1,200&family=Questrial&family=Roboto+Condensed&family=Rowdies:wght@700&family=Slabo+27px&family=Unbounded:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    @extends('page.fixeHeader')
+    <nav style="position: fixed;width: 100%" class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="{{ url('/') }}" >
+            Store <span style="color:#ff3c74">of</span>  Skills
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <section class="P-1">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Left Side Of Navbar -->
+            <ul class="navbar-nav me-auto">
+
+            </ul>
+
+            <!-- Right Side Of Navbar -->
+            <ul class="navbar-nav ms-auto">
+                <!-- Authentication Links -->
+                @guest
+                    @if (Route::has('login'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        </li>
+                    @endif
+
+                    @if (Route::has('register'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        </li>
+                    @endif
+                @else
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->nom}} {{ Auth::user()->prenom}}
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                @endguest
+            </ul>
+        </div>
+    </div>
+</nav>
+    {{--<header class="main-header">
+        <div class="container">
+            <h2 class="container-h2">Store of  Skills</h2>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="{{ route('login') }}">Connexion</a></li>
+              <li><a href="{{ route('register') }}">Inscription</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>--}}
+      <section class="P-1">
         <div class="main-part1">
-            <div class="part1">
-                <div class="logo-part1"><img src="images/pinse-remove.png" alt="" srcset=""></div>
-                    <h2 id="text-part1"> <span class="PROPOSER">Proposez</span>  & <span class="TROUVER">Trouvez</span> <br>
-                        Les services et Les emplois près de chez vous.
-                    </h2>
-            </div>
+                 <div class="part1">
+                        <div class="logo-part1"><img src="images/pinse-remove.png" alt="" srcset=""></div>
+                        <h2 id="text-part1"> <span class="PROPOSER">Proposez</span>  & <span class="TROUVER">Trouvez</span> <br>
+                            Les services et Les emplois près de chez vous.
+                        </h2>
+                </div>
         </div>
         <div class="part2">
                 <a class="lien-part1" href="login.php"><div class="button-part1">Proposer un service</div></a>
@@ -49,7 +111,6 @@
     </section>
     <section class="P-2">
         <h2 class="titre-part3">Les dernières <span id="span-t2">demandes</span></h2>
-<<<<<<< HEAD
             <div class="services">
 
                             <article>
@@ -87,44 +148,6 @@
                                 </div>
                                 <div class="image-dem">
                                     <img src="images/dem3.jpg" alt="" srcset="">
-=======
-        <div class="services">
-            <article>
-                <div class="info-per">
-                    <div class="img-prfl"><img src="images/profil1.jpg" alt="" srcset=""></div>
-                        <h4 class="info-prfl">Alyan GETEREZ</h4>
-                    </div>
-                    <div class="image-dem">
-                        <img src="images/dem1.jpg" alt="" srcset="">
-                    </div>
-                    <div class="desc-dem">
-                        <p class="text-dem">Bonjour, nous avons un problème de toilette bouché impossible de le débouché
-                                on apprécierait un coup de main pour ceux qui le peuvent
-                        </p>
-                    </div>
-                </article>
-                <article>
-                    <div class="info-per">
-                        <div class="img-prfl"><img src="images/profil2.jpg" alt="" srcset=""></div>
-                        <h4 class="info-prfl">Mamado Sedebi</h4>
-                    </div>
-                    <div class="image-dem">
-                        <img src="images/dem2.jpg" alt="" srcset="">
-                    </div>
-                    <div class="desc-dem">
-                        <p class="text-dem">Bonjour, nous ne sommes pas véhiculé du coup nous recherchons
-                             une personne véhiculé pour nous aider à récupérer un salon de jardin au 6 rue Clau
-                          </p>
-                    </div>
-                </article>
-                <article>
-                    <div class="info-per">
-                        <div class="img-prfl"><img src="images/profil3.jpg" alt="" srcset=""></div>
-                        <h4 class="info-prfl">Mamado Sedebi</h4>
-                    </div>
-                    <div class="image-dem">
-                        <img src="images/dem3.jpg" alt="" srcset="">
->>>>>>> a1916ea497d8c62adc65d6fec309b1f74b8659f4
 
                                 </div>
                                 <div class="desc-dem">
@@ -180,8 +203,8 @@
                 </div>
                 <div class="desc-ser">
                     <p class="text-ser">
-                        En tant qu'infirmière, mon service est axé sur les soins et le bien-être de mes patients. J'ai une formation approfondie en anatomie, en physiologie et en pharmacologie, ce qui me permet de fournir des soins adaptés à chaque patient.
-
+                        En tant qu'infirmière, mon service est axé sur les soins et le bien-être de mes patients. J'ai une formation approfondie en anatomie, en physiologie et en pharmacologie, ce qui me permet de fournir des soins adaptés à chaque patient. 
+                       
                       </p>
                 </div>
             </article>
