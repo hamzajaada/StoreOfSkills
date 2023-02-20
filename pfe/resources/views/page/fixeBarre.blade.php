@@ -10,12 +10,12 @@
 <body>
     <section class="main-sec1">
         <div class="barre">
-            <div class="botton">      
+            <div class="botton">
                 <i class="fa-solid fa-user-gear"></i><a class="vos" href="{{ route('profil') }}">Profil</a><br>
                 <i class="fa-solid fa-wrench"></i><a class="vos" href="{{ route('pageservices') }}">Services</a><br>
                 <i class="fa-solid fa-toolbox"></i><a class="vos" href="{{ route('pagedemanes') }}">Demandes</a><br>
-                <i class="fa-solid fa-reply"></i><a class="vos" href="profil.php">les reponses</a><br>
-                <i class="fa-solid fa-plus"></i><a class="vos" href="{{ route('page.ajouteOffre') }}">Ajout d'offre</a><br>
+                <i class="fa-solid fa-reply"></i><a class="vos" href="{{ route('reponse') }}">les reponses</a><br>
+                <i class="fa-solid fa-plus"></i><a class="vos" href="{{ route('page.ajouteOffre') }}">Ajoute d'offre</a><br>
             </div>
         </div>
     </section>

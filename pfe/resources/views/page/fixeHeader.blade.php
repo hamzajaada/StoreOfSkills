@@ -59,10 +59,40 @@
 
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
+
+                                {{-- <a class="dropdown-item" href="{{ route('profil') }}"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                    {{ __('Profil') }}
+                                </a>
+
+                                <a class="dropdown-item" href="{{ route('pageservices') }}"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                    {{ __('Services') }}
+                                </a>
+
+                                <a class="dropdown-item" href="{{ route('pagedemanes') }}"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                    {{ __('Demandes') }}
+                                </a>
+
+                                <a class="dropdown-item" href=""
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                    {{ __('Les reponses') }}
+                                </a>
+
+                                <a class="dropdown-item" href="{{ route('page.ajouteOffre') }}"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                    {{ __('Offre') }}
+                                </a> --}}
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf

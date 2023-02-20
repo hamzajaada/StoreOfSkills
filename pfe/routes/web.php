@@ -21,14 +21,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/ajoute/offres',function (){
+Route::get('/home/ajoute/offres',function (){
     return view('page.ajouteOffre');
 })->name('page.ajouteOffre');
 
-Route::get('/ajoute/users',function (){
+Route::get('/home/ajoute/users',function (){
     return view('formulaire.ajouteUser');
 });
-Route::get('/profil',function (){
+Route::get('/home/profil',function (){
     return view('page.pageparlogin');
 });
 
@@ -41,18 +41,22 @@ Route::get('/admin/users', function () {
 Route::get('/admin/offres', function () {
     return view('admin.offre');
 });
-Route::get('/services', function () {
+Route::get('/home/services', function () {
     return view('page.services');
 })->name('pageservices');
-Route::get('/demandes', function () {
+Route::get('/home/demandes', function () {
     return view('page.demandes');
 })->name('pagedemanes');
 
-Route::get('/profile', function () {
+Route::get('/home/profile', function () {
     return view('page.profile');
 
 })->name('profil');
 
-Route::get('/offres', function () {
+Route::get('/home/offres', function () {
     return view('page.ajouteOffre');
 })->name('offre');
+
+Route::get('/home/reponse', function () {
+    return view('page.reponse');
+})->name('reponse');
