@@ -41,22 +41,22 @@ Route::get('/admin/users', function () {
 Route::get('/admin/offres', function () {
     return view('admin.offre');
 });
-Route::get('/home/services', function () {
+Route::get('/services', function () {
     return view('page.services');
 })->name('pageservices');
-Route::get('/home/demandes', function () {
+Route::get('/demandes', function () {
     return view('page.demandes');
 })->name('pagedemanes');
 
-Route::get('/home/profile', function () {
+Route::get('/profile', function () {
     return view('page.profile');
 
 })->name('profil');
 
-Route::get('/home/offres', function () {
+Route::get('/offres', function () {
     return view('page.ajouteOffre');
 })->name('offre');
 
-Route::get('/home/reponse', function () {
+Route::get('/reponse', function () {
     return view('page.reponse');
 })->name('reponse');
