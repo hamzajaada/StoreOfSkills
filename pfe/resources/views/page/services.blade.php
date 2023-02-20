@@ -80,8 +80,8 @@
     
     <section class="P-2">
    
-   <h2 class="titre-part3">Les dernières <span id="span-t2" style="color:#ff3c74">Services</span></h2>
-   <div class="demandes">
+            <h2 class="titre-part3">Les dernières <span id="span-t2" style="color:#ff3c74">Services</span></h2>
+            <div class="demandes">
 
                 <article>
                     <div class="info-per">
@@ -221,12 +221,8 @@
                           </p>
                     </div>
                     <center><div class="button-commander"><a href="" class="but-post">commander</a></div></center>
-                </article>
-                
-
-    </div>
-
-                  
+                </article>  
+            </div>     
     </section> 
 </section>
 <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <footer>
+    <footer style="top:0">
         <div class="logo-footer"><img src="images/logodeloginremove.png" alt="" srcset=""></div>
         <div class="social"><h3>Retrouvez-nous  <br> <a class="link-a" href=""><i class="fa-brands fa-instagram"></i></a> <a class="link-a" href=""><i class="fa-brands fa-facebook"></i></a> <a class="link-a" href=""><i class="fa-brands fa-linkedin"></i></a> <a class="link-a" href=""><i class="fa-solid fa-location-dot"></i></a></h3></div>
     </footer>

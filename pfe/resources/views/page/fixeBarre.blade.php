@@ -10,14 +10,19 @@
 <body>
     <section class="main-sec1">
         <div class="barre">
-            <div class="botton">
+            <div class="botton">      
+                <i class="fa-solid fa-house"></i><a class="vos" href="profil.php">Home</a><br>
                 <i class="fa-sharp fa-solid fa-address-card"></i><a class="vos" href="{{ route('profil') }}">Profil</a><br>
                 <i class="fa-solid fa-wrench"></i><a class="vos" href="{{ route('pageservices') }}">Services</a><br>
                 <i class="fa-solid fa-toolbox"></i><a class="vos" href="{{ route('pagedemanes') }}">Demandes</a><br>
                 <i class="fa-solid fa-wrench"></i><a class="vos" href="profil.php">vos services</a><br>
                 <i class="fa-solid fa-toolbox"></i><a class="vos" href="profil.php">vos demandes</a><br>
+                <i class="fa-solid fa-reply"></i><a class="vos" href="profil.php">les reponses</a><br>
+
             </div>
         </div>
     </section>
+    <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
+
 </body>
 </html>

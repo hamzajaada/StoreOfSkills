@@ -8,6 +8,7 @@
     border-left: 0.1em solid lightgray;
     z-index: 999;
     padding: 10px;
+    background-color: rgb(244, 242, 242);
 }
 
 .vos{
@@ -17,6 +18,10 @@
     font-weight: 400;
     color: #333333;
     margin-left: 18px;
+    margin-bottom: 9px;
+}
+.vos:hover{
+    color: orange;
 }
 
 i{
