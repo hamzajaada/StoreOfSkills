@@ -11,6 +11,7 @@
     <section class="main-sec1">
         <div class="barre">
             <div class="botton">
+                <i class="fa-solid fa-user-gear"></i><a class="vos" href="{{ route('profil') }}">admin</a><br>
                 <i class="fa-solid fa-user-gear"></i><a class="vos" href="{{ route('profil') }}">Profil</a><br>
                 <i class="fa-solid fa-wrench"></i><a class="vos" href="{{ route('pageservices') }}">Services</a><br>
                 <i class="fa-solid fa-toolbox"></i><a class="vos" href="{{ route('pagedemanes') }}">Demandes</a><br>
