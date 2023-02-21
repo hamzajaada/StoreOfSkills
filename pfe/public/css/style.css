@@ -449,9 +449,23 @@ footer{
 }
 /*smartscreen*/
 @media screen and (max-width:620px){
+   #text-part1{
+      font-size: 2.3em;
+      font-weight: 400;
+      margin-top: 0px;
+      margin-left: 60px;
+   }
    .part1{
+      margin-top: 0px;
       display: block;
    }
+   .titre-part3 {
+      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 2em;
+      font-weight: 700;
+      margin-left: 60px;
+  }
    .text-part1{
       font-size: 1,3em;
       font-weight: 300;
@@ -465,13 +479,20 @@ footer{
       width: 300px;
       height: 470px;
       margin-bottom: 20px;
-      margin-left: 36px;
+      margin-left: 93px;
    }
    .image-dem img{
       width: 200px;
       height: 150px;
       margin-left: 27px;
    }
+   .titre-part4 {
+      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 2em;
+      font-weight: 700;
+      margin-left: 70px;
+  }
    .desc-dem{
       width: 250px;
 
@@ -486,6 +507,10 @@ footer{
       width: 250px;
 
    }
+   .part2{
+      margin-left: 50px;
+
+   }
    .services{
       display: block;
       margin-bottom: 975px;
@@ -497,25 +522,70 @@ footer{
    .P-2{
       margin-bottom: 1070px;
    }
-   .P-3{
-   
+   .P-4{
+      background-color: #fff;
+      margin-bottom: 600px;
+ 
    }
-   .p-4{
-      width: 100%;
-   }
+   .button-pre-ser {
+      width: 226px;
+      height: 45px;
+      border-radius: 30px;
+      background-color: #ff3c74;
+      padding: 10px;
+      text-align: center;
+      margin-top: 50px;
+      margin-right: -47px;
+  }
    .button-serv{
       margin-bottom: 100px;
+      margin-left: 50px;
+   }
+   .button-dem{
+     
+      margin-left: 50px;
+   }
+   .button-inscr{
+      margin-left: 70px;
    }
    .demandes{
       display: block;;}
    .cont-img{
-      display: block;
+    display: block;
 
    }
    .img-1{
-      width: 200px;
-      height: 150px;
+      margin-left: 94px;
    }
-   
-   
+   .notif{
+      display: block;
+   }
+   .store {
+      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 2em;
+      font-weight: 700;
+      margin-left: 80px;
+  }
+   .notif-titre {
+      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.5em;
+      font-weight: 700;
+      margin-left: 70px;
+  }
+  .titre-not1, .titre-not2, .titre-not3 {
+   text-align: center;
+   font-family: 'Open Sans', sans-serif;
+   color: #172433;
+   font-size: 1.9em;
+   font-weight: 1000;
+  
+}
+.desc {
+   margin-top: 20px;
+   margin-right: -27px;
+   margin-left: 17px;
+}
+
 }

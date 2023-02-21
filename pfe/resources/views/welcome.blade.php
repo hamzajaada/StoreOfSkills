@@ -215,7 +215,7 @@
 
         </h3>
     </div>
-    <div class="img1">
+    <div class="img-1">
         <img src="images/homepage-telephone-vibre-l.png" alt="" srcset="">
         <h3>3. Je suis alerté en temps réel des <br> demandes postées autour de moi.</h3>
     </div>
