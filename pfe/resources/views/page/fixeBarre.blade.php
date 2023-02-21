@@ -17,6 +17,9 @@
                 <i class="fa-solid fa-toolbox"></i><a class="vos" href="{{ route('pagedemanes') }}"> Demandes</a><br>
                   <i class="fa-solid fa-reply"></i>  <a class="vos" href="{{ route('reponse') }}">Reponses</a><br>
                     <i class="fa-solid fa-plus"></i>    <a class="vos" href="{{ route('page.ajouteOffre') }}">Offres</a><br>
+                    <i class="fa-solid fa-wrench"></i><a class="vos" href="{{ route('vosservices') }}">Votre services</a><br>
+                    <i class="fa-solid fa-wrench"></i><a class="vos" href="{{ route('pageservices') }}">Votre demandes</a><br>
+
             </div>
         </div>
     </section>

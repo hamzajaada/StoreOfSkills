@@ -141,5 +141,34 @@
  }*/
  .services-p{
    display: flex;
-   width: 90%;
+   width: 85%;
  }
+.butns{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 17px;
+}
+
+.modf{
+  padding-left: 10px;
+  padding-top: 5px;
+   width: 100px;
+   height: 40px;
+   background-color:#48d92f;
+   border-radius: 10px;
+   font-family: 'Open Sans', sans-serif;
+}
+.modf:hover{
+   background-color:#198d05;
+}
+.sup{
+   font-family: 'Open Sans', sans-serif;
+      padding: 5px;
+   width: 105px;
+   height: 40px;
+   background-color:red;
+   border-radius: 10px;
+}
+.sup:hover{
+   background-color:rgb(188, 35, 35);
+}
