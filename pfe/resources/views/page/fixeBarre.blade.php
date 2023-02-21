@@ -11,8 +11,8 @@
     <section class="main-sec1">
         <div class="barre">
             <div class="botton">
-               <i class="fa-solid fa-house"></i> <a class="vos" href="{{ route('homee') }}"></i> Home</a><br>
-                <i class="fa-solid fa-user-gear"></i> <a class="vos" href="{{ route('profil') }}">Profil</a><br>
+               <i class="fa-solid fa-house"></i> <a class="vos" href="{{ route('homee') }}"></i>Accueil</a><br>
+                <i class="fa-solid fa-user-gear"></i> <a class="vos" href="{{ route('profil') }}">Profile</a><br>
                 <i class="fa-solid fa-wrench"></i><a class="vos" href="{{ route('pageservices') }}"> Services</a><br>
                 <i class="fa-solid fa-toolbox"></i><a class="vos" href="{{ route('pagedemanes') }}"> Demandes</a><br>
                   <i class="fa-solid fa-reply"></i>  <a class="vos" href="{{ route('reponse') }}">Reponses</a><br>
