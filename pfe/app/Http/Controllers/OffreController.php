@@ -12,7 +12,7 @@ class OffreController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index():Response
+    public function index()
     {
         return view('home');
     }
@@ -20,7 +20,7 @@ class OffreController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(): Response
+    public function create()
     {
         return view('offres.create');
     }
@@ -28,7 +28,7 @@ class OffreController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request)
     {
         //
     }
@@ -36,7 +36,7 @@ class OffreController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Offre $offre): Response
+    public function show(Offre $offre)
     {
         //
     }
@@ -44,7 +44,7 @@ class OffreController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Offre $offre): Response
+    public function edit(Offre $offre)
     {
         //
     }
@@ -52,7 +52,7 @@ class OffreController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Offre $offre): RedirectResponse
+    public function update(Request $request, Offre $offre)
     {
         //
     }
@@ -60,7 +60,7 @@ class OffreController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Offre $offre): RedirectResponse
+    public function destroy(Offre $offre)
     {
         //
     }

@@ -26,7 +26,7 @@
     @extends('page.fixeHeader')
     <section class="services-p">
     @extends('page.fixeBarre')
-    <section class="P-2" >
+    <section class="P-2" style="width: 120%">
         <h1 class="titre-part3" style="margin-top: 70px;text-align:center;margin-right:295px">Profile</h1>
     <div class="info-compte">
         <form class="row g-3">

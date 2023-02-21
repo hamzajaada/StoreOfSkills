@@ -11,12 +11,12 @@
     <section class="main-sec1">
         <div class="barre">
             <div class="botton">
-                <div class="btnn"><a class="vos" href="{{ route('homee') }}"><i class="fa-solid fa-house"></i></i></a><br></div>
-                 <div class="btnn"><a class="vos" href="{{ route('profil') }}"><i class="fa-solid fa-user-gear"></i></a><br></div>
-                <div class="btnn"><a class="vos" href="{{ route('pageservices') }}"> <i class="fa-solid fa-wrench"></i></a><br></div>
-                <div class="btnn"><a class="vos" href="{{ route('pagedemanes') }}"> <i class="fa-solid fa-toolbox"></i></a><br></div>
-                    <div class="btnn"><a class="vos" href="{{ route('reponse') }}"><i class="fa-solid fa-reply"></i></a><br></div>
-                        <div class="btnn"><a class="vos" href="{{ route('page.ajouteOffre') }}"><i class="fa-solid fa-plus"></i></a><br></div>
+               <i class="fa-solid fa-house"></i> <a class="vos" href="{{ route('homee') }}"></i> Home</a><br>
+                <i class="fa-solid fa-user-gear"></i> <a class="vos" href="{{ route('profil') }}">Profil</a><br>
+                <i class="fa-solid fa-wrench"></i><a class="vos" href="{{ route('pageservices') }}"> Services</a><br>
+                <i class="fa-solid fa-toolbox"></i><a class="vos" href="{{ route('pagedemanes') }}"> Demandes</a><br>
+                  <i class="fa-solid fa-reply"></i>  <a class="vos" href="{{ route('reponse') }}">Reponses</a><br>
+                    <i class="fa-solid fa-plus"></i>    <a class="vos" href="{{ route('page.ajouteOffre') }}">Offres</a><br>
             </div>
         </div>
     </section>

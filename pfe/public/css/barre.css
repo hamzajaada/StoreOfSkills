@@ -1,13 +1,12 @@
 .barre{
     position: fixed;
     margin-top: 55px;
-   
     height: 100%;
     top: 0;
     right: 0;
     border-left: 0.1em solid lightgray;
     z-index: 999;
-    
+    width: 180px;
     background-color: rgb(244, 242, 242);
 }
 
@@ -15,7 +14,7 @@
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.3em;
-    font-weight: 400;
+    font-weight: 600;
     color: #333333;
     margin-left: 16px;
     
@@ -29,19 +28,49 @@ i{
     font-size: 1.3em;
     font-weight: 400;
     color: #3cb626;
+    margin-left: 16px;
 }
-i:hover{
-    color: azure;
-}
+
 .btnn{
-    padding-top: 19px;
-    padding-left: 5px;
+    padding-top: 23px;
+    padding-left: 9px;
     margin-top: 7px;
-    width: 80px;
+    width: 150px;
     height: 80px;
-    
+
     border-bottom: 0.3px solid rgb(182, 182, 182);
 }
 .btnn:hover{
-    background-color: #3cb626;
+    background-color: #d3d3d3;
 }
+.textaff {
+    display: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    
+    color:#3cb626;
+    margin-bottom: 10px;
+  }
+  
+ 
+  .btnn:hover .textaff {
+    display: block;
+  }
+  
+  .HPO {
+    display: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color:#3cb626;
+    margin-bottom: 10px;
+    margin-left: 20px;
+  }
+  
+ 
+  .btnn:hover .HPO {
+    display: block;
+  }
+  
+  
+  
+  
