@@ -1,13 +1,13 @@
 .barre{
     position: fixed;
     margin-top: 55px;
-    width: 220px;
+   
     height: 100%;
     top: 0;
     right: 0;
     border-left: 0.1em solid lightgray;
     z-index: 999;
-    padding: 10px;
+    
     background-color: rgb(244, 242, 242);
 }
 
@@ -17,14 +17,31 @@
     font-size: 1.3em;
     font-weight: 400;
     color: #333333;
-    margin-left: 18px;
-    margin-bottom: 9px;
+    margin-left: 16px;
+    
+    
 }
 .vos:hover{
-    color: orange;
+    color:rgb(9, 9, 246);
 }
 
 i{
-    font-size: 1.6em;
+    font-size: 1.3em;
     font-weight: 400;
+    color: #3cb626;
+}
+i:hover{
+    color: azure;
+}
+.btnn{
+    padding-top: 19px;
+    padding-left: 5px;
+    margin-top: 7px;
+    width: 80px;
+    height: 80px;
+    
+    border-bottom: 0.3px solid rgb(182, 182, 182);
+}
+.btnn:hover{
+    background-color: #3cb626;
 }

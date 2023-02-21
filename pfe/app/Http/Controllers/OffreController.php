@@ -12,7 +12,7 @@ class OffreController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(): Response
+    public function index():Response
     {
         return view('home');
     }

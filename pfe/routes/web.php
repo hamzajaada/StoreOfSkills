@@ -60,3 +60,6 @@ Route::get('/offres', function () {
 Route::get('/reponse', function () {
     return view('page.reponse');
 })->name('reponse');
+Route::get('/home', function () {
+    return view('home');
+})->name('homee');

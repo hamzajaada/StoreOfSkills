@@ -1,37 +1,16 @@
-.barre{
-    position: fixed;
-    margin-top: 55px;
-    width: 220px;
-    height: 100%;
-    top: 0;
-    right: 0;
-    border-left: 0.1em solid lightgray;
-    z-index: 999;
-    padding: 10px;
-}
 
-.vos{
-    text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.3em;
-    font-weight: 400;
-    color: #333333;
-    margin-left: 18px;
-}
 
-i{
-    font-size: 1.6em;
-    font-weight: 400;
-}
+
 .P-2{
     margin-top: 50px;
     background-color:#fafafa;
     margin-bottom: 20px;
     height: 550px;
+    margin-left: 20px;
  }
 
  .titre-part3{
-   margin-top: 30px;
+    margin-top: 30px;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-size: 2em;
@@ -55,6 +34,7 @@ i{
     box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
     background-color: #fff;
     margin-top: 30px;
+    margin-left: 10px;
  }
  .button-commander{
    width: 50%;
@@ -161,4 +141,5 @@ i{
  }*/
  .services-p{
    display: flex;
+   width: 110%;
  }

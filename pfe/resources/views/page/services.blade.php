@@ -74,7 +74,8 @@
                 </ul>
             </div>
         </div>
-    </nav> <section class="services-p">
+    </nav> 
+    <section class="services-p">
   
     @extends('page.fixeBarre')
     
