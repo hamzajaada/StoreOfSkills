@@ -447,4 +447,75 @@ footer{
 .link-a{
    color: #333333;
 }
+/*smartscreen*/
+@media screen and (max-width:620px){
+   .part1{
+      display: block;
+   }
+   .text-part1{
+      font-size: 1,3em;
+      font-weight: 300;
+      margin-left: 50px;
+   }
+   .button-part1,.button-part2{
+      width: 100px;
+      height: 41px;
+   }
+   article{
+      width: 300px;
+      height: 470px;
+      margin-bottom: 20px;
+      margin-left: 36px;
+   }
+   .image-dem img{
+      width: 200px;
+      height: 150px;
+      margin-left: 27px;
+   }
+   .desc-dem{
+      width: 250px;
 
+   }
+   
+   .image-ser img{
+      width: 200px;
+      height: 150px;
+      margin-left: 27px;
+   }
+   .desc-ser{
+      width: 250px;
+
+   }
+   .services{
+      display: block;
+      margin-bottom: 975px;
+   }
+   .demandes{
+      display: block;
+      margin-bottom: 975px;
+   }
+   .P-2{
+      margin-bottom: 1070px;
+   }
+   .P-3{
+   
+   }
+   .p-4{
+      width: 100%;
+   }
+   .button-serv{
+      margin-bottom: 100px;
+   }
+   .demandes{
+      display: block;;}
+   .cont-img{
+      display: block;
+
+   }
+   .img-1{
+      width: 200px;
+      height: 150px;
+   }
+   
+   
+}
