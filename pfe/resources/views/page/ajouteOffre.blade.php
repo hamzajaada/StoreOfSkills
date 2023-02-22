@@ -29,7 +29,7 @@
        @extends('page.fixeBarre')
     </section>
     <section class="P-2" >
-        <h1 class="titre-part3" style="margin-top: 70px;margin-left:493px;">Ajoute <span style="color:rgb(36, 189, 36)">d'offre</span> </h1>
+        <h1 class="titre-part3" style="margin-top: 70px;margin-left:334px;">Ajoute <span style="color:rgb(36, 189, 36)">d'offre</span> </h1>
     <div class="info-compte" style="margin-left: 238px;">
         <form class="row g-3">
             

@@ -453,18 +453,23 @@ footer{
       font-size: 2.3em;
       font-weight: 400;
       margin-top: 0px;
-      margin-left: 60px;
+      margin-left: 163px;
    }
+   .logo-part1 img {
+      width: 141%;
+      height: 500px;
+  }
    .part1{
       margin-top: 0px;
       display: block;
    }
+   
    .titre-part3 {
       text-align: center;
       font-family: 'Open Sans', sans-serif;
       font-size: 2em;
       font-weight: 700;
-      margin-left: 60px;
+      margin-left: 128px;
   }
    .text-part1{
       font-size: 1,3em;
@@ -479,7 +484,7 @@ footer{
       width: 300px;
       height: 470px;
       margin-bottom: 20px;
-      margin-left: 93px;
+      margin-left: 133px;
    }
    .image-dem img{
       width: 200px;
@@ -508,7 +513,7 @@ footer{
 
    }
    .part2{
-      margin-left: 50px;
+      margin-left: 114px;
 
    }
    .services{
@@ -539,14 +544,14 @@ footer{
   }
    .button-serv{
       margin-bottom: 100px;
-      margin-left: 50px;
+      margin-left: 134px;
    }
    .button-dem{
      
-      margin-left: 50px;
+      margin-left: 134px;
    }
    .button-inscr{
-      margin-left: 70px;
+      margin-left: 134px;
    }
    .demandes{
       display: block;;}

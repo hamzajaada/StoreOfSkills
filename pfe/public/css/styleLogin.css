@@ -40,3 +40,38 @@ button{
 .strong{
     margin-left: 10px;
 }
+/*smartscreen*/
+@media screen and (max-width:620px){
+   .card-body{
+    display: block;
+  
+   }
+   form {
+    margin-top: -24px;
+   }
+   .card{
+    margin-left: 30px;
+    margin-top: 40px;
+    margin-right: 30px;
+   }
+   #email, #password {
+    width: 73%;
+   }
+   .logo img {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+    
+  }
+  .col-form-label {
+    padding-top: calc(0.375rem + 1px);
+    padding-bottom: calc(0.375rem + 1px);
+    margin-bottom: 0;
+    font-size: inherit;
+    line-height: 1.6;
+    margin-left: 53px;
+}
+
+
+ 
+ }
