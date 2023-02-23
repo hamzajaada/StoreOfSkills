@@ -7,7 +7,7 @@
     <title>Document</title>
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    
+
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
@@ -20,9 +20,9 @@
 </head>
 <body>
 <div id="app">
-    @extends('page.fixeHeader')
+    @extends('offres.fixeHeader')
     <section class="main-sec1">
-        @extends('page.fixeBarre')
+        @extends('offres.fixeBarre')
     </section>
 
     <br><h2 style="text-align:center;margin-right:20%;margin-top:30px">Table de <span style="color:#ff3c74">services</span></h2><br>

@@ -10,4 +10,6 @@ class Offre extends Model
 {
     use HasFactory;
     use SoftDeletes;
+
+    protected $fillable=['type','categorie','offre','image_offre','prix'];
 }

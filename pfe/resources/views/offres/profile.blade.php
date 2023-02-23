@@ -23,39 +23,39 @@
 </head>
 <body>
 <div id="app">
-    @extends('page.fixeHeader')
+    @extends('offres.fixeHeader')
     <section class="services-p">
-    @extends('page.fixeBarre')
+    @extends('offres.fixeBarre')
     <section class="P-2" style="width: 120%">
         <h1 class="titre-part3" style="margin-top: 70px;text-align:center;margin-right:295px">Profile</h1>
     <div class="info-compte">
         <form class="row g-3">
             <h2>Informations de compte</h2>
             <div class="col-md-6">
-              <label for="inputNom" class="form-label">Nom</label>
-              <input type="text" class="form-control" id="inputNom">
+                <label for="inputNom" class="form-label">Nom</label>
+                <input type="text" value="{{ $profile->nom }}" class="form-control" id="inputNom">
             </div>
             <div class="col-md-6">
-              <label for="inputPrenom" class="form-label">Prenom</label>
-              <input type="text" class="form-control" id="inputPrenom">
+                <label for="inputPrenom" class="form-label">Prenom</label>
+                <input type="text" value="{{ $profile->prenom }}"  class="form-control" id="inputPrenom">
             </div>
             <div class="col-12">
-              <label for="inputEmail" class="form-label">Email</label>
-              <input type="email" class="form-control" id="inputEmail">
+                <label for="inputEmail" class="form-label">Email</label>
+                <input type="email" value="{{ $profile->email }}"  class="form-control" id="inputEmail">
             </div>
             <div class="col-12">
                 <label for="inputAddress" class="form-label">Address</label>
-                <input type="text" class="form-control" id="inputAddress">
-              </div>
-              <div class="col-12">
+                <input type="text" value="{{ $profile->adresse }}"  class="form-control" id="inputAddress">
+            </div>
+            <div class="col-12">
                 <label for="inputImage" class="form-label">Image</label>
-                <input class="form-control" type="file" id="formFile">
-              </div>
+                <input class="form-control" value="{{asset('image/'.$profile->image)}}"  type="file" id="formFile">
+            </div>
 
             <div class="col-12">
                 <center><button type="submit" class="btn btn-primary" style="width: 50%;">Modifer</button></center>
             </div>
-          </form>
+        </form>
     </div>
     <div class="mot_passe" style="margin-bottom: 30px">
         <form class="row g-3">

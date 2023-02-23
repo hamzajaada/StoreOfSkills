@@ -23,51 +23,65 @@
 </head>
 <body>
 <div id="app">
-    @extends('page.fixeHeader')
+    @extends('offres.fixeHeader')
     <section class="services-p">
     <section class="main-sec1">
-       @extends('page.fixeBarre')
+       @extends('offres.fixeBarre')
     </section>
     <section class="P-2" >
         <h1 class="titre-part3" style="margin-top: 70px;margin-left:334px;">Ajoute <span style="color:rgb(36, 189, 36)">d'offre</span> </h1>
     <div class="info-compte" style="margin-left: 238px;">
-        <form class="row g-3">
-            
+        <form class="row g-3" method="post" action="{{ route('offres.store') }}" enctype="multipart/form-data">
+            @csrf
+
+            <div class="form-group">
+                <label for="exampleFormControlNom">Nom:</label>
+                <input class="form-control" value="{{ Auth::user()->nom }}" name="nom" id="exampleFormControlNom">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlPrenom">Prenom:</label>
+                <input class="form-control" value="{{ Auth::user()->prenom }}" name="prenom" id="exampleFormControlPrenom">
+            </div>
+
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Type:</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                    <option>Service</option>
-                    <option>Demande</option>
+                <select class="form-control" name="type" id="exampleFormControlSelect1">
+                    <option value="service">Service</option>
+                    <option value="demande">Demande</option>
                 </select>
             </div>
+
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Categorie:</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
+                <select class="form-control" name="categorie" id="exampleFormControlSelect1">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                 </select>
             </div>
+
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Offre:</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-              </div>
-              <div class="col-12">
+                <textarea class="form-control" name="offre" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlNember">Prix:</label>
+                <input type="number" class="form-control" name="prix" id="exampleFormControlNember">
+            </div>
+
+            <div class="col-12">
                 <label for="inputImage" class="form-label">Image</label>
-                <input class="form-control" type="file" id="formFile">
-              </div>
+                <input class="form-control" name="image" type="file" id="formFile">
+            </div>
 
             <div class="col-12">
                 <center><button type="submit" class="btn btn-primary" style="width: 50%">Ajouter</button></center>
             </div>
-          </form>
+        </form>
     </div>
 </section>
 <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>

@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    
+
 
     <title>Store of Skills</title>
 
@@ -71,8 +71,8 @@
 
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
 
@@ -86,14 +86,14 @@
         </div>
     </div>
 </nav>
-      <section class="P-1">
+    <section class="P-1">
         <div class="main-part1">
-                 <div class="part1">
-                        <div class="logo-part1"><img src="images/pinse-remove.png" alt="" srcset=""></div>
-                        <h2 id="text-part1"> <span class="PROPOSER">Proposez</span>  & <span class="TROUVER">Trouvez</span> <br>
-                            Les services et Les emplois près de chez vous.
-                        </h2>
-                </div>
+            <div class="part1">
+                <div class="logo-part1"><img src="images/pinse-remove.png" alt="" srcset=""></div>
+                <h2 id="text-part1"> <span class="PROPOSER">Proposez</span>  & <span class="TROUVER">Trouvez</span> <br>
+                    Les services et Les emplois près de chez vous.
+                </h2>
+            </div>
         </div>
         <div class="part2">
                 <a class="lien-part1" href="{{ route('login') }}"><div class="button-part1">Proposer un service</div></a>
@@ -113,7 +113,7 @@
                                         <img src="images/dem1.jpg" alt="" srcset="">
                                 </div>
                                 <div class="desc-dem">
-                                        <p class="text-dem">Bonjour, nous avons un problème de toilette bouché impossible de le débouché 
+                                        <p class="text-dem">Bonjour, nous avons un problème de toilette bouché impossible de le débouché
                                             on apprécierait un coup de main pour ceux qui le peuvent
                                         </p>
                                 </div>
@@ -150,11 +150,11 @@
                             </article>
 
             </div>
-               <center><div class="button-serv"><a href="{{ route('login') }}" class="texte-butser">Voir plus</a></div></center>
+            <center><div class="button-serv"><a href="{{ route('login') }}" class="texte-butser">Voir plus</a></div></center>
     </section>
 
 <section class="P-3">
-  <h2 class="titre-part4">Les dernières <span>services</span></h2>
+<h2 class="titre-part4">Les dernières <span>services</span></h2>
 <div class="demandes">
             <article>
                 <div class="info-per">
@@ -167,7 +167,7 @@
                 <div class="desc-ser">
                     <p class="text-ser">
                         Électricien de formation, je me propose de vous accompagner dans tous vos travaux d'électricité. Du simple dépannage aux travaux de rénovation ou d'installations les plus complexes. N'hésitez pas à me contacter
-                      </p>
+                    </p>
                 </div>
             </article>
             <article>
@@ -181,7 +181,7 @@
                 <div class="desc-ser">
                     <p class="text-ser">
                         Notre entreprise de plomberie est fière de proposer un service professionnel et fiable à tous nos clients. Nous sommes spécialisés dans la réparation et l'installation de toutes sortes de systèmes de plomberie.
-                      </p>
+                    </p>
                 </div>
             </article>
             <article>
@@ -194,14 +194,13 @@
                 </div>
                 <div class="desc-ser">
                     <p class="text-ser">
-                        En tant qu'infirmière, mon service est axé sur les soins et le bien-être de mes patients. J'ai une formation approfondie en anatomie, en physiologie et en pharmacologie, ce qui me permet de fournir des soins adaptés à chaque patient. 
-                       
-                      </p>
+                        En tant qu'infirmière, mon service est axé sur les soins et le bien-être de mes patients. J'ai une formation approfondie en anatomie, en physiologie et en pharmacologie, ce qui me permet de fournir des soins adaptés à chaque patient.
+                    </p>
                 </div>
             </article>
 </div>
 
-              <center><div class="button-dem"><a href="{{ route('login') }}" class="texte-butdem">Voir plus</a></div></center>
+    <center><div class="button-dem"><a href="{{ route('login') }}" class="texte-butdem">Voir plus</a></div></center>
 </section>
 <section class="P-4">
    <center><h1  class="store">Store Of <span class="skills">Skills</span></h1></center>
@@ -219,41 +218,41 @@
         <img src="images/homepage-telephone-vibre-l.png" alt="" srcset="">
         <h3>3. Je suis alerté en temps réel des <br> demandes postées autour de moi.</h3>
     </div>
-   </div>
-   <center><div class="button-pre-ser"><a href="{{ route('login') }}" class="texte-pre-ser"> Je propose mes services</a></div></center>
+</div>
+<center><div class="button-pre-ser"><a href="{{ route('login') }}" class="texte-pre-ser"> Je propose mes services</a></div></center>
 </section>
 <section class="P-5">
-  <center> <h1 class="notif-titre">Développez votre activité avec <span class="S">Store </span> of <span class="K">Skills</span> </h1></center>
+<center> <h1 class="notif-titre">Développez votre activité avec <span class="S">Store </span> of <span class="K">Skills</span> </h1></center>
     <div class="notif">
         <div class="not1">
-             <h1 class="titre-not1">Trouvez <br> des clients</h1>
-             <div class="desc">
-             <h3 class="h3-notif"><i class="fa-sharp fa-regular fa-handshake"></i>4 millions de membres</h3>
-             <h3 class="h3-notif"><i class="fa-brands fa-shopify"></i> Des milliers de demandes chaque jour</h3>
-             <h3 class="h3-notif"><i class="fa-solid fa-globe"></i>Partout en Maroc</h3>
+            <h1 class="titre-not1">Trouvez <br> des clients</h1>
+            <div class="desc">
+                <h3 class="h3-notif"><i class="fa-sharp fa-regular fa-handshake"></i>4 millions de membres</h3>
+                <h3 class="h3-notif"><i class="fa-brands fa-shopify"></i> Des milliers de demandes chaque jour</h3>
+                <h3 class="h3-notif"><i class="fa-solid fa-globe"></i>Partout en Maroc</h3>
             </div>
         </div>
         <div class="not2">
             <h1 class="titre-not2">Développez <br> votre visibilité</h1>
             <div class="desc">
-            <h3 class="h3-notif"><i class="fa-solid fa-magnifying-glass"></i>Référencement de votre profil sur les moteurs de recherche</h3>
-             <h3 class="h3-notif"><i class="fa-regular fa-star"></i>Collecte de vos avis clients</h3>
-             <h3 class="h3-notif"><i class="fa-regular fa-address-card"></i>Cartes de visite et prospectus personnalisés</h3>
+                <h3 class="h3-notif"><i class="fa-solid fa-magnifying-glass"></i>Référencement de votre profil sur les moteurs de recherche</h3>
+                <h3 class="h3-notif"><i class="fa-regular fa-star"></i>Collecte de vos avis clients</h3>
+                <h3 class="h3-notif"><i class="fa-regular fa-address-card"></i>Cartes de visite et prospectus personnalisés</h3>
             </div>
         </div>
         <div class="not3">
             <h1 class="titre-not3">Gérez <br> votre activité</h1>
             <div class="desc">
-            <h3 class="h3-notif"><i class="fa-solid fa-file-invoice"></i>Création et envoi de vos devis et factures à tous vos clients</h3>
-             <h3 class="h3-notif"><i class="fa-regular fa-credit-card"></i>Paiement par carte bancaire sans commission</h3>
-             <h3 class="h3-notif"><i class="fa-solid fa-arrow-up-right-dots"></i>Suivi de votre chiffre d'affaires</h3>
+                <h3 class="h3-notif"><i class="fa-solid fa-file-invoice"></i>Création et envoi de vos devis et factures à tous vos clients</h3>
+                <h3 class="h3-notif"><i class="fa-regular fa-credit-card"></i>Paiement par carte bancaire sans commission</h3>
+                <h3 class="h3-notif"><i class="fa-solid fa-arrow-up-right-dots"></i>Suivi de votre chiffre d'affaires</h3>
             </div>
         </div>
 </div>
 <center><div class="button-inscr"><a href="{{ route('register') }}" class="texte-inscr"> Je m'inscrire</a></div></center>
 
 </section>
-@extends('page.footer')
+@extends('offres.footer')
 <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -17,7 +17,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="logo">
-                       <img src="/images/logodeloginremove.png" alt="" srcset="">
+                        <img src="/images/logodeloginremove.png" alt="" srcset="">
                     </div>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -69,7 +69,7 @@
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                   <div class="forgout"> <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    <div class="forgout"> <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a></div>
                                 @endif

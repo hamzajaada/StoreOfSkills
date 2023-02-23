@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\HomeControlle;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OffreController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,53 +20,15 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Auth::routes();
-
-Route::get('/home/ajoute/offres',function (){
-    return view('page.ajouteOffre');
-})->name('page.ajouteOffre');
-
-Route::get('/home/ajoute/users',function (){
-    return view('formulaire.ajouteUser');
-});
-Route::get('/home/profil',function (){
-    return view('page.pageparlogin');
-});
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::get('/admin/users', function () {
-    return view('admin.user');
-});
-
-Route::get('/admin/offres', function () {
-    return view('admin.offre');
-});
-Route::get('/services', function () {
-    return view('page.services');
-})->name('pageservices');
-Route::get('/demandes', function () {
-    return view('page.demandes');
-})->name('pagedemanes');
-
-Route::get('/profile', function () {
-    return view('page.profile');
-
-})->name('profil');
-
-Route::get('/offres', function () {
-    return view('page.ajouteOffre');
-})->name('offre');
-
-Route::get('/reponse', function () {
-    return view('page.reponse');
-})->name('reponse');
 Route::get('/home', function () {
     return view('home');
-})->name('homee');
-Route::get('/vosservices', function () {
-    return view('page.vosservice');
-})->name('vosservices');
-Route::get('/vosdemandes', function () {
-    return view('page.vosdemandes');
-})->name('vosdemandes');
+})->name('home');
+
+Auth::routes();
+
+Route::resource('offres',OffreController::class);
+Route::get('home/profile',[OffreController::class,'profile'])->name('home.profile');
+Route::get('home/services',[OffreController::class,'services'])->name('home.services');
+Route::get('home/demandes',[OffreController::class,'demandes'])->name('home.demandes');
+Route::get('home/vos-services',[OffreController::class,'services_id'])->name('home.vosservices');
+Route::get('home/vos-demandes',[OffreController::class,'demandes_id'])->name('home.vosdemandes');
