@@ -1,164 +1,113 @@
 *{
-    margin: 0;
-    padding: 0;
+   margin: 0;
+   padding: 0;
+  
+}
+body{
+   overflow: auto;
+   flex-wrap: wrap;
+} 
+.main-part1{
+   display: flex;
+}
+.part1{
+   margin-top: 100px;
+   display: flex;
+   margin-left: 5%;
+   margin-right: 5%;
+}
+.logo-part1 img{
+   width: 100%;
+   height: 500px;
+}
+.P-1{
+   margin-left: 145px;
+}
+span{
+   color: #3cb626;
+}
+#text-part1{
+   margin-top: 125px;
+   font-family: 'Open Sans', sans-serif;  
+   font-size: 4em;
+   font-weight: 900;
+}
+.PROPOSER {
+   color:#3cb626;
+}
+.TROUVER{
+   color:#ff3c74;
+}
+.part2{
+   display: flex;
+   justify-content: space-around;
+}
 
- }
- body{
-    overflow: auto;
-    flex-wrap: wrap;
- }
- .container-h2{
-    font-family: 'Open Sans', sans-serif;
-    margin-left: 40px;
- }
- .main-header {
-    width: 100%;
-    background-color: #ffffff;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    padding: 0 30px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    z-index: 999;
-  }
-
-
-  .main-nav ul {
-    list-style: none;
-    display: flex;
-
-  }
-
-  .main-nav ul li {
-    margin: 0 20px;
-  }
-
-  .main-nav ul li a {
-    text-decoration: none;
-    color: #333333;
-    font-weight: 600;
-    font-family: 'Open Sans', sans-serif;
-
-  }
-  .main-nav ul li a:hover{
-    color: orangered;
-  }
-
-  .logo {
-    width: 150px;
-    height: auto;
-  }
-
-
-  .container{
-    width: 97%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-   .main-part1{
-    display: flex;
- }
-
-  .barre{
-    position: fixed;
-    margin-top: 55px;
-    width: 220px;
-    height: 100%;
-      top: 0;
-      right: 0;
-      border-left: 0.1em solid lightgray;
-    z-index: 999;
-    padding: 10px;
- }
-
- .part1{
-    margin-top: 100px;
-    display: flex;
-    margin-left: 5%;
-    margin-right: 5%;
- }
- .logo-part1 img{
-    width: 100%;
-    height: 500px;
- }
- span{
-    color: #3cb626;
- }
- #text-part1{
-    margin-top: 125px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 4em;
-    font-weight: 900;
- }
- .PROPOSER {
-    color:#3cb626;
- }
- .TROUVER{
-    color:#ff3c74;
- }
- .part2{
-    display: flex;
-    justify-content: space-around;
- }
-
- .lien-part1{
-    color: #fff;
-    text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.2em;
-    font-weight: 400;
- }
- .lien-part2{
-    color: #fff;
-    text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.2em;
-    font-weight: 400;
- }
- .button-part1{
-    width: 226px;
-    height: 30px;
-    border-radius: 6px;
-    background-color: #3cb626;
-    padding: 10px;
-    text-align: center;
-    margin-top: 50px;
-
- }
- .button-part1:hover{
-    background-color:#22910f;
- }
- .button-part2{
-    width: 226px;
-    height: 30px;
-    border-radius: 6px;
-    background-color:#ff3c74;
-    padding: 10px;
-    text-align: center;
-    margin-top: 50px;
- }
- .button-part2:hover{
-    background-color:#d02c5a;
- }
- h3{
-    font-family: 'Open Sans', sans-serif;
-   font-size: 1.3em;
-   font-weight: 400;
-   color: #333333;
-   margin-left: 6px;
-   margin-bottom: 20px;
- }
- .vos{
+.lien-part1,.lien-part2{
+   color: #fff;
    text-decoration: none;
    font-family: 'Open Sans', sans-serif;
-   font-size: 1.3em;
+   font-size: 1.2em;
    font-weight: 400;
-   color: #333333;
-   margin-left: 18px;
- }
- i{
-    font-size: 1.6em;
-    font-weight: 400;
- }
+}
+.lien-part1:hover{
+   color:white;
+}
+.lien-part2:hover{
+   color:white;
+}
+.button-part1{
+   width: 226px;
+   height: 45px;
+   border-radius: 6px;
+   background-color: #3cb626;
+   padding: 10px;
+   text-align: center;
+   margin-top: 50px;
+}
+.button-part1:hover{
+   background-color:#22910f;
+}
+.button-part2{
+   width: 226px;
+   height: 45px;
+   border-radius: 6px;
+   background-color:#ff3c74;
+   padding: 10px;
+   text-align: center;
+   margin-top: 50px;
+}
+.button-part2:hover{
+   background-color:#d02c5a;
+}
+@media screen and (max-width:620px){
+   nav{
+     width: 100%;
+   }
+     #text-part1{
+        font-size: 2.3em;
+        font-weight: 900;
+        margin-top: 0px;
+        margin-left: 109px;
+        width: 100%;
+     }
+     .logo-part1 img {
+        width: 131%;
+        height: 500px;
+    }
+     .part1{
+        margin-top: 0px;
+        display: block;
+     }
+     .P-1{
+      margin-left: -107px;
+     }
+     .main-part1 {
+      width: 85%;
+  }
+  .part2{
+   display: block;
+   margin-left: 200px;
+  }
+   }
+    

@@ -4,8 +4,9 @@
     background-color:#fafafa;
     margin-bottom: 20px;
     height: 550px;
-    margin-left: 20px;
+    margin-left: 220px;
     width: 85%;
+    
  }
 
  .titre-part3{
@@ -16,7 +17,7 @@
     font-weight: 700;
     margin-right: 21px;
  }
- /*.demandes{
+ .demandes{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -24,7 +25,7 @@
     margin-bottom: 23px;
     height: 500px;
 
- }*/
+ }
  article{
     width: 400px;
     height: 490px;
