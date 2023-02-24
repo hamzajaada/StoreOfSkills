@@ -63,7 +63,11 @@ class OffreController extends Controller
         //     'image_offre'=>$imagePath,
         //     'prix'=>$request->prix
         // ]);
-        return redirect()->route('offre');
+        if($request->type=='service'){
+            return redirect()->route('home.services');
+        }elseif($request->type=='demande'){
+            return redirect()->route('home.demandes');
+        }
     }
 
     /**
