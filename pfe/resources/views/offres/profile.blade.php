@@ -35,23 +35,21 @@
                     <h2>Informations de compte</h2>
                     <div class="col-md-6">
                         <label for="inputNom" class="form-label">Nom</label>
-                        <input type="text" value="{{ $profile->nom }}" class="form-control" id="inputNom">
-                    </div>
+                        <input type="text" name="nom" value="{{ $profile->nom }}" class="form-control" id="inputNom">                    </div>
                     <div class="col-md-6">
                         <label for="inputPrenom" class="form-label">Prenom</label>
-                        <input type="text" value="{{ $profile->prenom }}"  class="form-control" id="inputPrenom">
-                    </div>
+                        <input type="text" name="prenom" value="{{ $profile->prenom }}"  class="form-control" id="inputPrenom">                    </div>
                     <div class="col-12">
                         <label for="inputEmail" class="form-label">Email</label>
-                        <input type="email" value="{{ $profile->email }}"  class="form-control" id="inputEmail">
+                        <input type="email" name="email" value="{{ $profile->email }}"  class="form-control" id="inputEmail">
                     </div>
                     <div class="col-12">
                         <label for="inputAddress" class="form-label">Address</label>
-                        <input type="text" value="{{ $profile->location }}"  class="form-control" id="inputAddress">
+                        <input type="text" name="location" value="{{ $profile->location }}"  class="form-control" id="inputAddress">
                     </div>
                     <div class="col-12">
                         <label for="inputImage" class="form-label">Image</label>
-                        <input class="form-control" type="file" id="formFile">
+                        <input class="form-control" type="file" name="image" id="formFile">
                     </div>
                     <div class="col-12">
                         <center><button type="submit" class="btn btn-primary" style="width: 50%;">Modifer</button></center>
