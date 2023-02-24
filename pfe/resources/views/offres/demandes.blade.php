@@ -32,7 +32,7 @@
                         <article>
                             <div class="info-per">
                                 <div class="img-prfl"><img src="images/profil1.jpg" alt="" srcset=""></div>
-                                <h4 class="info-prfl">Alyan GETEREZ</h4>
+                                <h4 class="info-prfl">{{ $d->nom }} {{ $d->prenom }}</h4>
                             </div>
                             <div class="image-dem">
                                 <img src="{{asset('image/'.$d->image_offre)}}" alt="" srcset="">

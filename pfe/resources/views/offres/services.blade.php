@@ -34,8 +34,8 @@
         @foreach ($services as $srv)
             <article>
                 <div class="info-per">
-                    <div class="img-prfl"><img src="images/profil1.jpg" alt="" srcset=""></div>
-                    <h4 class="info-prfl">Alyan GETEREZ</h4>
+                    <div class="img-prfl"><img src="{{asset('image/'.Auth::user()->image)}}" alt="" srcset=""></div>
+                    <h4 class="info-prfl">{{ $srv->nom }} {{ $srv->prenom }}</h4>
                 </div>
                 <div class="image-dem">
                         <img src="{{asset('image/'.$srv->image_offre)}}" alt="" srcset="">

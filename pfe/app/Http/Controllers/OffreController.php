@@ -18,7 +18,7 @@ class OffreController extends Controller
 
     public function index()
     {
-        $compte = User::where('nom', Auth::user()->nom)->where('prenom',Auth::user()->prenom);
+        $compte = User::where('nom', Auth::user()->nom)->where('prenom',Auth::user()->prenom)->get();
         return view('home',compact('compte'));
     }
 
@@ -35,24 +35,35 @@ class OffreController extends Controller
      */
     public function store(Request $request)
     {
-
         $request->validate([
+            'nom' => 'required',
+            'prenom' => 'required',
             'image' => 'required|image'
         ]);
 
         $imagePath = $request->file('image')->storeAs(
             'offres', time() . '_' . $request->file('image')->getClientOriginalName(), 'images'
         );
-        Offre::create([
-            'nom'=> $request->nom,
-            'prenom' => $request->prenom,
-            'type'=>$request->type,
-            'categorie'=>$request->categorie,
-            'offre'=>$request->offre,
-            'image_offre'=>$imagePath,
-            'prix'=>$request->prix
-        ]);
-        return redirect()->route('offres');
+
+        $offre = new Offre();
+        $offre->nom = $request->nom;
+        $offre->prenom = $request->prenom;
+        $offre->type = $request->type;
+        $offre->categorie = $request->categorie;
+        $offre->offre = $request->offre;
+        $offre->image_offre = $imagePath;
+        $offre->prix = $request->prix;
+        $offre->save();
+        // Offre::create([
+        //     'nom'=>$request->nom,
+        //     'prenom'=>$request->prenom,
+        //     'type' =>$request->type,
+        //     'categorie' =>$request->categorie,
+        //     'offre' =>$request->offre,
+        //     'image_offre'=>$imagePath,
+        //     'prix'=>$request->prix
+        // ]);
+        return redirect()->route('offre');
     }
 
     /**
@@ -88,7 +99,7 @@ class OffreController extends Controller
     }
 
     public function profile(){
-        $profile = User::where('nom', Auth::user()->nom)->where('prenom',Auth::user()->prenom);
+        $profile = User::where('nom', Auth::user()->nom)->where('prenom',Auth::user()->prenom)->first();
         return view('offres.profile',compact('profile'));
     }
 
@@ -98,15 +109,15 @@ class OffreController extends Controller
     }
 
     public function demandes(){
-        $demandes = Offre::where('type','demandes')->get();
+        $demandes = Offre::where('type','demande')->get();
         return view('offres.demandes',compact('demandes'));
     }
 
     public function services_id(){
         $id = User::where('nom', Auth::user()->nom)->where('prenom',Auth::user()->prenom)->first();
         $compte = User::where('nom', Auth::user()->nom)->where('prenom',Auth::user()->prenom);
-        $demandes = Offre::all()->where('type','service')->where('id',$id);
-        return view('offres.vosdemandes',compact('demandes','compte'));
+        $services = Offre::all()->where('type','service')->where('id',$id);
+        return view('offres.vosservice',compact('services','compte'));
     }
 
     public function demandes_id(){
