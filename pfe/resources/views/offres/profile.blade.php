@@ -26,7 +26,7 @@
     @extends('offres.fixeHeader')
     <section class="services-p">
         @extends('offres.fixeBarre')
-        <section class="P-2" style="width: 120%">
+        <section class="P-2">
             <h1 class="titre-part3" style="margin-top: 70px;text-align:center;margin-right:295px">Profile</h1>
             <div class="info-compte">
                 <form class="row g-3" method="post" action="{{ route('users.update',$profile->id) }}" enctype="multipart/form-data">

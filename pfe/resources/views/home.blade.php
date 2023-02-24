@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pageparlogin.css">
 </head>
 <body>
     <div>
@@ -16,7 +16,7 @@
         @extends('offres.fixeBarre')
     </div>
     <section class="P-1">
-        <div class="main-part1" style="width: 80%">
+        <div class="main-part1">
             <div class="part1">
                 <div class="logo-part1"><img src="images/pinse-remove.png" alt="" srcset=""></div>
                 <h2 id="text-part1"> <span class="PROPOSER">Proposez</span>  & <span class="TROUVER">Trouvez</span> <br>

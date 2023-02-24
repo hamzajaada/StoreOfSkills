@@ -21,7 +21,7 @@
 
 </head>
 <body>
-    <nav style="position: fixed;width: 100%;top:0" class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <nav style="position: fixed;width: 100%;top:0;" class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}" >
                 Store <span style="color:orangered">of</span>  Skills
