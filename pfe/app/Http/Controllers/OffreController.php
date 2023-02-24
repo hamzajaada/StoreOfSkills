@@ -54,15 +54,6 @@ class OffreController extends Controller
         $offre->image_offre = $imagePath;
         $offre->prix = $request->prix;
         $offre->save();
-        // Offre::create([
-        //     'nom'=>$request->nom,
-        //     'prenom'=>$request->prenom,
-        //     'type' =>$request->type,
-        //     'categorie' =>$request->categorie,
-        //     'offre' =>$request->offre,
-        //     'image_offre'=>$imagePath,
-        //     'prix'=>$request->prix
-        // ]);
         if($request->type=='service'){
             return redirect()->route('home.services');
         }elseif($request->type=='demande'){
@@ -81,17 +72,36 @@ class OffreController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Offre $offre)
+    public function edit($id)
     {
-        //
+        $offre = Offre::findorFail($id);
+        return view('offres.modification_offre',compact('offre'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Offre $offre)
+    public function update(Request $request, $id)
     {
-        //
+        $offre = Offre::findorFail($id);
+        $offre->nom = $request->nom;
+        $offre->prenom = $request->prenom;
+        $offre->type = $request->type;
+        $offre->categorie = $request->categorie;
+        $offre->offre = $request->offre;
+        if($request->file('image') != null){
+            $imagePath = $request->file('image')->storeAs(
+                'offres', time() . '_' . $request->file('image')->getClientOriginalName(), 'images'
+            );
+            $offre->image_offre = $imagePath;
+        }
+        $offre->prix = $request->prix;
+        $offre->save();
+        if($request->type=='service'){
+            return redirect()->route('home.vosservices');
+        }elseif($request->type=='demande'){
+            return redirect()->route('home.vosdemandes');
+        }
     }
 
     /**
@@ -102,10 +112,7 @@ class OffreController extends Controller
         //
     }
 
-    public function profile(){
-        $profile = User::where('nom', Auth::user()->nom)->where('prenom',Auth::user()->prenom)->first();
-        return view('offres.profile',compact('profile'));
-    }
+    
 
     public function services(){
         $services = Offre::where('type','service')->get();
@@ -120,14 +127,14 @@ class OffreController extends Controller
     public function services_id(){
         $id = User::where('nom', Auth::user()->nom)->where('prenom',Auth::user()->prenom)->first();
         $compte = User::where('nom', Auth::user()->nom)->where('prenom',Auth::user()->prenom);
-        $services = Offre::all()->where('type','service')->where('id',$id);
+        $services = Offre::all()->where('type','service')->where('nom', Auth::user()->nom)->where('prenom',Auth::user()->prenom);
         return view('offres.vosservice',compact('services','compte'));
     }
 
     public function demandes_id(){
         $id = User::where('nom', Auth::user()->nom)->where('prenom',Auth::user()->prenom)->first();
         $compte = User::where('nom', Auth::user()->nom)->where('prenom',Auth::user()->prenom);
-        $demandes = Offre::all()->where('type','demande')->where('id',$id);
+        $demandes = Offre::all()->where('type','demande')->where('nom', Auth::user()->nom)->where('prenom',Auth::user()->prenom);
         return view('offres.vosdemandes',compact('demandes','compte'));
     }
 

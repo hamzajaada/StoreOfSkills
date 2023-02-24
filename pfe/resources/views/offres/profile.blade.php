@@ -29,7 +29,9 @@
         <section class="P-2" style="width: 120%">
             <h1 class="titre-part3" style="margin-top: 70px;text-align:center;margin-right:295px">Profile</h1>
             <div class="info-compte">
-                <form class="row g-3" method="post" enctype="multipart/form-data">
+                <form class="row g-3" method="post" action="{{ route('users.update',$profile->id) }}" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
                     <h2>Informations de compte</h2>
                     <div class="col-md-6">
                         <label for="inputNom" class="form-label">Nom</label>
@@ -49,7 +51,7 @@
                     </div>
                     <div class="col-12">
                         <label for="inputImage" class="form-label">Image</label>
-                        <input class="form-control" value="{{asset('image/'.$profile->image)}}"  type="file" id="formFile">
+                        <input class="form-control" type="file" id="formFile">
                     </div>
                     <div class="col-12">
                         <center><button type="submit" class="btn btn-primary" style="width: 50%;">Modifer</button></center>

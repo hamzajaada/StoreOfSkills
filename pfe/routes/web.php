@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
@@ -27,7 +28,8 @@ Route::get('/home', function () {
 Auth::routes();
 
 Route::resource('offres',OffreController::class);
-Route::get('home/profile',[OffreController::class,'profile'])->name('home.profile');
+Route::resource('users',UserController::class);
+// Route::get('home/profile',[UserController::class,'profile'])->name('home.profile');
 Route::get('home/services',[OffreController::class,'services'])->name('home.services');
 Route::get('home/demandes',[OffreController::class,'demandes'])->name('home.demandes');
 Route::get('home/vos-services',[OffreController::class,'services_id'])->name('home.vosservices');

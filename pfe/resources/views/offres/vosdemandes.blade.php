@@ -25,168 +25,31 @@
     @extends('offres.fixeHeader')
     <section class="services-p">
         @extends('offres.fixeBarre')
-    <section class="P-2">
-    <h2 class="titre-part3">Votre <span id="span-t2" style="color:#3cb626">Demandes</span></h2>
-    <div class="demandes">
-
+        <section class="P-2">
+        <h2 class="titre-part3">Votre <span id="span-t2" style="color:#3cb626">Demandes</span></h2>
+        <div class="demandes">
+            @foreach ($demandes as $d)
                 <article>
                     <div class="info-per">
-                         <div class="img-prfl"><img src="images/profil1.jpg" alt="" srcset=""></div>
-                         <h4 class="info-prfl">Alyan GETEREZ</h4>
+                        <div class="img-prfl"><img src="images/profil1.jpg" alt="" srcset=""></div>
+                        <h4 class="info-prfl">{{ $d->nom }} {{ $d->prenom }}</h4>
                     </div>
                     <div class="image-dem">
-                            <img src="images/dem1.jpg" alt="" srcset="">
+                        <img src="{{asset('image/'.$d->image_offre)}}" alt="" srcset="">
                     </div>
                     <div class="desc-dem">
-                              <p class="text-dem">Bonjour, nous avons un problème de toilette bouché impossible de le débouché
-                                on apprécierait un coup de main pour ceux qui le peuvent
-                              </p>
+                        <p class="text-dem">{{ $d->offre }}</p>
+                    </div>
+                    <div class="prix">
+                        <p class="text-prix"><span style="color:#ff3c74"> Prix :</span>{{ $d->prix }}DH</p>
                     </div>
                     <div class="butns">
-                        <div class="modf"><a href="" class="but-post">Modifier</a></div>
+                        <div class="modf"><a href="{{ route('offres.edit',$d->id) }}" class="but-post">Modifier</a></div>
                         <div class="sup"><a href="" class="but-post">Supprimer</a></div>
                     </div>
                 </article>
-                <article>
-                    <div class="info-per">
-                        <div class="img-prfl"><img src="images/profil2.jpg" alt="" srcset=""></div>
-                        <h4 class="info-prfl">Mamado Sedebi</h4>
-                    </div>
-                    <div class="image-dem">
-                        <img src="images/dem2.jpg" alt="" srcset="">
-                    </div>
-                    <div class="desc-dem">
-                        <p class="text-dem">Bonjour, nous ne sommes pas véhiculé du coup nous recherchons
-                             une personne véhiculé pour nous aider à récupérer un salon de jardin au 6 rue Clau
-                          </p>
-                    </div>
-                    <div class="butns">
-                        <div class="modf"><a href="" class="but-post">Modifier</a></div>
-                        <div class="sup"><a href="" class="but-post">Supprimer</a></div>
-                    </div>
-                </article>
-                <article>
-                    <div class="info-per">
-                        <div class="img-prfl"><img src="images/profil3.jpg" alt="" srcset=""></div>
-                        <h4 class="info-prfl">Mamado Sedebi</h4>
-                    </div>
-                    <div class="image-dem">
-                        <img src="images/dem3.jpg" alt="" srcset="">
-
-                    </div>
-                    <div class="desc-dem">
-                        <p class="text-dem">
-                            Bonjour, Je souhaiterai que quelqu'un m'installe les étagères murales comme indiqué sur le croquis.
-                             Notre mur est en placo, nous avons donc achete
-                          </p>
-                    </div>
-                    <div class="butns">
-                        <div class="modf"><a href="" class="but-post">Modifier</a></div>
-                        <div class="sup"><a href="" class="but-post">Supprimer</a></div>
-                    </div>
-                </article>
-                <article>
-                    <div class="info-per">
-                        <div class="img-prfl"><img src="images/profil3.jpg" alt="" srcset=""></div>
-                        <h4 class="info-prfl">Mamado Sedebi</h4>
-                    </div>
-                    <div class="image-dem">
-                        <img src="images/dem3.jpg" alt="" srcset="">
-
-                    </div>
-                    <div class="desc-dem">
-                        <p class="text-dem">
-                            Bonjour, Je souhaiterai que quelqu'un m'installe les étagères murales comme indiqué sur le croquis.
-                             Notre mur est en placo, nous avons donc achete
-                          </p>
-                    </div>
-                    <div class="butns">
-                        <div class="modf"><a href="" class="but-post">Modifier</a></div>
-                        <div class="sup"><a href="" class="but-post">Supprimer</a></div>
-                    </div>
-                </article>
-                <article>
-                    <div class="info-per">
-                        <div class="img-prfl"><img src="images/profil3.jpg" alt="" srcset=""></div>
-                        <h4 class="info-prfl">Mamado Sedebi</h4>
-                    </div>
-                    <div class="image-dem">
-                        <img src="images/dem3.jpg" alt="" srcset="">
-
-                    </div>
-                    <div class="desc-dem">
-                        <p class="text-dem">
-                            Bonjour, Je souhaiterai que quelqu'un m'installe les étagères murales comme indiqué sur le croquis.
-                             Notre mur est en placo, nous avons donc achete
-                          </p>
-                    </div>
-                    <div class="butns">
-                        <div class="modf"><a href="" class="but-post">Modifier</a></div>
-                        <div class="sup"><a href="" class="but-post">Supprimer</a></div>
-                    </div>
-                </article>
-                <article>
-                    <div class="info-per">
-                        <div class="img-prfl"><img src="images/profil3.jpg" alt="" srcset=""></div>
-                        <h4 class="info-prfl">Mamado Sedebi</h4>
-                    </div>
-                    <div class="image-dem">
-                        <img src="images/dem3.jpg" alt="" srcset="">
-
-                    </div>
-                    <div class="desc-dem">
-                        <p class="text-dem">
-                            Bonjour, Je souhaiterai que quelqu'un m'installe les étagères murales comme indiqué sur le croquis.
-                             Notre mur est en placo, nous avons donc achete
-                          </p>
-                    </div>
-                    <div class="butns">
-                        <div class="modf"><a href="" class="but-post">Modifier</a></div>
-                        <div class="sup"><a href="" class="but-post">Supprimer</a></div>
-                    </div>
-                </article>
-                <article>
-                    <div class="info-per">
-                        <div class="img-prfl"><img src="images/profil3.jpg" alt="" srcset=""></div>
-                        <h4 class="info-prfl">Mamado Sedebi</h4>
-                    </div>
-                    <div class="image-dem">
-                        <img src="images/dem3.jpg" alt="" srcset="">
-
-                    </div>
-                    <div class="desc-dem">
-                        <p class="text-dem">
-                            Bonjour, Je souhaiterai que quelqu'un m'installe les étagères murales comme indiqué sur le croquis.
-                             Notre mur est en placo, nous avons donc achete
-                          </p>
-                    </div>
-                    <div class="butns">
-                        <div class="modf"><a href="" class="but-post">Modifier</a></div>
-                        <div class="sup"><a href="" class="but-post">Supprimer</a></div>
-                    </div>
-
-                </article>
-                <article>
-                    <div class="info-per">
-                        <div class="img-prfl"><img src="images/profil3.jpg" alt="" srcset=""></div>
-                        <h4 class="info-prfl">Mamado Sedebi</h4>
-                    </div>
-                    <div class="image-dem">
-                        <img src="images/dem3.jpg" alt="" srcset="">
-
-                    </div>
-                    <div class="desc-dem">
-                        <p class="text-dem">
-                            Bonjour, Je souhaiterai que quelqu'un m'installe les étagères murales comme indiqué sur le croquis.
-                             Notre mur est en placo, nous avons donc achete
-                          </p>
-                    </div>
-                    <div class="butns">
-                        <div class="modf"><a href="" class="but-post">Modifier</a></div>
-                        <div class="sup"><a href="" class="but-post">Supprimer</a></div>
-                    </div>
-                 </article>
-    </div>
+            @endforeach
+        </div>
     </section>
 </section>
 <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
