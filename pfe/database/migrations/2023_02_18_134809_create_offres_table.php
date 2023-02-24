@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('offres', function (Blueprint $table) {
             $table->id();
-            $table->string('nom');
-            $table->string('prenom');
             $table->string('type');
             $table->string('categorie');
             $table->text('offre');
             $table->string('image_offre');
             $table->float('prix');
+            $table->unsignedBigInteger('id_user');
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
             $table->softDeletes();
             $table->timestamps();
         });

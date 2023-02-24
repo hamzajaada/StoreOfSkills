@@ -14,9 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('consulter', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
-            $table->foreignId('offres_id')->constrained('offres')->cascadeOnDelete();
+            $table->unsignedBigInteger('id_user');
+            $table->unsignedBigInteger('id_offre');
+            $table->primary(['id_user', 'id_offre']);
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('id_offre')->references('id')->on('offres')->onDelete('cascade');
             $table->timestamps();
         });
     }
