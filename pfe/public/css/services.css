@@ -1,6 +1,4 @@
 
-
-
 .P-2{
     margin-top: 50px;
     background-color:#fafafa;
@@ -18,7 +16,7 @@
     font-weight: 700;
     margin-right: 21px;
  }
- .demandes{
+ /*.demandes{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -26,11 +24,10 @@
     margin-bottom: 23px;
     height: 500px;
 
-
- }
+ }*/
  article{
     width: 400px;
-    height: 443px;
+    height: 490px;
     border-radius: 7px;
     box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
     background-color: #fff;
@@ -42,7 +39,7 @@
    height: 45px;
    background-color:#ff3c74;
    border-radius: 7px;
-   margin-top: 10px;
+   margin-top: -7px;
    padding-top:7px ;
  }
  .button-commander:hover{
@@ -82,22 +79,22 @@
     height: 200px;
     margin-left: 20px;
  }
- /*.image-ser img{
+ .image-ser img{
     width: 408px;
     height: 187px;
     margin-left: 10px;
     border-radius: 10px;
- }*/
+ }
  .desc-dem{
     width: 360px;
-    height: 90px;
     margin-left: 20px;
+    height: 22%;
  }
- /*.desc-ser{
+ .desc-ser{
     width: 440px;
     height: 90px;
     margin-left: 20px;
- }*/
+ }
  .img-prfl img{
     width: 40px;
     height: 40px;
@@ -106,6 +103,10 @@
  .info-prfl{
     margin-left: 10px;
     font-family: 'Open Sans', sans-serif;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #333333;
+   
  }
  .image-dem img{
     width: 360px;
@@ -116,6 +117,8 @@
  .text-dem{
     margin-top: 10px;
     font-family: 'Open Sans', sans-serif;
+    height: 100px;
+    overflow-y: scroll;
  }
  /*.text-ser{
     margin-top: 10px;
@@ -123,14 +126,14 @@
     margin-left: 10px;
  }*/
 
- /*.demandes{
+ .demandes{
     display: flex;
     justify-content: space-around;
     margin-top: 40px;
     margin-bottom: -143px;
     height: 500px;
- }*/
- /*.image-ser{
+ }
+ .image-ser{
     width: 440px;
     height: 200px;
     margin-left: 20px;
@@ -139,7 +142,7 @@
     width: 440px;
     height: 90px;
     margin-left: 20px;
- }*/
+ }
  .services-p{
    display: flex;
    width: 100%;
@@ -172,4 +175,8 @@
 }
 .sup:hover{
    background-color:rgb(188, 35, 35);
+}
+
+.text-prix{
+   margin-left: 20px;
 }

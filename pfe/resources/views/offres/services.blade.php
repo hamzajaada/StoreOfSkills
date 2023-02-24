@@ -35,145 +35,24 @@
             <article>
                 <div class="info-per">
                     <div class="img-prfl"><img src="{{asset('image/'.Auth::user()->image)}}" alt="" srcset=""></div>
-                    <h4 class="info-prfl">{{ $srv->nom }} {{ $srv->prenom }}</h4>
-                </div>
+                        <h4 class="info-prfl">{{ $srv->nom }} {{ $srv->prenom }}</h4>
+                    </div>
                 <div class="image-dem">
                         <img src="{{asset('image/'.$srv->image_offre)}}" alt="" srcset="">
                 </div>
                 <div class="desc-dem">
                         <p class="text-dem">{{ $srv->offre }}</p>
                 </div>
-                <div class="desc-dem">
-                    <p class="text-dem">{{ $srv->prix }} DH</p>
+                <div class="prix">
+                    <p class="text-prix"><span style="color:#ff3c74"> Prix :</span>{{ $srv->prix }}DH</p>
                 </div>
+                
                 <center><div class="button-commander"><a href="" class="but-post">commander</a></div></center>
 
             </article>
         @endforeach
 
-                {{-- <article>
-                    <div class="info-per">
-                        <div class="img-prfl"><img src="images/profil2.jpg" alt="" srcset=""></div>
-                        <h4 class="info-prfl">Mamado Sedebi</h4>
-                    </div>
-                    <div class="image-dem">
-                        <img src="images/dem2.jpg" alt="" srcset="">
-                    </div>
-                    <div class="desc-dem">
-                        <p class="text-dem">Bonjour, nous ne sommes pas véhiculé du coup nous recherchons
-                             une personne véhiculé pour nous aider à récupérer un salon de jardin au 6 rue Clau
-                          </p>
-                    </div>
-                    <center><div class="button-commander"><a href="" class="but-post">commander</a></div></center>
-
-                </article>
-                <article>
-                    <div class="info-per">
-                        <div class="img-prfl"><img src="images/profil3.jpg" alt="" srcset=""></div>
-                        <h4 class="info-prfl">Mamado Sedebi</h4>
-                    </div>
-                    <div class="image-dem">
-                        <img src="images/dem3.jpg" alt="" srcset="">
-
-                    </div>
-                    <div class="desc-dem">
-                        <p class="text-dem">
-                            Bonjour, Je souhaiterai que quelqu'un m'installe les étagères murales comme indiqué sur le croquis.
-                             Notre mur est en placo, nous avons donc achete
-                          </p>
-                    </div>
-                    <center><div class="button-commander"><a href="" class="but-post">commander</a></div></center>
-
-                </article>
-                <article>
-                    <div class="info-per">
-                        <div class="img-prfl"><img src="images/profil3.jpg" alt="" srcset=""></div>
-                        <h4 class="info-prfl">Mamado Sedebi</h4>
-                    </div>
-                    <div class="image-dem">
-                        <img src="images/dem3.jpg" alt="" srcset="">
-
-                    </div>
-                    <div class="desc-dem">
-                        <p class="text-dem">
-                            Bonjour, Je souhaiterai que quelqu'un m'installe les étagères murales comme indiqué sur le croquis.
-                             Notre mur est en placo, nous avons donc achete
-                          </p>
-                    </div>
-                    <center><div class="button-commander"><a href="" class="but-post">commander</a></div></center>
-
-                </article>
-                <article>
-                    <div class="info-per">
-                        <div class="img-prfl"><img src="images/profil3.jpg" alt="" srcset=""></div>
-                        <h4 class="info-prfl">Mamado Sedebi</h4>
-                    </div>
-                    <div class="image-dem">
-                        <img src="images/dem3.jpg" alt="" srcset="">
-
-                    </div>
-                    <div class="desc-dem">
-                        <p class="text-dem">
-                            Bonjour, Je souhaiterai que quelqu'un m'installe les étagères murales comme indiqué sur le croquis.
-                             Notre mur est en placo, nous avons donc achete
-                          </p>
-                    </div>
-                    <center><div class="button-commander"><a href="" class="but-post">commander</a></div></center>
-
-                </article>
-                <article>
-                    <div class="info-per">
-                        <div class="img-prfl"><img src="images/profil3.jpg" alt="" srcset=""></div>
-                        <h4 class="info-prfl">Mamado Sedebi</h4>
-                    </div>
-                    <div class="image-dem">
-                        <img src="images/dem3.jpg" alt="" srcset="">
-
-                    </div>
-                    <div class="desc-dem">
-                        <p class="text-dem">
-                            Bonjour, Je souhaiterai que quelqu'un m'installe les étagères murales comme indiqué sur le croquis.
-                             Notre mur est en placo, nous avons donc achete
-                          </p>
-                    </div>
-                    <center><div class="button-commander"><a href="" class="but-post">commander</a></div></center>
-
-                </article>
-                <article>
-                    <div class="info-per">
-                        <div class="img-prfl"><img src="images/profil3.jpg" alt="" srcset=""></div>
-                        <h4 class="info-prfl">Mamado Sedebi</h4>
-                    </div>
-                    <div class="image-dem">
-                        <img src="images/dem3.jpg" alt="" srcset="">
-
-                    </div>
-                    <div class="desc-dem">
-                        <p class="text-dem">
-                            Bonjour, Je souhaiterai que quelqu'un m'installe les étagères murales comme indiqué sur le croquis.
-                             Notre mur est en placo, nous avons donc achete
-                          </p>
-                    </div>
-                    <center><div class="button-commander"><a href="" class="but-post">commander</a></div></center>
-
-                </article>
-                <article>
-                    <div class="info-per">
-                        <div class="img-prfl"><img src="images/profil3.jpg" alt="" srcset=""></div>
-                        <h4 class="info-prfl">Mamado Sedebi</h4>
-                    </div>
-                    <div class="image-dem">
-                        <img src="images/dem3.jpg" alt="" srcset="">
-
-                    </div>
-                    <div class="desc-dem">
-                        <p class="text-dem">
-                            Bonjour, Je souhaiterai que quelqu'un m'installe les étagères murales comme indiqué sur le croquis.
-                             Notre mur est en placo, nous avons donc achete
-                          </p>
-                    </div>
-                    <center><div class="button-commander"><a href="" class="but-post">commander</a></div></center>
-                </article> --}}
+               
     </div>
     </section>
 </section>

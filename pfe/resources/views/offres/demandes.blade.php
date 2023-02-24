@@ -32,16 +32,19 @@
                         <article>
                             <div class="info-per">
                                 <div class="img-prfl"><img src="images/profil1.jpg" alt="" srcset=""></div>
-                                <h4 class="info-prfl">{{ $d->nom }} {{ $d->prenom }}</h4>
+                                
+                                  <h4 class="info-prfl">{{ $d->prenom }} {{ $d->nom }} </h4>
+                                  
+                                
                             </div>
                             <div class="image-dem">
                                 <img src="{{asset('image/'.$d->image_offre)}}" alt="" srcset="">
                             </div>
                             <div class="desc-dem">
-                                <p class="text-dem">{{ $d->offre }}</p>
+                                <p class="text-dem">{{ $d->offre }}</p> <br>
                             </div>
-                            <div class="desc-dem">
-                                <p class="text-dem">{{ $d->prix }} DH</p>
+                            <div class="prix">
+                                <p class="text-prix"><span style="color:#ff3c74"> Prix :</span>{{ $d->prix }}DH</p>
                             </div>
                             <center><div class="button-postuller"><a href="" class="but-post">Postuler</a></div></center>
                         </article>
