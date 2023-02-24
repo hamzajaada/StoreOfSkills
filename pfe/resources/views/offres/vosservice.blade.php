@@ -35,16 +35,16 @@
                             <h4 class="info-prfl">{{ $srv->nom }} {{ $srv->prenom }}</h4>
                         </div>
                         <div class="image-dem">
-                            <img src="images/dem1.jpg" alt="" srcset="">
+                            <img src="{{asset('image/'.$srv->image_offre)}}" alt="" srcset="">
                         </div>
                         <div class="desc-dem">
                             <p class="text-dem">{{ $srv->offre }}</p>
                         </div>
-                        <div class="desc-dem">
-                            <p class="text-dem">{{ $srv->prix }} DH</p>
+                        <div class="prix">
+                            <p class="text-prix"><span style="color:#ff3c74"> Prix :</span>{{ $srv->prix }}DH</p>
                         </div>
                         <div class="butns">
-                            <div class="modf"><a href="" class="but-post">Modifier</a></div>
+                            <div class="modf"><a href="{{ route('offres.edit',$srv->id) }}" class="but-post">Modifier</a></div>
                             <div class="sup"><a href="" class="but-post">Supprimer</a></div>
                         </div>
                     </article>

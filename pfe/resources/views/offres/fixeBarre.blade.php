@@ -12,7 +12,7 @@
         <div class="barre">
             <div class="botton">
                 <i class="fa-solid fa-house"></i> <a class="vos" href="{{ route('home') }}"></i>Accueil</a><br>
-                <i class="fa-solid fa-user-gear"></i> <a class="vos" href="{{ route('home.profile') }}">Profile</a><br>
+                <i class="fa-solid fa-user-gear"></i> <a class="vos" href="{{ route('users.index') }}">Profile</a><br>
                 <i class="fa-solid fa-wrench"></i><a class="vos" href="{{ route('home.services') }}"> Services</a><br>
                 <i class="fa-solid fa-toolbox"></i><a class="vos" href="{{ route('home.demandes') }}"> Demandes</a><br>
                 <i class="fa-solid fa-reply"></i><a class="vos" href="">Reponses</a><br>
