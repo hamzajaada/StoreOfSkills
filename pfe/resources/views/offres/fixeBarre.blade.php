@@ -13,70 +13,70 @@
   <div class="sidebar">
     <div class="logo-details">
       <i class='bx bxl-c-plus-plus icon'></i>
-        <div class="logo_name">Store of Skills</div>
+        <div class="logo_name">Store <span style="color: rgb(234, 19, 170)">of</span> Skills</div>
         <i class="fa-solid fa-angle-right" id="btn"></i>
     </div>
     <div class="links"><ul class="nav-list">
       <li>
           <i class='bx bx-search' ></i>
          <input type="text" placeholder="Search...">
-         <span class="tooltip">Search</span>
+         <span style="color:black" class="tooltip">Search</span>
       </li>
       <li>
         <a href="{{ route('home') }}">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Accueil</span>
         </a>
-         <span class="tooltip">Accueil</span>
+         <span style="color:black" class="tooltip">Accueil</span>
       </li>
       <li>
        <a href="{{ route('users.index') }}">
          <i class='bx bx-user' ></i>
          <span class="links_name">Profile</span>
        </a>
-       <span class="tooltip">Profile</span>
+       <span style="color:black" class="tooltip">Profile</span>
      </li>
      <li>
        <a href="{{ route('home.services') }}">
         <i class="fa-solid fa-wrench"></i>
          <span class="links_name">Services</span>
        </a>
-       <span class="tooltip">Services</span>
+       <span style="color:black" class="tooltip">Services</span>
      </li>
      <li>
        <a href="{{ route('home.demandes') }}">
         <i class="fa-solid fa-toolbox"></i>
          <span class="links_name">Demandes</span>
        </a>
-       <span class="tooltip">Demandes</span>
+       <span style="color:black" class="tooltip">Demandes</span>
      </li>
      <li>
        <a href="#">
         <i class="fa-solid fa-reply"></i>
          <span class="links_name">Reponses</span>
        </a>
-       <span class="tooltip">Reponses</span>
+       <span style="color:black" class="tooltip">Reponses</span>
      </li>
      <li>
        <a href="{{ route('offres.create') }}">
         <i class="fa-solid fa-plus"></i> 
          <span class="links_name"> offre</span>
        </a>
-       <span class="tooltip">Offre</span>
+       <span  style="color:black"class="tooltip">Offre</span>
      </li>
      <li>
        <a href="{{ route('home.vosservices') }}">
         <i class="fa-solid fa-layer-group"></i>
          <span class="links_name">vos demandes</span>
        </a>
-       <span class="tooltip">vos demandes</span>
+       <span style="color:black" class="tooltip">vos demandes</span>
      </li>
      <li>
        <a href="{{ route('home.vosservices') }}">
         <i class="fa-solid fa-layer-group"></i>
          <span class="links_name">vos services</span>
        </a>
-       <span class="tooltip">vos services</span>
+       <span style="color:black" class="tooltip">vos services</span>
      </li>
   
      
