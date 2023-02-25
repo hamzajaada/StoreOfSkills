@@ -44,8 +44,8 @@
                         <p class="text-prix"><span style="color:#ff3c74"> Prix :</span>{{ $d->prix }}DH</p>
                     </div>
                     <div class="butns">
-                        <div class="modf"><a href="{{ route('offres.edit',$d->id) }}" class="but-post">Modifier</a></div>
-                        <div class="sup"><a href="" class="but-post">Supprimer</a></div>
+                        <div class="modf"><a class="btn btn-primary" href="{{ route('offres.edit',$d->id) }}" role="button">Modifier</a></div>
+                        <div class="sup"><a class="btn btn-danger" {{ route('offres.destroy',$d->id) }} role="button">Supprimer</a></div>
                     </div>
                 </article>
             @endforeach
