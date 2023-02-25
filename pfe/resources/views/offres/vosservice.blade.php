@@ -45,7 +45,7 @@
                         </div>
                         <div class="butns">
                             <div class="modf"><a href="{{ route('offres.edit',$srv->id) }}" class="but-post">Modifier</a></div>
-                            <div class="sup"><a href="" class="but-post">Supprimer</a></div>
+                            <div class="sup"><a href="{{ route('offres.destroy',$srv->id) }}" class="but-post">Supprimer</a></div>
                         </div>
                     </article>
                 @endforeach

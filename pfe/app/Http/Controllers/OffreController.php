@@ -107,9 +107,12 @@ class OffreController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Offre $offre)
+    public function destroy($id)
     {
-        //
+        $data = Offre::where('id',$id); 
+        $data->delete(); 
+        //return redirect()->route('home.vosservices');
+        return "L'enregistrement a été supprimé avec succès.";
     }
 
     
