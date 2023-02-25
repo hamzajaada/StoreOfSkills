@@ -26,24 +26,13 @@
     @extends('offres.fixeHeader')
     <section class="services-p">
     <section class="main-sec1">
-       @extends('offres.fixeBarre')
+        @extends('offres.fixeBarre')
     </section>
     <section class="P-2"  >
         <h1 class="titre-part3" style="margin-top: 40px;">Ajoute <span style="color:rgb(36, 189, 36)">d'offre</span> </h1>
     <div class="info-compte" style="margin-left: 96px;">
         <form class="row g-3" method="post" action="{{ route('offres.store') }}" enctype="multipart/form-data">
             @csrf
-
-            <div class="form-group">
-                <label for="exampleFormControlNom">Nom:</label>
-                <input class="form-control" value="{{ Auth::user()->nom }}" name="nom" id="exampleFormControlNom">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlPrenom">Prenom:</label>
-                <input class="form-control" value="{{ Auth::user()->prenom }}" name="prenom" id="exampleFormControlPrenom">
-            </div>
-
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Type:</label>
                 <select class="form-control" name="type" id="exampleFormControlSelect1">
@@ -51,33 +40,31 @@
                     <option value="demande">Demande</option>
                 </select>
             </div>
-
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Categorie:</label>
                 <select class="form-control" name="categorie" id="exampleFormControlSelect1">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option value="Design graphique">Design graphique</option>
+                    <option value="Développement web et mobile">Développement web et mobile</option>
+                    <option value="Rédaction et traduction">Rédaction et traduction</option>
+                    <option value="Marketing et publicité">Marketing et publicité</option>
+                    <option value="Services informatiques">Services informatiques</option>
+                    <option value="Coaching et formation">Coaching et formation</option>
+                    <option value="Métier">Métier</option>
                 </select>
             </div>
-
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Offre:</label>
                 <textarea class="form-control" name="offre" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
-
             <div class="form-group">
                 <label for="exampleFormControlNember">Prix:</label>
                 <input type="number" class="form-control" name="prix" id="exampleFormControlNember">
             </div>
-
             <div class="col-12">
                 <label for="inputImage" class="form-label">Image</label>
                 <input class="form-control" name="image" type="file" id="formFile">
             </div>
-
+            <input type="hidden" name="id_user" value="{{ Auth::user()->id }}">
             <div class="col-12">
                 <center><button type="submit" class="btn btn-primary" style="width: 50%">Ajouter</button></center>
             </div>

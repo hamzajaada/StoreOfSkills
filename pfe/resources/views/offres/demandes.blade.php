@@ -31,11 +31,8 @@
                     @foreach ($demandes as $d)
                         <article>
                             <div class="info-per">
-                                <div class="img-prfl"><img src="images/profil1.jpg" alt="" srcset=""></div>
-                                
-                                  <h4 class="info-prfl">{{ $d->prenom }} {{ $d->nom }} </h4>
-                                  
-                                
+                                <div class="img-prfl"><img src="{{asset('image/'.$d->image)}}" alt="" srcset=""></div>
+                                    <h4 class="info-prfl">{{ $d->prenom }} {{ $d->nom }} </h4>
                             </div>
                             <div class="image-dem">
                                 <img src="{{asset('image/'.$d->image_offre)}}" alt="" srcset="">

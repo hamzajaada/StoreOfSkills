@@ -34,7 +34,7 @@
         @foreach ($services as $srv)
             <article>
                 <div class="info-per">
-                    <div class="img-prfl"><img src="{{asset('image/'.Auth::user()->image)}}" alt="" srcset=""></div>
+                    <div class="img-prfl"><img src="{{asset('image/'.$srv->image)}}" alt="" srcset=""></div>
                         <h4 class="info-prfl">{{ $srv->nom }} {{ $srv->prenom }}</h4>
                     </div>
                 <div class="image-dem">
@@ -46,13 +46,13 @@
                 <div class="prix">
                     <p class="text-prix"><span style="color:#ff3c74"> Prix :</span>{{ $srv->prix }}DH</p>
                 </div>
-                
+
                 <center><div class="button-commander"><a href="" class="but-post">commander</a></div></center>
 
             </article>
         @endforeach
 
-               
+
     </div>
     </section>
 </section>

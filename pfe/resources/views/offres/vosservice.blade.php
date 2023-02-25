@@ -13,6 +13,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -31,7 +32,7 @@
                 @foreach ($services as $srv)
                     <article>
                         <div class="info-per">
-                            <div class="img-prfl"><img src="images/profil1.jpg" alt="" srcset=""></div>
+                            <div class="img-prfl"><img src="{{asset('image/'.$srv->image)}}" alt="" srcset=""></div>
                             <h4 class="info-prfl">{{ $srv->nom }} {{ $srv->prenom }}</h4>
                         </div>
                         <div class="image-dem">
@@ -44,9 +45,8 @@
                             <p class="text-prix"><span style="color:#ff3c74"> Prix :</span>{{ $srv->prix }}DH</p>
                         </div>
                         <div class="butns">
-                            <div class="modf"><a href="{{ route('offres.edit',$srv->id) }}" class="but-post">Modifier</a></div>
-                            <div class="sup"><a href="{{ route('offres.destroy',$srv->id) }}" class="but-post">Supprimer</a></div>
-                        </div>
+                            <div class="modf"><a class="btn btn-primary" href="{{ route('offres.edit',$srv->id) }}" role="button">Modifier</a></div>
+                            <div class="sup"><a class="btn btn-danger" {{ route('offres.destroy',$srv->id) }} role="button">Supprimer</a></div>
                     </article>
                 @endforeach
             </div>
@@ -55,3 +55,6 @@
     <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
 </body>
 </html>
+
+{{-- <a href="{{ route('offres.edit',$srv->id) }}" class="but-post">Modifier</a> --}}
+{{-- <a href="{{ route('offres.destroy',$srv->id) }}" class="but-post">Supprimer</a></div> --}}

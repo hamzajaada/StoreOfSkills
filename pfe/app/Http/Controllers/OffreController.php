@@ -18,7 +18,7 @@ class OffreController extends Controller
 
     public function index()
     {
-        $compte = User::where('nom', Auth::user()->nom)->where('prenom',Auth::user()->prenom)->get();
+        $compte = User::where('id', Auth::user()->id)->get();
         return view('home',compact('compte'));
     }
 
@@ -36,8 +36,6 @@ class OffreController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nom' => 'required',
-            'prenom' => 'required',
             'image' => 'required|image'
         ]);
 
@@ -46,13 +44,12 @@ class OffreController extends Controller
         );
 
         $offre = new Offre();
-        $offre->nom = $request->nom;
-        $offre->prenom = $request->prenom;
         $offre->type = $request->type;
         $offre->categorie = $request->categorie;
         $offre->offre = $request->offre;
         $offre->image_offre = $imagePath;
         $offre->prix = $request->prix;
+        $offre->id_user = $request->id_user;
         $offre->save();
         if($request->type=='service'){
             return redirect()->route('home.services');
@@ -84,8 +81,6 @@ class OffreController extends Controller
     public function update(Request $request, $id)
     {
         $offre = Offre::findorFail($id);
-        $offre->nom = $request->nom;
-        $offre->prenom = $request->prenom;
         $offre->type = $request->type;
         $offre->categorie = $request->categorie;
         $offre->offre = $request->offre;
@@ -96,6 +91,7 @@ class OffreController extends Controller
             $offre->image_offre = $imagePath;
         }
         $offre->prix = $request->prix;
+        $offre->id_user = $request->user_id;
         $offre->save();
         if($request->type=='service'){
             return redirect()->route('home.vosservices');
@@ -109,36 +105,55 @@ class OffreController extends Controller
      */
     public function destroy($id)
     {
-        $data = Offre::where('id',$id); 
-        $data->delete(); 
-        //return redirect()->route('home.vosservices');
-        return "L'enregistrement a été supprimé avec succès.";
+        $data = Offre::where('id',$id);
+        $data->delete();
+        return redirect()->route('home');
     }
 
-    
+
 
     public function services(){
         $services = Offre::where('type','service')->get();
+        foreach ($services as $srv) {
+            $user = User::where('id', $srv->id_user)->first(); // récupère l'utilisateur correspondant à l'id_user de l'srv
+            $srv->nom = $user->nom; // ajoute le nom de l'utilisateur à l'srv
+            $srv->prenom = $user->prenom; // ajoute le prénom de l'utilisateur à l'srv
+            $srv->image = $user->image; // ajoute l'image de l'utilisateur à l'srv
+        }
         return view('offres.services',compact('services'));
     }
 
     public function demandes(){
         $demandes = Offre::where('type','demande')->get();
+        foreach ($demandes as $d) {
+            $user = User::where('id', $d->id_user)->first(); // récupère l'utilisateur correspondant à l'id_user de l'd
+            $d->nom = $user->nom; // ajoute le nom de l'utilisateur à l'd
+            $d->prenom = $user->prenom; // ajoute le prénom de l'utilisateur à l'd
+            $d->image = $user->image; // ajoute l'image de l'utilisateur à l'd
+        }
         return view('offres.demandes',compact('demandes'));
     }
 
     public function services_id(){
-        $id = User::where('nom', Auth::user()->nom)->where('prenom',Auth::user()->prenom)->first();
-        $compte = User::where('nom', Auth::user()->nom)->where('prenom',Auth::user()->prenom);
-        $services = Offre::all()->where('type','service')->where('nom', Auth::user()->nom)->where('prenom',Auth::user()->prenom);
-        return view('offres.vosservice',compact('services','compte'));
+        $services = Offre::all()->where('type','service')->where('id_user', Auth::user()->id);
+        foreach ($services as $srv) {
+            $user = User::where('id', $srv->id_user)->first(); // récupère l'utilisateur correspondant à l'id_user de l'srv
+            $srv->nom = $user->nom; // ajoute le nom de l'utilisateur à l'srv
+            $srv->prenom = $user->prenom; // ajoute le prénom de l'utilisateur à l'srv
+            $srv->image = $user->image; // ajoute l'image de l'utilisateur à l'srv
+        }
+        return view('offres.vosservice',compact('services'));
     }
 
     public function demandes_id(){
-        $id = User::where('nom', Auth::user()->nom)->where('prenom',Auth::user()->prenom)->first();
-        $compte = User::where('nom', Auth::user()->nom)->where('prenom',Auth::user()->prenom);
-        $demandes = Offre::all()->where('type','demande')->where('nom', Auth::user()->nom)->where('prenom',Auth::user()->prenom);
-        return view('offres.vosdemandes',compact('demandes','compte'));
+        $demandes = Offre::all()->where('type','demande')->where('id_user', Auth::user()->id);
+        foreach ($demandes as $d) {
+            $user = User::where('id', $d->id_user)->first(); // récupère l'utilisateur correspondant à l'id_user de l'd
+            $d->nom = $user->nom; // ajoute le nom de l'utilisateur à l'd
+            $d->prenom = $user->prenom; // ajoute le prénom de l'utilisateur à l'd
+            $d->image = $user->image; // ajoute l'image de l'utilisateur à l'd
+        }
+        return view('offres.vosdemandes',compact('demandes'));
     }
 
     public function repondres($id){

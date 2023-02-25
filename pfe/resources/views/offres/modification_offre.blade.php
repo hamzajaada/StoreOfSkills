@@ -35,23 +35,12 @@
             @csrf
             @method('PUT')
             <div class="form-group">
-                <label for="exampleFormControlNom">Nom:</label>
-                <input class="form-control" value="{{ $offre->nom }}" name="nom" id="exampleFormControlNom">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlPrenom">Prenom:</label>
-                <input class="form-control" value="{{ $offre->prenom }}" name="prenom" id="exampleFormControlPrenom">
-            </div>
-
-            <div class="form-group">
                 <label for="exampleFormControlSelect1">Type:</label>
                 <select class="form-control" name="type" value="{{ $offre->type }}" id="exampleFormControlSelect1">
                     <option value="service">Service</option>
                     <option value="demande">Demande</option>
                 </select>
             </div>
-
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Categorie:</label>
                 <select class="form-control" value="{{ $offre->categorie }}" name="categorie" id="exampleFormControlSelect1">
@@ -62,21 +51,19 @@
                     <option value="5">5</option>
                 </select>
             </div>
-
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Offre:</label>
                 <textarea class="form-control" name="offre" id="exampleFormControlTextarea1" rows="3">{{ $offre->offre }}</textarea>
             </div>
-
             <div class="form-group">
                 <label for="exampleFormControlNember">Prix:</label>
                 <input type="number" value="{{ $offre->prix }}" class="form-control" name="prix" id="exampleFormControlNember">
             </div>
-
             <div class="col-12">
                 <label for="inputImage" class="form-label">Image</label>
                 <input class="form-control" name="image" type="file" id="formFile">
             </div>
+            <input type="hidden" name="id_user" value="{{ Auth::user()->id }}">
             <div class="col-12">
                 <center><button type="submit" class="btn btn-primary" style="width: 50%">Modifier</button></center>
             </div>

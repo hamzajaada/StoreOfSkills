@@ -59,13 +59,13 @@
      </li>
      <li>
        <a href="{{ route('offres.create') }}">
-        <i class="fa-solid fa-plus"></i> 
+        <i class="fa-solid fa-plus"></i>
          <span class="links_name"> offre</span>
        </a>
        <span class="tooltip">Offre</span>
      </li>
      <li>
-       <a href="{{ route('home.vosservices') }}">
+       <a href="{{ route('home.vosdemandes') }}">
         <i class="fa-solid fa-layer-group"></i>
          <span class="links_name">vos demandes</span>
        </a>
@@ -78,12 +78,12 @@
        </a>
        <span class="tooltip">vos services</span>
      </li>
-  
-     
+
+
     </ul>
 </div>
   </div>
-  
+
   <script>
   let sidebar = document.querySelector(".sidebar");
   let closeBtn = document.querySelector("#btn");
