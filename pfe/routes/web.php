@@ -32,5 +32,6 @@ Route::resource('users',UserController::class);
 Route::post('home/profile/change-password',[UserController::class,'changePassword'])->name('users.password');
 Route::get('home/services',[OffreController::class,'services'])->name('home.services');
 Route::get('home/demandes',[OffreController::class,'demandes'])->name('home.demandes');
+Route::get('home/reponses',[OffreController::class,'reponses'])->name('home.reponses');
 Route::get('home/vos-services',[OffreController::class,'services_id'])->name('home.vosservices');
 Route::get('home/vos-demandes',[OffreController::class,'demandes_id'])->name('home.vosdemandes');

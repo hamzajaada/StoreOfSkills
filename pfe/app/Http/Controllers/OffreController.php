@@ -109,7 +109,9 @@ class OffreController extends Controller
         return redirect()->back();
     }
 
-
+    public function reponses(){
+        return view('offres.reponse');
+    }
 
     public function services(){
         $services = Offre::where('type','service')->get();
@@ -143,7 +145,7 @@ class OffreController extends Controller
         }
         return view('offres.vosservice',compact('services'));
     }
-   
+
 
 
     public function demandes_id(){
@@ -152,7 +154,7 @@ class OffreController extends Controller
             $user = User::where('id', $d->id_user)->first();
             $d->nom = $user->nom;
             $d->prenom = $user->prenom;
-            $d->image = $user->image; 
+            $d->image = $user->image;
         }
         return view('offres.vosdemandes',compact('demandes'));
     }

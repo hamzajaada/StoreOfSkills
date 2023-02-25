@@ -25,16 +25,16 @@
         @extends('offres.fixeBarre')
     </section>
 
-    <br><h2 style="text-align:center;margin-right:20%;margin-top:30px">Table de <span style="color:#ff3c74">services</span></h2><br>
-    <div class="div-table" style="height: 350px; overflow-y: auto;" >
-        <table class="table" style="width: 85%;border-collapse: collapse;" >
+    <br><h2 style="text-align:center;margin-left:10%;margin-top:40px;">Table d'<span style="color:#ff3c74">offres</span></h2><br>
+    <div class="div-table" style="height: 350px; overflow-y: auto;margin-left:20%" >
+        <table class="table" style="width: 90%;border-collapse: collapse;" >
             <thead>
                 <tr>
                     <th scope="col">Nom</th>
                     <th scope="col">Prenom</th>
-                    <th scope="col">Service</th>
-                    <th scope="col">Demander par</th>
                     <th scope="col">Email</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Offre</th>
                     <th scope="col" colspan="2">Action</th>
                 </tr>
             </thead>
@@ -42,198 +42,9 @@
                 <tr>
                     <td>Elgallati</td>
                     <td>Abdelilah</td>
-                    <td>Service</td>
-                    <td>Hamza</td>
                     <td>Hamza@gmail.com</td>
-                    <td><button type="submit" class="btn btn-success">Accepter</button></td>
-                    <td><button type="submit" class="btn btn-danger">Reffuser</button></td>
-                </tr>
-                <tr>
-                    <td>Jaada</td>
-                    <td>Hamza</td>
+                    <td>type</td>
                     <td>Service</td>
-                    <td>Abdelilah</td>
-                    <td>Abdelilah@gmail.com</td>
-                    <td><button type="submit" class="btn btn-success">Accepter</button></td>
-                    <td><button type="submit" class="btn btn-danger">Reffuser</button></td>
-                </tr>
-                <tr>
-                    <td>Elgallati</td>
-                    <td>Abdelilah</td>
-                    <td>Service</td>
-                    <td>Hamza</td>
-                    <td>Hamza@gmail.com</td>
-                    <td><button type="submit" class="btn btn-success">Accepter</button></td>
-                    <td><button type="submit" class="btn btn-danger">Reffuser</button></td>
-                </tr>
-                <tr>
-                    <td>Jaada</td>
-                    <td>Hamza</td>
-                    <td>Service</td>
-                    <td>Abdelilah</td>
-                    <td>Abdelilah@gmail.com</td>
-                    <td><button type="submit" class="btn btn-success">Accepter</button></td>
-                    <td><button type="submit" class="btn btn-danger">Reffuser</button></td>
-                </tr>
-                <tr>
-                    <td>Elgallati</td>
-                    <td>Abdelilah</td>
-                    <td>Service</td>
-                    <td>Hamza</td>
-                    <td>Hamza@gmail.com</td>
-                    <td><button type="submit" class="btn btn-success">Accepter</button></td>
-                    <td><button type="submit" class="btn btn-danger">Reffuser</button></td>
-                </tr>
-                <tr>
-                    <td>Jaada</td>
-                    <td>Hamza</td>
-                    <td>Service</td>
-                    <td>Abdelilah</td>
-                    <td>Abdelilah@gmail.com</td>
-                    <td><button type="submit" class="btn btn-success">Accepter</button></td>
-                    <td><button type="submit" class="btn btn-danger">Reffuser</button></td>
-                </tr>
-                <tr>
-                    <td>Elgallati</td>
-                    <td>Abdelilah</td>
-                    <td>Service</td>
-                    <td>Hamza</td>
-                    <td>Hamza@gmail.com</td>
-                    <td><button type="submit" class="btn btn-success">Accepter</button></td>
-                    <td><button type="submit" class="btn btn-danger">Reffuser</button></td>
-                </tr>
-                <tr>
-                    <td>Jaada</td>
-                    <td>Hamza</td>
-                    <td>Service</td>
-                    <td>Abdelilah</td>
-                    <td>Abdelilah@gmail.com</td>
-                    <td><button type="submit" class="btn btn-success">Accepter</button></td>
-                    <td><button type="submit" class="btn btn-danger">Reffuser</button></td>
-                </tr>
-                <tr>
-                    <td>Elgallati</td>
-                    <td>Abdelilah</td>
-                    <td>Service</td>
-                    <td>Hamza</td>
-                    <td>Hamza@gmail.com</td>
-                    <td><button type="submit" class="btn btn-success">Accepter</button></td>
-                    <td><button type="submit" class="btn btn-danger">Reffuser</button></td>
-                </tr>
-                <tr>
-                    <td>Jaada</td>
-                    <td>Hamza</td>
-                    <td>Service</td>
-                    <td>Abdelilah</td>
-                    <td>Abdelilah@gmail.com</td>
-                    <td><button type="submit" class="btn btn-success">Accepter</button></td>
-                    <td><button type="submit" class="btn btn-danger">Reffuser</button></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <br><h2 style="text-align:center;margin-right:20%;margin-top:30px">Table de <span style="color:#3cb626">demandes</span></h2><br>
-    <div class="div-table" style="height: 350px; overflow-y: auto;margin-bottom:30px" >
-        <table class="table" style="width: 85%;" >
-            <thead>
-            <tr>
-                <th scope="col">Nom</th>
-                <th scope="col">Prenom</th>
-                <th scope="col">Service</th>
-                <th scope="col">Prestater par</th>
-                <th scope="col">Email</th>
-                <th scope="col" colspan="2">Action</th>
-            </tr>
-            </thead>
-            <tbody class="table-group-divider">
-                <tr>
-                    <td>Elgallati</td>
-                    <td>Abdelilah</td>
-                    <td>Demandes</td>
-                    <td>Hamza</td>
-                    <td>Hamza@gmail.com</td>
-                    <td><button type="submit" class="btn btn-success">Accepter</button></td>
-                    <td><button type="submit" class="btn btn-danger">Reffuser</button></td>
-                </tr>
-                <tr>
-                    <td>Jaada</td>
-                    <td>Hamza</td>
-                    <td>Demandes</td>
-                    <td>Abdelilah</td>
-                    <td>Abdelilah@gmail.com</td>
-                    <td><button type="submit" class="btn btn-success">Accepter</button></td>
-                    <td><button type="submit" class="btn btn-danger">Reffuser</button></td>
-                </tr>
-                <tr>
-                    <td>Elgallati</td>
-                    <td>Abdelilah</td>
-                    <td>Demandes</td>
-                    <td>Hamza</td>
-                    <td>Hamza@gmail.com</td>
-                    <td><button type="submit" class="btn btn-success">Accepter</button></td>
-                    <td><button type="submit" class="btn btn-danger">Reffuser</button></td>
-                </tr>
-                <tr>
-                    <td>Jaada</td>
-                    <td>Hamza</td>
-                    <td>Demandes</td>
-                    <td>Abdelilah</td>
-                    <td>Abdelilah@gmail.com</td>
-                    <td><button type="submit" class="btn btn-success">Accepter</button></td>
-                    <td><button type="submit" class="btn btn-danger">Reffuser</button></td>
-                </tr>
-                <tr>
-                    <td>Elgallati</td>
-                    <td>Abdelilah</td>
-                    <td>Demandes</td>
-                    <td>Hamza</td>
-                    <td>Hamza@gmail.com</td>
-                    <td><button type="submit" class="btn btn-success">Accepter</button></td>
-                    <td><button type="submit" class="btn btn-danger">Reffuser</button></td>
-                </tr>
-                <tr>
-                    <td>Jaada</td>
-                    <td>Hamza</td>
-                    <td>Demandes</td>
-                    <td>Abdelilah</td>
-                    <td>Abdelilah@gmail.com</td>
-                    <td><button type="submit" class="btn btn-success">Accepter</button></td>
-                    <td><button type="submit" class="btn btn-danger">Reffuser</button></td>
-                </tr>
-                <tr>
-                    <td>Elgallati</td>
-                    <td>Abdelilah</td>
-                    <td>Demandes</td>
-                    <td>Hamza</td>
-                    <td>Hamza@gmail.com</td>
-                    <td><button type="submit" class="btn btn-success">Accepter</button></td>
-                    <td><button type="submit" class="btn btn-danger">Reffuser</button></td>
-                </tr>
-                <tr>
-                    <td>Jaada</td>
-                    <td>Hamza</td>
-                    <td>Demandes</td>
-                    <td>Abdelilah</td>
-                    <td>Abdelilah@gmail.com</td>
-                    <td><button type="submit" class="btn btn-success">Accepter</button></td>
-                    <td><button type="submit" class="btn btn-danger">Reffuser</button></td>
-                </tr>
-                <tr>
-                    <td>Elgallati</td>
-                    <td>Abdelilah</td>
-                    <td>Demandes</td>
-                    <td>Hamza</td>
-                    <td>Hamza@gmail.com</td>
-                    <td><button type="submit" class="btn btn-success">Accepter</button></td>
-                    <td><button type="submit" class="btn btn-danger">Reffuser</button></td>
-                </tr>
-                <tr>
-                    <td>Jaada</td>
-                    <td>Hamza</td>
-                    <td>Demandes</td>
-                    <td>Abdelilah</td>
-                    <td>Abdelilah@gmail.com</td>
                     <td><button type="submit" class="btn btn-success">Accepter</button></td>
                     <td><button type="submit" class="btn btn-danger">Reffuser</button></td>
                 </tr>
