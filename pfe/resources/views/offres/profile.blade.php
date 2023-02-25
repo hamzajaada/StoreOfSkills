@@ -57,19 +57,21 @@
                 </form>
             </div>
             <div class="mot_passe" style="margin-bottom: 30px">
-                <form class="row g-3" method="post" enctype="multipart/form-data">
+                <form class="row g-3" method="post" action="{{ route('users.password') }}">
+                    @csrf
+                    @method('POST')
                     <h2>Modification de mot de passe</h2>
                     <div class="col-12">
                         <label for="inputPassword4" class="form-label">Mot de passe actuelle</label>
-                        <input type="password" class="form-control" id="inputPassword4">
+                        <input type="password" class="form-control" id="inputPassword4" name="current_password">
                     </div>
                     <div class="col-12">
                         <label for="inputPassword4" class="form-label">Nouveau mot de passe</label>
-                        <input type="password" class="form-control" id="inputPassword4">
+                        <input type="password" class="form-control" id="inputPassword4" name="password">
                     </div>
                     <div class="col-12">
                         <label for="inputPassword4" class="form-label">Confirmer le mot de passe</label>
-                        <input type="password" class="form-control" id="inputPassword4">
+                        <input type="password" class="form-control" id="inputPassword4" name="password_confirmation">
                     </div>
                     <div class="col-12">
                         <center><button type="submit" class="btn btn-primary" style="width: 50%;">Modifer</button></center>

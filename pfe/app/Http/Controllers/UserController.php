@@ -3,37 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\UploadedFile;
-
 use App\Models\Offre;
 use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules\Password;
 
 class UserController extends Controller
 {
-    // public function index(){
-    //     $profile = User::where('nom', Auth::user()->nom)->where('prenom',Auth::user()->prenom)->first();
-    //     return view('offres.profile',compact('profile'));
-    // }
-    // public function update(Request $request, $id)
-    // {
-    //     $user = User::findorFail($id);
-    //     $user->nom = $request->nom;
-    //     $user->prenom = $request->prenom;
-    //     $user->email = $request->email;
-    //     $user->location = $request->location;
-    //     if($request->file('image') != null){
-    //         $imagePath = $request->file('image')->storeAs(
-    //             'users', time() . '_' . $request->file('image')->getClientOriginalName(), 'images'
-    //         );
-    //         $user->image = $imagePath;
-    //     }
-    //     $user->save();
-    //
-    // }
-
     public function index()
     {
         $user = Auth::user();
@@ -60,20 +40,18 @@ class UserController extends Controller
     return redirect()->back();
 }
 
-    // public function changePassword(Request $request)
-    // {
-    //     $request->validate([
-    //         'current_password' => ['required', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()],
-    //         'password' => ['required', Password::min(8)->mixedCase()->letters()->numbers()->symbols()->uncompromised()->differentFrom($request->current_password)],
-    //         'password_confirmation' => 'required|same:password',
-    //     ]);
+    public function changePassword(Request $request)
+    {
 
-    //     $user = Auth::user();
-    //     $user->password = Hash::make($request->password);
-    //     $user->save();
-
-    //     return redirect()->back()->with('success', 'Votre mot de passe a été modifié avec succès.');
-    // }
+        $request->validate([
+            'current_password' => 'required|min:8',
+            'password' => 'required|min:8',
+            'password_confirmation' => 'required|same:password',
+        ]);
+        $user = Auth::user();
+        $user->update(['password' => Hash::make($request->password)]);
+        return redirect()->back();
+    }
 
     public function profile(){
 

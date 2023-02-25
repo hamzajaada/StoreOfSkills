@@ -12,4 +12,7 @@ class Offre extends Model
     use SoftDeletes;
 
     protected $fillable=['type','categorie','offre','image_offre','prix'];
+
+
+
 }

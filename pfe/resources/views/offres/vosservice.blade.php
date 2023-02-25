@@ -46,7 +46,11 @@
                         </div>
                         <div class="butns">
                             <div class="modf"><a class="btn btn-primary" href="{{ route('offres.edit',$srv->id) }}" role="button">Modifier</a></div>
-                            <div class="sup"><a class="btn btn-danger" href="{{ route('offres.destroy',$srv->id) }}" role="button">Supprimer</a></div>
+                            <form action="{{ route('offres.destroy',$srv->id) }}" method="post">
+                                @method('delete')
+                                @csrf
+                                <button class="btn btn-danger" type="submit">Supprimer</button>
+                            </form>
                         </div>
                     </article>
                 @endforeach

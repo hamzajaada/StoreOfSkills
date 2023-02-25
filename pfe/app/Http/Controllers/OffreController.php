@@ -18,8 +18,7 @@ class OffreController extends Controller
 
     public function index()
     {
-        $compte = User::where('id', Auth::user()->id)->get();
-        return view('home',compact('compte'));
+        return view('home');
     }
 
     /**
@@ -105,10 +104,9 @@ class OffreController extends Controller
      */
     public function destroy($id)
     {
-        $data = Offre::where('id',$id);
-        $data->delete();
-        $compte = User::where('id', Auth::user()->id)->get();
-        return view('home',compact('compte'));
+        $offre = Offre::findorFail($id);
+        $offre->delete();
+        return redirect()->back();
     }
 
 
@@ -116,7 +114,7 @@ class OffreController extends Controller
     public function services(){
         $services = Offre::where('type','service')->get();
         foreach ($services as $srv) {
-            $user = User::where('id', $srv->id_user)->first(); // récupère l'utilisateur correspondant à l'id_user de l'srv
+            $user = User::where('id', $srv->id_user)->first();
             $srv->nom = $user->nom; // ajoute le nom de l'utilisateur à l'srv
             $srv->prenom = $user->prenom; // ajoute le prénom de l'utilisateur à l'srv
             $srv->image = $user->image; // ajoute l'image de l'utilisateur à l'srv
@@ -127,10 +125,10 @@ class OffreController extends Controller
     public function demandes(){
         $demandes = Offre::where('type','demande')->get();
         foreach ($demandes as $d) {
-            $user = User::where('id', $d->id_user)->first(); // récupère l'utilisateur correspondant à l'id_user de l'd
-            $d->nom = $user->nom; // ajoute le nom de l'utilisateur à l'd
-            $d->prenom = $user->prenom; // ajoute le prénom de l'utilisateur à l'd
-            $d->image = $user->image; // ajoute l'image de l'utilisateur à l'd
+            $user = User::where('id', $d->id_user)->first();
+            $d->nom = $user->nom;
+            $d->prenom = $user->prenom;
+            $d->image = $user->image;
         }
         return view('offres.demandes',compact('demandes'));
     }
@@ -138,10 +136,10 @@ class OffreController extends Controller
     public function services_id(){
         $services = Offre::all()->where('type','service')->where('id_user', Auth::user()->id);
         foreach ($services as $srv) {
-            $user = User::where('id', $srv->id_user)->first(); // récupère l'utilisateur correspondant à l'id_user de l'srv
-            $srv->nom = $user->nom; // ajoute le nom de l'utilisateur à l'srv
-            $srv->prenom = $user->prenom; // ajoute le prénom de l'utilisateur à l'srv
-            $srv->image = $user->image; // ajoute l'image de l'utilisateur à l'srv
+            $user = User::where('id', $srv->id_user)->first();
+            $srv->nom = $user->nom;
+            $srv->prenom = $user->prenom;
+            $srv->image = $user->image;
         }
         return view('offres.vosservice',compact('services'));
     }
@@ -149,10 +147,10 @@ class OffreController extends Controller
     public function demandes_id(){
         $demandes = Offre::all()->where('type','demande')->where('id_user', Auth::user()->id);
         foreach ($demandes as $d) {
-            $user = User::where('id', $d->id_user)->first(); // récupère l'utilisateur correspondant à l'id_user de l'd
-            $d->nom = $user->nom; // ajoute le nom de l'utilisateur à l'd
-            $d->prenom = $user->prenom; // ajoute le prénom de l'utilisateur à l'd
-            $d->image = $user->image; // ajoute l'image de l'utilisateur à l'd
+            $user = User::where('id', $d->id_user)->first();
+            $d->nom = $user->nom;
+            $d->prenom = $user->prenom;
+            $d->image = $user->image; 
         }
         return view('offres.vosdemandes',compact('demandes'));
     }

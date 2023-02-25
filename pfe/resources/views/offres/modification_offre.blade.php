@@ -44,11 +44,13 @@
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Categorie:</label>
                 <select class="form-control" value="{{ $offre->categorie }}" name="categorie" id="exampleFormControlSelect1">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option value="Design graphique">Design graphique</option>
+                    <option value="Développement web et mobile">Développement web et mobile</option>
+                    <option value="Rédaction et traduction">Rédaction et traduction</option>
+                    <option value="Marketing et publicité">Marketing et publicité</option>
+                    <option value="Services informatiques">Services informatiques</option>
+                    <option value="Coaching et formation">Coaching et formation</option>
+                    <option value="Métier">Métier</option>
                 </select>
             </div>
             <div class="form-group">
