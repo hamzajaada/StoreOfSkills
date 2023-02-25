@@ -46,7 +46,8 @@
                         </div>
                         <div class="butns">
                             <div class="modf"><a class="btn btn-primary" href="{{ route('offres.edit',$srv->id) }}" role="button">Modifier</a></div>
-                            <div class="sup"><a class="btn btn-danger" {{ route('offres.destroy',$srv->id) }} role="button">Supprimer</a></div>
+                            <div class="sup"><a class="btn btn-danger" href="{{ route('offres.destroy',$srv->id) }}" role="button">Supprimer</a></div>
+                        </div>
                     </article>
                 @endforeach
             </div>

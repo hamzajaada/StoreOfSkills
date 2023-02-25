@@ -91,7 +91,7 @@ class OffreController extends Controller
             $offre->image_offre = $imagePath;
         }
         $offre->prix = $request->prix;
-        $offre->id_user = $request->user_id;
+        $offre->id_user = $request->id_user;
         $offre->save();
         if($request->type=='service'){
             return redirect()->route('home.vosservices');
@@ -107,7 +107,8 @@ class OffreController extends Controller
     {
         $data = Offre::where('id',$id);
         $data->delete();
-        return redirect()->route('home');
+        $compte = User::where('id', Auth::user()->id)->get();
+        return view('home',compact('compte'));
     }
 
 
