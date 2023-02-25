@@ -13,6 +13,8 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -45,7 +47,11 @@
                     </div>
                     <div class="butns">
                         <div class="modf"><a class="btn btn-primary" href="{{ route('offres.edit',$d->id) }}" role="button">Modifier</a></div>
+<<<<<<< HEAD
+                        <div class="sup"><a class="btn btn-danger" href="{{ route('offres.destroy',$d->id) }}" role="button">Supprimer</a></div>
+=======
                         <div class="sup"><a class="btn btn-danger" {{ route('offres.destroy',$d->id) }} role="button">Supprimer</a></div>
+>>>>>>> bf471a2748a9150026c249e21d53e03c1c1fb4b1
                     </div>
                 </article>
             @endforeach
