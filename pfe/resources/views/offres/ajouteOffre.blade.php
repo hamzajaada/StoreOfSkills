@@ -29,7 +29,7 @@
         @extends('offres.fixeBarre')
     </section>
     <section class="P-2"  >
-        <h1 class="titre-part3" style="margin-top: 40px;">Ajoute <span style="color:rgb(36, 189, 36)">d'offre</span> </h1>
+        <h1 class="titre-part3" style="margin-top: 40px; margin-left:150px">Ajoute <span style="color:rgb(36, 189, 36)">d'offre</span> </h1>
     <div class="info-compte" style="margin-left: 96px;">
         <form class="row g-3" method="post" action="{{ route('offres.store') }}" enctype="multipart/form-data">
             @csrf

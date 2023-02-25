@@ -176,8 +176,11 @@
    border-radius: 10px;
 }
 .sup:hover{
+   background-color:rgb(242, 69, 69);
+
    background-color:rgb(188, 35, 35);
 } */
+
 
 .text-prix{
    margin-left: 20px;

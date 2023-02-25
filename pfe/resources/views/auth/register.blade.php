@@ -13,7 +13,7 @@
 <body>
     <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-8" style="width: 75.666667%;">
             <div class="card" >
                 <div class="card-body">
                     <div class="logo">
