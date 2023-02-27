@@ -29,43 +29,29 @@
     <table class="table" style="width: 85%;" >
         <thead>
             <tr>
-                <th scope="col">#</th>
                 <th scope="col">NOM</th>
                 <th scope="col">Prenom</th>
                 <th scope="col">Adresse</th>
-                <th scope="col">Image</th>
                 <th scope="col">Email</th>
                 <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody class="table-group-divider">
-            <tr>
-                <th scope="row">1</th>
-                <td>Elgallati</td>
-                <td>Abdelilah</td>
-                <td>Essaouira</td>
-                <td>image</td>
-                <td>abdelilah@gmail.com</td>
-                <td><button type="submit" class="btn btn-danger">Supprimer</button></td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jaada</td>
-                <td>Hamza</td>
-                <td>Talmest</td>
-                <td>image</td>
-                <td>hamza@gmail.com</td>
-                <td><button type="submit" class="btn btn-danger">Supprimer</button></td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Elgallati</td>
-                <td>Mahdi</td>
-                <td>Essaouira</td>
-                <td>image</td>
-                <td>mahdi@gmail.com</td>
-                <td><button type="submit" class="btn btn-danger">Supprimer</button></td>
-            </tr>
+            @foreach ($users as $u)
+                <tr>
+                    <td>{{ $u->nom }}</td>
+                    <td>{{ $u->prenom }}</td>
+                    <td>{{ $u->location }}</td>
+                    <td>{{ $u->email }}</td>
+                    <td>
+                        <form action="{{ route('users.user.delete',$u->id) }}" method="post">
+                            @method('GET')
+                            @csrf
+                            <button class="btn btn-danger" type="submit">Supprimer</button>
+                        </form>
+                    </td>
+                <tr>
+            @endforeach
         </tbody>
     </table>
     </div>

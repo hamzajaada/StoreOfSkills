@@ -35,6 +35,7 @@
                     <th scope="col">Email</th>
                     <th scope="col">Type</th>
                     <th scope="col">Offre</th>
+                    <th scope="col">Prix</th>
                     <th scope="col" colspan="2">Action</th>
                 </tr>
             </thead>
@@ -45,6 +46,7 @@
                     <td>Hamza@gmail.com</td>
                     <td>type</td>
                     <td>Service</td>
+                    <td>Prix</td>
                     <td><button type="submit" class="btn btn-success">Accepter</button></td>
                     <td><button type="submit" class="btn btn-danger">Reffuser</button></td>
                 </tr>

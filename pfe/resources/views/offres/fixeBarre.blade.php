@@ -88,7 +88,7 @@
                             <span style="color:black" class="tooltip">Liste d'offres</span>
                         </li>
                         <li>
-                            <a href="{{ route('users.user') }}">
+                            <a href="{{ route('admin.users') }}">
                                 <i class="fa-solid fa-layer-group"></i>
                                 <span class="links_name">Liste d'utilisateurs</span>
                             </a>

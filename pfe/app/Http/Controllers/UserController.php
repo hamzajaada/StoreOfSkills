@@ -55,12 +55,28 @@ class UserController extends Controller
 
     public function users(){
         $users = User::all();
-        return view('admin.user',$users);
+        return view('admin.user',compact('users'));
     }
 
     public function offres(){
         $offres = Offre::all();
-        return view('admin.offre',$offres);
+        foreach ($offres as $f) {
+            $user = User::where('id', $f->id_user)->first();
+            $f->nom = $user->nom;
+            $f->prenom = $user->prenom;
+        }
+        return view('admin.offre',compact('offres'));
+    }
+
+    public function delete_user($id){
+        $user = User::findorFail($id);
+        $user->delete();
+        return redirect()->back();
+    }
+
+    public function delete_offre($id){
+        Offre::destroy($id);
+        return redirect()->back();
     }
 
     public function profile(){

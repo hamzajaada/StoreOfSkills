@@ -29,43 +29,34 @@
     <table class="table" style="width: 85%;" >
         <thead>
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">NOM</th>
+            <th scope="col">Nom</th>
             <th scope="col">Prenom</th>
             <th scope="col">Type</th>
             <th scope="col">Categorie</th>
             <th scope="col">Offre</th>
+            <th scope="col">Prix</th>
             <th scope="col">Action</th>
         </tr>
         </thead>
         <tbody class="table-group-divider">
-        <tr>
-            <th scope="row">1</th>
-            <td>Elgallati</td>
-            <td>Abdelilah</td>
-            <td>Type</td>
-            <td>Categorie</td>
-            <td>Offre</td>
-            <td><button type="submit" class="btn btn-danger">Supprimer</button></td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jaada</td>
-            <td>Hamza</td>
-            <td>Type</td>
-            <td>Categorie</td>
-            <td>Offre</td>
-            <td><button type="submit" class="btn btn-danger">Supprimer</button></td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Elgallati</td>
-            <td>Mahdi</td>
-            <td>Type</td>
-            <td>Categorie</td>
-            <td>Offre</td>
-            <td><button type="submit" class="btn btn-danger">Supprimer</button></td>
-        </tr>
+            @foreach ($offres as $f)
+                <tr>
+                    <td>{{ $f->nom }}</td>
+                    <td>{{ $f->prenom }}</td>
+                    <td>{{ $f->type }}</td>
+                    <td>{{ $f->categorie }}</td>
+                    <td>{{ $f->offre }}</td>
+                    <td>{{ $f->prix }}</td>
+                    <td>
+                        <form action="{{ route('users.offre.delete',$f->id) }}" method="post">
+                            @method('GET')
+                            @csrf
+                            <button class="btn btn-danger" type="submit">Supprimer</button>
+                        </form>
+                    </td>
+                </tr>
+            @endforeach
+
         </tbody>
     </table>
 </div>
