@@ -53,6 +53,16 @@ class UserController extends Controller
         return redirect()->back();
     }
 
+    public function users(){
+        $users = User::all();
+        return view('admin.user',$users);
+    }
+
+    public function offres(){
+        $offres = Offre::all();
+        return view('admin.offre',$offres);
+    }
+
     public function profile(){
 
     }

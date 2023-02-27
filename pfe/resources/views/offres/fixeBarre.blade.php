@@ -79,6 +79,22 @@
                         </a>
                         <span style="color:black" class="tooltip">vos services</span>
                     </li>
+                    @if (Auth::user()->nom == 'Admine' AND Auth::user()->email == 'admin@gmail.com')
+                        <li>
+                            <a href="{{ route('users.offre') }}">
+                                <i class="fa-solid fa-layer-group"></i>
+                                <span class="links_name">Liste d'offres</span>
+                            </a>
+                            <span style="color:black" class="tooltip">Liste d'offres</span>
+                        </li>
+                        <li>
+                            <a href="{{ route('users.user') }}">
+                                <i class="fa-solid fa-layer-group"></i>
+                                <span class="links_name">Liste d'utilisateurs</span>
+                            </a>
+                            <span style="color:black" class="tooltip">Liste d'utilisateurs</span>
+                        </li>
+                    @endif
                 </ul>
             </div>
         </div>

@@ -20,9 +20,9 @@
 </head>
 <body>
 <div id="app">
-    @extends('page.fixeHeader')
+    @extends('offres.fixeHeader')
     <section class="main-sec1">
-        @extends('page.fixeBarre')
+        @extends('offres.fixeBarre')
     </section>
     <br>
     <h1 style="text-align:center;margin-right:20%;margin-top:30px">Table d'offres</h1><br><br>

@@ -30,6 +30,8 @@ Auth::routes();
 Route::resource('offres',OffreController::class);
 Route::resource('users',UserController::class);
 Route::post('home/profile/change-password',[UserController::class,'changePassword'])->name('users.password');
+Route::get('home/users',[UserController::class,'users'])->name('users.user');
+Route::get('home/offres',[UserController::class,'offres'])->name('users.offre');
 Route::get('home/services',[OffreController::class,'services'])->name('home.services');
 Route::get('home/demandes',[OffreController::class,'demandes'])->name('home.demandes');
 Route::get('home/reponses',[OffreController::class,'reponses'])->name('home.reponses');
