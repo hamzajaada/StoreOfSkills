@@ -117,9 +117,9 @@ class OffreController extends Controller
         $services = Offre::where('type','service')->get();
         foreach ($services as $srv) {
             $user = User::where('id', $srv->id_user)->first();
-            $srv->nom = $user->nom; // ajoute le nom de l'utilisateur à l'srv
-            $srv->prenom = $user->prenom; // ajoute le prénom de l'utilisateur à l'srv
-            $srv->image = $user->image; // ajoute l'image de l'utilisateur à l'srv
+            $srv->nom = $user->nom; 
+            $srv->prenom = $user->prenom; 
+            $srv->image = $user->image; 
         }
         return view('offres.services',compact('services'));
     }
@@ -145,6 +145,7 @@ class OffreController extends Controller
         }
         return view('offres.vosservice',compact('services'));
     }
+
     public function demandes_id(){
         $demandes = Offre::all()->where('type','demande')->where('id_user', Auth::user()->id);
         foreach ($demandes as $d) {
