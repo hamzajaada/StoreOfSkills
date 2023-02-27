@@ -145,6 +145,7 @@ class OffreController extends Controller
         }
         return view('offres.vosservice',compact('services'));
     }
+    
     public function demandes_id(){
         $demandes = Offre::all()->where('type','demande')->where('id_user', Auth::user()->id);
         foreach ($demandes as $d) {
