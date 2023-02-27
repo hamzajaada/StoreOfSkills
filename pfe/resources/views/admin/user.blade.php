@@ -25,35 +25,37 @@
             @extends('offres.fixeBarre')
         </section>
         <br>
-    <h1 style="text-align:center;margin-right:20%;margin-top:30px">Table d'utilisateurs</h1><br><br>
-    <table class="table" style="width: 85%;" >
-        <thead>
-            <tr>
-                <th scope="col">NOM</th>
-                <th scope="col">Prenom</th>
-                <th scope="col">Adresse</th>
-                <th scope="col">Email</th>
-                <th scope="col">Action</th>
-            </tr>
-        </thead>
-        <tbody class="table-group-divider">
-            @foreach ($users as $u)
-                <tr>
-                    <td>{{ $u->nom }}</td>
-                    <td>{{ $u->prenom }}</td>
-                    <td>{{ $u->location }}</td>
-                    <td>{{ $u->email }}</td>
-                    <td>
-                        <form action="{{ route('users.user.delete',$u->id) }}" method="post">
-                            @method('GET')
-                            @csrf
-                            <button class="btn btn-danger" type="submit">Supprimer</button>
-                        </form>
-                    </td>
-                <tr>
-            @endforeach
-        </tbody>
-    </table>
+        <h1 style="text-align:center;margin-left:10%;margin-top:40px;">Table d'utilisateurs</h1><br><br>
+        <div class="div-table" style="margin-left:17%" >
+            <table class="table" style="width: 95%;border-collapse: collapse;" >
+                <thead>
+                    <tr>
+                        <th scope="col">NOM</th>
+                        <th scope="col">Prenom</th>
+                        <th scope="col">Adresse</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    @foreach ($users as $u)
+                        <tr>
+                            <td>{{ $u->nom }}</td>
+                            <td>{{ $u->prenom }}</td>
+                            <td>{{ $u->location }}</td>
+                            <td>{{ $u->email }}</td>
+                            <td>
+                                <form action="{{ route('users.user.delete',$u->id) }}" method="post">
+                                    @csrf
+                                    @method('delete')
+                                    <button class="btn btn-danger" type="submit">Supprimer</button>
+                                </form>
+                            </td>
+                        <tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
     </div>
     <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
 </body>

@@ -81,7 +81,7 @@
                     </li>
                     @if (Auth::user()->nom == 'Admine' AND Auth::user()->email == 'admin@gmail.com')
                         <li>
-                            <a href="{{ route('users.offre') }}">
+                            <a href="{{ route('users.home.offres') }}">
                                 <i class="fa-sharp fa-solid fa-list"></i>
                                 <span class="links_name">Liste d'offres</span>
                             </a>
@@ -89,8 +89,7 @@
                         </li>
                         <li>
                             <a href="{{ route('admin.users') }}">
-                                <i class="fa-solid fa-layer-group"></i>
-                            <a href="{{ route('users.user') }}">
+                                {{-- <i class="fa-solid fa-layer-group"></i> --}}
                                 <i class="fa-sharp fa-solid fa-list"></i>
                                 <span class="links_name">Liste d'utilisateurs</span>
                             </a>

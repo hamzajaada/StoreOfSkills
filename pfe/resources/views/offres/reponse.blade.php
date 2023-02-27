@@ -26,8 +26,8 @@
     </section>
 
     <br><h2 style="text-align:center;margin-left:10%;margin-top:40px;">Table d'<span style="color:#ff3c74">offres</span></h2><br>
-    <div class="div-table" style="height: 350px; overflow-y: auto;margin-left:20%" >
-        <table class="table" style="width: 90%;border-collapse: collapse;" >
+    <div class="div-table" style="margin-left:17%" >
+        <table class="table" style="width: 95%;border-collapse: collapse;" >
             <thead>
                 <tr>
                     <th scope="col">Nom</th>

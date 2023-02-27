@@ -21,28 +21,25 @@ class UserController extends Controller
     }
 
     public function update(Request $request, $id)
-{
-    $user = User::findorFail($id);
-    $user->nom = $request->input('nom');
-    $user->prenom = $request->input('prenom');
-    $user->email = $request->input('email');
-    $user->location = $request->input('location');
-
-    if ($request->hasFile('image')) {
-        $image = $request->file('image');
-        $filename = time() . '.' . $image->getClientOriginalExtension();
-        $path = public_path('uploads/images/' . $filename);
-        $image->move(public_path('uploads/images'), $filename);
-        $user->image = $filename;
+    {
+        $user = User::findorFail($id);
+        $user->nom = $request->input('nom');
+        $user->prenom = $request->input('prenom');
+        $user->email = $request->input('email');
+        $user->location = $request->input('location');
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $path = public_path('uploads/images/' . $filename);
+            $image->move(public_path('uploads/images'), $filename);
+            $user->image = $filename;
+        }
+        $user->save();
+        return redirect()->back();
     }
-
-    $user->save();
-    return redirect()->back();
-}
 
     public function changePassword(Request $request)
     {
-
         $request->validate([
             'current_password' => 'required|min:8',
             'password' => 'required|min:8',
