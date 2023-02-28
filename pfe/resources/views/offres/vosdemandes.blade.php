@@ -47,11 +47,34 @@
                     </div>
                     <div class="butns">
                         <div class="modf"><a class="btn btn-primary" href="{{ route('offres.edit',$d->id) }}" role="button">Modifier</a></div>
-                        <form action="{{ route('offres.destroy',$d->id) }}" method="post">
+                        {{-- <form action="{{ route('offres.destroy',$d->id) }}" method="post">
                             @method('delete')
                             @csrf
                             <button class="btn btn-danger" type="submit">Supprimer</button>
-                        </form>
+                        </form> --}}
+                        <!-- Modal de confirmation de suppression -->
+                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirm-delete-modal-{{ $d->id }}">Supprimer</button>
+                        <div class="modal fade" id="confirm-delete-modal-{{ $d->id }}" tabindex="-1" aria-labelledby="confirm-delete-modal-label-{{ $d->id }}" aria-hidden="true">
+                            <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="confirm-delete-modal-label-{{ $d->id }}">Confirmation de suppression</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                Êtes-vous sûr de vouloir supprimer cette demande ? Cette action est irréversible.
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                <form method="POST" action="{{ route('users.offre.delete', $d->id) }}">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">Supprimer</button>
+                                </form>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
                     </div>
                 </article>
             @endforeach

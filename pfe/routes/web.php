@@ -40,7 +40,7 @@ Route::get('home/demandes',[OffreController::class,'demandes'])->name('home.dema
 Route::get('home/reponses',[OffreController::class,'reponses'])->name('home.reponses');
 Route::get('home/vos-services',[OffreController::class,'services_id'])->name('home.vosservices');
 Route::get('home/vos-demandes',[OffreController::class,'demandes_id'])->name('home.vosdemandes');
-Route::post('/commander-service',[ConsulterController::class,'commanderService'])->name('commander');
+// Route::post('/commander-service',[ConsulterController::class,'commanderService'])->name('commander');
 
 // Route::resource('offres', OffreController::class);
 // Route::resource('users', UserController::class);

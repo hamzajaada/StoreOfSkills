@@ -108,7 +108,7 @@ class OffreController extends Controller
         $offre->delete();
         return redirect()->back();
     }
-
+    
     public function reponses(){
         return view('offres.reponse');
     }
@@ -117,9 +117,9 @@ class OffreController extends Controller
         $services = Offre::where('type','service')->get();
         foreach ($services as $srv) {
             $user = User::where('id', $srv->id_user)->first();
-            $srv->nom = $user->nom; 
-            $srv->prenom = $user->prenom; 
-            $srv->image = $user->image; 
+            $srv->nom = $user->nom;
+            $srv->prenom = $user->prenom;
+            $srv->image = $user->image;
         }
         return view('offres.services',compact('services'));
     }

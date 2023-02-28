@@ -46,11 +46,33 @@
                         </div>
                         <div class="butns">
                             <div class="modf"><a class="btn btn-primary" href="{{ route('offres.edit',$srv->id) }}" role="button">Modifier</a></div>
-                            <form action="{{ route('offres.destroy',$srv->id) }}" method="post">
-                                @method('delete')
+                            {{-- <form method="POST" action="{{ route('users.offre.delete', ['id' => $srv->id]) }}">
                                 @csrf
-                                <button class="btn btn-danger" type="submit">Supprimer</button>
-                            </form>
+                                @method('DELETE')
+                                <button type="button" class="btn btn-danger" onclick="confirmDelete(this)">Supprimer</button>
+                            </form> --}}
+                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirm-delete-modal-{{ $srv->id }}">Supprimer</button>
+                            <div class="modal fade" id="confirm-delete-modal-{{ $srv->id }}" tabindex="-1" aria-labelledby="confirm-delete-modal-label-{{ $srv->id }}" aria-hidden="true">
+                                <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="confirm-delete-modal-label-{{ $srv->id }}">Confirmation de suppression</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                    Êtes-vous sûr de vouloir supprimer ce service ? Cette action est irréversible.
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                    <form method="POST" action="{{ route('users.offre.delete', $srv->id) }}">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger">Supprimer</button>
+                                    </form>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
                         </div>
                     </article>
                 @endforeach
@@ -61,5 +83,10 @@
 </body>
 </html>
 
-{{-- <a href="{{ route('offres.edit',$srv->id) }}" class="but-post">Modifier</a> --}}
-{{-- <a href="{{ route('offres.destroy',$srv->id) }}" class="but-post">Supprimer</a></div> --}}
+<script>
+    function confirmDelete(button) {
+        if (confirm("Êtes-vous sûr de vouloir supprimer ce service?")) {
+            button.form.submit();
+        }
+    }
+</script>
