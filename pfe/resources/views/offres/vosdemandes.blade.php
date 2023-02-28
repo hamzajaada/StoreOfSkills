@@ -54,7 +54,7 @@
                         </form> --}}
                         <!-- Modal de confirmation de suppression -->
                         <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirm-delete-modal-{{ $d->id }}">Supprimer</button>
-                        <div class="modal fade" id="confirm-delete-modal-{{ $d->id }}" tabindex="-1" aria-labelledby="confirm-delete-modal-label-{{ $d->id }}" aria-hidden="true">
+                        <div class="modal fade" style="margin-top:300px" id="confirm-delete-modal-{{ $d->id }}" tabindex="-1" aria-labelledby="confirm-delete-modal-label-{{ $d->id }}" aria-hidden="true">
                             <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -84,3 +84,10 @@
 <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
 </body>
 </html>
+<script>
+    function confirmDelete(button) {
+        if (confirm("Êtes-vous sûr de vouloir supprimer ce service?")) {
+            button.form.submit();
+        }
+    }
+</script>
