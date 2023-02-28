@@ -47,7 +47,13 @@
                     <p class="text-prix"><span style="color:#ff3c74"> Prix :</span>{{ $srv->prix }}DH</p>
                 </div>
 
-                <center><div class="button-commander"><a href="" class="but-post">commander</a></div></center>
+                <center><div class="button-commander">
+                     <form action="{{ route('commander', $srv->id,$srv->id_user) }}" method="post">
+                            @method('post')
+                            @csrf
+                            <button class="btn btn-danger" type="submit">Commander</button>
+                        </form> </center>
+                   {{-- <a href="{{ route('commander'), $srv->id,$srv->id_user }}" class="but-post">commander</a></div> --}} 
 
             </article>
         @endforeach
