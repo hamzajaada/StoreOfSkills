@@ -1,3 +1,17 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #c9c9c9;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
 
 .P-2{
     margin-top: 50px;
@@ -119,7 +133,7 @@
     margin-top: 10px;
     font-family: 'Open Sans', sans-serif;
     height: 100px;
-    overflow-y: scroll;
+    overflow-y: auto;
  }
  /*.text-ser{
     margin-top: 10px;

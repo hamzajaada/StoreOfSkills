@@ -1,12 +1,27 @@
 *{
    margin: 0;
    padding: 0;
-  
+
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #c9c9c9;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+
 body{
    overflow: auto;
    flex-wrap: wrap;
-} 
+}
 .main-part1{
    display: flex;
 }
@@ -25,7 +40,7 @@ span{
 }
 #text-part1{
    margin-top: 125px;
-   font-family: 'Open Sans', sans-serif;  
+   font-family: 'Open Sans', sans-serif;
    font-size: 4em;
    font-weight: 900;
 }
@@ -86,7 +101,7 @@ span{
 
 .titre-part3{
    text-align: center;
-   font-family: 'Open Sans', sans-serif;  
+   font-family: 'Open Sans', sans-serif;
    font-size: 2em;
    font-weight: 700;
 }
@@ -146,7 +161,7 @@ article{
 }
 .info-prfl{
    margin-left: 10px;
-   font-family: 'Open Sans', sans-serif;  
+   font-family: 'Open Sans', sans-serif;
 }
 .image-dem img{
    width: 440px;
@@ -156,7 +171,7 @@ article{
 
 .text-dem{
    margin-top: 10px;
-   font-family: 'Open Sans', sans-serif;  
+   font-family: 'Open Sans', sans-serif;
 }
 .text-ser{
    margin-top: 10px;
@@ -184,7 +199,7 @@ button{
 }
 .button-serv:hover{
    background-color:#d02c5a;
-   
+
 }
 .texte-butser{
    color: #fff;
@@ -206,7 +221,7 @@ button{
 
 .titre-part4{
    text-align: center;
-   font-family: 'Open Sans', sans-serif;  
+   font-family: 'Open Sans', sans-serif;
    font-size: 2em;
    font-weight: 700;
 }
@@ -245,7 +260,7 @@ button{
 }
 .store{
    text-align: center;
-   font-family: 'Open Sans', sans-serif;  
+   font-family: 'Open Sans', sans-serif;
    font-size: 2em;
    font-weight: 700;
 }
@@ -261,7 +276,7 @@ button{
    margin-bottom: 30px;
 }
 h3{
-   font-family: 'Open Sans', sans-serif;  
+   font-family: 'Open Sans', sans-serif;
    color: #172433;
 }
 .button-pre-ser{
@@ -276,7 +291,7 @@ h3{
 }
 .button-pre-ser:hover{
    background-color:#d02c5a;
-   
+
 }
 .texte-pre-ser{
    color: #fff;
@@ -299,7 +314,7 @@ h3{
 }
 .notif-titre{
    text-align: center;
-   font-family: 'Open Sans', sans-serif;  
+   font-family: 'Open Sans', sans-serif;
    font-size: 2em;
    font-weight: 700;
 }
@@ -312,7 +327,7 @@ h3{
 .not1{
       width: 480px;
       height: 248px;
-      
+
       border-right: 0.3px solid #a09f9f;
 }
 .not2{
@@ -322,25 +337,25 @@ h3{
 .not3{
    width: 480px;
    height: 248px;
-   
+
    border-left: 0.3px solid #a09f9f;
 }
 .titre-not1 ,.titre-not2 ,.titre-not3{
    text-align: center;
-   font-family: 'Open Sans', sans-serif;  
+   font-family: 'Open Sans', sans-serif;
    color: #172433;
    font-size: 1.8em;
    font-weight: 1000;
 }
 .desc{
    margin-top: 20px;
-   
+
 }
 .h3-notif{
-   font-family: 'Open Sans', sans-serif;  
+   font-family: 'Open Sans', sans-serif;
    color: #172433;
    text-align: center;
-   
+
 }
 i{
    margin-right: 7px;
@@ -407,7 +422,7 @@ footer{
       width: 100%;
       margin-left: 75px;
    }
- 
+
    .text-part1{
       font-size: 1,3em;
       font-weight: 300;
@@ -416,7 +431,7 @@ footer{
    .button-part1,.button-part2{
       width: 197px;
       height: 47px;
-   } 
+   }
     .titre-part3 {
       text-align: center;
       font-family: 'Open Sans', sans-serif;
@@ -455,7 +470,7 @@ footer{
       width: 250px;
 
    }
-   
+
    .image-ser img{
       width: 303px;
       height: 150px;
@@ -481,7 +496,7 @@ footer{
       margin-bottom: 600px;
       width: 100%;
       margin-left: 43px;
- 
+
    }
    .button-pre-ser {
       width: 226px;
@@ -498,7 +513,7 @@ footer{
       margin-left: 134px;
    }
    .button-dem{
-     
+
       margin-left: 134px;
    }
    .button-inscr{
@@ -512,7 +527,7 @@ footer{
    }
    .img-1{
       margin-left: 94px;
-   
+
    }
    .notif{
       display: block;
@@ -544,7 +559,7 @@ footer{
    color: #172433;
    font-size: 1.9em;
    font-weight: 1000;
-  
+
 }
 .desc {
    margin-top: 20px;
