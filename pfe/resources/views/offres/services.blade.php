@@ -48,12 +48,12 @@
                 </div>
 
                 <center><div class="button-commander">
-                     <form action="{{ route('commander', $srv->id,$srv->id_user) }}" method="post">
+                    {{-- <form action="{{ route('commander', $srv->id,$srv->id_user) }}" method="post">
                             @method('post')
                             @csrf
                             <button class="btn btn-danger" type="submit">Commander</button>
-                        </form> </center>
-                   {{-- <a href="{{ route('commander'), $srv->id,$srv->id_user }}" class="but-post">commander</a></div> --}} 
+                        </form>  --}}
+                    <a href="{{ route('commander'), $srv->id,$srv->id_user }}" class="but-post">commander</a></div>  </center>
 
             </article>
         @endforeach
