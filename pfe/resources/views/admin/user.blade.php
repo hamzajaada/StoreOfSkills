@@ -45,11 +45,26 @@
                             <td>{{ $u->location }}</td>
                             <td>{{ $u->email }}</td>
                             <td>
-                                <form action="{{ route('users.user.delete',$u->id) }}" method="post">
-                                    @csrf
-                                    @method('delete')
-                                    <button class="btn btn-danger" type="submit">Supprimer</button>
-                                </form>
+                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirm-delete-modal-{{ $u->id }}">Supprimer</button>
+                                <div class="modal fade" style="margin-top:300px" id="confirm-delete-modal-{{ $u->id }}" tabindex="-1" aria-labelledby="confirm-delete-modal-label-{{ $u->id }}" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="confirm-delete-modal-label-{{ $u->id }}">Confirmation de suppression</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">Êtes-vous sûr de vouloir supprimer ce utilisateur ? Cette action est irréversible.</div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
+                                                <form action="{{ route('users.user.delete',$u->id) }}" method="post">
+                                                    @csrf
+                                                    @method('delete')
+                                                    <button class="btn btn-danger" type="submit">Supprimer</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </td>
                         <tr>
                     @endforeach

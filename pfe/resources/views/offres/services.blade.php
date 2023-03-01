@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ asset('css/services.css') }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
@@ -46,9 +46,29 @@
                 <div class="prix">
                     <p class="text-prix"><span style="color:#ff3c74"> Prix :</span>{{ $srv->prix }}DH</p>
                 </div>
-
-                <center><div class="button-commander"><a href="" class="but-post">commander</a></div></center>
-
+                <center><div {{--  class="button-commander"--}}>
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#confirm-delete-modal-{{ $srv->id }}">Commander</button>
+                    <div class="modal fade" style="margin-top:300px" id="confirm-delete-modal-{{ $srv->id }}" tabindex="-1" aria-labelledby="confirm-delete-modal-label-{{ $srv->id }}" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="confirm-delete-modal-label-{{ $srv->id }}">Confirmation de commande</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">Êtes-vous sûr de vouloir commander cette service ?</div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
+                                    <form method="POST" action="{{ route('home.commander') }}">
+                                        @csrf
+                                        @method('POST')
+                                        <input type="hidden" name="id" value="{{ $srv->id }}">
+                                        <input type="hidden" name="id_user" value="{{ $srv->id_user }}">
+                                        <button type="submit" class="btn btn-success">Commander</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                </div></center>
             </article>
         @endforeach
 

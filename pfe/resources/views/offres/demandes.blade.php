@@ -43,7 +43,39 @@
                             <div class="prix">
                                 <p class="text-prix"><span style="color:#ff3c74"> Prix :</span>{{ $d->prix }}DH</p>
                             </div>
-                            <center><div class="button-postuller"><a href="" class="but-post">Postuler</a></div></center>
+                            <center><div {{--  class="button-commander"--}}>
+                                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#confirm-delete-modal-{{ $d->id }}">Postuler</button>
+                                <div class="modal fade" style="margin-top:300px" id="confirm-delete-modal-{{ $d->id }}" tabindex="-1" aria-labelledby="confirm-delete-modal-label-{{ $d->id }}" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="confirm-delete-modal-label-{{ $d->id }}">Confirmation de postule</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">Êtes-vous sûr de vouloir postuler cette demande ?</div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
+                                                <form method="POST" action="{{ route('home.commander') }}">
+                                                    @csrf
+                                                    @method('POST')
+                                                    <input type="hidden" name="id" value="{{ $d->id }}">
+                                                    <input type="hidden" name="id_user" value="{{ $d->id_user }}">
+                                                    <button type="submit" class="btn btn-success">Postuler</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div></center>
+                            {{-- <center><div class="button-commander">
+                                <form action="{{ route('home.commander') }}" method="post">
+                                    @method('POST')
+                                    @csrf
+                                    <input type="hidden" name="id" value="{{ $d->id }}">
+                                    <input type="hidden" name="id_user" value="{{ $d->id_user }}">
+                                    <button class="btn btn-success" type="submit">Postuller</button>
+                                </form>
+                            </div></center> --}}
+                            {{-- <center><div class="button-postuller"><a href="" class="but-post">Postuler</a></div></center> --}}
                         </article>
                     @endforeach
                 </div>

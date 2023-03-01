@@ -24,8 +24,7 @@
     <section class="main-sec1">
         @extends('offres.fixeBarre')
     </section>
-
-    <br><h2 style="text-align:center;margin-left:10%;margin-top:40px;">Table d'<span style="color:#ff3c74">offres</span></h2><br>
+    <br><h2 style="text-align:center;margin-left:10%;margin-top:40px;">Table de <span style="color:#ff3c74">commandes</span></h2><br>
     <div class="div-table" style="margin-left:17%" >
         <table class="table" style="width: 95%;border-collapse: collapse;" >
             <thead>

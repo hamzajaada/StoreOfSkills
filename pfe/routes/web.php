@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommandeController;
 use App\Http\Controllers\ConsulterController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -40,7 +41,8 @@ Route::get('home/demandes',[OffreController::class,'demandes'])->name('home.dema
 Route::get('home/reponses',[OffreController::class,'reponses'])->name('home.reponses');
 Route::get('home/vos-services',[OffreController::class,'services_id'])->name('home.vosservices');
 Route::get('home/vos-demandes',[OffreController::class,'demandes_id'])->name('home.vosdemandes');
-// Route::post('/commander-service',[ConsulterController::class,'commanderService'])->name('commander');
+Route::post('home/commander',[CommandeController::class,'commanderService'])->name('home.commander');
+
 
 // Route::resource('offres', OffreController::class);
 // Route::resource('users', UserController::class);

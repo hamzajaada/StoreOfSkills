@@ -96,8 +96,22 @@
             </div>
         </div>
         <div class="part2">
-                <a class="lien-part1" href="{{ route('login') }}"><div class="button-part1">Proposer un service</div></a>
-                <a class="lien-part2" href="{{ route('login') }}"><div class="button-part2">Demander un service</div></a>
+                <a class="lien-part1"
+                    @if (Auth::user())
+                        href="{{ route('offres.create') }}"
+                    @else
+                        href="{{ route('login') }}"
+                    @endif >
+                    <div class="button-part1">Proposer un service</div>
+                </a>
+                <a class="lien-part2"
+                    @if (Auth::user())
+                        href="{{ route('offres.create') }}"
+                    @else
+                        href="{{ route('login') }}"
+                    @endif >
+                    <div class="button-part2">Demander un service</div>
+                </a>
         </div>
     </section>
     <section class="P-2">
@@ -150,7 +164,13 @@
                             </article>
 
             </div>
-            <center><div class="button-serv"><a href="{{ route('login') }}" class="texte-butser">Voir plus</a></div></center>
+            <center><div class="button-serv"><a
+                @if (Auth::user())
+                    href="{{ route('home.demandes') }}"
+                @else
+                    href="{{ route('login') }}"
+                @endif
+                class="texte-butser">Voir plus</a></div></center>
     </section>
 
 <section class="P-3">
@@ -200,7 +220,13 @@
             </article>
 </div>
 
-    <center><div class="button-dem"><a href="{{ route('login') }}" class="texte-butdem">Voir plus</a></div></center>
+    <center><div class="button-dem"><a
+        @if (Auth::user())
+            href="{{ route('home.services') }}"
+        @else
+            href="{{ route('login') }}"
+        @endif
+        class="texte-butdem">Voir plus</a></div></center>
 </section>
 <section class="P-4">
    <center><h1  class="store">Store Of <span class="skills">Skills</span></h1></center>
