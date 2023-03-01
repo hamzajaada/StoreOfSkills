@@ -71,8 +71,6 @@
                 </div></center>
             </article>
         @endforeach
-
-
     </div>
     </section>
 </section>

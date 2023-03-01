@@ -41,8 +41,12 @@ Route::get('home/demandes',[OffreController::class,'demandes'])->name('home.dema
 Route::get('home/reponses',[OffreController::class,'reponses'])->name('home.reponses');
 Route::get('home/vos-services',[OffreController::class,'services_id'])->name('home.vosservices');
 Route::get('home/vos-demandes',[OffreController::class,'demandes_id'])->name('home.vosdemandes');
+<<<<<<< HEAD
 Route::post('home/commander',[CommandeController::class,'commanderService'])->name('home.commander');
 
+=======
+Route::post('/commander-service',[ConsulterController::class,'commanderService'])->name('commander');
+>>>>>>> 8bd979bbd4531da4f8c58a9b1c8f8042abb1a1de
 
 // Route::resource('offres', OffreController::class);
 // Route::resource('users', UserController::class);
