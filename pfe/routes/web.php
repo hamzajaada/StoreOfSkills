@@ -41,22 +41,5 @@ Route::get('home/demandes',[OffreController::class,'demandes'])->name('home.dema
 Route::get('home/reponses',[OffreController::class,'reponses'])->name('home.reponses');
 Route::get('home/vos-services',[OffreController::class,'services_id'])->name('home.vosservices');
 Route::get('home/vos-demandes',[OffreController::class,'demandes_id'])->name('home.vosdemandes');
-<<<<<<< HEAD
-Route::post('home/commander',[CommandeController::class,'commanderService'])->name('home.commander');
-
-=======
 Route::post('/commander-service',[ConsulterController::class,'commanderService'])->name('commander');
->>>>>>> 8bd979bbd4531da4f8c58a9b1c8f8042abb1a1de
 
-// Route::resource('offres', OffreController::class);
-// Route::resource('users', UserController::class);
-// Route::post('home/profile/change-password', [UserController::class, 'changePassword'])->name('users.password');
-// Route::get('home/users', [UserController::class, 'users'])->name('admin.users');
-// Route::get('home/offres', [OffreController::class, 'index'])->name('home.offres');
-// Route::delete('home/users/delete', [UserController::class, 'delete_user'])->name('users.user.delete');
-// Route::delete('home/offres/delete', [OffreController::class, 'delete_offre'])->name('offres.destroy');
-// Route::get('home/services', [OffreController::class, 'services'])->name('home.services');
-// Route::get('home/demandes', [OffreController::class, 'demandes'])->name('home.demandes');
-// Route::get('home/reponses', [OffreController::class, 'reponses'])->name('home.reponses');
-// Route::get('home/vos-services', [OffreController::class, 'services_id'])->name('home.vosservices');
-// Route::get('home/vos-demandes', [OffreController::class, 'demandes_id'])->name('home.vosdemandes');
