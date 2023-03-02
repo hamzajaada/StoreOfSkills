@@ -24,7 +24,7 @@
     <section class="main-sec1">
         @extends('offres.fixeBarre')
     </section>
-    <br><h2 style="text-align:center;margin-left:10%;margin-top:40px;">Table de <span style="color:#ff3c74">commandes</span></h2><br>
+    <br><h2 style="text-align:center;margin-left:10%;margin-top:40px;">Table de <span style="color:#ff3c74">Reponses</span></h2><br>
     <div class="div-table" style="margin-left:17%" >
         <table class="table" style="width: 95%;border-collapse: collapse;" >
             <thead>
@@ -47,8 +47,18 @@
                     <td>{{ $com->typeOffre }}</td>
                     <td>{{ $com->Offre }}</td>
                     <td>{{ $com->prix }}</td>
-                    <td><button type="submit" class="btn btn-success">Accepter</button></td>
-                    <td><button type="submit" class="btn btn-danger">Reffuser</button></td>
+                    <td><form method="POST" action="{{ route('commande.accepter', ['id' => $com->id]) }}">
+                        @csrf
+                        <input type="hidden" name="commande_id" value="{{ $com->id }}">
+                        <button type="submit" class="btn btn-success">Accepter</button>
+                        </form> 
+                    </td>
+                    <td><form method="POST" action="{{ route('commande.refuser', ['id' => $com->id]) }}">
+                        @csrf
+                        <input type="hidden" name="commande_id" value="{{ $com->id }}">
+                        <button type="submit" class="btn btn-danger">Refuser</button>
+                    </form>
+                </td>
                 </tr>
                 @endforeach
             </tbody>
@@ -58,3 +68,4 @@
 <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
 </body>
 </html>
+ 

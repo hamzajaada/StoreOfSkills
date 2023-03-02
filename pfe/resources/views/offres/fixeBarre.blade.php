@@ -59,7 +59,7 @@
                         <span style="color:black" class="tooltip">Commades</span>
                     </li>
                     <li>
-                        <a href="{{ route('home.reponses') }}">
+                        <a href="{{ route('home.reponse') }}">
                             <i class="fa-solid fa-reply"></i>
                             <span class="links_name">Reponses</span>
                         </a>
