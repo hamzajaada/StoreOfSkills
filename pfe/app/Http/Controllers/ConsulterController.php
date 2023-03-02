@@ -23,4 +23,5 @@ class ConsulterController extends Controller
     //     // Retourner la réponse
      return response()->json(['success' => 'Commande ajoutée avec succès'], 200);
      }
+
 }
