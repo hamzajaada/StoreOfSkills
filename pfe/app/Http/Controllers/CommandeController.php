@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\commande;
 use App\Models\Offre;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -20,5 +21,20 @@ class CommandeController extends Controller
         $consulter->id_user_commande = Auth::user()->id;
         $consulter->save();
         return redirect()->back();
+    }
+    
+    public function commande_id(){
+        $commandes = commande::all()->where('id_user', Auth::user()->id);
+        foreach ($commandes as $commande) {
+            $offre = Offre::where('id', $commande->id_offre)->first();
+            $userdocommande = User::where('id', $commande->id_user_commande)->first();
+            $commande->nom = $userdocommande->nom;
+            $commande->prenom = $userdocommande->prenom;
+            $commande->email = $userdocommande->email;
+            $commande->typeOffre = $offre->type;
+            $commande->Offre = $offre->offre;
+            $commande->prix = $offre->prix;
+        }
+        return view('offres.reponse',compact('commandes'));
     }
 }

@@ -37,18 +37,20 @@
                     <th scope="col">Prix</th>
                     <th scope="col" colspan="2">Action</th>
                 </tr>
-            </thead>
+            </thead> 
             <tbody class="table-group-divider">
+                   @foreach ($commandes as $com )
                 <tr>
-                    <td>Elgallati</td>
-                    <td>Abdelilah</td>
-                    <td>Hamza@gmail.com</td>
-                    <td>type</td>
-                    <td>Service</td>
-                    <td>Prix</td>
+                    <td>{{ $com->nom }}</td>
+                    <td>{{ $com->prenom }}</td>
+                    <td>{{ $com->email }}</td>
+                    <td>{{ $com->typeOffre }}</td>
+                    <td>{{ $com->Offre }}</td>
+                    <td>{{ $com->prix }}</td>
                     <td><button type="submit" class="btn btn-success">Accepter</button></td>
                     <td><button type="submit" class="btn btn-danger">Reffuser</button></td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
