@@ -7,7 +7,6 @@ use App\Models\Offre;
 use App\Models\Consulter;
 class ConsulterController extends Controller
 {
-    
 
      public function commanderService($idOffre, $idClient) {
         // Vérifier si l'offre existe

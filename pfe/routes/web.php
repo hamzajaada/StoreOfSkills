@@ -41,23 +41,13 @@ Route::get('home/demandes',[OffreController::class,'demandes'])->name('home.dema
 Route::get('home/reponses',[OffreController::class,'reponses'])->name('home.reponses');
 Route::get('home/vos-services',[OffreController::class,'services_id'])->name('home.vosservices');
 Route::get('home/vos-demandes',[OffreController::class,'demandes_id'])->name('home.vosdemandes');
+
 Route::post('home/commander',[CommandeController::class,'commanderService'])->name('home.commander');
 Route::get('home/reponses',[CommandeController::class,'commande_id'])->name('home.reponses');
+
 
 Route::post('/commander-service',[ConsulterController::class,'commanderService'])->name('commander');
 Route::post('/commandes/{id}/accepter', [CommandeController::class, 'accepterCommande'])->name('commande.accepter');
 Route::post('/commandes/{id}/refuser', [CommandeController::class, 'refuserCommande'])->name('commande.refuser');
 
 
-// Route::resource('offres', OffreController::class);
-// Route::resource('users', UserController::class);
-// Route::post('home/profile/change-password', [UserController::class, 'changePassword'])->name('users.password');
-// Route::get('home/users', [UserController::class, 'users'])->name('admin.users');
-// Route::get('home/offres', [OffreController::class, 'index'])->name('home.offres');
-// Route::delete('home/users/delete', [UserController::class, 'delete_user'])->name('users.user.delete');
-// Route::delete('home/offres/delete', [OffreController::class, 'delete_offre'])->name('offres.destroy');
-// Route::get('home/services', [OffreController::class, 'services'])->name('home.services');
-// Route::get('home/demandes', [OffreController::class, 'demandes'])->name('home.demandes');
-// Route::get('home/reponses', [OffreController::class, 'reponses'])->name('home.reponses');
-// Route::get('home/vos-services', [OffreController::class, 'services_id'])->name('home.vosservices');
-// Route::get('home/vos-demandes', [OffreController::class, 'demandes_id'])->name('home.vosdemandes');
