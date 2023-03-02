@@ -52,4 +52,4 @@ Route::get('home/reponses',[CommandeController::class,'commande_id'])->name('hom
 Route::post('/commandes/{id}/accepter', [CommandeController::class, 'accepterCommande'])->name('commande.accepter');
 Route::post('/commandes/{id}/refuser', [CommandeController::class, 'refuserCommande'])->name('commande.refuser');
 
-
+Route::get('home/reponse',[CommandeController::class,'commande'])->name('home.reponse');

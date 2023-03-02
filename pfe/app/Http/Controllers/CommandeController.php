@@ -39,24 +39,24 @@ class CommandeController extends Controller
         return view('offres.reponse',compact('commandes'));
     }
     public function accepterCommande(Request $request, $id) {
-        $commande = Commande::findOrFail($id);
+         $commande = commande::find($request->input('commande_id'));
         $commande->status = 1;
         $commande->save();
         return redirect()->back(); 
     }
     
     public function refuserCommande(Request $request, $id) {
-        $commande = Commande::findOrFail($id);
+         $commande = commande::find($request->input('commande_id'));
         $commande->status = 2;
         $commande->save();
-        return redirect()->back();
+        return redirect()->back(); 
     }
     
-    /*public function commande(){
-        $commandes = commande::all()->where('id_user', Auth::user()->id);
+    public function commande(){
+        $commandes = commande::all()->where('id_user_commande', Auth::user()->id);
         foreach ($commandes as $commande) {
             $offre = Offre::where('id', $commande->id_offre)->first();
-            $userdecommande = User::where('id', $commande->id_user)->first();
+            $userdecommande = User::where('id', $commande->id_user_commande)->first();
             $commande->nom = $userdecommande->nom;
             $commande->prenom = $userdecommande->prenom;
             $commande->email = $userdecommande->email;
@@ -65,6 +65,6 @@ class CommandeController extends Controller
             $commande->prix = $offre->prix;
             $commande->id = $offre->id;
         }
-        return view('offres.reponse',compact('commandes'));
-    }*/
+        return view('offres.commande',compact('commandes'));
+    }
 }
