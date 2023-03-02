@@ -45,6 +45,9 @@ Route::post('home/commander',[CommandeController::class,'commanderService'])->na
 Route::get('home/reponses',[CommandeController::class,'commande_id'])->name('home.reponses');
 
 Route::post('/commander-service',[ConsulterController::class,'commanderService'])->name('commander');
+Route::post('/commandes/{id}/accepter', [CommandeController::class, 'accepterCommande'])->name('commande.accepter');
+Route::post('/commandes/{id}/refuser', [CommandeController::class, 'refuserCommande'])->name('commande.refuser');
+
 
 // Route::resource('offres', OffreController::class);
 // Route::resource('users', UserController::class);
