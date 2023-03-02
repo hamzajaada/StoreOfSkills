@@ -53,6 +53,7 @@ class CommandeController extends Controller
     }
     
     public function commande(){
+        $commande = [];
         $commandes = commande::all()->where('id_user_commande', Auth::user()->id);
         foreach ($commandes as $commande) {
             $offre = Offre::where('id', $commande->id_offre)->first();
@@ -65,6 +66,6 @@ class CommandeController extends Controller
             $commande->prix = $offre->prix;
             $commande->id = $offre->id;
         }
-        return view('offres.commande',compact('commandes'));
+        return view('offres.commande',['commandes'=>$commandes]);
     }
 }

@@ -48,12 +48,11 @@
                     <td>{{ $com->Offre  }}</td>
                     <td>{{ $com->prix}}</td>
                     <td>
-                        @if ($con->status==1){
-                            la commande etait accepte
-                        }
-                        @elseif ($con->status==2)
-                            la commande etait refuse
-                        @endif
+                        @if ($com->status==1)
+                           <span style="color: rgb(46, 175, 46)"> la commande était acceptée .</span>
+                        @elseif ($com->status==2)
+                      <span style="color: red">la commande était refusée .</span>  
+                         @endif
 
 
                     </td>
