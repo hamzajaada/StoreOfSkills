@@ -34,19 +34,19 @@ class CommandeController extends Controller
             $commande->typeOffre = $offre->type;
             $commande->Offre = $offre->offre;
             $commande->prix = $offre->prix;
-            $commande->id = $offre->id;
+            $commande->id = $offre->id; 
         }
         return view('offres.reponse',compact('commandes'));
     }
     public function accepterCommande(Request $request, $id) {
-        $commande = commande::find($request->input('commande_id'));
+        $commande = Commande::findOrFail($id);
         $commande->status = 1;
         $commande->save();
-        return redirect()->back();
+        return redirect()->back(); 
     }
     
     public function refuserCommande(Request $request, $id) {
-        $commande = commande::find($request->input('commande_id'));
+        $commande = Commande::findOrFail($id);
         $commande->status = 2;
         $commande->save();
         return redirect()->back();

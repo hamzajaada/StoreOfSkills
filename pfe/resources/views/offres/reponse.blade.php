@@ -51,7 +51,7 @@
                         @csrf
                         <input type="hidden" name="commande_id" value="{{ $com->id }}">
                         <button type="submit" class="btn btn-success">Accepter</button>
-                        </form>
+                        </form> 
                     </td>
                     <td><form method="POST" action="{{ route('commande.refuser', $com->id) }}">
                         @csrf
