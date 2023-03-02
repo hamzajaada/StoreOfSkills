@@ -41,13 +41,15 @@ Route::get('home/demandes',[OffreController::class,'demandes'])->name('home.dema
 Route::get('home/reponses',[OffreController::class,'reponses'])->name('home.reponses');
 Route::get('home/vos-services',[OffreController::class,'services_id'])->name('home.vosservices');
 Route::get('home/vos-demandes',[OffreController::class,'demandes_id'])->name('home.vosdemandes');
-
 Route::post('home/commander',[CommandeController::class,'commanderService'])->name('home.commander');
+
+Route::get('home/reponses',[CommandeController::class,'commande_id'])->name('home.reponses');
+
 Route::post('/commander-service',[ConsulterController::class,'commanderService'])->name('commander');
 
 
 
-/*edit by hamza*/ 
+/*edit by hamza*/
 Route::get('home/reponses',[CommandeController::class,'commande_id'])->name('home.reponses');
 Route::post('/commandes/{id}/accepter', [CommandeController::class, 'accepterCommande'])->name('commande.accepter');
 Route::post('/commandes/{id}/refuser', [CommandeController::class, 'refuserCommande'])->name('commande.refuser');
