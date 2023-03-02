@@ -57,7 +57,7 @@ class CommandeController extends Controller
         $commandes = commande::all()->where('id_user_commande', Auth::user()->id);
         foreach ($commandes as $commande) {
             $offre = Offre::where('id', $commande->id_offre)->first();
-            $userdecommande = User::where('id', $commande->id_user_commande)->first();
+            $userdecommande = User::where('id', $commande->id_user)->first();
             $commande->nom = $userdecommande->nom;
             $commande->prenom = $userdecommande->prenom;
             $commande->email = $userdecommande->email;
