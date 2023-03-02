@@ -54,6 +54,13 @@
                     <li>
                         <a href="{{ route('home.reponses') }}">
                             <i class="fa-solid fa-reply"></i>
+                            <span class="links_name">Commandes</span>
+                        </a>
+                        <span style="color:black" class="tooltip">Commades</span>
+                    </li>
+                    <li>
+                        <a href="{{ route('home.reponses') }}">
+                            <i class="fa-solid fa-reply"></i>
                             <span class="links_name">Reponses</span>
                         </a>
                         <span style="color:black" class="tooltip">Reponses</span>
