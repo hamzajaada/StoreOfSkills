@@ -9,6 +9,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class OffreController extends Controller
 {
@@ -108,7 +109,7 @@ class OffreController extends Controller
         $offre->delete();
         return redirect()->back();
     }
-    
+
     public function reponses(){
         return view('offres.reponse');
     }
@@ -160,30 +161,68 @@ class OffreController extends Controller
     public function repondres($id){
 
     }
-    public function search(Request $request)
+
+    public function search_offres(Request $request)
     {
-        $nom = $request->input('nom');
-        $prenom = $request->input('prenom');
-        $email = $request->input('email');
-        $adresse = $request->input('adresse');
+        $offres = DB::table('users')
+                ->join('offres', 'users.id', '=', 'offres.id_user')
+                ->select('users.nom', 'users.prenom','offres.id', 'offres.type', 'offres.categorie', 'offres.offre', 'offres.prix')
+                ->where('users.nom', 'LIKE', '%'.$request->input('nom').'%')
+                ->where('users.prenom', 'LIKE', '%'.$request->input('prenom').'%')
+                ->where('offres.type', 'LIKE', '%'.$request->input('type').'%')
+                ->where('offres.categorie', 'LIKE', '%'.$request->input('categorie').'%')
+                ->get();
 
-        $query = Offre::query();
+        return view('admin.offre', compact('offres'));
+    }
 
-        if ($nom) {
-            $query->where('nom', 'LIKE', "%$nom%");
-        }
-        if ($prenom) {
-            $query->where('prenom', 'LIKE', "%$prenom%");
-        }
-        if ($email) {
-            $query->where('email', 'LIKE', "%$email%");
-        }
-        if ($adresse) {
-            $query->where('adresse', 'LIKE', "%$adresse%");
-        }
+    public function search_service(Request $request)
+    {
+        $services = DB::table('users')
+                ->join('offres', 'users.id', '=', 'offres.id_user')
+                ->select('users.nom', 'users.prenom','users.image','offres.id','offres.type','offres.offre', 'offres.prix','offres.image_offre','offres.id_user')
+                ->where('users.nom', 'LIKE', '%'.$request->input('nom').'%')
+                ->where('users.prenom', 'LIKE', '%'.$request->input('prenom').'%')
+                ->where('offres.categorie', 'LIKE', '%'.$request->input('categorie').'%')
+                ->where('offres.type','service')
+                ->get();
+        return view('offres.services',compact('services'));
+    }
 
-        $users = $query->get();
-        return view('admin.user', compact('users'));
+    public function search_demande(Request $request)
+    {
+        $demandes = DB::table('users')
+                ->join('offres', 'users.id', '=', 'offres.id_user')
+                ->select('users.nom', 'users.prenom','users.image','offres.id','offres.type','offres.offre', 'offres.prix','offres.image_offre','offres.id_user')
+                ->where('users.nom', 'LIKE', '%'.$request->input('nom').'%')
+                ->where('users.prenom', 'LIKE', '%'.$request->input('prenom').'%')
+                ->where('offres.categorie', 'LIKE', '%'.$request->input('categorie').'%')
+                ->where('offres.type','demande')
+                ->get();
+        return view('offres.demandes',compact('demandes'));
+    }
 
+    public function search_vosservice(Request $request)
+    {
+        $services = DB::table('users')
+                ->join('offres', 'users.id', '=', 'offres.id_user')
+                ->select('users.nom', 'users.prenom','users.image','offres.id','offres.type','offres.offre', 'offres.prix','offres.image_offre','offres.id_user')
+                ->where('offres.categorie', 'LIKE', '%'.$request->input('categorie').'%')
+                ->where('offres.type','service')
+                ->where('id_user', Auth::user()->id)
+                ->get();
+        return view('offres.vosservice',compact('services'));
+    }
+
+    public function search_vosdemande(Request $request)
+    {
+        $demandes = DB::table('users')
+                ->join('offres', 'users.id', '=', 'offres.id_user')
+                ->select('users.nom', 'users.prenom','users.image','offres.id','offres.type','offres.offre', 'offres.prix','offres.image_offre','offres.id_user')
+                ->where('offres.categorie', 'LIKE', '%'.$request->input('categorie').'%')
+                ->where('offres.type','demande')
+                ->where('id_user', Auth::user()->id)
+                ->get();
+        return view('offres.vosdemandes',compact('demandes'));
     }
 }

@@ -16,9 +16,9 @@
     <!-- Style -->
     <style>
         .search-container {
-          display: flex;
-          justify-content: center;
-          margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
         }
         form{
             margin-left: 170px;
@@ -27,28 +27,28 @@
 
         }
         .form-control {
-          border-radius: 5px;
-          border: 1px solid #ccc;
-          padding: 10px;
-          font-size: 16px;
-          width: 400px;
-          max-width: 100%;
-          margin: 3px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: 16px;
+            width: 400px;
+            max-width: 100%;
+            margin: 3px;
         }
 
         .btn-primary {
-          background-color: #007bff;
-          border: none;
-          border-radius: 5px;
-          color: #fff;
-          padding: 10px 20px;
-          font-size: 16px;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
         .btn-primary:hover {
-          background-color: #0069d9;
+            background-color: #0069d9;
         }
     </style>
     <!-- Scripts -->
@@ -64,7 +64,6 @@
         <br>
         <h1 style="text-align:center;margin-left:10%;margin-top:40px;">Table d'offres</h1><br><br>
         <div class="search-container" style="margin-bottom: 50px;margin-top: -8px;">
-
             <form method="POST" action="{{ route('admin.offres.search') }}" >
                 <center><h3>Recherche Multicritère </h3> </center>
                 @csrf

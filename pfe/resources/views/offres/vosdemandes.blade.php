@@ -29,6 +29,29 @@
         @extends('offres.fixeBarre')
         <section class="P-2">
         <h2 class="titre-part3">Votre <span id="span-t2" style="color:#3cb626">Demandes</span></h2>
+        <div class="search-container" style="margin-bottom: 50px;margin-top: -8px;">
+            <form method="POST" action="{{ route('home.vosdemandes.search') }}" >
+                <center><h3>Recherche Multicritère </h3> </center>
+                @csrf
+                @method('POST')
+                <div class="form-group" style=" display:flex;">
+                    <select class="form-control" name="categorie" id="exampleFormControlSelect1">
+                        <option value="">Recherche par catégorie</option>
+                        <option value="Design graphique">Design graphique</option>
+                        <option value="Développement web et mobile">Développement web et mobile</option>
+                        <option value="Rédaction et traduction">Rédaction et traduction</option>
+                        <option value="Marketing et publicité">Marketing et publicité</option>
+                        <option value="Services informatiques">Services informatiques</option>
+                        <option value="Coaching et formation">Coaching et formation</option>
+                        <option value="Métier">Métier</option>
+                    </select>
+                </div>
+                <div class="form-group" style="margin-top: 32px; margin-left:813px; display:flex;">
+                    <button type="submit" class="btn btn-primary">Rechercher</button>
+                    <button type="submit" class="btn btn-danger" style="margin-left: 10px">Reset</button>
+                </div>
+            </form>
+        </div>
         <div class="demandes">
             @foreach ($demandes as $d)
                 <article>
