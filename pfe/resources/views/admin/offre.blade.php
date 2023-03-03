@@ -98,6 +98,7 @@
                     </tr>
                 </thead>
                 <tbody class="table-group-divider">
+                    @if(count($offres) > 0)
                     @foreach ($offres as $f)
                         <tr>
                             <td>{{ $f->nom }}</td>
@@ -130,6 +131,11 @@
                             </td>
                         </tr>
                     @endforeach
+                    @else
+                    <tr><td colspan="6">
+                        <center><span style="color:red">l'élement recherché n'existe pas</span></center>
+                    </td></tr>
+                @endif
                 </tbody>
             </table>
         </div>
