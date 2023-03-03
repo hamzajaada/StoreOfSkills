@@ -9,7 +9,39 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ asset('css/barre.css') }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
+    <style>
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
 
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  width: 400px;
+  max-width: 100%;
+  margin: 3px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+}
+
+    </style>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
@@ -26,6 +58,27 @@
         </section>
         <br>
         <h1 style="text-align:center;margin-left:10%;margin-top:40px;">Table d'utilisateurs</h1><br><br>
+        {{-- <center>
+
+        </center> --}}
+        <div class="search-container">
+            <form method="POST" action="{{ route('admin.user.search') }}" style="display:flex">
+                @csrf
+                @method('POST')
+                <div class="form-group" style=" display:flex;">
+                    <input type="text" name="nom" class="form-control" placeholder="Recherche par nom" value="{{ old('nom') }}">
+                    <input type="text" name="prenom" class="form-control" placeholder="Recherche par prénom" value="{{ old('prenom') }}">
+                    <input type="text" name="email" class="form-control" placeholder="Recherche par email" value="{{ old('email') }}">
+                    <input type="text" name="adresse" class="form-control" placeholder="Recherche par adresse" value="{{ old('adresse') }}">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Rechercher</button>
+                </div>
+            </form>
+        </div>
+
+
+        {{-- {{ route('users.search') }} --}}
         <div class="div-table" style="margin-left:17%" >
             <table class="table" style="width: 95%;border-collapse: collapse;" >
                 <thead>
@@ -38,36 +91,42 @@
                     </tr>
                 </thead>
                 <tbody class="table-group-divider">
-                    @foreach ($users as $u)
-                        <tr>
-                            <td>{{ $u->nom }}</td>
-                            <td>{{ $u->prenom }}</td>
-                            <td>{{ $u->location }}</td>
-                            <td>{{ $u->email }}</td>
-                            <td>
-                                <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirm-delete-modal-{{ $u->id }}">Supprimer</button>
-                                <div class="modal fade" style="margin-top:300px" id="confirm-delete-modal-{{ $u->id }}" tabindex="-1" aria-labelledby="confirm-delete-modal-label-{{ $u->id }}" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="confirm-delete-modal-label-{{ $u->id }}">Confirmation de suppression</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">Êtes-vous sûr de vouloir supprimer ce utilisateur ? Cette action est irréversible.</div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
-                                                <form action="{{ route('users.user.delete',$u->id) }}" method="post">
-                                                    @csrf
-                                                    @method('delete')
-                                                    <button class="btn btn-danger" type="submit">Supprimer</button>
-                                                </form>
+                    @if(count($users) > 0)
+                        @foreach ($users as $u)
+                            <tr>
+                                <td>{{ $u->nom }}</td>
+                                <td>{{ $u->prenom }}</td>
+                                <td>{{ $u->location }}</td>
+                                <td>{{ $u->email }}</td>
+                                <td>
+                                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirm-delete-modal-{{ $u->id }}">Supprimer</button>
+                                    <div class="modal fade" style="margin-top:300px" id="confirm-delete-modal-{{ $u->id }}" tabindex="-1" aria-labelledby="confirm-delete-modal-label-{{ $u->id }}" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="confirm-delete-modal-label-{{ $u->id }}">Confirmation de suppression</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">Êtes-vous sûr de vouloir supprimer ce utilisateur ? Cette action est irréversible.</div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
+                                                    <form action="{{ route('users.user.delete',$u->id) }}" method="post">
+                                                        @csrf
+                                                        @method('delete')
+                                                        <button class="btn btn-danger" type="submit">Supprimer</button>
+                                                    </form>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </td>
-                        <tr>
-                    @endforeach
+                                </td>
+                        @endforeach
+                    @else
+                        <tr><td colspan="6">
+                            <center><span style="color:red">l'élement recherché n'existe pas</span></center>
+                        </td></tr>
+
+                    @endif
                 </tbody>
             </table>
         </div>
