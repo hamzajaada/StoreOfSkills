@@ -25,7 +25,9 @@
             margin-top: 50px;
         }
         form{
-            margin-left: 170px;
+            margin-top: 30px;
+            margin-left: -25px;
+            
             box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
             padding: 10px
 
@@ -54,6 +56,9 @@
         .btn-primary:hover {
             background-color: #0069d9;
         }
+        .con{
+        display: flex;
+             }
     </style>
 </head>
 <body>
@@ -65,9 +70,10 @@
             <h2 class="titre-part3">Les dernières <span id="span-t2" style="color:#4fdd36">demandes</span></h2>
             <div class="search-container" style="margin-bottom: 50px;margin-top: -8px;">
                 <form method="POST" action="{{ route('home.demandes.search') }}" >
-                    <center><h3>Recherche Multicritère </h3> </center>
+                    {{-- <center><h3>Recherche Multicritère </h3> </center> --}}
                     @csrf
                     @method('POST')
+                    <div class="con">
                     <div class="form-group" style=" display:flex;">
                         <input type="text" name="nom" class="form-control" placeholder="Recherche par nom" value="{{ old('nom') }}">
                         <input type="text" name="prenom" class="form-control" placeholder="Recherche par prénom" value="{{ old('prenom') }}">
@@ -82,10 +88,11 @@
                             <option value="Métier">Métier</option>
                         </select>
                     </div>
-                    <div class="form-group" style="margin-top: 32px; margin-left:813px; display:flex;">
+                    <div class="form-group" style=" display:flex;">
                         <button type="submit" class="btn btn-primary">Rechercher</button>
                         <button type="submit" class="btn btn-danger" style="margin-left: 10px">Reset</button>
                     </div>
+                </div>
                 </form>
             </div>
             <div class="demandes">

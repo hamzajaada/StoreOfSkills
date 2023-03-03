@@ -50,6 +50,9 @@
         .btn-primary:hover {
             background-color: #0069d9;
         }
+        .con{
+            display: flex;
+        }
     </style>
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -65,9 +68,10 @@
         <h1 style="text-align:center;margin-left:10%;margin-top:40px;">Table d'offres</h1><br><br>
         <div class="search-container" style="margin-bottom: 50px;margin-top: -8px;">
             <form method="POST" action="{{ route('admin.offres.search') }}" >
-                <center><h3>Recherche Multicritère </h3> </center>
+                {{-- <center><h3>Recherche Multicritère </h3> </center> --}}
                 @csrf
                 @method('POST')
+                <div class="con">
                 <div class="form-group" style=" display:flex;">
                     <input type="text" name="nom" class="form-control" placeholder="Recherche par nom" value="{{ old('nom') }}">
                     <input type="text" name="prenom" class="form-control" placeholder="Recherche par prénom" value="{{ old('prenom') }}">
@@ -78,10 +82,11 @@
                     </select>
                     <input type="text" name="adresse" class="form-control" placeholder="Recherche par adresse" value="{{ old('adresse') }}">
                 </div>
-                <div class="form-group" style="margin-top: 32px; margin-left:813px; display:flex;">
+                <div class="form-group" style="display:flex;">
                     <button type="submit" class="btn btn-primary">Rechercher</button>
                     <button type="submit" class="btn btn-danger" style="margin-left: 10px">Reset</button>
                 </div>
+            </div>
             </form>
         </div>
         <div class="div-table" style="margin-left:17%" >

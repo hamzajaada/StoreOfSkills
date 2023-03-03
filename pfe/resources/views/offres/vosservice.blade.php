@@ -14,7 +14,49 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<!--style-->
+<style>
+    .search-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    form{
+        margin-top: 30px;
+        margin-left: -25px;
+        
+        box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
+        padding: 10px
 
+    }
+    .form-control {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        font-size: 16px;
+        width: 400px;
+        max-width: 100%;
+        margin: 3px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #0069d9;
+    }
+    .con{
+    display: flex;
+         }
+</style>
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -30,9 +72,10 @@
             <h2 class="titre-part3">Votre <span id="span-t2" style="color:#ff3c74">Services</span></h2>
             <div class="search-container" style="margin-bottom: 50px;margin-top: -8px;">
                 <form method="POST" action="{{ route('home.vosservices.search') }}" >
-                    <center><h3>Recherche Multicritère </h3> </center>
+                    {{-- <center><h3>Recherche Multicritère </h3> </center> --}}
                     @csrf
                     @method('POST')
+                    <div class="con">
                     <div class="form-group" style=" display:flex;">
                         <select class="form-control" name="categorie" id="exampleFormControlSelect1">
                             <option value="">Recherche par catégorie</option>
@@ -45,10 +88,11 @@
                             <option value="Métier">Métier</option>
                         </select>
                     </div>
-                    <div class="form-group" style="margin-top: 32px; margin-left:813px; display:flex;">
+                    <div class="form-group" style=" display:flex;">
                         <button type="submit" class="btn btn-primary">Rechercher</button>
                         <button type="submit" class="btn btn-danger" style="margin-left: 10px">Reset</button>
                     </div>
+                </div>
                 </form>
             </div>
             <div class="demandes">
