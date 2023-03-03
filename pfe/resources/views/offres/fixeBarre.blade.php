@@ -18,11 +18,14 @@
             </div>
             <div class="links">
                 <ul class="nav-list">
-                    <li>
+
+                    {{--
+                          <li>
                         <i class='bx bx-search' ></i>
                         <input type="text" placeholder="Search...">
                         <span style="color:black" class="tooltip">Search</span>
-                    </li>
+                          </li>
+                     --}}
                     <li>
                         <a href="{{ route('home') }}">
                         <i class='bx bx-grid-alt'></i>
@@ -102,7 +105,16 @@
                             </a>
                             <span style="color:black" class="tooltip">Liste d'utilisateurs</span>
                         </li>
+                        
                     @endif
+                    <li>
+                            <a href="#">
+                                {{-- <i class="fa-solid fa-layer-group"></i> --}}
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span class="links_name">Maps</span>
+                            </a>
+                            <span style="color:black" class="tooltip">Maps</span>
+                        </li>
                 </ul>
             </div>
         </div>
