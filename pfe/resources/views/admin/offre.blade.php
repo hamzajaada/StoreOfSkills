@@ -24,7 +24,7 @@
             margin-left: 170px;
             box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
             padding: 10px
-        
+
         }
         .form-control {
           border-radius: 5px;
@@ -35,7 +35,7 @@
           max-width: 100%;
           margin: 3px;
         }
-        
+
         .btn-primary {
           background-color: #007bff;
           border: none;
@@ -46,7 +46,7 @@
           cursor: pointer;
           transition: background-color 0.3s ease;
         }
-        
+
         .btn-primary:hover {
           background-color: #0069d9;
         }
@@ -64,8 +64,8 @@
         <br>
         <h1 style="text-align:center;margin-left:10%;margin-top:40px;">Table d'offres</h1><br><br>
         <div class="search-container" style="margin-bottom: 50px;margin-top: -8px;">
-            
-            <form method="POST" action="{{ route('admin.offre.search') }}" >
+
+            <form method="POST" action="{{ route('admin.offres.search') }}" >
                 <center><h3>Recherche Multicritère </h3> </center>
                 @csrf
                 @method('POST')
@@ -73,6 +73,7 @@
                     <input type="text" name="nom" class="form-control" placeholder="Recherche par nom" value="{{ old('nom') }}">
                     <input type="text" name="prenom" class="form-control" placeholder="Recherche par prénom" value="{{ old('prenom') }}">
                     <select class="form-control" name="type" id="exampleFormControlSelect1">
+                        <option value="">Recherche par type</option>
                         <option value="service">Service</option>
                         <option value="demande">Demande</option>
                     </select>

@@ -66,9 +66,9 @@ form{
         {{-- <center>
 
         </center> --}}
-        
+
         <div class="search-container" style="margin-bottom: 50px;margin-top: -8px;">
-            
+
             <form method="POST" action="{{ route('admin.user.search') }}" >
                 <center><h3>Recherche Multicritère </h3> </center>
                 @csrf
@@ -78,7 +78,7 @@ form{
                     <input type="text" name="prenom" class="form-control" placeholder="Recherche par prénom" value="{{ old('prenom') }}">
                     <input type="text" name="email" class="form-control" placeholder="Recherche par email" value="{{ old('email') }}">
                     <input type="text" name="adresse" class="form-control" placeholder="Recherche par adresse" value="{{ old('adresse') }}">
-                    
+
                 </div>
                 <div class="form-group" style="margin-top: 32px; margin-left:813px; display:flex;">
                     <button type="submit" class="btn btn-primary">Rechercher</button>
@@ -135,7 +135,6 @@ form{
                         <tr><td colspan="6">
                             <center><span style="color:red">l'élement recherché n'existe pas</span></center>
                         </td></tr>
-
                     @endif
                 </tbody>
             </table>
