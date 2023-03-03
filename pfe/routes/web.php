@@ -43,6 +43,7 @@ Route::get('home/vos-services',[OffreController::class,'services_id'])->name('ho
 Route::get('home/vos-demandes',[OffreController::class,'demandes_id'])->name('home.vosdemandes');
 Route::post('home/commander',[CommandeController::class,'commanderService'])->name('home.commander');
 Route::post('home/users/search',[UserController::class,'search'])->name('admin.user.search');
+Route::post('home/offres/search',[UserController::class,'search'])->name('admin.offre.search');
 Route::get('home/reponses',[CommandeController::class,'commande_id'])->name('home.reponses');
 
 Route::post('/commander-service',[ConsulterController::class,'commanderService'])->name('commander');

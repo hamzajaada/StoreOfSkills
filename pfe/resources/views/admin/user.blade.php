@@ -15,7 +15,12 @@
   justify-content: center;
   margin-top: 50px;
 }
+form{
+    margin-left: 170px;
+    box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
+    padding: 10px
 
+}
 .form-control {
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -61,8 +66,11 @@
         {{-- <center>
 
         </center> --}}
-        <div class="search-container">
-            <form method="POST" action="{{ route('admin.user.search') }}" style="display:flex">
+        
+        <div class="search-container" style="margin-bottom: 50px;margin-top: -8px;">
+            
+            <form method="POST" action="{{ route('admin.user.search') }}" >
+                <center><h3>Recherche Multicritère </h3> </center>
                 @csrf
                 @method('POST')
                 <div class="form-group" style=" display:flex;">
@@ -70,9 +78,11 @@
                     <input type="text" name="prenom" class="form-control" placeholder="Recherche par prénom" value="{{ old('prenom') }}">
                     <input type="text" name="email" class="form-control" placeholder="Recherche par email" value="{{ old('email') }}">
                     <input type="text" name="adresse" class="form-control" placeholder="Recherche par adresse" value="{{ old('adresse') }}">
+                    
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="margin-top: 32px; margin-left:813px; display:flex;">
                     <button type="submit" class="btn btn-primary">Rechercher</button>
+                    <button type="submit" class="btn btn-danger" style="margin-left: 10px">Reset</button>
                 </div>
             </form>
         </div>

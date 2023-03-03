@@ -160,4 +160,30 @@ class OffreController extends Controller
     public function repondres($id){
 
     }
+    public function search(Request $request)
+    {
+        $nom = $request->input('nom');
+        $prenom = $request->input('prenom');
+        $email = $request->input('email');
+        $adresse = $request->input('adresse');
+
+        $query = Offre::query();
+
+        if ($nom) {
+            $query->where('nom', 'LIKE', "%$nom%");
+        }
+        if ($prenom) {
+            $query->where('prenom', 'LIKE', "%$prenom%");
+        }
+        if ($email) {
+            $query->where('email', 'LIKE', "%$email%");
+        }
+        if ($adresse) {
+            $query->where('adresse', 'LIKE', "%$adresse%");
+        }
+
+        $users = $query->get();
+        return view('admin.user', compact('users'));
+
+    }
 }
