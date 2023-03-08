@@ -68,7 +68,7 @@
         <h1 style="text-align:center;margin-left:10%;margin-top:40px;">Table d'offres</h1><br><br>
         <div class="search-container" style="margin-bottom: 50px;margin-top: -8px;">
             <form method="POST" action="{{ route('admin.offres.search') }}" >
-                {{-- <center><h3>Recherche Multicritère </h3> </center> --}}
+                {{-- <center><h3>Recherche Multicritère </h3> </center> aaaaaa--}}
                 @csrf
                 @method('POST')
                 <div class="con">

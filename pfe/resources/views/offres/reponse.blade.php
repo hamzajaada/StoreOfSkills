@@ -9,11 +9,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-
+    
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-
+    
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -33,7 +33,7 @@
                     <th scope="col">Prenom</th>
                     <th scope="col">Email</th>
                     <th scope="col">Type</th>
-                    <th scope="col">Offre</th>
+                    <th style="height: auto;overflow:auto;" scope="col">Offre</th>
                     <th scope="col">Prix</th>
                     <th scope="col" colspan="2">Action</th>
                 </tr>
