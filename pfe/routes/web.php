@@ -28,7 +28,6 @@ Route::delete('home/users/delete/{id}',[UserController::class,'delete_user'])->n
 Route::delete('home/offres/delete/{id}',[UserController::class,'delete_offre'])->name('users.offre.delete');
 Route::get('home/services',[OffreController::class,'services'])->name('home.services');
 Route::get('home/demandes',[OffreController::class,'demandes'])->name('home.demandes');
-// Route::get('home/reponses',[OffreController::class,'reponses'])->name('home.reponses');
 Route::get('home/vos-services',[OffreController::class,'services_id'])->name('home.vosservices');
 Route::get('home/vos-demandes',[OffreController::class,'demandes_id'])->name('home.vosdemandes');
 Route::post('home/commander',[CommandeController::class,'commanderOffre'])->name('home.commander');
@@ -40,11 +39,6 @@ Route::post('home/demandes/search',[OffreController::class,'search_demande'])->n
 Route::post('home/vosservices/search',[OffreController::class,'search_vosservice'])->name('home.vosservices.search');
 Route::post('home/vosdemandes/search',[OffreController::class,'search_vosdemande'])->name('home.vosdemandes.search');
 
-
-
-
-
-/*edit by hamza*/
 Route::get('home/reponses',[CommandeController::class,'reponse'])->name('home.reponse');
 Route::get('home/commandes',[CommandeController::class,'commande'])->name('home.commande');
 Route::post('/commandes/accepter', [CommandeController::class, 'accepterCommande'])->name('commande.accepter');
