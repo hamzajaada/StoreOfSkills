@@ -107,7 +107,7 @@ class UserController extends Controller
             $query->where('email', 'LIKE', "%$email%");
         }
         if ($adresse) {
-            $query->where('adresse', 'LIKE', "%$adresse%");
+            $query->where('location', 'LIKE', "%$adresse%");
         }
 
         $users = $query->get();

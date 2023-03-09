@@ -54,6 +54,7 @@
                         </a>
                         <span style="color:black" class="tooltip">Demandes</span>
                     </li>
+                    @if (Auth::user()->nom != 'Admine' AND Auth::user()->email != 'admin@gmail.com')
                     <li>
                         <a href="{{ route('home.reponses') }}">
                             <i class="fa-solid fa-reply"></i>
@@ -75,13 +76,7 @@
                         </a>
                         <span  style="color:black"class="tooltip">Offre</span>
                     </li>
-                    <li>
-                        <a href="{{ route('home.vosdemandes') }}">
-                            <i class="fa-solid fa-hand-holding"></i>
-                            <span class="links_name">vos demandes</span>
-                        </a>
-                        <span style="color:black" class="tooltip">vos demandes</span>
-                    </li>
+
                     <li>
                         <a href="{{ route('home.vosservices') }}">
                             <i class="fa-solid fa-layer-group"></i>
@@ -89,6 +84,15 @@
                         </a>
                         <span style="color:black" class="tooltip">vos services</span>
                     </li>
+                    <li>
+                        <a href="{{ route('home.vosdemandes') }}">
+                            <i class="fa-solid fa-hand-holding"></i>
+                            <span class="links_name">vos demandes</span>
+                        </a>
+                        <span style="color:black" class="tooltip">vos demandes</span>
+                    </li>
+                    @endif
+
                     @if (Auth::user()->nom == 'Admine' AND Auth::user()->email == 'admin@gmail.com')
                         <li>
                             <a href="{{ route('users.home.offres') }}">
@@ -105,16 +109,7 @@
                             </a>
                             <span style="color:black" class="tooltip">Liste d'utilisateurs</span>
                         </li>
-                        
                     @endif
-                    <li>
-                            <a href="#">
-                                {{-- <i class="fa-solid fa-layer-group"></i> --}}
-                                <i class="fa-solid fa-location-dot"></i>
-                                <span class="links_name">Maps</span>
-                            </a>
-                            <span style="color:black" class="tooltip">Maps</span>
-                        </li>
                 </ul>
             </div>
         </div>
