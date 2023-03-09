@@ -13,6 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
+        // les champs de la table users
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('nom');

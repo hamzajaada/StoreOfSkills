@@ -11,6 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // les champs de la table offres
         Schema::create('offres', function (Blueprint $table) {
             $table->id();
             $table->string('type');

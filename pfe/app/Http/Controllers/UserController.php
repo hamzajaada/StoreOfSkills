@@ -15,12 +15,14 @@ use Illuminate\Validation\Rules\Password;
 
 class UserController extends Controller
 {
+    // la fonction qui return la page de profile et les informations de l'itilisateur connecter
     public function index()
     {
         $user = Auth::user();
         return view('offres.profile', ['profile' => $user]);
     }
 
+    // la fonction de modification des informations de l'itilisateur connecter
     public function update(Request $request, $id)
     {
         $user = User::findorFail($id);
@@ -39,6 +41,7 @@ class UserController extends Controller
         return redirect()->back();
     }
 
+    // la fonction qui modifie le mot de passe de l'utilisateur
     public function changePassword(Request $request)
     {
         $request->validate([
@@ -51,11 +54,13 @@ class UserController extends Controller
         return redirect()->back();
     }
 
+    // la fonction qui return tout les utilisateurs dans la page user
     public function users(){
         $users = User::all();
         return view('admin.user',compact('users'));
     }
 
+    // la fonction qui return tout les offres dans la page offre
     public function offres(){
         $offres = Offre::all();
         foreach ($offres as $f) {
@@ -66,37 +71,27 @@ class UserController extends Controller
         return view('admin.offre',compact('offres'));
     }
 
+    // la fonction pour supprimer un utilisateur de la base de données par l'admine
     public function delete_user($id){
         $user = User::findorFail($id);
         $user->delete();
         return redirect()->back();
     }
 
+    // la fonction pour supprimer une offre de la base de données par l'admine
     public function delete_offre($id){
         Offre::destroy($id);
         return redirect()->back();
     }
 
-    public function profile(){
-
-    }
-
-    public function destroy($id)
-    {
-        //
-    }
-
-
-
+    // la fonction de recherche des utilisateurs soit avec le nom ou prenom ou email ou adresse
     public function search_user(Request $request)
     {
         $nom = $request->input('nom');
         $prenom = $request->input('prenom');
         $email = $request->input('email');
         $adresse = $request->input('adresse');
-
         $query = User::query();
-
         if ($nom) {
             $query->where('nom', 'LIKE', "%$nom%");
         }
@@ -109,10 +104,7 @@ class UserController extends Controller
         if ($adresse) {
             $query->where('location', 'LIKE', "%$adresse%");
         }
-
         $users = $query->get();
         return view('admin.user', compact('users'));
-
     }
-
 }

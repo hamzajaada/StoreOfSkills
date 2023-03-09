@@ -20,12 +20,12 @@
                 <ul class="nav-list">
 
                     {{--
-                          <li>
-                        <i class='bx bx-search' ></i>
-                        <input type="text" placeholder="Search...">
-                        <span style="color:black" class="tooltip">Search</span>
-                          </li>
-                     --}}
+                        <li>
+                            <i class='bx bx-search' ></i>
+                            <input type="text" placeholder="Search...">
+                            <span style="color:black" class="tooltip">Search</span>
+                        </li>
+                    --}}
                     <li>
                         <a href="{{ route('home') }}">
                         <i class='bx bx-grid-alt'></i>
@@ -55,42 +55,41 @@
                         <span style="color:black" class="tooltip">Demandes</span>
                     </li>
                     @if (Auth::user()->nom != 'Admine' AND Auth::user()->email != 'admin@gmail.com')
-                    <li>
-                        <a href="{{ route('home.reponses') }}">
-                            <i class="fa-solid fa-reply"></i>
-                            <span class="links_name">Commandes</span>
-                        </a>
-                        <span style="color:black" class="tooltip">Commades</span>
-                    </li>
-                    <li>
-                        <a href="{{ route('home.reponse') }}">
-                            <i class="fa-solid fa-reply"></i>
-                            <span class="links_name">Reponses</span>
-                        </a>
-                        <span style="color:black" class="tooltip">Reponses</span>
-                    </li>
-                    <li>
-                        <a href="{{ route('offres.create') }}">
-                            <i class="fa-solid fa-plus"></i>
-                            <span class="links_name"> offre</span>
-                        </a>
-                        <span  style="color:black"class="tooltip">Offre</span>
-                    </li>
-
-                    <li>
-                        <a href="{{ route('home.vosservices') }}">
-                            <i class="fa-solid fa-layer-group"></i>
-                            <span class="links_name">vos services</span>
-                        </a>
-                        <span style="color:black" class="tooltip">vos services</span>
-                    </li>
-                    <li>
-                        <a href="{{ route('home.vosdemandes') }}">
-                            <i class="fa-solid fa-hand-holding"></i>
-                            <span class="links_name">vos demandes</span>
-                        </a>
-                        <span style="color:black" class="tooltip">vos demandes</span>
-                    </li>
+                        <li>
+                            <a href="{{ route('home.reponses') }}">
+                                <i class="fa-solid fa-reply"></i>
+                                <span class="links_name">Commandes</span>
+                            </a>
+                            <span style="color:black" class="tooltip">Commades</span>
+                        </li>
+                        <li>
+                            <a href="{{ route('home.reponse') }}">
+                                <i class="fa-solid fa-reply"></i>
+                                <span class="links_name">Reponses</span>
+                            </a>
+                            <span style="color:black" class="tooltip">Reponses</span>
+                        </li>
+                        <li>
+                            <a href="{{ route('offres.create') }}">
+                                <i class="fa-solid fa-plus"></i>
+                                <span class="links_name"> offre</span>
+                            </a>
+                            <span  style="color:black"class="tooltip">Offre</span>
+                        </li>
+                        <li>
+                            <a href="{{ route('home.vosservices') }}">
+                                <i class="fa-solid fa-layer-group"></i>
+                                <span class="links_name">vos services</span>
+                            </a>
+                            <span style="color:black" class="tooltip">vos services</span>
+                        </li>
+                        <li>
+                            <a href="{{ route('home.vosdemandes') }}">
+                                <i class="fa-solid fa-hand-holding"></i>
+                                <span class="links_name">vos demandes</span>
+                            </a>
+                            <span style="color:black" class="tooltip">vos demandes</span>
+                        </li>
                     @endif
 
                     @if (Auth::user()->nom == 'Admine' AND Auth::user()->email == 'admin@gmail.com')

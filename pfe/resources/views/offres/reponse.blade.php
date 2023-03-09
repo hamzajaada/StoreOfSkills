@@ -13,8 +13,6 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/reponse.css') }}">
-
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -26,7 +24,7 @@
     <section class="main-sec1">
         @extends('offres.fixeBarre')
     </section>
-    <br><h2 style="text-align:center;margin-left:10%;margin-top:40px;">Table de <span style="color:#ff3c74">Commandes</span></h2><br>
+    <br><h2 style="text-align:center;margin-left:10%;margin-top:40px;">Table de <span style="color:#ff3c74">Reponses</span></h2><br>
     <div class="div-table" style="margin-left:17%" >
         <table class="table" style="width: 95%;border-collapse: collapse;" >
             <thead>
@@ -35,32 +33,27 @@
                     <th scope="col">Prenom</th>
                     <th scope="col">Email</th>
                     <th scope="col">Type</th>
-                    <th style="height: auto;overflow:auto;" scope="col">Offre</th>
+                    <th scope="col">Offre</th>
                     <th scope="col">Prix</th>
-                    <th scope="col" colspan="2">Action</th>
+                    <th scope="col">Status</th>
                 </tr>
             </thead>
             <tbody class="table-group-divider">
-                   @foreach ($commandes as $com )
+                    @foreach ($commandes as $com )
                 <tr>
                     <td>{{ $com->nom }}</td>
                     <td>{{ $com->prenom }}</td>
                     <td>{{ $com->email }}</td>
                     <td>{{ $com->typeOffre }}</td>
-                    <td>{{ $com->Offre }}</td>
-                    <td>{{ $com->prix }}</td>
-                    <td><form class="BTNFORM" method="POST" style="box-shadow: none" action="{{ route('commande.accepter', ['id' => $com->id]) }}">
-                        @csrf
-                        <input type="hidden" name="commande_id" value="{{ $com->id }}">
-                        <button type="submit" class="btn btn-success">Accepter</button>
-                        </form>
+                    <td>{{ $com->Offre  }}</td>
+                    <td>{{ $com->prix}}</td>
+                    <td>
+                        @if ($com->status==1)
+                            <span style="color: rgb(46, 175, 46)"> la commande était acceptée .</span>
+                        @elseif ($com->status==2)
+                            <span style="color: red">la commande était refusée .</span>
+                        @endif
                     </td>
-                    <td><form class="BTNFORM" method="POST" style="box-shadow: none" action="{{ route('commande.refuser', ['id' => $com->id]) }}">
-                        @csrf
-                        <input type="hidden" name="commande_id" value="{{ $com->id }}">
-                        <button type="submit" class="btn btn-danger">Refuser</button>
-                    </form>
-                </td>
                 </tr>
                 @endforeach
             </tbody>

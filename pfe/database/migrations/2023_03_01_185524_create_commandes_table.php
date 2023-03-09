@@ -13,6 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
+        // les champs de la table commandes
         Schema::create('commandes', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_user');

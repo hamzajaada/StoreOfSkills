@@ -54,8 +54,8 @@
         background-color: #0069d9;
     }
     .con{
-    display: flex;
-         }
+        display: flex;
+    }
 </style>
 
     <!-- Scripts -->
@@ -113,11 +113,6 @@
                     </div>
                     <div class="butns">
                         <div class="modf"><a class="btn btn-primary" href="{{ route('offres.edit',$d->id) }}" role="button">Modifier</a></div>
-                        {{-- <form action="{{ route('offres.destroy',$d->id) }}" method="post">
-                            @method('delete')
-                            @csrf
-                            <button class="btn btn-danger" type="submit">Supprimer</button>
-                        </form> --}}
                         <!-- Modal de confirmation de suppression -->
                         <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirm-delete-modal-{{ $d->id }}">Supprimer</button>
                         <div class="modal fade" style="margin-top:300px" id="confirm-delete-modal-{{ $d->id }}" tabindex="-1" aria-labelledby="confirm-delete-modal-label-{{ $d->id }}" aria-hidden="true">

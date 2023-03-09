@@ -46,8 +46,8 @@ Route::get('home/reponses',[CommandeController::class,'commande_id'])->name('hom
 
 /*edit by hamza*/
 Route::get('home/reponses',[CommandeController::class,'commande_id'])->name('home.reponses');
-Route::post('/commandes/{id}/accepter', [CommandeController::class, 'accepterCommande'])->name('commande.accepter');
-Route::post('/commandes/{id}/refuser', [CommandeController::class, 'refuserCommande'])->name('commande.refuser');
+Route::post('/commandes/accepter', [CommandeController::class, 'accepterCommande'])->name('commande.accepter');
+Route::post('/commandes/refuser', [CommandeController::class, 'refuserCommande'])->name('commande.refuser');
 
 Route::get('home/reponse',[CommandeController::class,'commande'])->name('home.reponse');
 
