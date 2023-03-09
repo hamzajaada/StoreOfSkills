@@ -77,6 +77,7 @@
             border-color: #ebccd1;
         }
     </style>
+
 </head>
 <body>
 <div id="app">
@@ -91,7 +92,7 @@
                     @csrf
                     @method('POST')
                     <div class="con">
-                    <div class="form-group" style=" display:flex;">
+                    <div class="form-group" >
                         <input type="text" name="nom" class="form-control" placeholder="Recherche par nom" value="{{ old('nom') }}">
                         <input type="text" name="prenom" class="form-control" placeholder="Recherche par prénom" value="{{ old('prenom') }}">
                         <select class="form-control" name="categorie" id="exampleFormControlSelect1">
@@ -105,7 +106,7 @@
                             <option value="Métier">Métier</option>
                         </select>
                     </div>
-                    <div class="form-group" style=" display:flex;">
+                    <div class="form-group1" style="">
                         <button type="submit" class="btn btn-primary">Rechercher</button>
                         <button type="submit" class="btn btn-danger" style="margin-left: 10px">Reset</button>
                     </div>

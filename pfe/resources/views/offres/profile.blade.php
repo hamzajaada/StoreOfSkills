@@ -24,10 +24,10 @@
 <body>
 <div id="app">
     @extends('offres.fixeHeader')
-    <section class="services-p">
+    <section class="services-profil">
         @extends('offres.fixeBarre')
-        <section class="P-2">
-            <h1 class="titre-part3" style="margin-top: 70px;text-align:center;margin-right:295px;margin-left: 281px;"><span style="color:rgb(15, 15, 236)">Modifier</span>  votre Profile</h1>
+        <section class="P-3" >
+            <h1 class="titre-Modfprofil"><span style="color:rgb(15, 15, 236)">Modifier</span>  votre Profile</h1>
             <div class="info-compte">
                 <form class="row g-3" method="post" action="{{ route('users.update',$profile->id) }}" enctype="multipart/form-data">
                     @csrf
@@ -56,8 +56,8 @@
                     </div>
                 </form>
             </div>
-            <div class="mot_passe" style="margin-bottom: 30px">
-                <form class="row g-3" method="post" action="{{ route('users.password') }}">
+            <div class="mot_passe" >
+                <form class="row g-3" method="post"  action="{{ route('users.password') }}">
                     @csrf
                     @method('POST')
                     <h2>Modification de mot de passe</h2>
@@ -80,6 +80,7 @@
             </div>
         </section>
     </section>
+    </div>
 
 <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
 </body>
