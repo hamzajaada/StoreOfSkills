@@ -98,30 +98,30 @@ span{
 @media screen and (max-width:620px){
    nav{
      width: 100%;
-   }
-     #text-part1{
-        font-size: 2.3em;
-        font-weight: 900;
-        margin-top: 0px;
-        margin-left: 109px;
-        width: 100%;
-     }
-     .logo-part1 img {
-        width: 131%;
-        height: 500px;
-    }
-     .part1{
+   }.part1{
         margin-top: 0px;
         display: block;
-     }
-     .P-1{
-      margin-left: -107px;
-     }
-     .main-part1 {
-      width: 85%;
-  }
-  .part2{
-   display: block;
-   margin-left: 200px;
-  }
    }
+   #text-part1 {
+      font-size: 1.2em;
+      font-weight: 940;
+      margin-top: 0px;
+      margin-left: 212px;
+      width: 77%;
+  }
+  .part2 {
+   display: block;
+   margin-left: 243px;
+   }
+   .P-1{
+      margin-left: -107px;
+   }
+   .main-part1 {
+      width: 85%;
+   }
+   .logo-part1 img {
+    width: 75%;
+    height: 438px;
+    margin-left: 189px;
+   }
+}

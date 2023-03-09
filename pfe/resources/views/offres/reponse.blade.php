@@ -47,13 +47,13 @@
                     <td>{{ $com->typeOffre }}</td>
                     <td>{{ $com->Offre }}</td>
                     <td>{{ $com->prix }}</td>
-                    <td><form method="POST" action="{{ route('commande.accepter', ['id' => $com->id]) }}">
+                    <td><form method="POST" style="box-shadow: none" action="{{ route('commande.accepter', ['id' => $com->id]) }}">
                         @csrf
                         <input type="hidden" name="commande_id" value="{{ $com->id }}">
                         <button type="submit" class="btn btn-success">Accepter</button>
                         </form> 
                     </td>
-                    <td><form method="POST" action="{{ route('commande.refuser', ['id' => $com->id]) }}">
+                    <td><form method="POST" style="box-shadow: none" action="{{ route('commande.refuser', ['id' => $com->id]) }}">
                         @csrf
                         <input type="hidden" name="commande_id" value="{{ $com->id }}">
                         <button type="submit" class="btn btn-danger">Refuser</button>
