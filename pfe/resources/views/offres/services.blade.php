@@ -25,7 +25,7 @@
             margin-top: 50px;
         }
         form{
-            
+
             margin-top: 30px;
             margin-left: -25px;
             box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
@@ -39,7 +39,7 @@
             width: 400px;
             max-width: 100%;
             margin: 3px;ç
-            
+
         }
 
         .btn-primary {
@@ -57,6 +57,19 @@
    }
         .btn-primary:hover {
             background-color: #0069d9;
+        }
+
+        .alert {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+
+        .alert-danger {
+            color: #a94442;
+            background-color: #f2dede;
+            border-color: #ebccd1;
         }
     </style>
 </head>
@@ -138,7 +151,13 @@
                 </div></center>
             </article>
         @endforeach
+
     </div>
+        @if(session('error'))
+            <div class="alert alert-danger my-4" style="position: absolute; margin-top: -25rem!important; margin-bottom: 46.5rem!important; margin-left: 10%; width: 63%;">
+                {{ session('error') }}
+            </div>
+        @endif
     </section>
 </section>
 <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>

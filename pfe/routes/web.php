@@ -8,16 +8,6 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OffreController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', function () {
     return view('welcome');
@@ -41,7 +31,7 @@ Route::get('home/demandes',[OffreController::class,'demandes'])->name('home.dema
 Route::get('home/reponses',[OffreController::class,'reponses'])->name('home.reponses');
 Route::get('home/vos-services',[OffreController::class,'services_id'])->name('home.vosservices');
 Route::get('home/vos-demandes',[OffreController::class,'demandes_id'])->name('home.vosdemandes');
-Route::post('home/commander',[CommandeController::class,'commanderService'])->name('home.commander');
+Route::post('home/commander',[CommandeController::class,'commanderOffre'])->name('home.commander');
 
 Route::post('home/users/search',[UserController::class,'search_user'])->name('admin.user.search');
 Route::post('home/offres/search',[OffreController::class,'search_offres'])->name('admin.offres.search');
@@ -52,8 +42,6 @@ Route::post('home/vosdemandes/search',[OffreController::class,'search_vosdemande
 
 Route::get('home/reponses',[CommandeController::class,'commande_id'])->name('home.reponses');
 
-Route::post('/commander-service',[ConsulterController::class,'commanderService'])->name('commander');
-
 
 
 /*edit by hamza*/
@@ -62,3 +50,5 @@ Route::post('/commandes/{id}/accepter', [CommandeController::class, 'accepterCom
 Route::post('/commandes/{id}/refuser', [CommandeController::class, 'refuserCommande'])->name('commande.refuser');
 
 Route::get('home/reponse',[CommandeController::class,'commande'])->name('home.reponse');
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
