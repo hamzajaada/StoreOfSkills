@@ -16,8 +16,8 @@
 .P-2{
     margin-top: 50px;
     background-color:#ffff;
-    margin-bottom: 20px;
-    height: 550px;
+    margin-bottom: 50px;
+    
     margin-left: 220px;
     width: 85%;
 
@@ -31,15 +31,7 @@
     font-weight: 700;
     margin-right: 21px;
  }
- .demandes{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 40px;
-    margin-bottom: 23px;
-    height: 500px;
-
- }
+ 
  article{
     width: 400px;
     height: 490px;
@@ -49,28 +41,7 @@
     margin-top: 30px;
 
  }
- .button-commander{
-   width: 50%;
-   height: 45px;
-   background-color:#ff3c74;
-   border-radius: 7px;
-   margin-top: -7px;
-   padding-top:7px ;
- }
- .button-commander:hover{
-   background-color:#a51840;
- }
- .button-postuller{
-   width: 50%;
-   height: 45px;
-   background-color:#3cb626;
-   border-radius: 7px;
-   margin-top: 10px;
-   padding-top:7px ;
- }
- .button-postuller:hover{
-   background-color:#198d05;
- }
+ 
  .but-post{
    text-decoration: none;
    color: #fafafa;
@@ -89,7 +60,7 @@
     display: flex;
     align-items: center;
  }
- .image-dem{
+ .image-ser{
     width: 360px;
     height: 200px;
     margin-left: 20px;
@@ -100,15 +71,12 @@
     margin-left: 10px;
     border-radius: 10px;
  }
- .desc-dem{
-    width: 360px;
-    margin-left: 20px;
-    height: 22%;
- }
+
  .desc-ser{
-    width: 440px;
+    width: 370px;
     height: 90px;
     margin-left: 20px;
+    margin-bottom: 10px;
  }
  .img-prfl img{
     width: 40px;
@@ -123,41 +91,38 @@
     color: #333333;
 
  }
- .image-dem img{
+ .image-ser img{
     width: 360px;
     height: 200px;
     border-radius: 7px;
  }
 
- .text-dem{
-    margin-top: 10px;
-    font-family: 'Open Sans', sans-serif;
-    height: 100px;
-    overflow-y: auto;
- }
+
+ 
  /*.text-ser{
     margin-top: 10px;
     font-family: 'Open Sans', sans-serif;
     margin-left: 10px;
  }*/
-
- .demandes{
+ .text-ser{
+    margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    height: 100px;
+    overflow-y: auto;
+  }
+ .services{
     display: flex;
     justify-content: space-around;
     margin-top: 40px;
-    margin-bottom: -143px;
+    margin-bottom: 100px;
     height: 500px;
  }
  .image-ser{
     width: 440px;
     height: 200px;
-    margin-left: 20px;
+    margin-left: 11px;
  }
- .desc-ser{
-    width: 440px;
-    height: 90px;
-    margin-left: 20px;
- }
+ 
  .services-p{
    display: flex;
    width: 100%;

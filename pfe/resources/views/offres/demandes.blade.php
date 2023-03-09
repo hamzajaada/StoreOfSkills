@@ -7,7 +7,8 @@
     <title>Demmandes</title>
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="{{ asset('css/services.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/demandes.css') }}">
+    {{--     <link rel="stylesheet" href="{{ asset('css/services.css') }}">--}}
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->

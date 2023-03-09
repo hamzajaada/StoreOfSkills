@@ -1,12 +1,3 @@
-/* Google Font Link */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins" , sans-serif;
-}
-
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -21,6 +12,193 @@
     border-radius: 5px;
 }
 
+
+.P-2{
+    margin-top: 50px;
+    background-color:#ffff;
+    margin-bottom: 50px;
+    
+    margin-left: 220px;
+    width: 85%;
+
+ }
+
+ .titre-part3{
+    margin-top: 30px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    margin-right: 21px;
+ }
+ 
+ article{
+    width: 400px;
+    height: 490px;
+    border-radius: 7px;
+    box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
+    background-color: #fff;
+    margin-top: 30px;
+
+ }
+ .button-commander{
+   width: 50%;
+   height: 45px;
+   background-color:#ff3c74;
+   border-radius: 7px;
+   margin-top: -7px;
+   padding-top:7px ;
+ }
+ .button-commander:hover{
+   background-color:#a51840;
+ }
+ .button-postuller{
+   width: 50%;
+   height: 45px;
+   background-color:#3cb626;
+   border-radius: 7px;
+   margin-top: 10px;
+   padding-top:7px ;
+ }
+ .button-postuller:hover{
+   background-color:#198d05;
+ }
+ .but-post{
+   text-decoration: none;
+   color: #fafafa;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 1.2em;
+   font-weight: 400;
+}
+.but-post:hover{
+   color: #fafafa;
+}
+
+ .info-per{
+    width: 360px;
+    height: 80px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+ }
+ .image-dem{
+    width: 360px;
+    height: 200px;
+    margin-left: 20px;
+ }
+ .image-ser img{
+    width: 408px;
+    height: 187px;
+    margin-left: 10px;
+    border-radius: 10px;
+ }
+ .desc-dem{
+    width: 360px;
+    margin-left: 20px;
+    height: 22%;
+ }
+ .desc-ser{
+    width: 440px;
+    height: 90px;
+    margin-left: 20px;
+ }
+ .img-prfl img{
+    width: 40px;
+    height: 40px;
+    border-radius: 26px;
+ }
+ .info-prfl{
+    margin-left: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #333333;
+
+ }
+ .image-dem img{
+    width: 360px;
+    height: 200px;
+    border-radius: 7px;
+ }
+
+ .text-dem{
+    margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    height: 100px;
+    overflow-y: auto;
+ }
+ /*.text-ser{
+    margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 10px;
+ }*/
+
+ .demandes{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    height: 500px;
+ }
+ .image-ser{
+    width: 440px;
+    height: 200px;
+    margin-left: 20px;
+ }
+ .desc-ser{
+    width: 440px;
+    height: 90px;
+    margin-left: 20px;
+ }
+ .services-p{
+   display: flex;
+   width: 100%;
+ }
+.butns{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 17px;
+  align-items: center;
+}
+
+/* .modf{
+  padding-left: 14px;
+  padding-top: 5px;
+   width: 100px;
+   height: 40px;
+   background-color:rgb(48, 48, 255);
+   border-radius: 10px;
+   font-family: 'Open Sans', sans-serif;
+}
+.modf:hover{
+   background-color:#001b76;
+} */
+/* .sup{
+   font-family: 'Open Sans', sans-serif;
+   padding: 5px;
+   width: 105px;
+   height: 40px;
+   background-color:red;
+   border-radius: 10px;
+}
+.sup:hover{
+   background-color:rgb(242, 69, 69);
+
+   background-color:rgb(188, 35, 35);
+} */
+
+
+.text-prix{
+   margin-left: 20px;
+}
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
 .sidebar{
   position: fixed;
   left: 0;
@@ -259,57 +437,78 @@
   font-weight: 500;
   margin: 18px
 }
-.links{
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+form{
+            
+  margin-top: 30px;
+  margin-left: -25px;
+  box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
+  padding: 10px
+}
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  width: 400px;
+  max-width: 100%;
+  margin: 3px;
+  
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.form-group{
+  display: flex;
+}
+.form-group1{
+  display: flex;
+}
+.con{
+display: flex;
+}
+.btn-primary:hover {
+  background-color: #0069d9;
+
+}
+
+
+@media (max-width: 420px) {
+  .sidebar li .tooltip{
+    display: none;
+  }
+}
+
+
+  @media screen and (max-width:620px){
+    .form-group{
+      display: block;
+    }
+    .form-group1{
+      display: block;
+      margin-left: 33px;
+      margin-top: 18px;
+    }
+    .con{
+      display: block;
+    }
+
+
+  }
+ .links{
     margin-right: 10px;
  }
- 
- .P-3{
-  margin-top: 67px;
-  background-color:#ffff;
-  margin-bottom: 20px;
-  margin-left: 220px;
-  width: 85%;
-}
-.titre-Modfprofil{
-    margin-top: 70px;
-    text-align: center;
-    margin-right: 193px;
-    margin-left: 200px;
-}
-/*css de form*/
-.info-compte{
-    padding: 10px;
-    margin-top: 40px;
-    
-    border-radius: 5px;
-    margin-left: 35px;
-}
-.mot_passe{
-  padding: 10px;
-  margin-top: 40px;
-  border-radius: 5px;
-  margin-left: 35px;
-  margin-bottom: 30px;
-}
 
 
-@media screen and (max-width:620px){
-
-  .P-3 {
-    margin-top: 67px;
-    background-color: #ffff;
-    margin-bottom: 20px;
-    height: 550px;
-    margin-left: 82px;
-    width: 98%;
-   }
-   .services-profil{
-    width: 80%;
-   }
-   .titre-Modfprofil{
-    margin-top: 70px;
-    margin-left: 105px;
-    margin-right: 75px;
-   }
-
-   }
