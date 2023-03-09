@@ -19,7 +19,60 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Alegreya+Sans+SC:ital@1&family=Bebas+Neue&family=Dosis&family=Kanit:ital,wght@0,100;0,200;1,100&family=Open+Sans&family=Oswald&family=Poiret+One&family=Poppins:wght@500&family=Prompt:ital,wght@1,200&family=Questrial&family=Roboto+Condensed&family=Rowdies:wght@700&family=Slabo+27px&family=Unbounded:wght@300&display=swap" rel="stylesheet">
-   
+    <style>
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        form{
+
+            margin-top: 30px;
+            margin-left: -25px;
+            box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
+            padding: 10px
+        }
+        .form-control {
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: 16px;
+            width: 400px;
+            max-width: 100%;
+            margin: 3px;ç
+
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+   .con{
+    display: flex;
+   }
+        .btn-primary:hover {
+            background-color: #0069d9;
+        }
+
+        .alert {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+
+        .alert-danger {
+            color: #a94442;
+            background-color: #f2dede;
+            border-color: #ebccd1;
+        }
+    </style>
 </head>
 <body>
 <div id="app">
@@ -99,7 +152,13 @@
                 </div></center>
             </article>
         @endforeach
+
     </div>
+        @if(session('error'))
+            <div class="alert alert-danger my-4" style="position: absolute; margin-top: -25rem!important; margin-bottom: 46.5rem!important; margin-left: 10%; width: 63%;">
+                {{ session('error') }}
+            </div>
+        @endif
     </section>
 </section>
 <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>

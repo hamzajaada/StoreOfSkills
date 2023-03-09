@@ -13,6 +13,10 @@ class Offre extends Model
 
     protected $fillable=['type','categorie','offre','image_offre','prix'];
 
+    public static function find(mixed $id)
+    {
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);

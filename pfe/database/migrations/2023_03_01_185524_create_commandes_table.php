@@ -19,7 +19,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_offre');
             $table->integer('id_user_commande');
            // $table->primary(['id_user', 'id_offre']);
-            $table->tinyInteger('status')->default(0);
+            $table->Integer('status')->default(0);
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('id_offre')->references('id')->on('offres')->onDelete('cascade');
             $table->timestamps();

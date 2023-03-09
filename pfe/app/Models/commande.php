@@ -10,5 +10,5 @@ class Commande extends Model
 {
     use HasFactory;
     use SoftDeletes;
-    protected $fillable=['id_user','id_offre'];
+    protected $fillable=['id_user','id_offre','id_user_commande'];
 }
