@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ asset('css/services.css') }}">
-    
+
     <title>{{ config('app.name', 'Laravel') }}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- Fonts -->
@@ -155,7 +155,7 @@
 
     </div>
         @if(session('error'))
-            <div class="alert alert-danger my-4" style="position: absolute; margin-top: -25rem!important; margin-bottom: 46.5rem!important; margin-left: 10%; width: 63%;">
+            <div class="alert alert-danger my-4" style="position: absolute; margin-top: -40rem!important; margin-bottom: 46.5rem!important; margin-left: 10%; width: 63%;">
                 {{ session('error') }}
             </div>
         @endif

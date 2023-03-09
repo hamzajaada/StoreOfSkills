@@ -24,7 +24,7 @@
     form{
         margin-top: 30px;
         margin-left: -25px;
-        
+
         box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
         padding: 10px
 
@@ -95,18 +95,18 @@
                 </div>
                 </form>
             </div>
-            <div class="demandes">
+            <div class="services">
                 @foreach ($services as $srv)
                     <article>
                         <div class="info-per">
                             <div class="img-prfl"><img src="{{asset('image/'.$srv->image)}}" alt="" srcset=""></div>
                             <h4 class="info-prfl">{{ $srv->nom }} {{ $srv->prenom }}</h4>
                         </div>
-                        <div class="image-dem">
+                        <div class="image-ser">
                             <img src="{{asset('image/'.$srv->image_offre)}}" alt="" srcset="">
                         </div>
-                        <div class="desc-dem">
-                            <p class="text-dem">{{ $srv->offre }}</p>
+                        <div class="desc-ser">
+                            <p class="text-ser">{{ $srv->offre }}</p>
                         </div>
                         <div class="prix">
                             <p class="text-prix"><span style="color:#ff3c74"> Prix :</span>{{ $srv->prix }}DH</p>

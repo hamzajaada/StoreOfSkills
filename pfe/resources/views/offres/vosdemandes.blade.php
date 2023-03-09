@@ -7,7 +7,7 @@
     <title>Services</title>
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="{{ asset('css/services.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/demandes.css') }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
@@ -24,7 +24,7 @@
     form{
         margin-top: 30px;
         margin-left: -25px;
-        
+
         box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
         padding: 10px
 

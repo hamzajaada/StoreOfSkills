@@ -9,11 +9,13 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-    
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
-    
+    <link rel="stylesheet" href="{{ asset('css/reponse.css') }}">
+
+
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -24,7 +26,7 @@
     <section class="main-sec1">
         @extends('offres.fixeBarre')
     </section>
-    <br><h2 style="text-align:center;margin-left:10%;margin-top:40px;">Table de <span style="color:#ff3c74">Reponses</span></h2><br>
+    <br><h2 style="text-align:center;margin-left:10%;margin-top:40px;">Table de <span style="color:#ff3c74">Commandes</span></h2><br>
     <div class="div-table" style="margin-left:17%" >
         <table class="table" style="width: 95%;border-collapse: collapse;" >
             <thead>
@@ -37,7 +39,7 @@
                     <th scope="col">Prix</th>
                     <th scope="col" colspan="2">Action</th>
                 </tr>
-            </thead> 
+            </thead>
             <tbody class="table-group-divider">
                    @foreach ($commandes as $com )
                 <tr>
@@ -47,13 +49,13 @@
                     <td>{{ $com->typeOffre }}</td>
                     <td>{{ $com->Offre }}</td>
                     <td>{{ $com->prix }}</td>
-                    <td><form method="POST" style="box-shadow: none" action="{{ route('commande.accepter', ['id' => $com->id]) }}">
+                    <td><form class="BTNFORM" method="POST" style="box-shadow: none" action="{{ route('commande.accepter', ['id' => $com->id]) }}">
                         @csrf
                         <input type="hidden" name="commande_id" value="{{ $com->id }}">
                         <button type="submit" class="btn btn-success">Accepter</button>
-                        </form> 
+                        </form>
                     </td>
-                    <td><form method="POST" style="box-shadow: none" action="{{ route('commande.refuser', ['id' => $com->id]) }}">
+                    <td><form class="BTNFORM" method="POST" style="box-shadow: none" action="{{ route('commande.refuser', ['id' => $com->id]) }}">
                         @csrf
                         <input type="hidden" name="commande_id" value="{{ $com->id }}">
                         <button type="submit" class="btn btn-danger">Refuser</button>
@@ -68,4 +70,3 @@
 <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
 </body>
 </html>
- 
