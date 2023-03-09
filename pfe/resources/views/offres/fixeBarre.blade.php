@@ -56,7 +56,7 @@
                     </li>
                     @if (Auth::user()->nom != 'Admine' AND Auth::user()->email != 'admin@gmail.com')
                         <li>
-                            <a href="{{ route('home.reponses') }}">
+                            <a href="{{ route('home.commande') }}">
                                 <i class="fa-solid fa-reply"></i>
                                 <span class="links_name">Commandes</span>
                             </a>
