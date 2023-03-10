@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/ajouteOffre.css') }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
@@ -31,17 +31,17 @@
     <section class="P-2" >
         <h1 class="titre-part3" style="margin-top: 70px;margin-left:140px;">Modifier votre <span style="color:rgb(44, 8, 247)">d'offre</span> </h1>
         <div class="info-compte" style="margin-left: 61px;">
-        <form class="row g-3" method="post" action="{{ route('offres.update',$offre->id) }}" enctype="multipart/form-data">
+        <form style="border-radius: 7px" class="row g-3" method="post" action="{{ route('offres.update',$offre->id) }}" enctype="multipart/form-data">
             @csrf
             @method('PUT')
-            <div class="form-group">
+            <div class="form-group" style="display: block">
                 <label for="exampleFormControlSelect1">Type:</label>
                 <select class="form-control" name="type" value="{{ $offre->type }}" id="exampleFormControlSelect1">
                     <option value="service">Service</option>
                     <option value="demande">Demande</option>
                 </select>
             </div>
-            <div class="form-group">
+            <div class="form-group" style="display: block">
                 <label for="exampleFormControlSelect1">Categorie:</label>
                 <select class="form-control" value="{{ $offre->categorie }}" name="categorie" id="exampleFormControlSelect1">
                     <option value="Design graphique">Design graphique</option>
@@ -53,11 +53,11 @@
                     <option value="Métier">Métier</option>
                 </select>
             </div>
-            <div class="form-group">
+            <div class="form-group" style="display: block">
                 <label for="exampleFormControlTextarea1">Offre:</label>
                 <textarea class="form-control" name="offre" id="exampleFormControlTextarea1" rows="3">{{ $offre->offre }}</textarea>
             </div>
-            <div class="form-group">
+            <div class="form-group" style="display: block">
                 <label for="exampleFormControlNember">Prix:</label>
                 <input type="number" value="{{ $offre->prix }}" class="form-control" name="prix" id="exampleFormControlNember">
             </div>
