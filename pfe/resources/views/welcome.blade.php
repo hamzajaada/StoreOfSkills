@@ -24,7 +24,7 @@
     <title>Store of skills</title>
     {{-- LINK CSS --}}
     <link rel="stylesheet" href="css/style.css">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,52 +119,49 @@
     <section class="P-2">
         <h2 class="titre-part3">Les dernières <span id="span-t2">demandes</span></h2>
             <div class="services">
-
-                            <article>
-                                <div class="info-per">
-                                    <div class="img-prfl"><img src="images/profil1.jpg" alt="" srcset=""></div>
-                                    <h4 class="info-prfl">Alyan GETEREZ</h4>
-                                </div>
-                                <div class="image-dem">
-                                        <img src="images/dem1.jpg" alt="" srcset="">
-                                </div>
-                                <div class="desc-dem">
-                                        <p class="text-dem">Bonjour, nous avons un problème de toilette bouché impossible de le débouché
-                                            on apprécierait un coup de main pour ceux qui le peuvent
-                                        </p>
-                                </div>
-                            </article>
-                            <article>
-                                <div class="info-per">
-                                    <div class="img-prfl"><img src="images/profil2.jpg" alt="" srcset=""></div>
-                                    <h4 class="info-prfl">Mamado Sedebi</h4>
-                                </div>
-                                <div class="image-dem">
-                                    <img src="images/dem2.jpg" alt="" srcset="">
-                                </div>
-                                <div class="desc-dem">
-                                    <p class="text-dem">Bonjour, nous ne sommes pas véhiculé du coup nous recherchons
-                                        une personne véhiculé pour nous aider à récupérer un salon de jardin au 6 rue Clau
-                                    </p>
-                                </div>
-                            </article>
-                            <article>
-                                <div class="info-per">
-                                    <div class="img-prfl"><img src="images/profil3.jpg" alt="" srcset=""></div>
-                                    <h4 class="info-prfl">Mamado Sedebi</h4>
-                                </div>
-                                <div class="image-dem">
-                                    <img src="images/dem3.jpg" alt="" srcset="">
-
-                                </div>
-                                <div class="desc-dem">
-                                    <p class="text-dem">
-                                        Bonjour, Je souhaiterai que quelqu'un m'installe les étagères murales comme indiqué sur le croquis.
-                                        Notre mur est en placo, nous avons donc achete
-                                    </p>
-                                </div>
-                            </article>
-
+                <article>
+                    <div class="info-per">
+                        <div class="img-prfl"><img src="images/profil1.jpg" alt="" srcset=""></div>
+                            <h4 class="info-prfl">Alyan GETEREZ</h4>
+                        </div>
+                    <div class="image-dem">
+                        <img src="images/dem1.jpg" alt="" srcset="">
+                    </div>
+                    <div class="desc-dem">
+                        <p class="text-dem">Bonjour, nous avons un problème de toilette bouché impossible de le débouché
+                            on apprécierait un coup de main pour ceux qui le peuvent
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <div class="info-per">
+                        <div class="img-prfl"><img src="images/profil2.jpg" alt="" srcset=""></div>
+                            <h4 class="info-prfl">Mamado Sedebi</h4>
+                    </div>
+                    <div class="image-dem">
+                        <img src="images/dem2.jpg" alt="" srcset="">
+                    </div>
+                    <div class="desc-dem">
+                        <p class="text-dem">Bonjour, nous ne sommes pas véhiculé du coup nous recherchons
+                            une personne véhiculé pour nous aider à récupérer un salon de jardin au 6 rue Clau
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <div class="info-per">
+                        <div class="img-prfl"><img src="images/profil3.jpg" alt="" srcset=""></div>
+                        <h4 class="info-prfl">Mamado Sedebi</h4>
+                    </div>
+                    <div class="image-dem">
+                        <img src="images/dem3.jpg" alt="" srcset="">
+                    </div>
+                    <div class="desc-dem">
+                        <p class="text-dem">
+                            Bonjour, Je souhaiterai que quelqu'un m'installe les étagères murales comme indiqué sur le croquis.
+                            Notre mur est en placo, nous avons donc achete
+                        </p>
+                    </div>
+                </article>
             </div>
             <center><div class="button-serv"><a
                 @if (Auth::user())
@@ -172,12 +169,13 @@
                 @else
                     href="{{ route('login') }}"
                 @endif
-                class="texte-butser">Voir plus</a></div></center>
+                class="texte-butser">Voir plus</a>
+            </div></center>
     </section>
 
-<section class="P-3">
-<h2 class="titre-part4">Les dernières <span>services</span></h2>
-<div class="demandes">
+    <section class="P-3">
+        <h2 class="titre-part4">Les dernières <span>services</span></h2>
+        <div class="demandes">
             <article>
                 <div class="info-per">
                     <div class="img-prfl"><img src="images/profil4.jpg" alt="" srcset=""></div>
@@ -220,66 +218,64 @@
                     </p>
                 </div>
             </article>
-</div>
-
-    <center><div class="button-dem"><a
-        @if (Auth::user())
-            href="{{ route('home.services') }}"
-        @else
-            href="{{ route('login') }}"
-        @endif
-        class="texte-butdem">Voir plus</a></div></center>
-</section>
-<section class="P-4">
-   <center><h1  class="store">Store Of <span class="skills">Skills</span></h1></center>
-   <div class="cont-img">
-    <div class="img-1"> <img src="images/homepage-bricolage-l.png" alt="" srcset="">
-        <h3>1. Je réponds aux demandes <br> et réalise des prestations. </h3>
-    </div>
-    <div class="img-1">
-        <img src="images/homepage-telephone-l.png" alt="" srcset="">
-        <h3>2. Je suis payé et évalué.
-
-        </h3>
-    </div>
-    <div class="img-1">
-        <img src="images/homepage-telephone-vibre-l.png" alt="" srcset="">
-        <h3>3. Je suis alerté en temps réel des <br> demandes postées autour de moi.</h3>
-    </div>
-</div>
-<center><div class="button-pre-ser"><a href="{{ route('login') }}" class="texte-pre-ser"> Je propose mes services</a></div></center>
-</section>
-<section class="P-5">
-<center> <h1 class="notif-titre">Développez votre activité avec <span class="S">Store </span> of <span class="K">Skills</span> </h1></center>
-    <div class="notif">
-        <div class="not1">
-            <h1 class="titre-not1">Trouvez <br> des clients</h1>
-            <div class="desc">
-                <h3 class="h3-notif"><i class="fa-sharp fa-regular fa-handshake"></i>4 millions de membres</h3>
-                <h3 class="h3-notif"><i class="fa-brands fa-shopify"></i> Des milliers de demandes chaque jour</h3>
-                <h3 class="h3-notif"><i class="fa-solid fa-globe"></i>Partout en Maroc</h3>
+        </div>
+        <center><div class="button-dem"><a
+            @if (Auth::user())
+                href="{{ route('home.services') }}"
+            @else
+                href="{{ route('login') }}"
+            @endif
+            class="texte-butdem">Voir plus</a>
+        </div></center>
+    </section>
+    <section class="P-4">
+        <center><h1  class="store">Store Of <span class="skills">Skills</span></h1></center>
+        <div class="cont-img">
+            <div class="img-1"> <img src="images/homepage-bricolage-l.png" alt="" srcset="">
+                <h3>1. Je réponds aux demandes <br> et réalise des prestations. </h3>
+            </div>
+            <div class="img-1">
+                <img src="images/homepage-telephone-l.png" alt="" srcset="">
+                <h3>2. Je suis payé et évalué.</h3>
+            </div>
+            <div class="img-1">
+                <img src="images/homepage-telephone-vibre-l.png" alt="" srcset="">
+                <h3>3. Je suis alerté en temps réel des <br> demandes postées autour de moi.</h3>
             </div>
         </div>
-        <div class="not2">
-            <h1 class="titre-not2">Développez <br> votre visibilité</h1>
-            <div class="desc">
-                <h3 class="h3-notif"><i class="fa-solid fa-magnifying-glass"></i>Référencement de votre profil sur les moteurs de recherche</h3>
-                <h3 class="h3-notif"><i class="fa-regular fa-star"></i>Collecte de vos avis clients</h3>
-                <h3 class="h3-notif"><i class="fa-regular fa-address-card"></i>Cartes de visite et prospectus personnalisés</h3>
+        <center><div class="button-pre-ser"><a href="{{ route('login') }}" class="texte-pre-ser"> Je propose mes services</a></div></center>
+    </section>
+    <section class="P-5">
+        <center> <h1 class="notif-titre">Développez votre activité avec <span class="S">Store </span> of <span class="K">Skills</span> </h1></center>
+        <div class="notif">
+            <div class="not1">
+                <h1 class="titre-not1">Trouvez <br> des clients</h1>
+                <div class="desc">
+                    <h3 class="h3-notif"><i class="fa-sharp fa-regular fa-handshake"></i>4 millions de membres</h3>
+                    <h3 class="h3-notif"><i class="fa-brands fa-shopify"></i> Des milliers de demandes chaque jour</h3>
+                    <h3 class="h3-notif"><i class="fa-solid fa-globe"></i>Partout en Maroc</h3>
+                </div>
+            </div>
+            <div class="not2">
+                <h1 class="titre-not2">Développez <br> votre visibilité</h1>
+                <div class="desc">
+                    <h3 class="h3-notif"><i class="fa-solid fa-magnifying-glass"></i>Référencement de votre profil sur les moteurs de recherche</h3>
+                    <h3 class="h3-notif"><i class="fa-regular fa-star"></i>Collecte de vos avis clients</h3>
+                    <h3 class="h3-notif"><i class="fa-regular fa-address-card"></i>Cartes de visite et prospectus personnalisés</h3>
+                </div>
+            </div>
+            <div class="not3">
+                <h1 class="titre-not3">Gérez <br> votre activité</h1>
+                <div class="desc">
+                    <h3 class="h3-notif"><i class="fa-solid fa-file-invoice"></i>Création et envoi de vos devis et factures à tous vos clients</h3>
+                    <h3 class="h3-notif"><i class="fa-regular fa-credit-card"></i>Paiement par carte bancaire sans commission</h3>
+                    <h3 class="h3-notif"><i class="fa-solid fa-arrow-up-right-dots"></i>Suivi de votre chiffre d'affaires</h3>
+                </div>
             </div>
         </div>
-        <div class="not3">
-            <h1 class="titre-not3">Gérez <br> votre activité</h1>
-            <div class="desc">
-                <h3 class="h3-notif"><i class="fa-solid fa-file-invoice"></i>Création et envoi de vos devis et factures à tous vos clients</h3>
-                <h3 class="h3-notif"><i class="fa-regular fa-credit-card"></i>Paiement par carte bancaire sans commission</h3>
-                <h3 class="h3-notif"><i class="fa-solid fa-arrow-up-right-dots"></i>Suivi de votre chiffre d'affaires</h3>
-            </div>
-        </div>
-</div>
-<center><div class="button-inscr"><a href="{{ route('register') }}" class="texte-inscr"> Je m'inscrire</a></div></center>
+        <center><div class="button-inscr"><a href="{{ route('register') }}" class="texte-inscr"> Je m'inscrire</a></div></center>
 
-</section>
+    </section>
 @extends('offres.footer')
 <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
 </body>

@@ -8,7 +8,7 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-
+// controller de registre
 class RegisterController extends Controller
 {
     /*
@@ -36,6 +36,8 @@ class RegisterController extends Controller
      *
      * @return void
      */
+
+    //  le constructeur de class
     public function __construct()
     {
         $this->middleware('guest');
@@ -47,6 +49,8 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
+
+    // la fonction de validation des champs remplie par l'utilisateur
     protected function validator(array $data)
     {
         return Validator::make($data, [
@@ -65,11 +69,12 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\Models\User
      */
+
+    //  la fonction de creation de nouveau utilisateurs
     protected function create(array $data)
     {
         $image = $data['image'];
         $imagePath = $image->storeAs('users', time() . '_' . $image->getClientOriginalName(), 'images');
-        // $imagePath = $data['image']->store('public/image/users');
         return User::create([
             'nom' => $data['nom'],
             'prenom' => $data['prenom'],

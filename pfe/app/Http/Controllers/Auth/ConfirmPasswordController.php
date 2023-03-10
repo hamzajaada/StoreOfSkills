@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\ConfirmsPasswords;
 
+// controller de confirmation de password
 class ConfirmPasswordController extends Controller
 {
     /*

@@ -8,7 +8,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-   
     {{--  <link rel="stylesheet" href="{{ asset('css/profile.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('css/ajouteOffre.css') }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
@@ -27,52 +26,53 @@
 <div id="app">
     @extends('offres.fixeHeader')
     <section class="services-p">
-    <section class="main-sec1">
-        @extends('offres.fixeBarre')
+        <section class="main-sec1">
+            @extends('offres.fixeBarre')
+        </section>
+        <section class="P-3"  >
+            <h1 class="titre-part3">Ajoute <span style="color:rgb(36, 189, 36)">d'offre</span></h1>
+            <div class="info-compte" style="margin-left: 96px;">
+                <form class="row g-3" method="post" action="{{ route('offres.store') }}" enctype="multipart/form-data">
+                    @csrf
+                    <div class="form-group" style="display: block">
+                        <label for="exampleFormControlSelect1">Type:</label>
+                        <select class="form-control" name="type" id="exampleFormControlSelect1">
+                            <option value="service">Service</option>
+                            <option value="demande">Demande</option>
+                        </select>
+                    </div>
+                    <div class="form-group"style="display: block">
+                        <label for="exampleFormControlSelect1">Categorie:</label><br>
+                        <select class="form-control" name="categorie" id="exampleFormControlSelect1">
+                            <option value="Design graphique">Design graphique</option>
+                            <option value="Développement web et mobile">Développement web et mobile</option>
+                            <option value="Rédaction et traduction">Rédaction et traduction</option>
+                            <option value="Marketing et publicité">Marketing et publicité</option>
+                            <option value="Services informatiques">Services informatiques</option>
+                            <option value="Coaching et formation">Coaching et formation</option>
+                            <option value="Métier">Métier</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="display: block">
+                        <label for="exampleFormControlTextarea1">Offre:</label>
+                        <textarea class="form-control" name="offre" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="form-group" style="display: block">
+                        <label for="exampleFormControlNember">Prix:</label>
+                        <input type="number" class="form-control" name="prix" id="exampleFormControlNember">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputImage" class="form-label">Image</label>
+                        <input class="form-control" name="image" type="file" id="formFile">
+                    </div>
+                    <input type="hidden" name="id_user" value="{{ Auth::user()->id }}">
+                    <div class="col-12">
+                        <center><button type="submit" class="btn btn-primary" style="width: 50%">Ajouter</button></center>
+                    </div>
+                </form>
+            </div>
+        </section>
     </section>
-    <section class="P-3"  >
-        <h1 class="titre-part3">Ajoute <span style="color:rgb(36, 189, 36)">d'offre</span> </h1>
-    <div class="info-compte" style="margin-left: 96px;">
-        <form class="row g-3" method="post" action="{{ route('offres.store') }}" enctype="multipart/form-data">
-            @csrf
-            <div class="form-group" style="display: block">
-                <label for="exampleFormControlSelect1">Type:</label>
-                <select class="form-control" name="type" id="exampleFormControlSelect1">
-                    <option value="service">Service</option>
-                    <option value="demande">Demande</option>
-                </select>
-            </div>
-            <div class="form-group"style="display: block">
-                <label for="exampleFormControlSelect1">Categorie:</label> 
-                 <br><select class="form-control" name="categorie" id="exampleFormControlSelect1">
-                    <option value="Design graphique">Design graphique</option>
-                    <option value="Développement web et mobile">Développement web et mobile</option>
-                    <option value="Rédaction et traduction">Rédaction et traduction</option>
-                    <option value="Marketing et publicité">Marketing et publicité</option>
-                    <option value="Services informatiques">Services informatiques</option>
-                    <option value="Coaching et formation">Coaching et formation</option>
-                    <option value="Métier">Métier</option>
-                </select>
-            </div>
-            <div class="form-group" style="display: block">
-                <label for="exampleFormControlTextarea1">Offre:</label>
-                <textarea class="form-control" name="offre" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-            <div class="form-group" style="display: block">
-                <label for="exampleFormControlNember">Prix:</label>
-                <input type="number" class="form-control" name="prix" id="exampleFormControlNember">
-            </div>
-            <div class="col-12">
-                <label for="inputImage" class="form-label">Image</label>
-                <input class="form-control" name="image" type="file" id="formFile">
-            </div>
-            <input type="hidden" name="id_user" value="{{ Auth::user()->id }}">
-            <div class="col-12">
-                <center><button type="submit" class="btn btn-primary" style="width: 50%">Ajouter</button></center>
-            </div>
-        </form>
-    </div>
-</section>
-<script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
 </body>
 </html>

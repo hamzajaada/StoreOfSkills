@@ -10,7 +10,7 @@ class Offre extends Model
 {
     use HasFactory;
     use SoftDeletes;
-
+    // les champs que l'on peut utiliser de la table offres
     protected $fillable=['type','categorie','offre','image_offre','prix'];
 
     public static function find(mixed $id)

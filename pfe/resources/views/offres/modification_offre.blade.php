@@ -25,9 +25,55 @@
 <div id="app">
     @extends('offres.fixeHeader')
     <section class="services-p">
-    <section class="main-sec1">
-        @extends('offres.fixeBarre')
+        <section class="main-sec1">
+            @extends('offres.fixeBarre')
+        </section>
+        <section class="P-2" >
+            <h1 class="titre-part3" style="margin-top: 70px;margin-left:140px;">Modifier votre <span style="color:rgb(44, 8, 247)">d'offre</span> </h1>
+            <div class="info-compte" style="margin-left: 61px;">
+                <form class="row g-3" method="post" action="{{ route('offres.update',$offre->id) }}" enctype="multipart/form-data">
+                    @csrf
+                    @method('PUT')
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Type:</label>
+                        <select class="form-control" name="type" value="{{ $offre->type }}" id="exampleFormControlSelect1">
+                            <option value="service">Service</option>
+                            <option value="demande">Demande</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Categorie:</label>
+                        <select class="form-control" value="{{ $offre->categorie }}" name="categorie" id="exampleFormControlSelect1">
+                            <option value="Design graphique">Design graphique</option>
+                            <option value="Développement web et mobile">Développement web et mobile</option>
+                            <option value="Rédaction et traduction">Rédaction et traduction</option>
+                            <option value="Marketing et publicité">Marketing et publicité</option>
+                            <option value="Services informatiques">Services informatiques</option>
+                            <option value="Coaching et formation">Coaching et formation</option>
+                            <option value="Métier">Métier</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Offre:</label>
+                        <textarea class="form-control" name="offre" id="exampleFormControlTextarea1" rows="3">{{ $offre->offre }}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlNember">Prix:</label>
+                        <input type="number" value="{{ $offre->prix }}" class="form-control" name="prix" id="exampleFormControlNember">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputImage" class="form-label">Image</label>
+                        <input class="form-control" name="image" type="file" id="formFile">
+                    </div>
+                    <input type="hidden" name="id_user" value="{{ Auth::user()->id }}">
+                    <div class="col-12">
+                        <center><button type="submit" class="btn btn-primary" style="width: 50%">Modifier</button></center>
+                    </div>
+                </form>
+            </div>
+        </section>
     </section>
+<<<<<<< HEAD
     <section class="P-2" >
         <h1 class="titre-part3" style="margin-top: 70px;margin-left:140px;">Modifier votre <span style="color:rgb(44, 8, 247)">d'offre</span> </h1>
         <div class="info-compte" style="margin-left: 61px;">
@@ -73,5 +119,8 @@
     </div>
 </section>
 <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
+=======
+    <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
+>>>>>>> 7ff6fa071246d3567117e2c89e426fa65da6dbb7
 </body>
 </html>

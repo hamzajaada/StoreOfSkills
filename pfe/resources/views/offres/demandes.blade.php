@@ -28,7 +28,6 @@
         form{
             margin-top: 30px;
             margin-left: -25px;
-
             box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
             padding: 10px
 
@@ -89,29 +88,28 @@
             <h2 class="titre-part3">Les dernières <span id="span-t2" style="color:#4fdd36">demandes</span></h2>
             <div class="search-container" style="margin-bottom: 50px;margin-top: -8px;">
                 <form method="POST" action="{{ route('home.demandes.search') }}" >
-                    {{-- <center><h3>Recherche Multicritère </h3> </center> --}}
                     @csrf
                     @method('POST')
                     <div class="con">
-                    <div class="form-group" >
-                        <input type="text" name="nom" class="form-control" placeholder="Recherche par nom" value="{{ old('nom') }}">
-                        <input type="text" name="prenom" class="form-control" placeholder="Recherche par prénom" value="{{ old('prenom') }}">
-                        <select class="form-control" name="categorie" id="exampleFormControlSelect1">
-                            <option value="">Recherche par categorie</option>
-                            <option value="Design graphique">Design graphique</option>
-                            <option value="Développement web et mobile">Développement web et mobile</option>
-                            <option value="Rédaction et traduction">Rédaction et traduction</option>
-                            <option value="Marketing et publicité">Marketing et publicité</option>
-                            <option value="Services informatiques">Services informatiques</option>
-                            <option value="Coaching et formation">Coaching et formation</option>
-                            <option value="Métier">Métier</option>
-                        </select>
+                        <div class="form-group" >
+                            <input type="text" name="nom" class="form-control" placeholder="Recherche par nom" value="{{ old('nom') }}">
+                            <input type="text" name="prenom" class="form-control" placeholder="Recherche par prénom" value="{{ old('prenom') }}">
+                            <select class="form-control" name="categorie" id="exampleFormControlSelect1">
+                                <option value="">Recherche par categorie</option>
+                                <option value="Design graphique">Design graphique</option>
+                                <option value="Développement web et mobile">Développement web et mobile</option>
+                                <option value="Rédaction et traduction">Rédaction et traduction</option>
+                                <option value="Marketing et publicité">Marketing et publicité</option>
+                                <option value="Services informatiques">Services informatiques</option>
+                                <option value="Coaching et formation">Coaching et formation</option>
+                                <option value="Métier">Métier</option>
+                            </select>
+                        </div>
+                        <div class="form-group1" style="">
+                            <button type="submit" class="btn btn-primary">Rechercher</button>
+                            <button type="submit" class="btn btn-danger" style="margin-left: 10px">Reset</button>
+                        </div>
                     </div>
-                    <div class="form-group1" style="">
-                        <button type="submit" class="btn btn-primary">Rechercher</button>
-                        <button type="submit" class="btn btn-danger" style="margin-left: 10px">Reset</button>
-                    </div>
-                </div>
                 </form>
             </div>
             <div class="demandes">

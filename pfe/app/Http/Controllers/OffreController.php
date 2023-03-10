@@ -10,13 +10,13 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-
+// le controller des offres
 class OffreController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-
+    // la fonction qui return la page home
     public function index()
     {
         return view('home');
@@ -25,6 +25,7 @@ class OffreController extends Controller
     /**
      * Show the form for creating a new resource.
      */
+    // la fonction qui return la page de crée un offre
     public function create()
     {
         return view('offres.ajouteOffre');
@@ -33,16 +34,19 @@ class OffreController extends Controller
     /**
      * Store a newly created resource in storage.
      */
+
+    //  la fonction qui ajoute l'offre à la base données
     public function store(Request $request)
     {
+        // la validation des information
         $request->validate([
             'image' => 'required|image'
         ]);
-
+        // l'ajoute de photo au dossier offres
         $imagePath = $request->file('image')->storeAs(
             'offres', time() . '_' . $request->file('image')->getClientOriginalName(), 'images'
         );
-
+        // l'ajoute d'offre au base de données
         $offre = new Offre();
         $offre->type = $request->type;
         $offre->categorie = $request->categorie;
@@ -69,6 +73,7 @@ class OffreController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
+    // la fonction qui return les information d'offre précis pour les modifier
     public function edit($id)
     {
         $offre = Offre::findorFail($id);
@@ -78,6 +83,7 @@ class OffreController extends Controller
     /**
      * Update the specified resource in storage.
      */
+    // la fonction pour modifier une offre précis et souvegarder à la base de données
     public function update(Request $request, $id)
     {
         $offre = Offre::findorFail($id);
@@ -103,6 +109,8 @@ class OffreController extends Controller
     /**
      * Remove the specified resource from storage.
      */
+
+    // la fonction pour supprimer un offre de la base données
     public function destroy($id)
     {
         $offre = Offre::findorFail($id);
@@ -110,10 +118,7 @@ class OffreController extends Controller
         return redirect()->back();
     }
 
-    public function reponses(){
-        return view('offres.reponse');
-    }
-
+    // la fonction qui return les offres de type service
     public function services(){
         $services = Offre::where('type','service')->get();
         foreach ($services as $srv) {
@@ -125,6 +130,7 @@ class OffreController extends Controller
         return view('offres.services',compact('services'));
     }
 
+    // la fonction qui return les offres de type demande
     public function demandes(){
         $demandes = Offre::where('type','demande')->get();
         foreach ($demandes as $d) {
@@ -136,6 +142,7 @@ class OffreController extends Controller
         return view('offres.demandes',compact('demandes'));
     }
 
+    // la fonction qui return les offres de type service de l'utilisateur connecter
     public function services_id(){
         $services = Offre::all()->where('type','service')->where('id_user', Auth::user()->id);
         foreach ($services as $srv) {
@@ -147,6 +154,7 @@ class OffreController extends Controller
         return view('offres.vosservice',compact('services'));
     }
 
+    // la fonction qui return les offres de type demande de l'utilisateur connecter
     public function demandes_id(){
         $demandes = Offre::all()->where('type','demande')->where('id_user', Auth::user()->id);
         foreach ($demandes as $d) {
@@ -158,10 +166,7 @@ class OffreController extends Controller
         return view('offres.vosdemandes',compact('demandes'));
     }
 
-    public function repondres($id){
-
-    }
-
+    // la fonction de recherche d'offre soit avec le nom ou prenom ou type ou catégorie
     public function search_offres(Request $request)
     {
         $offres = DB::table('users')
@@ -176,6 +181,7 @@ class OffreController extends Controller
         return view('admin.offre', compact('offres'));
     }
 
+    // la fonction de recherche de service soit avec le nom ou prenom ou catégorie
     public function search_service(Request $request)
     {
         $services = DB::table('users')
@@ -189,6 +195,7 @@ class OffreController extends Controller
         return view('offres.services',compact('services'));
     }
 
+    // la fonction de recherche de demande soit avec le nom ou prenom ou catégorie
     public function search_demande(Request $request)
     {
         $demandes = DB::table('users')
@@ -202,6 +209,7 @@ class OffreController extends Controller
         return view('offres.demandes',compact('demandes'));
     }
 
+    // la fonction de recherche de service soit avec le nom ou prenom ou catégorie de l'utilisateur connecter
     public function search_vosservice(Request $request)
     {
         $services = DB::table('users')
@@ -214,6 +222,7 @@ class OffreController extends Controller
         return view('offres.vosservice',compact('services'));
     }
 
+    // la fonction de recherche de demande soit avec le nom ou prenom ou catégorie de l'utilisateur connecter
     public function search_vosdemande(Request $request)
     {
         $demandes = DB::table('users')
