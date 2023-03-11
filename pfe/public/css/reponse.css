@@ -4,3 +4,12 @@
     box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
     padding: 10px;
 }
+.div-table{
+    margin-left:17%
+}
+@media screen and (max-width:620px){
+   
+    .div-table{
+        margin-left:37%
+    }
+}

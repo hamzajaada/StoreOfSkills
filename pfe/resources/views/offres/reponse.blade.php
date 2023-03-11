@@ -7,6 +7,7 @@
    
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="{{ asset('css/reponse.css') }}">
 
     <title>Reponses</title>
 
@@ -25,7 +26,7 @@
         @extends('offres.fixeBarre')
     </section>
     <br><h2 style="text-align:center;margin-left:10%;margin-top:40px;">Table de <span style="color:#ff3c74">Reponses</span></h2><br>
-    <div class="div-table" style="margin-left:17%" >
+    <div class="div-table">
         <table class="table" style="width: 95%;border-collapse: collapse;" >
             <thead>
                 <tr>

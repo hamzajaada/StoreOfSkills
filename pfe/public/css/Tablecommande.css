@@ -16,3 +16,9 @@ span{
 .BTNFORM{
     box-shadow: none
 }
+@media screen and (max-width:620px){
+   
+    .div-table{
+        margin-left:37%
+    }
+}

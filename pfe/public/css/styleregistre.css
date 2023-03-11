@@ -24,3 +24,28 @@ form{
 button{
     margin-left: 50px;
 }
+@media screen and (max-width:620px){
+  .card-body{
+    display: block;
+  }
+ 
+.form-control {
+    width: 100%; 
+    margin-left: 4px;
+}
+.inp1{
+   
+}
+.logo img {
+    margin-top: -63px;
+    width: 300px;
+    height: 300px;
+    margin-bottom: -108px;
+    margin-left: -25px;
+}
+button{
+    width: 70%;
+    margin-left: 25px;
+}
+
+     }

@@ -23,4 +23,23 @@
   .form-group2{
     display: block;
   }
+  @media screen and (max-width:620px){
+    .info-compte {
+      margin-left: -35px;
+      margin-right: -57px;
+      box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
+      padding-left: 20px;
+      /* margin-bottom: 9px; */
+  }
+  .titre-Ajouteoffre {
+    margin-top: 40px;
+    text-align: center;
+    margin-left: 95px;
+    margin-bottom: 76px;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: -6px;
+}
+
+}
+
   
