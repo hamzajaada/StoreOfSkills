@@ -16,6 +16,7 @@
     </div>
     <div>
         @extends('offres.fixeBarre')
+        {{-- hh --}}
     </div>
     <section class="P-1">
         <div class="main-part1">
