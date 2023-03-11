@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ asset('css/services.css') }}">
@@ -90,6 +90,7 @@
                 <div class="formInputserv" >
                     <input type="text" name="nom" class="form-control" placeholder="Recherche par nom" value="{{ old('nom') }}">
                     <input type="text" name="prenom" class="form-control" placeholder="Recherche par prénom" value="{{ old('prenom') }}">
+                    <input type="text" name="location" class="form-control" placeholder="Recherche par adresse" value="{{ old('location') }}">
                     <select class="form-control" style="" name="categorie" id="exampleFormControlSelect1">
                         <option value="">Recherche par catégorie</option>
                         <option value="Design graphique">Design graphique</option>
@@ -113,11 +114,11 @@
                 <article>
                     <div class="info-per">
                         <div class="img-prfl"><img src="{{asset('image/'.$srv->image)}}" alt="" srcset=""></div>
-                            <h4 class="info-prfl">{{ $srv->nom }} {{ $srv->prenom }}</h4> 
-                            
+                            <h4 class="info-prfl">{{ $srv->nom }} {{ $srv->prenom }}</h4>
+
                         </div>
-                        
-                        
+
+
                     <div class="image-ser">
                             <img src="{{asset('image/'.$srv->image_offre)}}" alt="" srcset="">
                     </div>
