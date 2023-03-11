@@ -193,6 +193,7 @@ class OffreController extends Controller
                 ->select('users.nom', 'users.prenom','users.location','users.image','offres.id','offres.type','offres.offre', 'offres.prix','offres.image_offre','offres.id_user')
                 ->where('users.nom', 'LIKE', '%'.$request->input('nom').'%')
                 ->where('users.prenom', 'LIKE', '%'.$request->input('prenom').'%')
+                ->where('users.location', 'LIKE', '%'.$request->input('location').'%')
                 ->where('offres.categorie', 'LIKE', '%'.$request->input('categorie').'%')
                 ->where('offres.type','service')
                 ->get();
