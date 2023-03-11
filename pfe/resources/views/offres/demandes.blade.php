@@ -83,12 +83,11 @@
                                             <div class="modal-body">Êtes-vous sûr de vouloir postuler cette demande ?</div>
                                             <div class="modal-footer">
                                                 <button id="comf-btn" type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
-                                                <form id="comf-btn1" method="POST" action="{{ route('home.commander') }}">
+                                                <form method="POST" id="comf-btn1" style="box-shadow: none" action="{{ route('home.commander') }}">
                                                     @csrf
-                                                    @method('POST')
-                                                    <input type="hidden" name="id" value="{{ $d->id }}">
+                                                    <input type="hidden" name="offre_id" value="{{ $d->id }}">
                                                     <input type="hidden" name="id_user" value="{{ $d->id_user }}">
-                                                    <button  type="submit" class="btn btn-success">Postuler</button>
+                                                    <button type="submit" class="btn btn-success">Postuler</button>
                                                 </form>
                                             </div>
                                         </div>
@@ -98,7 +97,7 @@
                     @endforeach
                 </div>
             @if(session('error'))
-                <div class="alert alert-danger my-4" style="position: absolute; margin-top: -25rem!important; margin-bottom: 46.5rem!important;margin-left: 28%;width: 28%;">
+                <div class="alert alert-danger my-4" style="position: absolute; margin-top: -40rem!important; margin-bottom: 46.5rem!important;margin-left: 10%;width: 63%;">
                     {{ session('error') }}
                 </div>
             @endif

@@ -8,35 +8,26 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Rule;
+use App\Rules\IsNotServiceOwner;
 // controller de commandes
 class CommandeController extends Controller
 {
     // la fonction de comander une offre s'il est possible
     public function commanderOffre(Request $request) {
-        $validatedData = $request->validate([
-            'id' => [
-                'required',
-                Rule::unique('commandes')->where(function ($query) {
-                    return $query->where('id_user_commande', Auth::id());
-                })->where(function ($query) use ($request) {
-                    return $query->where('id_offre', $request->id);
-                })
-            ]
-        ]);
-        if (commande::where('id_user_commande', Auth::id())->where('id_offre', $request->id)->exists()) {
-            return redirect()->back()->with('error', 'Vous avez déjà commandé/postulé cette offre');
-        }
-        $offre = Offre::find($request->id);
-        if (optional($offre)->users && $offre->users->contains(auth()->user())) {
-            return back()->with('error', 'Vous avez déjà commandé cette offre');
-        }
-        $commande = new Commande;
-        $commande->id_user = $request->id_user;
-        $commande->id_offre = $request->id;
-        $commande->id_user_commande = Auth::user()->id;
-        $commande->save();
 
-        return redirect()->back()->with('success', 'Commande enregistrée avec succès');
+        $offre = Offre::findOrFail($request->offre_id);
+        if (commande::where('id_user_commande', Auth::id())->where('id_offre', $request->offre_id)->exists()) {
+            return redirect()->back()->with('error', 'Vous avez déjà commandé/postulé cette offre');
+        }elseif ($request->id_user == Auth::user()->id) {
+            return redirect()->back()->with('error', 'Vous ne pouvez pas commander votre propre offre.');
+        }else{
+            $commande = new Commande;
+            $commande->id_user = $request->id_user;
+            $commande->id_offre = $request->offre_id;
+            $commande->id_user_commande = Auth::user()->id;
+            $commande->save();
+            return redirect()->back()->with('success', 'Commande enregistrée avec succès');
+        }
     }
 
     // la fonction qui return les commandes retenu par les utilisateur pour accepter ou refuser

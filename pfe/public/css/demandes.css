@@ -38,7 +38,7 @@
     justify-content: center;
     margin-top: -20px;
     margin-bottom: -40px;
-    
+
  }
  #Searchdem{
   margin-top: 30px;
@@ -54,17 +54,17 @@
 }
 .input-barreSearch{
   display: flex;
-} 
+}
 .demandes{
     display: flex;
     justify-content: space-around;
-    margin-top: 40px;
+    margin-top: 95px;
     margin-bottom: 100px;
     height: 500px;
     flex-wrap: wrap;
     flex-direction: row;
  }
- 
+
  .card1{
     width: 400px;
     height: 490px;
@@ -99,13 +99,13 @@
     height: 200px;
     margin-left: 20px;
  }
- 
+
  .desc-dem{
     width: 360px;
     margin-left: 20px;
     height: 22%;
  }
- 
+
  .image-dem img{
     width: 360px;
     height: 200px;
@@ -149,11 +149,11 @@
    margin-top: 17px;
    align-items: center;
  }
- 
+
 
 
   @media screen and (max-width:620px){
-   
+
 
 
   }

@@ -136,10 +136,16 @@
                                     <div class="modal-body">Êtes-vous sûr de vouloir commander cette service ?</div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
-                                        <form style="box-shadow: none" method="POST" action="{{ route('home.commander') }}">
+                                        {{-- <form style="box-shadow: none" method="POST" action="{{ route('home.commander') }}">
                                             @csrf
                                             @method('POST')
                                             <input type="hidden" name="id" value="{{ $srv->id }}">
+                                            <input type="hidden" name="id_user" value="{{ $srv->id_user }}">
+                                            <button type="submit" class="btn btn-success">Commander</button>
+                                        </form> --}}
+                                        <form method="POST" style="box-shadow: none" action="{{ route('home.commander') }}">
+                                            @csrf
+                                            <input type="hidden" name="offre_id" value="{{ $srv->id }}">
                                             <input type="hidden" name="id_user" value="{{ $srv->id_user }}">
                                             <button type="submit" class="btn btn-success">Commander</button>
                                         </form>
