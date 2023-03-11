@@ -52,10 +52,6 @@
                             <span style="color: rgb(46, 175, 46)"> la commande était acceptée .</span>
                         @elseif ($com->status==2)
                             <span style="color: red">la commande était refusée .</span>
-                        {{-- @elseif ($com->status==3)
-                            <span style="color: rgb(51, 0, 255)">la commande était commencé .</span>
-                        @elseif ($com->status==4)
-                            <span style="color: rgb(51, 0, 255)">la commande était terminée .</span> --}}
                         @endif
                     </td>
                 </tr>
