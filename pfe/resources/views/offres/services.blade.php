@@ -80,17 +80,17 @@
     @extends('offres.fixeHeader')
     <section class="services-p">
         @extends('offres.fixeBarre')
-    <section class="P-2">
-        <h2 class="titre-part3">Les dernières <span id="span-t2" style="color:#ff3c74">Services</span></h2>
-        <div class="search-container" style="margin-bottom: 50px;margin-top: -8px;">
-            <form method="POST" action="{{ route('home.services.search') }}" >
+    <section class="P-s">
+        <h2 class="titre-liste-services">Les dernières <span id="span-t3">Services</span></h2>
+        <div class="search-container-services" style="margin-bottom: 50px;margin-top: -8px;">
+            <form class="input-barresea" method="POST" action="{{ route('home.services.search') }}" >
                 @csrf
                 @method('POST')
-                <div class="con">
-                <div class="form-group" >
+                <div class="barreSearchser">
+                <div class="formInputserv" >
                     <input type="text" name="nom" class="form-control" placeholder="Recherche par nom" value="{{ old('nom') }}">
                     <input type="text" name="prenom" class="form-control" placeholder="Recherche par prénom" value="{{ old('prenom') }}">
-                    <select class="form-control" name="categorie" id="exampleFormControlSelect1">
+                    <select class="form-control" style="" name="categorie" id="exampleFormControlSelect1">
                         <option value="">Recherche par catégorie</option>
                         <option value="Design graphique">Design graphique</option>
                         <option value="Développement web et mobile">Développement web et mobile</option>
@@ -136,7 +136,7 @@
                                     <div class="modal-body">Êtes-vous sûr de vouloir commander cette service ?</div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
-                                        <form method="POST" action="{{ route('home.commander') }}">
+                                        <form style="box-shadow: none" method="POST" action="{{ route('home.commander') }}">
                                             @csrf
                                             @method('POST')
                                             <input type="hidden" name="id" value="{{ $srv->id }}">

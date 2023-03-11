@@ -69,8 +69,8 @@
     @extends('offres.fixeHeader')
     <section class="services-p">
         @extends('offres.fixeBarre')
-        <section class="P-2">
-        <h2 class="titre-part3">Votre <span id="span-t2" style="color:#3cb626">Demandes</span></h2>
+        <section class="P-D">
+        <h2 class="titre-de-listeDemandes">Votre <span id="span-t2" style="color:#3cb626">Demandes</span></h2>
         <div class="search-container" style="margin-bottom: 50px;margin-top: -8px;">
             <form method="POST" action="{{ route('home.vosdemandes.search') }}" >
                 {{--<center><h3>Recherche Multicritère </h3> </center>  --}}

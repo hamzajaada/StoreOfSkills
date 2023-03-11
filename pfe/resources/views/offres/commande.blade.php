@@ -14,7 +14,7 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/reponse.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('css/Tablecommande.css') }}">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -40,73 +40,62 @@
     </style>
 </head>
 <body>
-    <div id="app">
-        @extends('offres.fixeHeader')
-        <section class="main-sec1">
-            @extends('offres.fixeBarre')
-        </section>
-        <br><h2 style="text-align:center;margin-left:10%;margin-top:40px;">Table de <span style="color:#ff3c74">Commandes</span></h2><br>
-        <div class="div-table" style="margin-left:17%; margin-top:20px"  >
-            <table class="table" style="width: 95%;border-collapse: collapse;" >
-                <thead>
-                    <tr>
-                        <th scope="col">Nom</th>
-                        <th scope="col">Prenom</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Type</th>
-                        <th style="height: auto;overflow:auto;" scope="col">Offre</th>
-                        <th scope="col">Prix</th>
-                        <th scope="col" colspan="4">Action</th>
-                    </tr>
-                </thead>
-                <tbody class="table-group-divider">
-                    @foreach ($commandes as $com )
-                    <tr>
-                        <td>{{ $com->nom }}</td>
-                        <td>{{ $com->prenom }}</td>
-                        <td>{{ $com->email }}</td>
-                        <td>{{ $com->typeOffre }}</td>
-                        <td>{{ $com->Offre }}</td>
-                        <td>{{ $com->prix }}</td>
-                        <td>
-                            <form class="BTNFORM" style="box-shadow: none" action="{{ route('commande.accepter') }}" method="POST">
-                                @csrf
-                                <input type="hidden" name="commande_id" value="{{ $com->id }}">
-                                <button id="accepter-btn" type="submit" class="btn btn-success">Accepter</button>
-                            </form>
-                        </td>
-                        {{-- <td>
-                            <form class="BTNFORM" style="box-shadow: none" action="{{ route('commande.start') }}" method="POST">
-                                @csrf
-                                <input type="hidden" name="commande_id" value="{{ $com->id }}">
-                                <button id="commencer-btn" type="submit" class="btn btn-primary" disabled>Commencer</button>
-                            </form>
-                        </td>
-                        <td>
-                            <form class="BTNFORM" style="box-shadow: none" action="{{ route('commande.terminer') }}" method="POST">
-                                @csrf
-                                <input type="hidden" name="commande_id" value="{{ $com->id }}">
-                                <button id="terminer-btn" type="submit" class="btn btn-primary" disabled>Terminé</button>
-                            </form>
-                        </td> --}}
-                        <td>
-                            <form class="BTNFORM" style="box-shadow: none" action="{{ route('commande.refuser') }}" method="POST">
-                                @csrf
-                                <input type="hidden" name="commande_id" value="{{ $com->id }}">
-                                <button type="submit" class="btn btn-danger">Refuser</button>
-                            </form>
-                        </td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
+<div id="app">
+    @extends('offres.fixeHeader')
+    <section class="main-sec1">
+        @extends('offres.fixeBarre')
+    </section>
+    <br><h2 class="TitreCommande" >Table de <span >Commandes</span></h2><br>
+    <div class="div-table" >
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prenom</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Type</th>
+                    <th style="height: auto;overflow:auto;" scope="col">Offre</th>
+                    <th scope="col">Prix</th>
+                    <th scope="col" colspan="2">Action</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                @foreach ($commandes as $com )
+                <tr>
+                    <td>{{ $com->nom }}</td>
+                    <td>{{ $com->prenom }}</td>
+                    <td>{{ $com->email }}</td>
+                    <td>{{ $com->typeOffre }}</td>
+                    <td>{{ $com->Offre }}</td>
+                    <td>{{ $com->prix }}</td>
+                    <td>
+                        <form class="BTNFORM"  action="{{ route('commande.accepter') }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="commande_id" value="{{ $com->id }}">
+                            <button type="submit" class="btn btn-primary">Accepter</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form class="BTNFORM"  action="{{ route('commande.refuser') }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="commande_id" value="{{ $com->id }}">
+                            <button type="submit" class="btn btn-danger">Refuser</button>
+                        </form>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+    @if(session('error'))
+        <div class="alert alert-danger my-4" style="position: absolute; margin-top: -40rem!important; margin-bottom: 46.5rem!important; margin-left: 10%; width: 63%;">
+            {{ session('error') }}
         </div>
         @if (session('success'))
             <div class="alert alert-success" style="position: absolute; margin-top: -51rem!important; margin-bottom: 46.5rem!important; margin-left: 20%; width: 63%;">
                 {{ session('success') }}
             </div>
         @endif
-
     </div>
     <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
     {{-- <script>
