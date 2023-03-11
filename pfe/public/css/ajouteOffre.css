@@ -1,16 +1,26 @@
-.P-3{
+.AF{
     margin-top: 67px;
     background-color:#ffff;
     margin-bottom: 20px;
     margin-left: 165px;
     width: 85%;
   }
-  .titre-part3{
+  .titre-Ajouteoffre{
     margin-top: 40px;
-    margin-left:150px;
-    margin-bottom: 30px;
-    
+    text-align: center;
+    margin-left: 95px;
+    margin-bottom: 30px; 
+    font-family: 'Open Sans', sans-serif;
   }
-  form{
-    
+  .info-compte{
+    margin-left: 96px;
+    box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
+    padding-left: 20px;
   }
+  span{
+    color:rgb(36, 189, 36)
+  }
+  .form-group2{
+    display: block;
+  }
+  

@@ -68,8 +68,8 @@
     @extends('offres.fixeHeader')
     <section class="services-p">
         @extends('offres.fixeBarre')
-        <section class="P-2">
-            <h2 class="titre-part3">Votre <span id="span-t2" style="color:#ff3c74">Services</span></h2>
+        <section class="P-s">
+            <h2 class="titre-liste-services">Votre <span id="span-t2" style="color:#ff3c74">Services</span></h2>
             <div class="search-container" style="margin-bottom: 50px;margin-top: -8px;">
                 <form method="POST" action="{{ route('home.vosservices.search') }}" >
                     {{-- <center><h3>Recherche Multicritère </h3> </center> --}}
@@ -126,7 +126,7 @@
                                     </div>
                                     <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                                    <form method="POST" action="{{ route('users.offre.delete', $srv->id) }}">
+                                    <form style="box-shadow: none" method="POST" action="{{ route('users.offre.delete', $srv->id) }}">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger">Supprimer</button>

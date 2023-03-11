@@ -1,0 +1,18 @@
+.TitreCommande{
+    text-align:center;
+    margin-left:10%;
+    margin-top:40px;
+}
+.div-table{
+    margin-left:17%
+}
+.table{
+    width: 95%;
+    border-collapse: collapse;
+}
+span{
+    color:#ff3c74
+}
+.BTNFORM{
+    box-shadow: none
+}

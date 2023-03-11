@@ -14,7 +14,7 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/reponse.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('css/Tablecommande.css') }}">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -26,9 +26,9 @@
     <section class="main-sec1">
         @extends('offres.fixeBarre')
     </section>
-    <br><h2 style="text-align:center;margin-left:10%;margin-top:40px;">Table de <span style="color:#ff3c74">Commandes</span></h2><br>
-    <div class="div-table" style="margin-left:17%" >
-        <table class="table" style="width: 95%;border-collapse: collapse;" >
+    <br><h2 class="TitreCommande" >Table de <span >Commandes</span></h2><br>
+    <div class="div-table" >
+        <table class="table">
             <thead>
                 <tr>
                     <th scope="col">Nom</th>
@@ -50,14 +50,14 @@
                     <td>{{ $com->Offre }}</td>
                     <td>{{ $com->prix }}</td>
                     <td>
-                        <form class="BTNFORM" style="box-shadow: none" action="{{ route('commande.accepter') }}" method="POST">
+                        <form class="BTNFORM"  action="{{ route('commande.accepter') }}" method="POST">
                             @csrf
                             <input type="hidden" name="commande_id" value="{{ $com->id }}">
                             <button type="submit" class="btn btn-primary">Accepter</button>
                         </form>
                     </td>
                     <td>
-                        <form class="BTNFORM" style="box-shadow: none" action="{{ route('commande.refuser') }}" method="POST">
+                        <form class="BTNFORM"  action="{{ route('commande.refuser') }}" method="POST">
                             @csrf
                             <input type="hidden" name="commande_id" value="{{ $com->id }}">
                             <button type="submit" class="btn btn-danger">Refuser</button>

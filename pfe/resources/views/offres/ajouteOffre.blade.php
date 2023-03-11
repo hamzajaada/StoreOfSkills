@@ -29,19 +29,19 @@
         <section class="main-sec1">
             @extends('offres.fixeBarre')
         </section>
-        <section class="P-3"  >
-            <h1 class="titre-part3">Ajoute <span style="color:rgb(36, 189, 36)">d'offre</span></h1>
-            <div class="info-compte" style="margin-left: 96px;">
+        <section class="AF"  >
+            <h1 class="titre-Ajouteoffre">Ajoute <span >d'offre</span></h1>
+            <div class="info-compte">
                 <form class="row g-3" method="post" action="{{ route('offres.store') }}" enctype="multipart/form-data">
                     @csrf
-                    <div class="form-group" style="display: block">
+                    <div class="form-group2" >
                         <label for="exampleFormControlSelect1">Type:</label>
                         <select class="form-control" name="type" id="exampleFormControlSelect1">
                             <option value="service">Service</option>
                             <option value="demande">Demande</option>
                         </select>
                     </div>
-                    <div class="form-group"style="display: block">
+                    <div class="form-group2">
                         <label for="exampleFormControlSelect1">Categorie:</label><br>
                         <select class="form-control" name="categorie" id="exampleFormControlSelect1">
                             <option value="Design graphique">Design graphique</option>
@@ -53,11 +53,11 @@
                             <option value="Métier">Métier</option>
                         </select>
                     </div>
-                    <div class="form-group" style="display: block">
+                    <div class="form-group2" >
                         <label for="exampleFormControlTextarea1">Offre:</label>
                         <textarea class="form-control" name="offre" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
-                    <div class="form-group" style="display: block">
+                    <div class="form-group2" >
                         <label for="exampleFormControlNember">Prix:</label>
                         <input type="number" class="form-control" name="prix" id="exampleFormControlNember">
                     </div>
