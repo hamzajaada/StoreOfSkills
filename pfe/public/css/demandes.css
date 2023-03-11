@@ -67,7 +67,7 @@
 
  .card1{
     width: 400px;
-    height: 490px;
+    height: 518px;
     border-radius: 7px;
     box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
     background-color: #fff;
@@ -120,6 +120,12 @@
  }
 .text-prixdem{
    margin-left: 20px;
+}
+.locationn{
+   margin-left: 18px;
+}
+#locat{
+   color: #ff3c74
 }
 #comf-btn{
   box-shadow: none;

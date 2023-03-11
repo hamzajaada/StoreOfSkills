@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Services</title>
+    
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ asset('css/services.css') }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Services</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -113,15 +113,18 @@
                 <article>
                     <div class="info-per">
                         <div class="img-prfl"><img src="{{asset('image/'.$srv->image)}}" alt="" srcset=""></div>
-                            <h4 class="info-prfl">{{ $srv->nom }} {{ $srv->prenom }}</h4>
+                            <h4 class="info-prfl">{{ $srv->nom }} {{ $srv->prenom }}</h4> 
+                            
                         </div>
-                        <h6>{{ $srv->location }}</h6>
+                        
+                        
                     <div class="image-ser">
                             <img src="{{asset('image/'.$srv->image_offre)}}" alt="" srcset="">
                     </div>
                     <div class="desc-ser">
                             <p class="text-ser">{{ $srv->offre }}</p>
                     </div>
+                    <h6 class="location"> <i id="loc" class="fa-solid fa-map-pin"></i> {{ $srv->location }}</h6>
                     <div class="prix">
                         <p class="text-prix"><span style="color:#ff3c74"> Prix :</span>{{ $srv->prix }}DH</p>
                     </div>

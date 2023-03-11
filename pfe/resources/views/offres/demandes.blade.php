@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Demmandes</title>
+  
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ asset('css/demandes.css') }}">
     {{--     <link rel="stylesheet" href="{{ asset('css/services.css') }}">--}}
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Demandes</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -61,13 +61,14 @@
                             <div class="img-prfl"><img src="{{asset('image/'.$d->image)}}" alt="" srcset=""></div>
                                 <h4 class="info-prfl">{{ $d->prenom }} {{ $d->nom }} </h4>
                             </div>
-                            <h6>{{ $d->location }}</h6>
+                          
                             <div class="image-dem">
                                 <img src="{{asset('image/'.$d->image_offre)}}" alt="" srcset="">
                             </div>
                             <div class="desc-dem">
                                 <p class="text-dem">{{ $d->offre }}</p> <br>
                             </div>
+                            <h6 class="locationn"><i id="locat" class="fa-solid fa-map-pin"></i> {{ $d->location }}</h6>
                             <div class="prix">
                                 <p class="text-prixdem"><span style="color:#ff3c74"> Prix :</span>{{ $d->prix }}DH</p>
                             </div>

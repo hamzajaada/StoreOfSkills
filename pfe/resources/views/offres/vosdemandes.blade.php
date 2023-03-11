@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Services</title>
+   
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ asset('css/demandes.css') }}">
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>vos demandes</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -102,7 +102,7 @@
                         <div class="img-prfl"><img src="{{asset('image/'.$d->image)}}" alt="" srcset=""></div>
                         <h4 class="info-prfl">{{ $d->nom }} {{ $d->prenom }}</h4>
                     </div>
-                    <h6>{{ $d->location }}</h6>
+                  
                     <div class="image-dem">
                         <img src="{{asset('image/'.$d->image_offre)}}" alt="" srcset="">
                     </div>
