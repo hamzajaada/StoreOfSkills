@@ -190,7 +190,7 @@ class OffreController extends Controller
     {
         $services = DB::table('users')
                 ->join('offres', 'users.id', '=', 'offres.id_user')
-                ->select('users.nom', 'users.prenom','users.image','offres.id','offres.type','offres.offre', 'offres.prix','offres.image_offre','offres.id_user')
+                ->select('users.nom', 'users.prenom','users.location','users.image','offres.id','offres.type','offres.offre', 'offres.prix','offres.image_offre','offres.id_user')
                 ->where('users.nom', 'LIKE', '%'.$request->input('nom').'%')
                 ->where('users.prenom', 'LIKE', '%'.$request->input('prenom').'%')
                 ->where('offres.categorie', 'LIKE', '%'.$request->input('categorie').'%')
@@ -204,9 +204,10 @@ class OffreController extends Controller
     {
         $demandes = DB::table('users')
                 ->join('offres', 'users.id', '=', 'offres.id_user')
-                ->select('users.nom', 'users.prenom','users.image','offres.id','offres.type','offres.offre', 'offres.prix','offres.image_offre','offres.id_user')
+                ->select('users.nom', 'users.prenom','users.location','users.image','offres.id','offres.type','offres.offre', 'offres.prix','offres.image_offre','offres.id_user')
                 ->where('users.nom', 'LIKE', '%'.$request->input('nom').'%')
                 ->where('users.prenom', 'LIKE', '%'.$request->input('prenom').'%')
+                ->where('users.location', 'LIKE', '%'.$request->input('location').'%')
                 ->where('offres.categorie', 'LIKE', '%'.$request->input('categorie').'%')
                 ->where('offres.type','demande')
                 ->get();
