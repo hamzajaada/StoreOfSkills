@@ -67,6 +67,12 @@
             background-color: #f2dede;
             border-color: #ebccd1;
         }
+
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
     </style>
 </head>
 <body>
@@ -112,16 +118,13 @@
                     <div class="image-ser">
                             <img src="{{asset('image/'.$srv->image_offre)}}" alt="" srcset="">
                     </div>
-
-              
-                <div class="desc-ser">
-                        <p class="text-ser">{{ $srv->offre }}</p>
-                </div>
-                <div class="prix">
-                    <p class="text-prix"><span style="color:#ff3c74"> Prix :</span>{{ $srv->prix }}DH</p>
-                </div>
-            
-                    <center><div {{--  class="button-commander"--}}>
+                    <div class="desc-ser">
+                            <p class="text-ser">{{ $srv->offre }}</p>
+                    </div>
+                    <div class="prix">
+                        <p class="text-prix"><span style="color:#ff3c74"> Prix :</span>{{ $srv->prix }}DH</p>
+                    </div>
+                    <center><div>
                         <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#confirm-delete-modal-{{ $srv->id }}">Commander</button>
                         <div class="modal fade" style="margin-top:300px" id="confirm-delete-modal-{{ $srv->id }}" tabindex="-1" aria-labelledby="confirm-delete-modal-label-{{ $srv->id }}" aria-hidden="true">
                             <div class="modal-dialog">
@@ -141,17 +144,21 @@
                                             <button type="submit" class="btn btn-success">Commander</button>
                                         </form>
                                     </div>
-
                                 </div>
                             </div>
-                    </div>
-                </center>
+                        </div>
+                    </div></center>
                 </article>
             @endforeach
         </div>
         @if(session('error'))
             <div class="alert alert-danger my-4" style="position: absolute; margin-top: -40rem!important; margin-bottom: 46.5rem!important; margin-left: 10%; width: 63%;">
                 {{ session('error') }}
+            </div>
+        @endif
+        @if(session('success'))
+            <div class="alert alert-success my-4" style="position: absolute; margin-top: -40rem!important; margin-bottom: 46.5rem!important; margin-left: 10%; width: 63%;">
+                {{ session('success') }}
             </div>
         @endif
         </section>

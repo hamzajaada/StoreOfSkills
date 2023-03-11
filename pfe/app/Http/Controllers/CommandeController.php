@@ -81,9 +81,34 @@ class CommandeController extends Controller
         }
         $commande->status = 1;
         $commande->save();
-        return redirect()->back();
-
+        $message = "La commande a été acceptée avec succès.";
+        return redirect()->back()->with('success', $message);
     }
+
+    // // la fonction qui agire lorsque l'utilisateur accept une commande
+    // public function startCommande(Request $request) {
+    //     $commande = commande::where( 'id_offre', $request->commande_id )->first();
+    //     if (!$commande) {
+    //         return redirect()->back()->with('error', 'La commande n\'existe pas');
+    //     }
+    //     $commande->status = 3;
+    //     $commande->save();
+    //     $message = "La commande a été commencé avec succès.";
+    //     return redirect()->back()->with('success', $message);
+
+    // }
+
+    // // la fonction qui agire lorsque l'utilisateur reffuse une commande
+    // public function terminerCommande(Request $request) {
+    //     $commande = commande::where( 'id_offre', $request->commande_id )->first();
+    //     if (!$commande) {
+    //         return redirect()->back()->with('error', 'La commande n\'existe pas');
+    //     }
+    //     $commande->status = 4;
+    //     $commande->save();
+    //     $message = "La commande a été terminé avec succès.";
+    //     return redirect()->back()->with('success', $message);
+    // }
 
     // la fonction qui agire lorsque l'utilisateur reffuse une commande
     public function refuserCommande(Request $request) {
@@ -93,7 +118,8 @@ class CommandeController extends Controller
         }
         $commande->status = 2;
         $commande->save();
-        return redirect()->back();
+        $message = "La commande a été refusé avec succès.";
+        return redirect()->back()->with('success', $message);
     }
 
 

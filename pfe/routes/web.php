@@ -43,7 +43,12 @@ Route::get('home/reponses',[CommandeController::class,'reponse'])->name('home.re
 Route::get('home/commandes',[CommandeController::class,'commande'])->name('home.commande');
 Route::post('/commandes/accepter', [CommandeController::class, 'accepterCommande'])->name('commande.accepter');
 Route::post('/commandes/refuser', [CommandeController::class, 'refuserCommande'])->name('commande.refuser');
+// Route::post('/commandes/début', [CommandeController::class, 'startCommande'])->name('commande.start');
+// Route::post('/commandes/terminé', [CommandeController::class, 'terminerCommande'])->name('commande.terminer');
 
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
