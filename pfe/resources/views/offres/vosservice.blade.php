@@ -102,6 +102,7 @@
                             <div class="img-prfl"><img src="{{asset('image/'.$srv->image)}}" alt="" srcset=""></div>
                             <h4 class="info-prfl">{{ $srv->nom }} {{ $srv->prenom }}</h4>
                         </div>
+                        <h6>{{ $srv->location }}</h6>
                         <div class="image-ser">
                             <img src="{{asset('image/'.$srv->image_offre)}}" alt="" srcset="">
                         </div>

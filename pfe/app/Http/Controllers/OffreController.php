@@ -125,6 +125,7 @@ class OffreController extends Controller
             $user = User::where('id', $srv->id_user)->first();
             $srv->nom = $user->nom;
             $srv->prenom = $user->prenom;
+            $srv->location = $user->location;
             $srv->image = $user->image;
         }
         return view('offres.services',compact('services'));
@@ -137,6 +138,7 @@ class OffreController extends Controller
             $user = User::where('id', $d->id_user)->first();
             $d->nom = $user->nom;
             $d->prenom = $user->prenom;
+            $d->location = $user->location;
             $d->image = $user->image;
         }
         return view('offres.demandes',compact('demandes'));
@@ -149,6 +151,7 @@ class OffreController extends Controller
             $user = User::where('id', $srv->id_user)->first();
             $srv->nom = $user->nom;
             $srv->prenom = $user->prenom;
+            $srv->location = $user->location;
             $srv->image = $user->image;
         }
         return view('offres.vosservice',compact('services'));
@@ -161,6 +164,7 @@ class OffreController extends Controller
             $user = User::where('id', $d->id_user)->first();
             $d->nom = $user->nom;
             $d->prenom = $user->prenom;
+            $d->location = $user->location;
             $d->image = $user->image;
         }
         return view('offres.vosdemandes',compact('demandes'));

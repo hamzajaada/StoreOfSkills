@@ -168,7 +168,7 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 2em;
     font-weight: 700;
-    
+
     margin-left: -107px;
 }
     .input-barreSearch{
@@ -196,7 +196,7 @@
       background-color: #fff;
       margin-top: 30px;
       margin-left: -124px;
-      
+
    }
    .info-perso{
       width: 160px;
@@ -205,8 +205,8 @@
       display: flex;
       align-items: center;
    }
-  
-   
+
+
    .desc-dem{
       width: 212px;
       height:70px;
@@ -219,7 +219,7 @@
       height: 100px;
       overflow-y: auto;
     }
-  
+
    .img-prfl img{
       width: 25px;
       height: 25px;
@@ -231,8 +231,8 @@
       font-size: 1.3em;
       font-weight: 600;
       color: #333333;
-  
-   } 
+
+   }
    .image-dem{
       width: 200px;
       height: 100px;

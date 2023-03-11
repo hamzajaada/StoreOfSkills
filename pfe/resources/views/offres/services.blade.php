@@ -101,7 +101,7 @@
                         <option value="Métier">Métier</option>
                     </select>
                 </div>
-                <div class="form-group1" style="margin-top: 2px;"> 
+                <div class="form-group1" style="margin-top: 2px;">
                     <button type="submit" class="btn btn-primary">Rechercher</button>
                     <button type="submit" class="btn btn-danger" style="margin-left: 10px">Reset</button>
                 </div>
@@ -115,6 +115,7 @@
                         <div class="img-prfl"><img src="{{asset('image/'.$srv->image)}}" alt="" srcset=""></div>
                             <h4 class="info-prfl">{{ $srv->nom }} {{ $srv->prenom }}</h4>
                         </div>
+                        <h6>{{ $srv->location }}</h6>
                     <div class="image-ser">
                             <img src="{{asset('image/'.$srv->image_offre)}}" alt="" srcset="">
                     </div>
@@ -136,13 +137,6 @@
                                     <div class="modal-body">Êtes-vous sûr de vouloir commander cette service ?</div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
-                                        {{-- <form style="box-shadow: none" method="POST" action="{{ route('home.commander') }}">
-                                            @csrf
-                                            @method('POST')
-                                            <input type="hidden" name="id" value="{{ $srv->id }}">
-                                            <input type="hidden" name="id_user" value="{{ $srv->id_user }}">
-                                            <button type="submit" class="btn btn-success">Commander</button>
-                                        </form> --}}
                                         <form method="POST" style="box-shadow: none" action="{{ route('home.commander') }}">
                                             @csrf
                                             <input type="hidden" name="offre_id" value="{{ $srv->id }}">
