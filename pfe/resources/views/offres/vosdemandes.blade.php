@@ -102,6 +102,7 @@
                         <div class="img-prfl"><img src="{{asset('image/'.$d->image)}}" alt="" srcset=""></div>
                         <h4 class="info-prfl">{{ $d->nom }} {{ $d->prenom }}</h4>
                     </div>
+                    <h6>{{ $d->location }}</h6>
                     <div class="image-dem">
                         <img src="{{asset('image/'.$d->image_offre)}}" alt="" srcset="">
                     </div>
