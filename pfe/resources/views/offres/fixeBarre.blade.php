@@ -54,7 +54,7 @@
                         </a>
                         <span style="color:black" class="tooltip">Demandes</span>
                     </li>
-                    @if (Auth::user()->nom != 'Admine' AND Auth::user()->email != 'admin@gmail.com')
+                    @if (Auth::user()->nom != 'Admin' AND Auth::user()->email != 'admin@gmail.com')
                         <li>
                             <a href="{{ route('home.commande') }}">
                                 <i class="fa-solid fa-reply"></i>
@@ -92,7 +92,7 @@
                         </li>
                     @endif
 
-                    @if (Auth::user()->nom == 'Admine' AND Auth::user()->email == 'admin@gmail.com')
+                    @if (Auth::user()->nom == 'Admin' AND Auth::user()->email == 'admin@gmail.com')
                         <li>
                             <a href="{{ route('users.home.offres') }}">
                                 <i class="fa-sharp fa-solid fa-list"></i>

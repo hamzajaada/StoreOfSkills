@@ -43,6 +43,9 @@ Route::get('home/vos-demandes',[OffreController::class,'demandes_id'])->name('ho
 // le route qui return la page de reponse
 Route::get('home/reponses',[CommandeController::class,'reponse'])->name('home.reponse');
 
+// le route qui supprime une commande
+Route::delete('home/commande/delete',[CommandeController::class,'delete_commande'])->name('home.commande.delete');
+
 // le route qui return la page de commande
 Route::get('home/commandes',[CommandeController::class,'commande'])->name('home.commande');
 

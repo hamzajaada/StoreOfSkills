@@ -59,7 +59,7 @@ class CommandeController extends Controller
             $commande->typeOffre = $offre->type;
             $commande->Offre = $offre->offre;
             $commande->prix = $offre->prix;
-            $commande->id = $offre->id;
+            $commande->id_commande = $offre->id;
         }
         return view('offres.reponse',['commandes'=>$commandes]);
     }
@@ -76,31 +76,6 @@ class CommandeController extends Controller
         return redirect()->back()->with('success', $message);
     }
 
-    // // la fonction qui agire lorsque l'utilisateur accept une commande
-    // public function startCommande(Request $request) {
-    //     $commande = commande::where( 'id_offre', $request->commande_id )->first();
-    //     if (!$commande) {
-    //         return redirect()->back()->with('error', 'La commande n\'existe pas');
-    //     }
-    //     $commande->status = 3;
-    //     $commande->save();
-    //     $message = "La commande a été commencé avec succès.";
-    //     return redirect()->back()->with('success', $message);
-
-    // }
-
-    // // la fonction qui agire lorsque l'utilisateur reffuse une commande
-    // public function terminerCommande(Request $request) {
-    //     $commande = commande::where( 'id_offre', $request->commande_id )->first();
-    //     if (!$commande) {
-    //         return redirect()->back()->with('error', 'La commande n\'existe pas');
-    //     }
-    //     $commande->status = 4;
-    //     $commande->save();
-    //     $message = "La commande a été terminé avec succès.";
-    //     return redirect()->back()->with('success', $message);
-    // }
-
     // la fonction qui agire lorsque l'utilisateur reffuse une commande
     public function refuserCommande(Request $request) {
         $commande = commande::where( 'id_offre', $request->commande_id )->first();
@@ -113,5 +88,15 @@ class CommandeController extends Controller
         return redirect()->back()->with('success', $message);
     }
 
-
+    // la fonction qui supprime un commande
+    public function delete_commande(Request $request){
+        // $commande = commande::where('id',$request->id)->first();
+        try {
+            $commande = commande::findOrFail($request->id);
+            $commande->delete();
+        } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e) {
+            return redirect()->back()->with('error', 'La commande que vous voulez supprimer n\'existe pas.');
+        }
+        return redirect()->back()->with('success', 'La commande a été supprimée avec succès.');
+    }
 }

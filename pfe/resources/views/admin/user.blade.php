@@ -72,7 +72,6 @@ form{
         <div class="search-container" style="margin-bottom: 50px;margin-top: -8px;">
 
             <form method="POST" action="{{ route('admin.user.search') }}" >
-               {{-- <center><h3>Recherche Multicritère </h3> </center> --}} 
                 @csrf
                 @method('POST')
                 <div class="con">
