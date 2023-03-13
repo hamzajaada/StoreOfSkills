@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
- 
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -93,9 +93,9 @@
         </div>
     @endif
     @if (session('success'))
-            <div class="alert alert-success" style="position: absolute; margin-top: -51rem!important; margin-bottom: 46.5rem!important; margin-left: 20%; width: 63%;">
-                {{ session('success') }}
-            </div>
+        <div class="alert alert-success" style="position: absolute; margin-top: -51rem!important; margin-bottom: 46.5rem!important; margin-left: 20%; width: 63%;">
+            {{ session('success') }}
+        </div>
     @endif
     </div>
     <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>

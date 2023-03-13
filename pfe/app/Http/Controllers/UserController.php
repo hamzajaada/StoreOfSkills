@@ -75,13 +75,13 @@ class UserController extends Controller
     public function delete_user($id){
         $user = User::findorFail($id);
         $user->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success', 'L\'utilisateur a été supprimée avec succès.');
     }
 
     // la fonction pour supprimer une offre de la base de données par l'admine
     public function delete_offre($id){
         Offre::destroy($id);
-        return redirect()->back();
+        return redirect()->back()->with('success', 'L\'offre a été supprimée avec succès.');
     }
 
     // la fonction de recherche des utilisateurs soit avec le nom ou prenom ou email ou adresse

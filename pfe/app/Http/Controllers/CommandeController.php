@@ -72,8 +72,7 @@ class CommandeController extends Controller
         }
         $commande->status = 1;
         $commande->save();
-        $message = "La commande a été acceptée avec succès.";
-        return redirect()->back()->with('success', $message);
+        return redirect()->back()->with('success', 'La commande a été accepter');
     }
 
     // la fonction qui agire lorsque l'utilisateur reffuse une commande
@@ -85,7 +84,7 @@ class CommandeController extends Controller
         $commande->status = 2;
         $commande->save();
         $message = "La commande a été refusé avec succès.";
-        return redirect()->back()->with('success', $message);
+        return redirect()->back()->with('success', 'La commande a été refusé');
     }
 
     // la fonction qui supprime un commande

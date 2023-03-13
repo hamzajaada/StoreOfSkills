@@ -8,6 +8,7 @@
         <!-- Boxicons CDN Link -->
         <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <div class="sidebar">
@@ -18,38 +19,34 @@
             </div>
             <div class="links">
                 <ul class="nav-list">
-
-                    {{--
-                        <li>
-                            <i class='bx bx-search' ></i>
-                            <input type="text" placeholder="Search...">
-                            <span style="color:black" class="tooltip">Search</span>
-                        </li>
-                    --}}
                     <li>
                         <a href="{{ route('home') }}">
-                        <i class='bx bx-grid-alt'></i>
+                        {{-- <i class='bx bx-grid-alt'></i> --}}
+                        <i class="fa fa-home"></i>
                         <span class="links_name">Accueil</span>
                         </a>
                         <span style="color:black" class="tooltip">Accueil</span>
                     </li>
                     <li>
                         <a href="{{ route('users.index') }}">
-                            <i class='bx bx-user' ></i>
+                            {{-- <i class='bx bx-user' ></i> --}}
+                            <i class="fa fa-user"></i>
                             <span class="links_name">Profile</span>
                         </a>
                         <span style="color:black" class="tooltip">Profile</span>
                     </li>
                     <li>
                         <a href="{{ route('home.services') }}">
-                            <i class="fa-solid fa-wrench"></i>
+                            {{-- <i class="fa-solid fa-wrench"></i> --}}
+                            <i class="fa fa-wrench"></i>
                             <span class="links_name">Services</span>
                         </a>
                         <span style="color:black" class="tooltip">Services</span>
                     </li>
                     <li>
                         <a href="{{ route('home.demandes') }}">
-                            <i class="fa-solid fa-toolbox"></i>
+                            {{-- <i class="fa-solid fa-toolbox"></i> --}}
+                            <i class="fa fa-inbox"></i>
                             <span class="links_name">Demandes</span>
                         </a>
                         <span style="color:black" class="tooltip">Demandes</span>
@@ -57,35 +54,40 @@
                     @if (Auth::user()->nom != 'Admin' AND Auth::user()->email != 'admin@gmail.com')
                         <li>
                             <a href="{{ route('home.commande') }}">
-                                <i class="fa-solid fa-reply"></i>
+                                {{-- <i class="fa-solid fa-reply"></i> --}}
+                                <i class="fa fa-shopping-cart"></i>
                                 <span class="links_name">Commandes</span>
                             </a>
                             <span style="color:black" class="tooltip">Commades</span>
                         </li>
                         <li>
                             <a href="{{ route('home.reponse') }}">
-                                <i class="fa-solid fa-reply"></i>
+                                {{-- <i class="fa-solid fa-reply"></i> --}}
+                                <i class="fa fa-reply"></i>
                                 <span class="links_name">Reponses</span>
                             </a>
                             <span style="color:black" class="tooltip">Reponses</span>
                         </li>
                         <li>
                             <a href="{{ route('offres.create') }}">
-                                <i class="fa-solid fa-plus"></i>
+                                {{-- <i class="fa-solid fa-plus"></i> --}}
+                                <i class="fa fa-plus"></i>
                                 <span class="links_name"> offre</span>
                             </a>
                             <span  style="color:black"class="tooltip">Offre</span>
                         </li>
                         <li>
                             <a href="{{ route('home.vosservices') }}">
-                                <i class="fa-solid fa-layer-group"></i>
+                                {{-- <i class="fa-solid fa-layer-group"></i> --}}
+                                <i class="fa fa-briefcase"></i>
                                 <span class="links_name">vos services</span>
                             </a>
                             <span style="color:black" class="tooltip">vos services</span>
                         </li>
                         <li>
                             <a href="{{ route('home.vosdemandes') }}">
-                                <i class="fa-solid fa-hand-holding"></i>
+                                {{-- <i class="fa-solid fa-hand-holding"></i> --}}
+                                <i class="fa fa-list"></i>
                                 <span class="links_name">vos demandes</span>
                             </a>
                             <span style="color:black" class="tooltip">vos demandes</span>
@@ -95,7 +97,8 @@
                     @if (Auth::user()->nom == 'Admin' AND Auth::user()->email == 'admin@gmail.com')
                         <li>
                             <a href="{{ route('users.home.offres') }}">
-                                <i class="fa-sharp fa-solid fa-list"></i>
+                                {{-- <i class="fa-sharp fa-solid fa-list"></i> --}}
+                                <i class="fa fa-gift"></i>
                                 <span class="links_name">Liste d'offres</span>
                             </a>
                             <span style="color:black" class="tooltip">Liste d'offres</span>
@@ -103,7 +106,7 @@
                         <li>
                             <a href="{{ route('admin.users') }}">
                                 {{-- <i class="fa-solid fa-layer-group"></i> --}}
-                                <i class="fa-sharp fa-solid fa-list"></i>
+                                <i class="fa fa-users"></i>
                                 <span class="links_name">Liste d'utilisateurs</span>
                             </a>
                             <span style="color:black" class="tooltip">Liste d'utilisateurs</span>
