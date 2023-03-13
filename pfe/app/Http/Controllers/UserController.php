@@ -38,7 +38,7 @@ class UserController extends Controller
             $user->image = $filename;
         }
         $user->save();
-        return redirect()->back();
+        return redirect()->back()->with('success', 'La modification a été avec succès.');
     }
 
     // la fonction qui modifie le mot de passe de l'utilisateur
@@ -51,7 +51,7 @@ class UserController extends Controller
         ]);
         $user = Auth::user();
         $user->update(['password' => Hash::make($request->password)]);
-        return redirect()->back();
+        return redirect()->back()->with('success', 'La modification de mot de passe a été avec succès.');
     }
 
     // la fonction qui return tout les utilisateurs dans la page user

@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ asset('css/demandes.css') }}">
     {{--     <link rel="stylesheet" href="{{ asset('css/services.css') }}">--}}
-    <title>Demandes</title>
+    <title>StoreOfSkills - Demandes</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
