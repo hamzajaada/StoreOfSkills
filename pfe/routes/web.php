@@ -84,3 +84,7 @@ Route::post('/commandes/accepter', [CommandeController::class, 'accepterCommande
 
 // le route de reffus de commande
 Route::post('/commandes/refuser', [CommandeController::class, 'refuserCommande'])->name('commande.refuser');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
