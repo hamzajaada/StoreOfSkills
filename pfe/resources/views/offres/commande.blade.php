@@ -60,26 +60,35 @@
                 </tr>
             </thead>
             <tbody class="table-group-divider">
-                @foreach ($commandes as $com )
+                @foreach ($userCommandes as $com )
                 <tr>
                     <td>{{ $com->nom }}</td>
                     <td>{{ $com->prenom }}</td>
                     <td>{{ $com->email }}</td>
-                    <td>{{ $com->typeOffre }}</td>
-                    <td>{{ $com->Offre }}</td>
+                    <td>{{ $com->type }}</td>
+                    <td>{{ $com->offre }}</td>
                     <td>{{ $com->prix }}</td>
-                    <td>
-                        <form class="BTNFORM"  action="{{ route('commande.accepter') }}" method="POST">
+                    {{-- <td>
+                        <form class="BTNFORM"  action="" method="POST">
                             @csrf
                             <input type="hidden" name="commande_id" value="{{ $com->id }}">
                             <button type="submit" class="btn btn-primary">Accepter</button>
                         </form>
                     </td>
                     <td>
-                        <form class="BTNFORM"  action="{{ route('commande.refuser') }}" method="POST">
+                        <form class="BTNFORM"  action="" method="POST">
                             @csrf
                             <input type="hidden" name="commande_id" value="{{ $com->id }}">
                             <button type="submit" class="btn btn-danger">Refuser</button>
+                        </form>
+                    </td> --}}
+                    <td>
+                        <form class="BTNFORM" action="{{ route('commandes.update') }}" method="POST">
+                            @csrf
+                            @method('POST')
+                            <input type="hidden" name="commande_id" value="{{ $com->id }}">
+                            <button type="submit" name="accepter" class="btn btn-primary">Accepter</button>
+                            <button type="submit" name="refuser" class="btn btn-danger">Refuser</button>
                         </form>
                     </td>
                 </tr>

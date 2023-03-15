@@ -60,37 +60,39 @@
                 </tr>
             </thead>
             <tbody class="table-group-divider">
-                    @foreach ($commandes as $com )
+                    @foreach ($userReponses as $rep )
                 <tr>
-                    <td>{{ $com->nom }}</td>
-                    <td>{{ $com->prenom }}</td>
-                    <td>{{ $com->email }}</td>
-                    <td>{{ $com->typeOffre }}</td>
-                    <td>{{ $com->Offre  }}</td>
-                    <td>{{ $com->prix}}</td>
+                    <td>{{ $rep->nom }}</td>
+                    <td>{{ $rep->prenom }}</td>
+                    <td>{{ $rep->email }}</td>
+                    <td>{{ $rep->type }}</td>
+                    <td>{{ $rep->offre  }}</td>
+                    <td>{{ $rep->prix}}</td>
                     <td>
-                        @if ($com->status==1)
+                        @if ($rep->statut == 'acceptee')
                             <span style="color: rgb(46, 175, 46)"> la commande était acceptée .</span>
-                        @elseif ($com->status==2)
+                        @elseif ($rep->statut == 'refusee')
                             <span style="color: red">la commande était refusée .</span>
+                        @else
+                            <span style="color: blue">la commande est en attent .</span>
                         @endif
                     </td>
                     <td>
-                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirm-delete-modal-{{ $com->id }}">Supprimer</button>
-                        <div class="modal fade" style="margin-top:300px" id="confirm-delete-modal-{{ $com->id }}" tabindex="-1" aria-labelledby="confirm-delete-modal-label-{{ $com->id }}" aria-hidden="true">
+                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirm-delete-modal-{{ $rep->id }}">Supprimer</button>
+                        <div class="modal fade" style="margin-top:300px" id="confirm-delete-modal-{{ $rep->id }}" tabindex="-1" aria-labelledby="confirm-delete-modal-label-{{ $rep->id }}" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="confirm-delete-modal-label-{{ $com->id }}">Confirmation de suppression</h5>
+                                        <h5 class="modal-title" id="confirm-delete-modal-label-{{ $rep->id }}">Confirmation de suppression</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">Êtes-vous sûr de vouloir supprimer cette commande ? Cette action est irréversible.</div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
-                                        <form action="{{ route('home.commande.delete') }}" method="post">
+                                        <form action="" method="post">
                                             @method('delete')
                                             @csrf
-                                            <input type="hidden" name="id" value="{{ $com->id }}">
+                                            <input type="hidden" name="id" value="{{ $rep->id }}">
                                             <button class="btn btn-danger" type="submit">Supprimer</button>
                                         </form>
                                     </div>

@@ -85,7 +85,7 @@
                                             <div class="modal-body">Êtes-vous sûr de vouloir postuler cette demande ?</div>
                                             <div class="modal-footer">
                                                 <button id="comf-btn" type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
-                                                <form method="POST" id="comf-btn1" style="box-shadow: none" action="{{ route('home.commander') }}">
+                                                <form method="POST" id="comf-btn1" style="box-shadow: none" action="{{ route('commande.store') }}">
                                                     @csrf
                                                     <input type="hidden" name="offre_id" value="{{ $d->id }}">
                                                     <input type="hidden" name="id_user" value="{{ $d->id_user }}">

@@ -40,14 +40,7 @@ Route::get('home/vos-services',[OffreController::class,'services_id'])->name('ho
 // le route qui return la page de demande personnel
 Route::get('home/vos-demandes',[OffreController::class,'demandes_id'])->name('home.vosdemandes');
 
-// le route qui return la page de reponse
-Route::get('home/reponses',[CommandeController::class,'reponse'])->name('home.reponse');
 
-// le route qui supprime une commande
-Route::delete('home/commande/delete',[CommandeController::class,'delete_commande'])->name('home.commande.delete');
-
-// le route qui return la page de commande
-Route::get('home/commandes',[CommandeController::class,'commande'])->name('home.commande');
 
 // les routes qui return la fonction de modification de mot de passe
 Route::post('home/profile/change-password',[UserController::class,'changePassword'])->name('users.password');
@@ -76,15 +69,21 @@ Route::post('home/vosservices',[OffreController::class,'search_vosservice'])->na
 // le route de recherche de demandes personnel
 Route::post('home/vosdemandes',[OffreController::class,'search_vosdemande'])->name('home.vosdemandes.search');
 
-// le route de recherche de commandes
-Route::post('home/commander',[CommandeController::class,'commanderOffre'])->name('home.commander');
 
-// le route d'accept de commande
-Route::post('/commandes/accepter', [CommandeController::class, 'accepterCommande'])->name('commande.accepter');
-
-// le route de reffus de commande
-Route::post('/commandes/refuser', [CommandeController::class, 'refuserCommande'])->name('commande.refuser');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+// le route qui return la page de commande
+Route::get('home/offre/commandes',[CommandeController::class,'getUserCommandes'])->name('home.commande');
+
+// le route qui return la page de reponse
+Route::get('home/offre/reponses',[CommandeController::class,'getUserReponses'])->name('home.reponse');
+
+Route::post('/home/offre/commande', [CommandeController::class, 'store'])->name('commande.store');
+
+Route::post('/home/offre/commande/update', [CommandeController::class, 'update'])->name('commandes.update');
+
+

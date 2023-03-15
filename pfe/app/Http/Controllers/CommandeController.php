@@ -1,101 +1,71 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\commande;
 use App\Models\Offre;
+use App\Models\Commande;
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Validation\Rule;
-use App\Rules\IsNotServiceOwner;
-// controller de commandes
+
 class CommandeController extends Controller
 {
-    // la fonction de comander une offre s'il est possible
-    public function commanderOffre(Request $request) {
-
+    public function store(Request $request)
+    {
         $offre = Offre::findOrFail($request->offre_id);
-        if (commande::where('id_user_commande', Auth::id())->where('id_offre', $request->offre_id)->exists()) {
-            return redirect()->back()->with('error', 'Vous avez déjà commandé/postulé cette offre');
-        }elseif ($request->id_user == Auth::user()->id) {
-            return redirect()->back()->with('error', 'Vous ne pouvez pas commander votre propre offre.');
-        }else{
-            $commande = new Commande;
-            $commande->id_user = $request->id_user;
-            $commande->id_offre = $request->offre_id;
-            $commande->id_user_commande = Auth::user()->id;
+        $commandeExistante = Commande::where('user_id', $offre->id_user)->where('buyer_id', auth()->id())->where('offre_id', $offre->id)->exists();
+        if ($offre->id_user == auth()->id()) {
+            return back()->with('error', 'Vous ne pouvez pas commander votre propre offre.');
+        } elseif ($commandeExistante) {
+            return back()->with('error', 'Vous avez déjà commandé cette offre.');
+        } else {
+            $commande = new Commande();
+            $commande->user_id = $offre->id_user;
+            $commande->buyer_id = auth()->id();
+            $commande->offre_id = $offre->id;
             $commande->save();
-            return redirect()->back()->with('success', 'Commande enregistrée avec succès');
+            return back()->with('success', 'Votre commande a été créée avec succès.');
         }
     }
 
-    // la fonction qui return les commandes retenu par les utilisateur pour accepter ou refuser
-    public function commande(){
-        $commandes = commande::all()->where('id_user', Auth::user()->id);
-        foreach ($commandes as $commande) {
-            $offre = Offre::where('id', $commande->id_offre)->first();
-            $userdocommande = User::where('id', $commande->id_user_commande)->first();
-            $commande->nom = $userdocommande->nom;
-            $commande->prenom = $userdocommande->prenom;
-            $commande->email = $userdocommande->email;
-            $commande->typeOffre = $offre->type;
-            $commande->Offre = $offre->offre;
-            $commande->prix = $offre->prix;
-            $commande->id = $offre->id;
-        }
-        return view('offres.commande',compact('commandes'));
+    public function getUserCommandes()
+    {
+        $userCommandes = Commande::where('user_id', auth()->id())
+            ->join('users', 'users.id', '=', 'commandes.buyer_id')
+            ->join('offres', 'offres.id', '=', 'commandes.offre_id')
+            ->select('commandes.id', 'commandes.user_id', 'commandes.buyer_id', 'commandes.offre_id', 'users.nom', 'users.prenom', 'users.email', 'offres.type', 'offres.offre', 'offres.prix')
+            ->get();
+
+        return view('offres.commande', compact('userCommandes'));
     }
 
-    // la fonction qui return les les commandes de l'utilisateur et affiche leur status s'il est accepter ou refusé
-    public function reponse(){
-        $commandes = commande::all()->where('id_user_commande', Auth::user()->id);
-        foreach ($commandes as $commande) {
-            $offre = Offre::where('id', $commande->id_offre)->first();
-            $userdecommande = User::where('id', $commande->id_user)->first();
-            $commande->nom = $userdecommande->nom;
-            $commande->prenom = $userdecommande->prenom;
-            $commande->email = $userdecommande->email;
-            $commande->typeOffre = $offre->type;
-            $commande->Offre = $offre->offre;
-            $commande->prix = $offre->prix;
-            $commande->id_commande = $offre->id;
-        }
-        return view('offres.reponse',['commandes'=>$commandes]);
+    public function getUserReponses()
+    {
+        $userReponses = Commande::where('buyer_id', auth()->id())
+            ->join('users', 'users.id', '=', 'commandes.user_id')
+            ->join('offres', 'offres.id', '=', 'commandes.offre_id')
+            ->select('commandes.id', 'commandes.user_id', 'commandes.buyer_id', 'commandes.offre_id','commandes.statut', 'users.nom', 'users.prenom', 'users.email', 'offres.type', 'offres.offre', 'offres.prix')
+            ->get();
+
+        return view('offres.reponse', compact('userReponses'));
     }
 
-    // la fonction qui agire lorsque l'utilisateur accept une commande
-    public function accepterCommande(Request $request) {
-        $commande = commande::where( 'id_offre', $request->commande_id )->first();
-        if (!$commande) {
-            return redirect()->back()->with('error', 'La commande n\'existe pas');
-        }
-        $commande->status = 1;
-        $commande->save();
-        return redirect()->back()->with('success', 'La commande a été accepter');
-    }
+    public function update(Request $request)
+    {
+        $commande = Commande::findOrFail($request->commande_id);
 
-    // la fonction qui agire lorsque l'utilisateur reffuse une commande
-    public function refuserCommande(Request $request) {
-        $commande = commande::where( 'id_offre', $request->commande_id )->first();
-        if (!$commande) {
-            return redirect()->back()->with('error', 'La commande n\'existe pas');
+        if ($request->has('accepter')) {
+            $commande->statut = 'acceptée';
+        } elseif ($request->has('refuser')) {
+            $commande->statut = 'refusée';
+        } else {
+            return redirect()->back()->with('error', 'Une erreur est survenue');
         }
-        $commande->status = 2;
-        $commande->save();
-        $message = "La commande a été refusé avec succès.";
-        return redirect()->back()->with('success', 'La commande a été refusé');
-    }
 
-    // la fonction qui supprime un commande
-    public function delete_commande(Request $request){
-        // $commande = commande::where('id',$request->id)->first();
         try {
-            $commande = commande::findOrFail($request->id);
-            $commande->delete();
-        } catch (\Illuminate\Database\Eloquent\ModelNotFoundException $e) {
-            return redirect()->back()->with('error', 'La commande que vous voulez supprimer n\'existe pas.');
+            $commande->save();
+            return redirect()->back()->with('success', 'La commande a été mise à jour avec succès');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Une erreur est survenue : '.$e->getMessage());
         }
-        return redirect()->back()->with('success', 'La commande a été supprimée avec succès.');
     }
+
 }
