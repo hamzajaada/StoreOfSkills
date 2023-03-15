@@ -91,7 +91,7 @@
     <section class="P-1">
         <div class="main-part1">
             <div class="part1">
-                <div class="logo-part1"><img src="images/SFS.png" alt="" srcset=""></div>
+                <div class="logo-part1"><img src="images/SFSR.png" alt="" srcset=""></div>
                 <h2 id="text-part1"> <span class="PROPOSER">Proposez</span>  & <span class="TROUVER">Trouvez</span> <br>
                     Les services et Les emplois près de chez vous.
                 </h2>
