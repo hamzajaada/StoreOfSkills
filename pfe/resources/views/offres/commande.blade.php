@@ -45,7 +45,7 @@
     <section class="main-sec1">
         @extends('offres.fixeBarre')
     </section>
-    <br><h2 class="TitreCommande" >Table de <span >Commandes</span></h2><br>
+    <br><h2 class="TitreCommande" >Table de <span style="color: rgb(11, 181, 11)" >commandes</span></h2><br>
     <div class="div-table" >
         <table class="table">
             <thead>
@@ -88,6 +88,15 @@
                             @method('POST')
                             <input type="hidden" name="commande_id" value="{{ $com->id }}">
                             <button type="submit" name="accepter" class="btn btn-primary">Accepter</button>
+                            
+                        </form>
+                    </td>
+                    <td>
+                        <form class="BTNFORM" action="{{ route('commandes.update') }}" method="POST">
+                            @csrf
+                            @method('POST')
+                            <input type="hidden" name="commande_id" value="{{ $com->id }}">
+                            
                             <button type="submit" name="refuser" class="btn btn-danger">Refuser</button>
                         </form>
                     </td>

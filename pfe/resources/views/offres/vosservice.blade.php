@@ -69,7 +69,7 @@
     <section class="services-p">
         @extends('offres.fixeBarre')
         <section class="P-s">
-            <h2 class="titre-liste-services">Votre <span id="span-t2" style="color:#ff3c74">Services</span></h2>
+            <h2 class="titre-liste-services">Vos <span id="span-t2" style="color:#ff3c74">services</span></h2>
             <div class="search-container" style="margin-bottom: 50px;margin-top: -8px;">
                 <form method="POST" action="{{ route('home.vosservices.search') }}" >
                     {{-- <center><h3>Recherche Multicritère </h3> </center> --}}

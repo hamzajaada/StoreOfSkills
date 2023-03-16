@@ -367,7 +367,7 @@ i{
    background-color:#7622e4;
    padding: 10px;
    text-align: center;
-   margin-top: 50px;
+   margin-top: 90px;
 }
 .button-inscr:hover{
    background-color:#6317c5;
@@ -391,8 +391,8 @@ footer{
    align-items: center;
 }
 .logo-footer img{
-   width: 150px;
-   height: 150px;
+   width: 100px;
+   height: 100px;
 }
 
 .link-a{
@@ -569,4 +569,23 @@ footer{
 footer{
    width: 131%;
 }
+}
+.social{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+#lnfot1{
+   font-size: 2em;
+   font-weight: 400;
+}
+#lnfot1:hover{
+   color: orangered;
+}
+#lnfot2{
+   font-size: 2em;
+   font-weight: 400;
+}
+#lnfot2:hover{
+   color: orangered;
 }

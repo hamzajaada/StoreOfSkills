@@ -75,7 +75,7 @@
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                {{ __('se déconnecter') }}
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -93,7 +93,7 @@
             <div class="part1">
                 <div class="logo-part1"><img src="images/SFSR.png" alt="" srcset=""></div>
                 <h2 id="text-part1"> <span class="PROPOSER">Proposez</span>  & <span class="TROUVER">Trouvez</span> <br>
-                    Les services et Les emplois près de chez Vous.
+                    Les services et les emplois près de chez Vous.
                 </h2>
             </div>
         </div>
