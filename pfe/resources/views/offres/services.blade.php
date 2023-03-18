@@ -91,7 +91,7 @@
                     <input type="text" name="nom" class="form-control" placeholder="Recherche par nom" value="{{ old('nom') }}">
                     <input type="text" name="prenom" class="form-control" placeholder="Recherche par prénom" value="{{ old('prenom') }}">
                     <input type="text" name="location" class="form-control" placeholder="Recherche par adresse" value="{{ old('location') }}">
-                    <select class="form-control" style="" name="categorie" id="exampleFormControlSelect1">
+                    <select class="form-select" aria-label="Default select example" name="categorie" id="exampleFormControlSelect1">
                         <option value="">Recherche par catégorie</option>
                         <option value="Design graphique">Design graphique</option>
                         <option value="Développement web et mobile">Développement web et mobile</option>
@@ -104,7 +104,7 @@
                 </div>
                 <div class="form-group1" style="margin-top: 2px;">
                     <button type="submit" class="btn btn-primary">Rechercher</button>
-                    <button type="submit" class="btn btn-danger" style="margin-left: 10px">Reset</button>
+                    <button type="submit" class="btn btn-danger" style="margin-left: 10px">Réinitialiser</button>
                 </div>
             </div>
             </form>
@@ -115,10 +115,7 @@
                     <div class="info-per">
                         <div class="img-prfl"><img src="{{asset('image/'.$srv->image)}}" alt="" srcset=""></div>
                             <h4 class="info-prfl">{{ $srv->nom }} {{ $srv->prenom }}</h4>
-
                         </div>
-
-
                     <div class="image-ser">
                             <img src="{{asset('image/'.$srv->image_offre)}}" alt="" srcset="">
                     </div>

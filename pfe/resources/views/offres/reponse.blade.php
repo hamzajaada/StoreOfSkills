@@ -45,8 +45,36 @@
         @extends('offres.fixeBarre')
     </section>
     <br><h2 style="text-align:center;margin-left:10%;margin-top:40px;">Table de <span style="color:#ff3c74">réponses</span></h2><br>
+    <div class="search-container-services" style="margin-bottom: 50px;margin-top: -8px;">
+        <form class="input-barresea" method="POST" action="{{ route('home.reponse.search') }}" >
+            @csrf
+            @method('POST')
+            <div class="barreSearchser">
+            <div class="formInputserv" >
+                <input type="text" name="nom" class="form-control" placeholder="Recherche par nom" value="{{ old('nom') }}">
+                <input type="text" name="prenom" class="form-control" placeholder="Recherche par prénom" value="{{ old('prenom') }}">
+                <input type="text" name="email" class="form-control" placeholder="Recherche par email" value="{{ old('email') }}">
+                <select class="form-select" aria-label="Default select example" value="{{ old('type') }}" name="type" id="exampleFormControlSelect1">
+                    <option value="">Recherche par type</option>
+                    <option value="service">Service</option>
+                    <option value="demande">Demande</option>
+                </select>
+                <select class="form-select" aria-label="Default select example" value="{{ old('statut') }}" name="statut" id="exampleFormControlSelect1">
+                    <option value="">Recherche par statue</option>
+                    <option value="en_attente">En attent</option>
+                    <option value="acceptee">Acceptée</option>
+                    <option value="refusee">Refusée</option>
+                </select>
+            </div>
+            <div class="form-group1" style="margin-top: 2px;">
+                <button type="submit" class="btn btn-primary">Rechercher</button>
+                <button type="submit" class="btn btn-danger" style="margin-left: 10px">Réinitialiser</button>
+            </div>
+        </div>
+        </form>
+    </div>
     <div class="div-table">
-        <table class="table" style="width: 95%;border-collapse: collapse;" >
+        <table class="table" style="width: 95%;border-collapse: collapse; margin-top:85px" >
             <thead>
                 <tr>
                     <th scope="col">Nom</th>
@@ -89,10 +117,9 @@
                                     <div class="modal-body">Êtes-vous sûr de vouloir supprimer cette commande ? Cette action est irréversible.</div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
-                                        <form action="" method="post">
+                                        <form action="{{ route('commandes.delete',$rep->id) }}" method="post">
                                             @method('delete')
                                             @csrf
-                                            <input type="hidden" name="id" value="{{ $rep->id }}">
                                             <button class="btn btn-danger" type="submit">Supprimer</button>
                                         </form>
                                     </div>
@@ -106,12 +133,12 @@
         </table>
     </div>
     @if(session('error'))
-        <div class="alert alert-danger my-4" style="position: absolute; margin-top: -40rem!important; margin-bottom: 46.5rem!important; margin-left: 10%; width: 63%;">
+        <div class="alert alert-danger my-4" style="position: absolute; margin-top: -5rem!important; margin-bottom: 46.5rem!important; margin-left: 10%; width: 63%;">
             {{ session('error') }}
         </div>
     @endif
     @if(session('success'))
-        <div class="alert alert-success my-4" style="position: absolute; margin-top: -40rem!important; margin-bottom: 46.5rem!important; margin-left: 10%; width: 63%;">
+        <div class="alert alert-success my-4" style="position: absolute; margin-top: -5rem!important; margin-bottom: 46.5rem!important; margin-left: 10%; width: 63%;">
             {{ session('success') }}
         </div>
     @endif

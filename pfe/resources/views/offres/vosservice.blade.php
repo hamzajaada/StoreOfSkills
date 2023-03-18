@@ -77,7 +77,7 @@
                     @method('POST')
                     <div class="con">
                     <div class="form-group" style=" display:flex;">
-                        <select class="form-control" name="categorie" id="exampleFormControlSelect1">
+                        <select class="form-select" aria-label="Default select example" name="categorie" id="exampleFormControlSelect1">
                             <option value="">Recherche par catégorie</option>
                             <option value="Design graphique">Design graphique</option>
                             <option value="Développement web et mobile">Développement web et mobile</option>
@@ -90,7 +90,7 @@
                     </div>
                     <div class="form-group" style=" display:flex;">
                         <button type="submit" class="btn btn-primary">Rechercher</button>
-                        <button type="submit" class="btn btn-danger" style="margin-left: 10px">Reset</button>
+                        <button type="submit" class="btn btn-danger" style="margin-left: 10px">Réinitialiser</button>
                     </div>
                 </div>
                 </form>

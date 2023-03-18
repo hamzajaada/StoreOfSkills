@@ -92,7 +92,7 @@
                 <div class="form-group" style=" display:flex;">
                     <input type="text" name="nom" class="form-control" placeholder="Recherche par nom" value="{{ old('nom') }}">
                     <input type="text" name="prenom" class="form-control" placeholder="Recherche par prénom" value="{{ old('prenom') }}">
-                    <select class="form-control" name="type" id="exampleFormControlSelect1">
+                    <select class="form-select" aria-label="Default select example" name="type" id="exampleFormControlSelect1">
                         <option value="">Recherche par type</option>
                         <option value="service">Service</option>
                         <option value="demande">Demande</option>

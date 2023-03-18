@@ -30,20 +30,20 @@
             @extends('offres.fixeBarre')
         </section>
         <section class="AF"  >
-            <h1 class="titre-Ajouteoffre">Ajoute <span >d'offre</span></h1>
+            <h1 class="titre-Ajouteoffre">Ajout <span >d'offre</span></h1>
             <div class="info-compte">
                 <form class="row g-3" method="post" action="{{ route('offres.store') }}" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group2" >
                         <label for="exampleFormControlSelect1">Type:</label>
-                        <select class="form-control" name="type" id="exampleFormControlSelect1">
+                        <select class="form-select" aria-label="Default select example" name="type" id="exampleFormControlSelect1">
                             <option value="service">Service</option>
                             <option value="demande">Demande</option>
                         </select>
                     </div>
                     <div class="form-group2">
-                        <label for="exampleFormControlSelect1">Categorie:</label><br>
-                        <select class="form-control" name="categorie" id="exampleFormControlSelect1">
+                        <label for="exampleFormControlSelect1">Catégorie:</label><br>
+                        <select class="form-select" aria-label="Default select example"  name="categorie" id="exampleFormControlSelect1">
                             <option value="Design graphique">Design graphique</option>
                             <option value="Développement web et mobile">Développement web et mobile</option>
                             <option value="Rédaction et traduction">Rédaction et traduction</option>

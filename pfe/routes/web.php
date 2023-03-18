@@ -69,13 +69,6 @@ Route::post('home/vosservices',[OffreController::class,'search_vosservice'])->na
 // le route de recherche de demandes personnel
 Route::post('home/vosdemandes',[OffreController::class,'search_vosdemande'])->name('home.vosdemandes.search');
 
-
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
 // le route qui return la page de commande
 Route::get('home/offre/commandes',[CommandeController::class,'getUserCommandes'])->name('home.commande');
 
@@ -86,4 +79,9 @@ Route::post('/home/offre/commande', [CommandeController::class, 'store'])->name(
 
 Route::post('/home/offre/commande/update', [CommandeController::class, 'update'])->name('commandes.update');
 
+Route::delete('/home/offre/commande/delete/{id}', [CommandeController::class, 'destroy'])->name('commandes.delete');
+
+Route::post('home/offre/reponses',[CommandeController::class,'search_reponse'])->name('home.reponse.search');
+
+Route::post('home/offre/commandes',[CommandeController::class,'search_commande'])->name('home.commande.search');
 

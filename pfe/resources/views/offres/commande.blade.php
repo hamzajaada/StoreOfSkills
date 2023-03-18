@@ -37,6 +37,14 @@
             background-color: #d4edda;
             border-color: #c3e6cb;
         }
+
+        .acceptee {
+            background-color: #00800038;
+        }
+
+        .refusee {
+            background-color: #ff00004f;
+        }
     </style>
 </head>
 <body>
@@ -46,8 +54,30 @@
         @extends('offres.fixeBarre')
     </section>
     <br><h2 class="TitreCommande" >Table de <span style="color: rgb(11, 181, 11)" >commandes</span></h2><br>
+    <div class="search-container-services" style="margin-bottom: 50px;margin-top: -8px;">
+        <form class="input-barresea" method="POST" action="{{ route('home.commande.search') }}" >
+            @csrf
+            @method('POST')
+            <div class="barreSearchser">
+            <div class="formInputserv" >
+                <input type="text" name="nom" class="form-control" placeholder="Recherche par nom" value="{{ old('nom') }}">
+                <input type="text" name="prenom" class="form-control" placeholder="Recherche par prénom" value="{{ old('prenom') }}">
+                <input type="text" name="email" class="form-control" placeholder="Recherche par email" value="{{ old('email') }}">
+                <select class="form-select" value="{{ old('type') }}" aria-label="Default select example" name="type" id="exampleFormControlSelect1">
+                    <option value="">Recherche par type</option>
+                    <option value="service">Service</option>
+                    <option value="demande">Demande</option>
+                </select>
+            </div>
+            <div class="form-group1" style="margin-top: 2px;">
+                <button type="submit" class="btn btn-primary" name="search">Rechercher</button>
+                <button type="submit" class="btn btn-danger" name="reset" style="margin-left: 10px">Réinitialiser</button>
+            </div>
+        </div>
+        </form>
+    </div>
     <div class="div-table" >
-        <table class="table">
+        <table class="table" style="width: 95%;border-collapse: collapse; margin-top:85px" >
             <thead>
                 <tr>
                     <th scope="col">Nom</th>
@@ -61,34 +91,19 @@
             </thead>
             <tbody class="table-group-divider">
                 @foreach ($userCommandes as $com )
-                <tr>
+                <tr class="@if($com->statut == 'en_attente') en-attente @elseif($com->statut == 'acceptee') acceptee @elseif($com->statut == 'refusee') refusee @endif">
                     <td>{{ $com->nom }}</td>
                     <td>{{ $com->prenom }}</td>
                     <td>{{ $com->email }}</td>
                     <td>{{ $com->type }}</td>
                     <td>{{ $com->offre }}</td>
                     <td>{{ $com->prix }}</td>
-                    {{-- <td>
-                        <form class="BTNFORM"  action="" method="POST">
-                            @csrf
-                            <input type="hidden" name="commande_id" value="{{ $com->id }}">
-                            <button type="submit" class="btn btn-primary">Accepter</button>
-                        </form>
-                    </td>
-                    <td>
-                        <form class="BTNFORM"  action="" method="POST">
-                            @csrf
-                            <input type="hidden" name="commande_id" value="{{ $com->id }}">
-                            <button type="submit" class="btn btn-danger">Refuser</button>
-                        </form>
-                    </td> --}}
                     <td>
                         <form class="BTNFORM" action="{{ route('commandes.update') }}" method="POST">
                             @csrf
                             @method('POST')
                             <input type="hidden" name="commande_id" value="{{ $com->id }}">
                             <button type="submit" name="accepter" class="btn btn-primary">Accepter</button>
-                            
                         </form>
                     </td>
                     <td>
@@ -96,7 +111,6 @@
                             @csrf
                             @method('POST')
                             <input type="hidden" name="commande_id" value="{{ $com->id }}">
-                            
                             <button type="submit" name="refuser" class="btn btn-danger">Refuser</button>
                         </form>
                     </td>
@@ -106,17 +120,20 @@
         </table>
     </div>
     @if(session('error'))
-        <div class="alert alert-danger my-4" style="position: absolute; margin-top: -40rem!important; margin-bottom: 46.5rem!important; margin-left: 10%; width: 63%;">
+        <div class="alert alert-danger my-4" style="position: absolute; margin-top: -16rem!important; margin-bottom: 46.5rem!important; margin-left: 10%; width: 63%;">
             {{ session('error') }}
         </div>
     @endif
     @if (session('success'))
-        <div class="alert alert-success" style="position: absolute; margin-top: -51rem!important; margin-bottom: 46.5rem!important; margin-left: 20%; width: 63%;">
+        <div class="alert alert-success" style="position: absolute; margin-top: -16rem!important; margin-bottom: 46.5rem!important; margin-left: 20%; width: 63%;">
             {{ session('success') }}
         </div>
     @endif
     </div>
     <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
+    <script>
+
+    </script>
 
 </body>
 </html>

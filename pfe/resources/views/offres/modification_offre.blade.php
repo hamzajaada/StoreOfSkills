@@ -37,14 +37,14 @@
             @method('PUT')
             <div class="form-group2" style="display: block">
                 <label for="exampleFormControlSelect1">Type:</label>
-                <select class="form-control" name="type" value="{{ $offre->type }}" id="exampleFormControlSelect1">
+                <select class="form-select" aria-label="Default select example" name="type" value="{{ $offre->type }}" id="exampleFormControlSelect1">
                     <option value="service">Service</option>
                     <option value="demande">Demande</option>
                 </select>
             </div>
             <div class="form-group2" style="display: block">
                 <label for="exampleFormControlSelect1">Categorie:</label>
-                <select class="form-control" value="{{ $offre->categorie }}" name="categorie" id="exampleFormControlSelect1">
+                <select class="form-select" aria-label="Default select example" value="{{ $offre->categorie }}" name="categorie" id="exampleFormControlSelect1">
                     <option value="Design graphique">Design graphique</option>
                     <option value="Développement web et mobile">Développement web et mobile</option>
                     <option value="Rédaction et traduction">Rédaction et traduction</option>

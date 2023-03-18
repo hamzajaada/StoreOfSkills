@@ -2,9 +2,14 @@
 
 namespace App\Http\Controllers;
 use App\Models\Offre;
-use App\Models\Commande;
 use App\Models\User;
+use Illuminate\Console\Command;
 use Illuminate\Http\Request;
+use App\Models\Commande;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class CommandeController extends Controller
 {
@@ -31,9 +36,22 @@ class CommandeController extends Controller
         $userCommandes = Commande::where('user_id', auth()->id())
             ->join('users', 'users.id', '=', 'commandes.buyer_id')
             ->join('offres', 'offres.id', '=', 'commandes.offre_id')
-            ->select('commandes.id', 'commandes.user_id', 'commandes.buyer_id', 'commandes.offre_id', 'users.nom', 'users.prenom', 'users.email', 'offres.type', 'offres.offre', 'offres.prix')
+            ->select('commandes.id', 'commandes.user_id', 'commandes.buyer_id', 'commandes.offre_id','commandes.statut', 'users.nom', 'users.prenom', 'users.email', 'offres.type', 'offres.offre', 'offres.prix')
             ->get();
+        return view('offres.commande', compact('userCommandes'));
+    }
 
+    public function search_commande(Request $request)
+    {
+        $userCommandes = DB::table('commandes')->where('user_id', auth()->id())
+            ->join('users', 'users.id', '=', 'commandes.buyer_id')
+            ->join('offres', 'offres.id', '=', 'commandes.offre_id')
+            ->select('commandes.id', 'commandes.user_id', 'commandes.buyer_id', 'commandes.offre_id','commandes.statut', 'users.nom', 'users.prenom', 'users.email', 'offres.type', 'offres.offre', 'offres.prix')
+            ->where('users.nom', 'LIKE', '%'.$request->input('nom').'%')
+            ->where('users.prenom', 'LIKE', '%'.$request->input('prenom').'%')
+            ->where('users.email', 'LIKE', '%'.$request->input('email').'%')
+            ->where('offres.type', 'LIKE', '%'.$request->input('type').'%')
+            ->get();
         return view('offres.commande', compact('userCommandes'));
     }
 
@@ -44,14 +62,26 @@ class CommandeController extends Controller
             ->join('offres', 'offres.id', '=', 'commandes.offre_id')
             ->select('commandes.id', 'commandes.user_id', 'commandes.buyer_id', 'commandes.offre_id','commandes.statut', 'users.nom', 'users.prenom', 'users.email', 'offres.type', 'offres.offre', 'offres.prix')
             ->get();
-
         return view('offres.reponse', compact('userReponses'));
     }
+
+    function search_reponse(Request $request){
+        $userReponses = DB::table('commandes')->where('buyer_id', auth()->id())
+            ->join('users', 'users.id', '=', 'commandes.user_id')
+            ->join('offres', 'offres.id', '=', 'commandes.offre_id')
+            ->select('commandes.id', 'commandes.user_id', 'commandes.buyer_id', 'commandes.offre_id','commandes.statut', 'users.nom', 'users.prenom', 'users.email', 'offres.type', 'offres.offre', 'offres.prix')
+            ->where('users.nom', 'LIKE', '%'.$request->input('nom').'%')
+            ->where('users.prenom', 'LIKE', '%'.$request->input('prenom').'%')
+            ->where('users.email', 'LIKE', '%'.$request->input('email').'%')
+            ->where('offres.type', 'LIKE', '%'.$request->input('type').'%')
+            ->where('commandes.statut', 'LIKE', '%'.$request->input('statut').'%')
+            ->get();
+            return view('offres.reponse', compact('userReponses'));
+        }
 
     public function update(Request $request)
     {
         $commande = Commande::findOrFail($request->commande_id);
-
         if ($request->has('accepter')) {
             $commande->statut = 'acceptée';
         } elseif ($request->has('refuser')) {
@@ -59,13 +89,17 @@ class CommandeController extends Controller
         } else {
             return redirect()->back()->with('error', 'Une erreur est survenue');
         }
-
         try {
             $commande->save();
             return redirect()->back()->with('success', 'La commande a été mise à jour avec succès');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Une erreur est survenue : '.$e->getMessage());
         }
+    }
+
+    function destroy($id){
+        Commande::where('id',$id)->delete();
+        return redirect()->back()->with('success','La commande a été supprimée avec succès');
     }
 
 }
