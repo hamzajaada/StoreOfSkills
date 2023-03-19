@@ -95,6 +95,16 @@
                 </div></div>
             </form>
         </div>
+        @if(session('error'))
+            <div class="alert alert-danger my-4" style="position: absolute; margin-top: -2.5rem!important;  margin-left: 12%; width: 65%;">
+                {{ session('error') }}
+            </div>
+        @endif
+        @if(session('success'))
+            <div class="alert alert-success my-4" style="position: absolute; margin-top: -2.5rem!important;  margin-left: 12%; width: 65%;">
+                {{ session('success') }}
+            </div>
+        @endif
         <div class="demandes">
             @foreach ($demandes as $d)
                 <article>

@@ -76,6 +76,16 @@
         </div>
         </form>
     </div>
+    @if(session('error'))
+        <div class="alert alert-danger my-4" style="position: absolute; margin-top: -2rem!important; margin-left: 23%; width: 65%;">
+            {{ session('error') }}
+        </div>
+    @endif
+    @if (session('success'))
+        <div class="alert alert-success" style="position: absolute; margin-top: -2rem!important; margin-left: 23%; width: 65%;">
+            {{ session('success') }}
+        </div>
+    @endif
     <div class="div-table" >
         <table class="table" style="width: 95%;border-collapse: collapse; margin-top:85px" >
             <thead>
@@ -119,16 +129,7 @@
             </tbody>
         </table>
     </div>
-    @if(session('error'))
-        <div class="alert alert-danger my-4" style="position: absolute; margin-top: -16rem!important; margin-bottom: 46.5rem!important; margin-left: 10%; width: 63%;">
-            {{ session('error') }}
-        </div>
-    @endif
-    @if (session('success'))
-        <div class="alert alert-success" style="position: absolute; margin-top: -16rem!important; margin-bottom: 46.5rem!important; margin-left: 20%; width: 63%;">
-            {{ session('success') }}
-        </div>
-    @endif
+
     </div>
     <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
     <script>

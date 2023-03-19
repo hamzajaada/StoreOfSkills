@@ -109,6 +109,16 @@
             </div>
             </form>
         </div>
+        @if(session('error'))
+            <div class="alert alert-danger my-4" style="position: absolute; margin-top: -2.5rem!important; margin-left: 12%; width: 65%;">
+                {{ session('error') }}
+            </div>
+        @endif
+        @if(session('success'))
+            <div class="alert alert-success my-4" style="position: absolute; margin-top: -2.5rem!important; margin-left: 12%; width: 65%;">
+                {{ session('success') }}
+            </div>
+        @endif
         <div class="services">
             @foreach ($services as $srv)
                 <article>
@@ -152,16 +162,7 @@
                 </article>
             @endforeach
         </div>
-        @if(session('error'))
-            <div class="alert alert-danger my-4" style="position: absolute; margin-top: -40rem!important; margin-bottom: 46.5rem!important; margin-left: 10%; width: 63%;">
-                {{ session('error') }}
-            </div>
-        @endif
-        @if(session('success'))
-            <div class="alert alert-success my-4" style="position: absolute; margin-top: -40rem!important; margin-bottom: 46.5rem!important; margin-left: 10%; width: 63%;">
-                {{ session('success') }}
-            </div>
-        @endif
+
         </section>
     </section>
     <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>

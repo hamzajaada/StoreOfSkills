@@ -46,6 +46,16 @@
         @extends('offres.fixeBarre')
         <section class="P-3" >
             <h1 class="titre-Modfprofil"><span style="color:rgb(15, 15, 236)">Modifier</span>  votre Profile</h1>
+            @if(session('error'))
+                <div class="alert alert-danger" style="position: absolute; margin-top: -0rem!important; margin-left: 12%; width: 65%;">
+                    {{ session('error') }}
+                </div>
+            @endif
+            @if (session('success'))
+                <div class="alert alert-success" style="position: absolute; margin-top: -0rem!important; margin-left: 12%; width: 65%;">
+                    {{ session('success') }}
+                </div>
+            @endif
             <div class="info-compte">
                 <form class="row g-3" method="post" action="{{ route('users.update',$profile->id) }}" enctype="multipart/form-data">
                     @csrf
@@ -98,16 +108,7 @@
             </div>
         </section>
     </section>
-    @if(session('error'))
-            <div class="alert alert-danger my-4" style="position: absolute; margin-top: -40rem!important; margin-bottom: 46.5rem!important; margin-left: 10%; width: 63%;">
-                {{ session('error') }}
-            </div>
-        @endif
-        @if (session('success'))
-            <div class="alert alert-success" style="position: absolute; margin-top: -61rem!important; margin-bottom: 46.5rem!important; margin-left: 20%; width: 63%;">
-                {{ session('success') }}
-            </div>
-        @endif
+
     </div>
 
 <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
