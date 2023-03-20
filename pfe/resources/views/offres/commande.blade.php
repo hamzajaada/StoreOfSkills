@@ -48,8 +48,8 @@
     <br><h2 class="TitreCommande" >Table de <span style="color: rgb(11, 181, 11)" >commandes</span></h2><br>
     <div class="div-table" >
         <table class="table">
-            <thead>
-                <tr>
+            <thead> 
+                <tr >
                     <th scope="col">Nom</th>
                     <th scope="col">Prenom</th>
                     <th scope="col">Email</th>
@@ -68,20 +68,6 @@
                     <td>{{ $com->type }}</td>
                     <td>{{ $com->offre }}</td>
                     <td>{{ $com->prix }}</td>
-                    {{-- <td>
-                        <form class="BTNFORM"  action="" method="POST">
-                            @csrf
-                            <input type="hidden" name="commande_id" value="{{ $com->id }}">
-                            <button type="submit" class="btn btn-primary">Accepter</button>
-                        </form>
-                    </td>
-                    <td>
-                        <form class="BTNFORM"  action="" method="POST">
-                            @csrf
-                            <input type="hidden" name="commande_id" value="{{ $com->id }}">
-                            <button type="submit" class="btn btn-danger">Refuser</button>
-                        </form>
-                    </td> --}}
                     <td>
                         <form class="BTNFORM" action="{{ route('commandes.update') }}" method="POST">
                             @csrf
