@@ -37,7 +37,7 @@
                             <input type="text" name="nom" class="form-control" placeholder="Recherche par nom" value="{{ old('nom') }}">
                             <input type="text" name="prenom" class="form-control" placeholder="Recherche par prénom" value="{{ old('prenom') }}">
                             <input type="text" name="location" class="form-control" placeholder="Recherche par adresse" value="{{ old('location') }}">
-                            <select class="form-control" name="categorie" id="exampleFormControlSelect1">
+                            <select class="form-select" aria-label="Default select example" name="categorie" id="exampleFormControlSelect1">
                                 <option value="">Recherche par categorie</option>
                                 <option value="Design graphique">Design graphique</option>
                                 <option value="Développement web et mobile">Développement web et mobile</option>
@@ -50,11 +50,21 @@
                         </div>
                         <div class="BTN_BARRESEARCH" >
                             <button type="submit" class="btn btn-primary">Rechercher</button>
-                            <button type="submit" class="btn btn-danger" style="margin-left: 10px">Reset</button>
+                            <button type="submit" class="btn btn-danger" style="margin-left: 10px">Réinitialiser</button>
                         </div>
                     </div>
                 </form>
             </div>
+            @if(session('error'))
+                <div class="alert alert-danger my-4" style="position: absolute; margin-top: 3.2rem!important; margin-left: 12%; width: 65%;">
+                    {{ session('error') }}
+                </div>
+            @endif
+            @if(session('success'))
+                <div class="alert alert-success my-4" style="position: absolute; margin-top: 3.2rem!important; margin-left: 12%; width: 65%;">
+                    {{ session('success') }}
+                </div>
+            @endif
             <div class="demandes">
                 @foreach ($demandes as $d)
                     <article class="card1">
@@ -98,16 +108,7 @@
                         </article>
                     @endforeach
                 </div>
-            @if(session('error'))
-                <div class="alert alert-danger my-4" style="position: absolute; margin-top: -40rem!important; margin-bottom: 46.5rem!important;margin-left: 10%;width: 63%;">
-                    {{ session('error') }}
-                </div>
-            @endif
-            @if(session('success'))
-                <div class="alert alert-danger my-4" style="position: absolute; margin-top: -40rem!important; margin-bottom: 46.5rem!important; margin-left: 10%; width: 63%;">
-                    {{ session('success') }}
-                </div>
-            @endif
+
             </section>
         </section>
 

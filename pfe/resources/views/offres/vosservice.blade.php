@@ -77,7 +77,7 @@
                     @method('POST')
                     <div class="con">
                     <div class="form-group" style=" display:flex;">
-                        <select class="form-control" name="categorie" id="exampleFormControlSelect1">
+                        <select class="form-select" aria-label="Default select example" name="categorie" id="exampleFormControlSelect1">
                             <option value="">Recherche par catégorie</option>
                             <option value="Design graphique">Design graphique</option>
                             <option value="Développement web et mobile">Développement web et mobile</option>
@@ -90,11 +90,21 @@
                     </div>
                     <div class="form-group" style=" display:flex;">
                         <button type="submit" class="btn btn-primary">Rechercher</button>
-                        <button type="submit" class="btn btn-danger" style="margin-left: 10px">Reset</button>
+                        <button type="submit" class="btn btn-danger" style="margin-left: 10px">Réinitialiser</button>
                     </div>
                 </div>
                 </form>
             </div>
+            @if(session('error'))
+                <div class="alert alert-danger my-4" style="position: absolute; margin-top: -2.5rem!important; margin-left: 12%; width: 65%;">
+                    {{ session('error') }}
+                </div>
+            @endif
+            @if(session('success'))
+                <div class="alert alert-success my-4" style="position: absolute; margin-top: -2.5rem!important; margin-left: 12%; width: 65%;">
+                    {{ session('success') }}
+                </div>
+            @endif
             <div class="services">
                 @foreach ($services as $srv)
                     <article>
@@ -102,7 +112,6 @@
                             <div class="img-prfl"><img src="{{asset('image/'.$srv->image)}}" alt="" srcset=""></div>
                             <h4 class="info-prfl">{{ $srv->nom }} {{ $srv->prenom }}</h4>
                         </div>
-
                         <div class="image-ser">
                             <img src="{{asset('image/'.$srv->image_offre)}}" alt="" srcset="">
                         </div>
@@ -143,13 +152,14 @@
         </section>
     </section>
     <script src="https://kit.fontawesome.com/6fe423de62.js" crossorigin="anonymous"></script>
+    <script>
+        function confirmDelete(button) {
+            if (confirm("Êtes-vous sûr de vouloir supprimer ce service?")) {
+                button.form.submit();
+            }
+        }
+    </script>
 </body>
 </html>
 
-<script>
-    function confirmDelete(button) {
-        if (confirm("Êtes-vous sûr de vouloir supprimer ce service?")) {
-            button.form.submit();
-        }
-    }
-</script>
+

@@ -18,7 +18,7 @@
                 <div class="card-body">
                     <div class="logo">
                         <img src="/images/logodeloginremove.png" alt="" srcset="">
-                     </div>
+                    </div>
                     <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                         @csrf
 
@@ -37,7 +37,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="prenom" class="col-md-4 col-form-label text-md-end">{{ __('prenom') }}</label>
+                            <label for="prenom" class="col-md-4 col-form-label text-md-end">{{ __('prénom') }}</label>
 
                             <div  class="col-md-6">
                                 <input id="prenom" type="text" class="form-control @error('prenom') is-invalid @enderror" name="prenom" value="{{ old('prenom') }}" required autocomplete="prenom" autofocus>
@@ -79,7 +79,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email') }}</label>
 
                             <div  class="col-md-6">
                                 <input  id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
@@ -93,7 +93,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Mot de passe') }}</label>
 
                             <div  class="col-md-6">
                                 <input  id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
@@ -107,7 +107,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
+                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Mot de passe confirmé') }}</label>
 
                             <div  class="col-md-6">
                                 <input  id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
@@ -117,7 +117,7 @@
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                    {{ __('Inscription') }}
                                 </button>
                             </div>
                         </div>

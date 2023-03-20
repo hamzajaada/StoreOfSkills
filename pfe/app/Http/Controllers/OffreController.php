@@ -56,9 +56,9 @@ class OffreController extends Controller
         $offre->id_user = $request->id_user;
         $offre->save();
         if($request->type=='service'){
-            return redirect()->route('home.services');
+            return redirect()->route('home.services')->with('success', 'Votre service a été créée avec succès.');
         }elseif($request->type=='demande'){
-            return redirect()->route('home.demandes');
+            return redirect()->route('home.demandes')->with('success', 'Votre demande a été créée avec succès.');
         }
     }
 
@@ -100,9 +100,9 @@ class OffreController extends Controller
         $offre->id_user = $request->id_user;
         $offre->save();
         if($request->type=='service'){
-            return redirect()->route('home.vosservices');
+            return redirect()->route('home.vosservices')->with('success', 'Votre service a été modifier avec succès.');;
         }elseif($request->type=='demande'){
-            return redirect()->route('home.vosdemandes');
+            return redirect()->route('home.vosdemandes')->with('success', 'Votre demande a été modifier avec succès.');;
         }
     }
 
@@ -115,7 +115,7 @@ class OffreController extends Controller
     {
         $offre = Offre::findorFail($id);
         $offre->delete();
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Votre offre a été supprimer avec succès.');
     }
 
     // la fonction qui return les offres de type service

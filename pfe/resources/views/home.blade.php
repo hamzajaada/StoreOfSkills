@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,15 +22,15 @@
     <section class="P-1">
         <div class="main-part1">
             <div class="part1">
-                <div class="logo-part1"><img src="images/logoAB.png" alt="" srcset=""></div>
+                <div class="logo-part1"><img src="images/SFSR.png" alt="" srcset=""></div>
                 <h2 id="text-part1"> <span class="PROPOSER">Proposez</span>  & <span class="TROUVER">Trouvez</span> <br>
                     Les services et les emplois près de chez vous.
                 </h2>
             </div>
         </div>
         <div class="part2">
-                <a class="lien-part1" href="{{ route('offres.create') }}"><div class="button-part1">Proposer un service</div></a>
-                <a class="lien-part2" href="{{ route('offres.create') }}"><div class="button-part2">Demander un service</div></a>
+                <a class="lien-part1" href="{{ route('home.services') }}"><div class="button-part1">Les services</div></a>
+                <a class="lien-part2" href="{{ route('home.demandes') }}"><div class="button-part2">Les demandes</div></a>
         </div>
     </section>
 </body>
