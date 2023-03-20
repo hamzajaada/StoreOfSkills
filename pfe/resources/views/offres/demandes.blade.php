@@ -27,7 +27,7 @@
     <section class="services-p">
         @extends('offres.fixeBarre')
         <section class="P-D">
-            <h2 class="titre-de-listeDemandes">Les dernières <span id="span-t2">demandes</span></h2>
+            <h2 class="titre-de-listeDemandes">Les <span id="span-t2">demandes</span></h2>
             <div class="search-container-demandes" >
                 <form  id="Searchdem" method="POST" action="{{ route('home.demandes.search') }}" >
                     @csrf

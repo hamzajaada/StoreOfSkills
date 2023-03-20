@@ -81,7 +81,7 @@
     <section class="services-p">
         @extends('offres.fixeBarre')
     <section class="P-s">
-        <h2 class="titre-liste-services">Les dernières <span id="span-t3">Services</span></h2>
+        <h2 class="titre-liste-services">Les <span id="span-t3">services</span></h2>
         <div class="search-container-services" style="margin-bottom: 50px;margin-top: -8px;">
             <form class="input-barresea" method="POST" action="{{ route('home.services.search') }}" >
                 @csrf

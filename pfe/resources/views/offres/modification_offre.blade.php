@@ -30,7 +30,7 @@
 
 
     <section class="AF" >
-        <h1 class="titre-Ajouteoffre">Modifier votre <span style="color:rgb(44, 8, 247)">d'offre</span> </h1>
+        <h1 class="titre-Ajouteoffre">Modification <span style="color:rgb(44, 8, 247)">d'offre</span> </h1>
         <div class="info-compte" style="margin-left: 102px;">
         <form style="border-radius: 7px" class="row g-3" method="post" action="{{ route('offres.update',$offre->id) }}" enctype="multipart/form-data">
             @csrf
