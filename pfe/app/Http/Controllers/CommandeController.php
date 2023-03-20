@@ -51,6 +51,7 @@ class CommandeController extends Controller
             ->where('users.prenom', 'LIKE', '%'.$request->input('prenom').'%')
             ->where('users.email', 'LIKE', '%'.$request->input('email').'%')
             ->where('offres.type', 'LIKE', '%'.$request->input('type').'%')
+            ->where('commandes.statut', 'LIKE', '%'.$request->input('statut').'%')
             ->get();
         return view('offres.commande', compact('userCommandes'));
     }
