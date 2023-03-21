@@ -34,10 +34,10 @@
                     @method('POST')
                     <div class="BarreSearch">
                         <div class="input-barreSearch" >
-                            <input type="text" name="nom" class="form-control" placeholder="Recherche par nom" value="{{ old('nom') }}">
-                            <input type="text" name="prenom" class="form-control" placeholder="Recherche par prénom" value="{{ old('prenom') }}">
-                            <input type="text" name="location" class="form-control" placeholder="Recherche par adresse" value="{{ old('location') }}">
-                            <select class="form-select" aria-label="Default select example" name="categorie" id="exampleFormControlSelect1">
+                            <input type="text" name="nom" class="form-control" placeholder="Recherche par nom" style="margin-left:2px;margin-right:2px" value="{{ old('nom') }}">
+                            <input type="text" name="prenom" class="form-control" placeholder="Recherche par prénom" style="margin-left:2px;margin-right:2px" value="{{ old('prenom') }}">
+                            <input type="text" name="location" class="form-control" placeholder="Recherche par adresse" style="margin-left:2px;margin-right:2px" value="{{ old('location') }}">
+                            <select class="form-select" aria-label="Default select example" name="categorie" style="margin-left:2px;margin-right:2px" id="exampleFormControlSelect1">
                                 <option value="">Recherche par categorie</option>
                                 <option value="Design graphique">Design graphique</option>
                                 <option value="Développement web et mobile">Développement web et mobile</option>
@@ -49,7 +49,7 @@
                             </select>
                         </div>
                         <div class="BTN_BARRESEARCH" >
-                            <button type="submit" class="btn btn-primary">Rechercher</button>
+                            <button type="submit" class="btn btn-primary" style="margin-left:2px;margin-right:2px">Rechercher</button>
                             <button type="submit" class="btn btn-danger" style="margin-left: 10px">Réinitialiser</button>
                         </div>
                     </div>
