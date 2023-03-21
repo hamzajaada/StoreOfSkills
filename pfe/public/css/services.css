@@ -57,7 +57,7 @@
  .services{
     display: flex;
     justify-content: space-around;
-    margin-top: -51px;
+    margin-top: -33px;
     margin-bottom: 100px;
     height: 500px;
     flex-wrap: wrap;
@@ -192,6 +192,7 @@
 .sidebar.open .logo-details .icon,
 .sidebar.open .logo-details .logo_name{
   opacity: 1;
+  margin-left: 45px;
 }
 .sidebar .logo-details #btn{
   position: absolute;

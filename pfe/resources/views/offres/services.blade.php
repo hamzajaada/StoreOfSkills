@@ -89,7 +89,6 @@
                 <div class="barreSearchser">
                 <div class="formInputserv" >
                     <input type="text" name="nom" class="form-control" placeholder="Recherche par nom" value="{{ old('nom') }}">
-                    <input type="text" name="prenom" class="form-control" placeholder="Recherche par prénom" value="{{ old('prenom') }}">
                     <input type="text" name="location" class="form-control" placeholder="Recherche par adresse" value="{{ old('location') }}">
                     <select class="form-select" aria-label="Default select example" name="categorie" id="exampleFormControlSelect1">
                         <option value="">Recherche par catégorie</option>

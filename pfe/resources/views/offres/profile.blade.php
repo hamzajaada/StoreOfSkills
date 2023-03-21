@@ -45,7 +45,7 @@
     <section class="services-profil">
         @extends('offres.fixeBarre')
         <section class="P-3" >
-            <h1 class="titre-Modfprofil"><span style="color:rgb(15, 15, 236)">Modifier</span>  votre Profile</h1>
+            <h1 class="titre-Modfprofil">Modification de <span style="color:rgb(15, 15, 236)">profile</span>  </h1>
             @if(session('error'))
                 <div class="alert alert-danger" style="position: absolute; margin-top: -0rem!important; margin-left: 12%; width: 65%;">
                     {{ session('error') }}

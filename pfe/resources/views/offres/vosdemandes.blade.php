@@ -104,7 +104,7 @@
                 {{ session('success') }}
             </div>
         @endif
-        <div class="demandes" style="margin-top:71px">
+        <div class="demandes" style="margin-top:-33px">
             @foreach ($demandes as $d)
                 <article>
                     <div class="info-per">

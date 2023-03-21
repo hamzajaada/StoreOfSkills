@@ -30,7 +30,7 @@
             @extends('offres.fixeBarre')
         </section>
         <section class="AF"  >
-            <h1 class="titre-Ajouteoffre">Ajout <span >d'offre</span></h1>
+            <h1 class="titre-Ajouteoffre">Ajout d'<span >offre</span></h1>
             <div class="info-compte">
                 <form class="row g-3" method="post" action="{{ route('offres.store') }}" enctype="multipart/form-data">
                     @csrf

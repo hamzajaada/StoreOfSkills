@@ -45,21 +45,20 @@
         @extends('offres.fixeBarre')
     </section>
     <br><h2 style="text-align:center;margin-left:10%;margin-top:40px;">Table de <span style="color:#ff3c74">réponses</span></h2><br>
-    <div class="search-container-services" style="margin-bottom: 50px;margin-top: -8px;">
+    <div class="search-container-services" style="margin-bottom: 50px;margin-top: -8px;  margin-left: 180px;">
         <form class="input-barresea" method="POST" action="{{ route('home.reponse.search') }}" >
             @csrf
             @method('POST')
             <div class="barreSearchser">
             <div class="formInputserv" >
-                <input type="text" name="nom" class="form-control" placeholder="Recherche par nom" value="{{ old('nom') }}">
-                <input type="text" name="prenom" class="form-control" placeholder="Recherche par prénom" value="{{ old('prenom') }}">
-                <input type="text" name="email" class="form-control" placeholder="Recherche par email" value="{{ old('email') }}">
-                <select class="form-select" aria-label="Default select example" value="{{ old('type') }}" name="type" id="exampleFormControlSelect1">
+                <input type="text" name="nom" class="form-control" style="margin-left:2px;margin-right:2px" placeholder="Recherche par nom" value="{{ old('nom') }}">
+                <input type="text" name="email" class="form-control" style="margin-left:2px;margin-right:2px" placeholder="Recherche par email" value="{{ old('email') }}">
+                <select class="form-select" aria-label="Default select example" style="margin-left:2px;margin-right:2px" value="{{ old('type') }}" name="type" id="exampleFormControlSelect1">
                     <option value="">Recherche par type</option>
                     <option value="service">Service</option>
                     <option value="demande">Demande</option>
                 </select>
-                <select class="form-select" aria-label="Default select example" value="{{ old('statut') }}" name="statut" id="exampleFormControlSelect1">
+                <select class="form-select" aria-label="Default select example" style="margin-left:2px;margin-right:2px" value="{{ old('statut') }}" name="statut" id="exampleFormControlSelect1">
                     <option value="">Recherche par statue</option>
                     <option value="en_attente">En attent</option>
                     <option value="acceptee">Acceptée</option>

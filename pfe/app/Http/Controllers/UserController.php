@@ -62,12 +62,10 @@ class UserController extends Controller
 
     // la fonction qui return tout les offres dans la page offre
     public function offres(){
-        $offres = Offre::all();
-        foreach ($offres as $f) {
-            $user = User::where('id', $f->id_user)->first();
-            $f->nom = $user->nom;
-            $f->prenom = $user->prenom;
-        }
+        $offres = DB::table('offres')
+            ->join('users', 'users.id', '=', 'offres.id_user')
+            ->select('offres.id', 'offres.type', 'offres.categorie', 'offres.offre','offres.image_offre','offres.prix','offres.id_user', 'users.nom', 'users.prenom')
+            ->get();
         return view('admin.offre',compact('offres'));
     }
 
