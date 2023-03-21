@@ -37,23 +37,19 @@
             @method('PUT')
             <div class="form-group2" style="display: block">
                 <label for="exampleFormControlSelect1">Type:</label>
-                <input class="form-control" disabled {{-- aria-label="Default select example" --}} name="type" value="{{ $offre->type }}" id="exampleFormControlSelect1">
+                <input class="form-control" disabled style="background-color: white" name="type" value="{{ $offre->type }}" id="exampleFormControlSelect1">
             </div>
             <div class="form-group2" style="display: block">
                 <label for="exampleFormControlSelect1">Categorie:</label>
-                <input class="form-control" disabled {{-- aria-label="Default select example" --}} value="{{ $offre->categorie }}" name="categorie" id="exampleFormControlSelect1">
+                <input class="form-control" disabled style="background-color: white" value="{{ $offre->categorie }}" name="categorie" id="exampleFormControlSelect1">
             </div>
             <div class="form-group2" style="display: block">
                 <label for="exampleFormControlTextarea1">Offre:</label>
-                <textarea class="form-control" disabled name="offre" id="exampleFormControlTextarea1" rows="3">{{ $offre->offre }}</textarea>
+                <textarea class="form-control" disabled name="offre" style="background-color: white" id="exampleFormControlTextarea1" rows="3">{{ $offre->offre }}</textarea>
             </div>
             <div class="form-group2" style="display: block">
                 <label for="exampleFormControlNember">Prix:</label>
-                <input type="number" disabled value="{{ $offre->prix }}" class="form-control" name="prix" id="exampleFormControlNember">
-            </div>
-            <div class="col-12">
-                <label for="inputImage" class="form-label">Image:</label>
-                <input class="form-control" disabled name="image" value="{{ $offre->image_offre }}" type="file" id="formFile">
+                <input type="number" disabled value="{{ $offre->prix }}" style="background-color: white" class="form-control" name="prix" id="exampleFormControlNember">
             </div>
         </form>
     </div>
