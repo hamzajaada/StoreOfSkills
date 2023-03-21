@@ -42,6 +42,18 @@ class UserController extends Controller
     }
 
     // la fonction qui modifie le mot de passe de l'utilisateur
+    // public function changePassword(Request $request)
+    // {
+    //     $request->validate([
+    //         'current_password' => 'required|min:8',
+    //         'password' => 'required|min:8',
+    //         'password_confirmation' => 'required|same:password',
+    //     ]);
+    //     $user = Auth::user();
+    //     $user->update(['password' => Hash::make($request->password)]);
+    //     return redirect()->back()->with('success', 'La modification de mot de passe a été avec succès.');
+    // }
+
     public function changePassword(Request $request)
     {
         $request->validate([
@@ -49,9 +61,20 @@ class UserController extends Controller
             'password' => 'required|min:8',
             'password_confirmation' => 'required|same:password',
         ]);
+
         $user = Auth::user();
-        $user->update(['password' => Hash::make($request->password)]);
-        return redirect()->back()->with('success', 'La modification de mot de passe a été avec succès.');
+
+        // Check if the current password is correct
+        if (!Hash::check($request->current_password, $user->password)) {
+            return redirect()->back()->with('error', 'Le mot de passe actuel est incorrect.');
+        }
+
+        try {
+            $user->update(['password' => Hash::make($request->password)]);
+            return redirect()->back()->with('success', 'La modification de mot de passe a été effectuée avec succès.');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error' ,'Une erreur est survenue lors de la modification de mot de passe. Veuillez réessayer.');
+        }
     }
 
     // la fonction qui return tout les utilisateurs dans la page user
