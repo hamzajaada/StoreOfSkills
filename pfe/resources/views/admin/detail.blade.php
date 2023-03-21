@@ -9,7 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ asset('css/ajouteOffre.css') }}">
-    <title>StoreOfSkills - Modification d'offre</title>
+    <title>StoreOfSkills - Détail d'offre</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -30,45 +30,30 @@
 
 
     <section class="AF" >
-        <h1 class="titre-Ajouteoffre">Modification <span style="color:rgb(44, 8, 247)">d'offre</span> </h1>
+        <h1 class="titre-Ajouteoffre">Détail <span style="color:rgb(44, 8, 247)">d'offre</span> </h1>
         <div class="info-compte" style="margin-left: 102px;">
-        <form style="border-radius: 7px" class="row g-3" method="post" action="{{ route('offres.update',$offre->id) }}" enctype="multipart/form-data">
+        <form style="border-radius: 7px" class="row g-3" method="post" action="" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="form-group2" style="display: block">
                 <label for="exampleFormControlSelect1">Type:</label>
-                <select class="form-select" aria-label="Default select example" name="type" value="{{ $offre->type }}" id="exampleFormControlSelect1">
-                    <option value="service">Service</option>
-                    <option value="demande">Demande</option>
-                </select>
+                <input class="form-control" disabled {{-- aria-label="Default select example" --}} name="type" value="{{ $offre->type }}" id="exampleFormControlSelect1">
             </div>
             <div class="form-group2" style="display: block">
                 <label for="exampleFormControlSelect1">Categorie:</label>
-                <select class="form-select" aria-label="Default select example" value="{{ $offre->categorie }}" name="categorie" id="exampleFormControlSelect1">
-                    <option value="Design graphique">Design graphique</option>
-                    <option value="Développement web et mobile">Développement web et mobile</option>
-                    <option value="Rédaction et traduction">Rédaction et traduction</option>
-                    <option value="Marketing et publicité">Marketing et publicité</option>
-                    <option value="Services informatiques">Services informatiques</option>
-                    <option value="Coaching et formation">Coaching et formation</option>
-                    <option value="Métier">Métier</option>
-                </select>
+                <input class="form-control" disabled {{-- aria-label="Default select example" --}} value="{{ $offre->categorie }}" name="categorie" id="exampleFormControlSelect1">
             </div>
             <div class="form-group2" style="display: block">
                 <label for="exampleFormControlTextarea1">Offre:</label>
-                <textarea class="form-control" name="offre" id="exampleFormControlTextarea1" rows="3">{{ $offre->offre }}</textarea>
+                <textarea class="form-control" disabled name="offre" id="exampleFormControlTextarea1" rows="3">{{ $offre->offre }}</textarea>
             </div>
             <div class="form-group2" style="display: block">
                 <label for="exampleFormControlNember">Prix:</label>
-                <input type="number" value="{{ $offre->prix }}" class="form-control" name="prix" id="exampleFormControlNember">
+                <input type="number" disabled value="{{ $offre->prix }}" class="form-control" name="prix" id="exampleFormControlNember">
             </div>
             <div class="col-12">
                 <label for="inputImage" class="form-label">Image:</label>
-                <input class="form-control" name="image" type="file" id="formFile">
-            </div>
-            <input type="hidden" name="id_user" value="{{ Auth::user()->id }}">
-            <div class="col-12">
-                <center><button type="submit" class="btn btn-primary" style="width: 50%">Modifier</button></center>
+                <input class="form-control" disabled name="image" value="{{ $offre->image_offre }}" type="file" id="formFile">
             </div>
         </form>
     </div>

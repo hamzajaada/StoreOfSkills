@@ -81,7 +81,7 @@
     <section class="services-p">
         @extends('offres.fixeBarre')
     <section class="P-s">
-        <h2 class="titre-liste-services">Les dernières <span id="span-t3">Services</span></h2>
+        <h2 class="titre-liste-services">Les <span id="span-t3">services</span></h2>
         <div class="search-container-services" style="margin-bottom: 50px;margin-top: -8px;">
             <form class="input-barresea" method="POST" action="{{ route('home.services.search') }}" >
                 @csrf
@@ -136,29 +136,37 @@
                     <div class="prix">
                         <p class="text-prix"><span style="color:#ff3c74"> Prix :</span>{{ $srv->prix }}DH</p>
                     </div>
-                    <center><div>
-                        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#confirm-delete-modal-{{ $srv->id }}">Commander</button>
-                        <div class="modal fade" style="margin-top:300px" id="confirm-delete-modal-{{ $srv->id }}" tabindex="-1" aria-labelledby="confirm-delete-modal-label-{{ $srv->id }}" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="confirm-delete-modal-label-{{ $srv->id }}">Confirmation de commande</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">Êtes-vous sûr de vouloir commander cette service ?</div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
-                                        <form method="POST" style="box-shadow: none" action="{{ route('commande.store') }}">
-                                            @csrf
-                                            <input type="hidden" name="offre_id" value="{{ $srv->id }}">
-                                            <input type="hidden" name="id_user" value="{{ $srv->id_user }}">
-                                            <button type="submit" class="btn btn-success">Commander</button>
-                                        </form>
+
+                    @if (Auth::user()->nom == 'Admin' AND Auth::user()->email == 'admin@gmail.com')
+                    <center>
+                        <div class="modf"><a class="btn btn-primary" href="{{ route('offres.show',$srv->id) }}" role="button">Détail</a></div>
+                    </center>
+                    @else
+                        <center><div>
+                            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#confirm-delete-modal-{{ $srv->id }}">Commander</button>
+                            <div class="modal fade" style="margin-top:300px" id="confirm-delete-modal-{{ $srv->id }}" tabindex="-1" aria-labelledby="confirm-delete-modal-label-{{ $srv->id }}" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="confirm-delete-modal-label-{{ $srv->id }}">Confirmation de commande</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">Êtes-vous sûr de vouloir commander cette service ?</div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
+                                            <form method="POST" style="box-shadow: none" action="{{ route('commande.store') }}">
+                                                @csrf
+                                                <input type="hidden" name="offre_id" value="{{ $srv->id }}">
+                                                <input type="hidden" name="id_user" value="{{ $srv->id_user }}">
+                                                <button type="submit" class="btn btn-success">Commander</button>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div></center>
+                        </div></center>
+                    @endif
+
                 </article>
             @endforeach
         </div>

@@ -17,6 +17,7 @@
    padding-right: 5px;
   z-index: 99;
   transition: all 0.5s ease;
+  top:0;
 }
 .sidebar.open{
   width: 250px;
@@ -41,6 +42,7 @@
 .sidebar.open .logo-details .icon,
 .sidebar.open .logo-details .logo_name{
   opacity: 1;
+  margin-left: 42px;
 }
 .sidebar .logo-details #btn{
   position: absolute;
@@ -254,11 +256,11 @@
   }
 }
 
- 
+
 
   @media screen and (max-width:620px){
-    
-  
+
+
 
 
   }

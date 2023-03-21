@@ -73,7 +73,6 @@
         <h2 class="titre-de-listeDemandes">Vos <span id="span-t2" style="color:#3cb626">demandes</span></h2>
         <div class="search-container" style="margin-bottom: 50px;margin-top: -8px;">
             <form method="POST" action="{{ route('home.vosdemandes.search') }}" >
-                {{--<center><h3>Recherche Multicritère </h3> </center>  --}}
                 @csrf
                 @method('POST')
                 <div class="con">
@@ -105,7 +104,7 @@
                 {{ session('success') }}
             </div>
         @endif
-        <div class="demandes">
+        <div class="demandes" style="margin-top:71px">
             @foreach ($demandes as $d)
                 <article>
                     <div class="info-per">

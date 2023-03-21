@@ -100,19 +100,19 @@
         <div class="part2">
                 <a class="lien-part1"
                     @if (Auth::user())
-                        href="{{ route('offres.create') }}"
+                        href="{{ route('home.services') }}"
                     @else
                         href="{{ route('login') }}"
                     @endif >
-                    <div class="button-part1">Proposer un service</div>
+                    <div class="button-part1">Les services</div>
                 </a>
                 <a class="lien-part2"
                     @if (Auth::user())
-                        href="{{ route('offres.create') }}"
+                        href="{{ route('home.demandes') }}"
                     @else
                         href="{{ route('login') }}"
                     @endif >
-                    <div class="button-part2">Demander un service</div>
+                    <div class="button-part2">Les demandes</div>
                 </a>
         </div>
     </section>

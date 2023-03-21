@@ -68,6 +68,12 @@
                     <option value="service">Service</option>
                     <option value="demande">Demande</option>
                 </select>
+                <select class="form-select" value="{{ old('statut') }}" aria-label="Default select example" name="statut" id="exampleFormControlSelect1">
+                    <option value="">Recherche par statut</option>
+                    <option value="en_attente">En attent</option>
+                    <option value="acceptee">Acceptée</option>
+                    <option value="refusee">Refusée</option>
+                </select>
             </div>
             <div class="form-group1" style="margin-top: 2px;">
                 <button type="submit" class="btn btn-primary" name="search">Rechercher</button>
@@ -87,9 +93,15 @@
         </div>
     @endif
     <div class="div-table" >
+<<<<<<< HEAD
         <table class="table">
             <thead> 
                 <tr >
+=======
+        <table class="table" style="width: 95%;border-collapse: collapse; margin-top:85px" >
+            <thead>
+                <tr>
+>>>>>>> e1b913d69cab961f860739b3bba8f6b0deec853d
                     <th scope="col">Nom</th>
                     <th scope="col">Prenom</th>
                     <th scope="col">Email</th>

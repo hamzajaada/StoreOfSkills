@@ -27,7 +27,7 @@
     <section class="services-p">
         @extends('offres.fixeBarre')
         <section class="P-D">
-            <h2 class="titre-de-listeDemandes">Les dernières <span id="span-t2">demandes</span></h2>
+            <h2 class="titre-de-listeDemandes">Les <span id="span-t2">demandes</span></h2>
             <div class="search-container-demandes" >
                 <form  id="Searchdem" method="POST" action="{{ route('home.demandes.search') }}" >
                     @csrf
@@ -82,29 +82,35 @@
                             <div class="prix">
                                 <p class="text-prixdem"><span style="color:#ff3c74"> Prix :</span>{{ $d->prix }}DH</p>
                             </div>
-                            <center>
-                                <div {{--  class="button-commander"--}}>
-                                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#confirm-delete-modal-{{ $d->id }}">Postuler</button>
-                                <div class="modal fade" style="margin-top:300px" id="confirm-delete-modal-{{ $d->id }}" tabindex="-1" aria-labelledby="confirm-delete-modal-label-{{ $d->id }}" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="confirm-delete-modal-label-{{ $d->id }}">Confirmation de postule</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">Êtes-vous sûr de vouloir postuler cette demande ?</div>
-                                            <div class="modal-footer">
-                                                <button id="comf-btn" type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
-                                                <form method="POST" id="comf-btn1" style="box-shadow: none" action="{{ route('commande.store') }}">
-                                                    @csrf
-                                                    <input type="hidden" name="offre_id" value="{{ $d->id }}">
-                                                    <input type="hidden" name="id_user" value="{{ $d->id_user }}">
-                                                    <button type="submit" class="btn btn-success">Postuler</button>
-                                                </form>
+                            @if (Auth::user()->nom == 'Admin' AND Auth::user()->email == 'admin@gmail.com')
+                                <center>
+                                    <div class="modf"><a class="btn btn-primary" href="{{ route('offres.show',$d->id) }}" role="button">Détail</a></div>
+                                </center>
+                            @else
+                                <center>
+                                    <div>
+                                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#confirm-delete-modal-{{ $d->id }}">Postuler</button>
+                                    <div class="modal fade" style="margin-top:300px" id="confirm-delete-modal-{{ $d->id }}" tabindex="-1" aria-labelledby="confirm-delete-modal-label-{{ $d->id }}" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="confirm-delete-modal-label-{{ $d->id }}">Confirmation de postule</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">Êtes-vous sûr de vouloir postuler cette demande ?</div>
+                                                <div class="modal-footer">
+                                                    <button id="comf-btn" type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
+                                                    <form method="POST" id="comf-btn1" style="box-shadow: none" action="{{ route('commande.store') }}">
+                                                        @csrf
+                                                        <input type="hidden" name="offre_id" value="{{ $d->id }}">
+                                                        <input type="hidden" name="id_user" value="{{ $d->id_user }}">
+                                                        <button type="submit" class="btn btn-success">Postuler</button>
+                                                    </form>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                            </div></center>
+                                </div></center>
+                                @endif
                         </article>
                     @endforeach
                 </div>

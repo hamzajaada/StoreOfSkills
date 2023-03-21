@@ -14,10 +14,13 @@
 
 
 .P-s{
+<<<<<<< HEAD
     margin-top: 76px;
+=======
+    margin-top: 60px;
+>>>>>>> e1b913d69cab961f860739b3bba8f6b0deec853d
     background-color:#ffff;
     margin-bottom: 50px;
-    
     margin-left: 220px;
     width: 85%;
 
@@ -47,13 +50,13 @@
   padding: 10px;
  }
  .barreSearchser{
-  display: flex; 
+  display: flex;
   flex-wrap: wrap;
   flex-direction: row;
  }
  .formInputserv{
   display: flex;
- 
+
  }
  .services{
     display: flex;
@@ -92,7 +95,7 @@
     align-items: center;
  }
 
- 
+
  .desc-ser{
     width: 370px;
     height: 90px;
@@ -118,7 +121,7 @@
     font-weight: 600;
     color: #333333;
 
- } 
+ }
  .image-ser{
     width: 400px;
     height: 200px;
@@ -137,7 +140,7 @@
   color:#ff3c74
  }
 
- 
+
  .butns{
   display: flex;
   justify-content: space-around;
@@ -446,7 +449,7 @@
       background-color: #fff;
       margin-top: 30px;
       margin-left: -124px;
-      
+
    }
    .info-per{
       width: 160px;
@@ -455,8 +458,8 @@
       display: flex;
       align-items: center;
    }
-  
-   
+
+
    .desc-ser{
       width: 212px;
       height:70px;
@@ -469,7 +472,7 @@
       height: 100px;
       overflow-y: auto;
     }
-  
+
    .img-prfl img{
       width: 25px;
       height: 25px;
@@ -481,8 +484,8 @@
       font-size: 1.3em;
       font-weight: 600;
       color: #333333;
-  
-   } 
+
+   }
    .image-ser{
       width: 200px;
       height: 100px;

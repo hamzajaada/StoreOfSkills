@@ -13,7 +13,6 @@
     <body>
         <div class="sidebar">
             <div class="logo-details">
-                <i class='bx bxl-c-plus-plus icon'></i>
                 <div class="logo_name">Store <span style="color: rgb(234, 19, 170)">of</span> Skills</div>
                 <i class="fa-solid fa-angle-right" id="btn"></i>
             </div>
