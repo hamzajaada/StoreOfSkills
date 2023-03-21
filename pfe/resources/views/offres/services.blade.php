@@ -103,7 +103,7 @@
                     </select>
                 </div>
                 <div class="form-group1" style="margin-top: 2px;">
-                    <button type="submit" class="btn btn-primary">Rechercher</button>
+                    <button type="submit" class="btn btn-primary" style="margin-left:2px;margin-right:2px">Rechercher</button>
                     <button type="submit" class="btn btn-danger" style="margin-left: 10px">Réinitialiser</button>
                 </div>
             </div>
