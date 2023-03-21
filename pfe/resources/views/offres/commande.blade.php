@@ -61,7 +61,6 @@
             <div class="barreSearchser">
             <div class="formInputserv" >
                 <input type="text" name="nom" class="form-control" placeholder="Recherche par nom" value="{{ old('nom') }}">
-                <input type="text" name="prenom" class="form-control" placeholder="Recherche par prénom" value="{{ old('prenom') }}">
                 <input type="text" name="email" class="form-control" placeholder="Recherche par email" value="{{ old('email') }}">
                 <select class="form-select" value="{{ old('type') }}" aria-label="Default select example" name="type" id="exampleFormControlSelect1">
                     <option value="">Recherche par type</option>
@@ -93,15 +92,9 @@
         </div>
     @endif
     <div class="div-table" >
-<<<<<<< HEAD
-        <table class="table">
-            <thead> 
-                <tr >
-=======
-        <table class="table" style="width: 95%;border-collapse: collapse; margin-top:85px" >
+        <table class="table" style="width: 95%;border-collapse: collapse; margin-top:85px">
             <thead>
                 <tr>
->>>>>>> e1b913d69cab961f860739b3bba8f6b0deec853d
                     <th scope="col">Nom</th>
                     <th scope="col">Prenom</th>
                     <th scope="col">Email</th>
