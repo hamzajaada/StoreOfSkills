@@ -65,9 +65,10 @@ class OffreController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Offre $offre)
+    public function show($id)
     {
-        //
+        $offre = Offre::findorFail($id);
+        return view('admin.detail',compact('offre'));
     }
 
     /**

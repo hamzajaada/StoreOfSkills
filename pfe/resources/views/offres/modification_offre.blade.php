@@ -63,7 +63,7 @@
                 <input type="number" value="{{ $offre->prix }}" class="form-control" name="prix" id="exampleFormControlNember">
             </div>
             <div class="col-12">
-                <label for="inputImage" class="form-label">Image</label>
+                <label for="inputImage" class="form-label">Image:</label>
                 <input class="form-control" name="image" type="file" id="formFile">
             </div>
             <input type="hidden" name="id_user" value="{{ Auth::user()->id }}">
