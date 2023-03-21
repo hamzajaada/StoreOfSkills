@@ -14,11 +14,7 @@
 
 
 .P-s{
-<<<<<<< HEAD
     margin-top: 76px;
-=======
-    margin-top: 60px;
->>>>>>> e1b913d69cab961f860739b3bba8f6b0deec853d
     background-color:#ffff;
     margin-bottom: 50px;
     margin-left: 220px;
@@ -27,7 +23,7 @@
  }
 
  .titre-liste-services{
-    margin-top: 30px;
+    margin-top: 70px;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-size: 2em;
@@ -61,7 +57,7 @@
  .services{
     display: flex;
     justify-content: space-around;
-    margin-top: 40px;
+    margin-top: -51px;
     margin-bottom: 100px;
     height: 500px;
     flex-wrap: wrap;
