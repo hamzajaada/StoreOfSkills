@@ -14,7 +14,11 @@
 
 
 .P-s{
+<<<<<<< HEAD
+    margin-top: 76px;
+=======
     margin-top: 60px;
+>>>>>>> e1b913d69cab961f860739b3bba8f6b0deec853d
     background-color:#ffff;
     margin-bottom: 50px;
     margin-left: 220px;
@@ -36,7 +40,8 @@
  .search-container-services{
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: -41px;
+  margin-left: 90px;
  }
  .input-barresea{
   margin-top: 30px;
