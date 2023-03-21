@@ -279,17 +279,17 @@
 /*css de form*/
 .info-compte{
     padding: 10px;
-    margin-top: 75px;
+    margin-top: 26px;
     box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
     border-radius: 5px;
-    margin-left: 35px;
+    margin-left: 50px;
 }
 .mot_passe{
   padding: 10px;
   margin-top: 40px;
   border-radius: 5px;
   box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
-  margin-left: 35px;
+  margin-left: 50px;
   margin-bottom: 30px;
 }
 

@@ -54,7 +54,7 @@
         @extends('offres.fixeBarre')
     </section>
     <br><h2 class="TitreCommande" >Table de <span style="color: rgb(11, 181, 11)" >commandes</span></h2><br>
-    <div class="search-container-services" style="margin-bottom: 50px;margin-top: -8px;">
+    <div class="search-container-services" style="margin-bottom: 50px;margin-top: -8px;margin-left:247px">
         <form class="input-barresea" method="POST" action="{{ route('home.commande.search') }}" >
             @csrf
             @method('POST')
@@ -87,15 +87,9 @@
         </div>
     @endif
     <div class="div-table" >
-<<<<<<< HEAD
         <table class="table">
             <thead> 
                 <tr >
-=======
-        <table class="table" style="width: 95%;border-collapse: collapse; margin-top:85px" >
-            <thead>
-                <tr>
->>>>>>> e976d5d0eea997b21dd665324aa86ec586680f9b
                     <th scope="col">Nom</th>
                     <th scope="col">Prenom</th>
                     <th scope="col">Email</th>
