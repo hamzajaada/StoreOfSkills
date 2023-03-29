@@ -41,19 +41,6 @@ class UserController extends Controller
         return redirect()->back()->with('success', 'La modification a été avec succès.');
     }
 
-    // la fonction qui modifie le mot de passe de l'utilisateur
-    // public function changePassword(Request $request)
-    // {
-    //     $request->validate([
-    //         'current_password' => 'required|min:8',
-    //         'password' => 'required|min:8',
-    //         'password_confirmation' => 'required|same:password',
-    //     ]);
-    //     $user = Auth::user();
-    //     $user->update(['password' => Hash::make($request->password)]);
-    //     return redirect()->back()->with('success', 'La modification de mot de passe a été avec succès.');
-    // }
-
     public function changePassword(Request $request)
     {
         $request->validate([

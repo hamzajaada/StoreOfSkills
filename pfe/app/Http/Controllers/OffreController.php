@@ -55,7 +55,10 @@ class OffreController extends Controller
     // return les offres en détail
     public function show($id)
     {
-        $offre = Offre::findorFail($id);
+        $offre = $offre = $services = DB::table('offres')->where('offres.id',$id)
+            ->join('users', 'users.id', '=', 'offres.id_user')
+            ->select('offres.id', 'offres.type', 'offres.categorie', 'offres.offre','offres.image_offre','offres.prix','offres.id_user', 'users.nom', 'users.prenom','users.email', 'users.location','users.image')
+            ->first();
         return view('admin.detail',compact('offre'));
     }
 
