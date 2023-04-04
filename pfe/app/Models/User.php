@@ -14,6 +14,7 @@ class User extends Authenticatable
 {
     use SoftDeletes;
     use HasApiTokens, HasFactory, Notifiable;
+    
     // les champs que l'on peut utiliser de la table users
     protected $fillable = [
         'nom','prenom','location','image','email', 'password'

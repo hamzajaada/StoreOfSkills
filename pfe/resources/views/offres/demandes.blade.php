@@ -35,7 +35,6 @@
                     <div class="BarreSearch">
                         <div class="input-barreSearch" >
                             <input type="text" name="nom" class="form-control" placeholder="Recherche par nom" style="margin-left:2px;margin-right:2px" value="{{ old('nom') }}">
-                            <input type="text" name="prenom" class="form-control" placeholder="Recherche par prénom" style="margin-left:2px;margin-right:2px" value="{{ old('prenom') }}">
                             <input type="text" name="location" class="form-control" placeholder="Recherche par adresse" style="margin-left:2px;margin-right:2px" value="{{ old('location') }}">
                             <select class="form-select" aria-label="Default select example" name="categorie" style="margin-left:2px;margin-right:2px" id="exampleFormControlSelect1">
                                 <option value="">Recherche par categorie</option>

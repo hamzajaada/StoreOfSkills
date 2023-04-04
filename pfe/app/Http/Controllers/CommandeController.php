@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\DB;
 
 class CommandeController extends Controller
 {
+    // la fonction qui enregistre une commande s'il est correct
     public function store(Request $request)
     {
         $offre = Offre::findOrFail($request->offre_id);
@@ -31,6 +32,7 @@ class CommandeController extends Controller
         }
     }
 
+    // la fonction qui return les commande pour l'accepter ou refuser
     public function getUserCommandes()
     {
         $userCommandes = Commande::where('user_id', auth()->id())
@@ -41,6 +43,7 @@ class CommandeController extends Controller
         return view('offres.commande', compact('userCommandes'));
     }
 
+    // la fonction de recherche dans la page de commande
     public function search_commande(Request $request)
     {
         $userCommandes = DB::table('commandes')->where('user_id', auth()->id())
@@ -56,6 +59,7 @@ class CommandeController extends Controller
         return view('offres.commande', compact('userCommandes'));
     }
 
+    // la fonction qui return les commande que l'utilisateur a commander pour voir leur situation ou le supprimer
     public function getUserReponses()
     {
         $userReponses = Commande::where('buyer_id', auth()->id())
@@ -66,6 +70,7 @@ class CommandeController extends Controller
         return view('offres.reponse', compact('userReponses'));
     }
 
+    // la fonction de recherche dans la page de reponse
     function search_reponse(Request $request){
         $userReponses = DB::table('commandes')->where('buyer_id', auth()->id())
             ->join('users', 'users.id', '=', 'commandes.user_id')
@@ -77,9 +82,10 @@ class CommandeController extends Controller
             ->where('offres.type', 'LIKE', '%'.$request->input('type').'%')
             ->where('commandes.statut', 'LIKE', '%'.$request->input('statut').'%')
             ->get();
-            return view('offres.reponse', compact('userReponses'));
+        return view('offres.reponse', compact('userReponses'));
         }
 
+    // la fonction qui fait la modification dans le status de commande
     public function update(Request $request)
     {
         $commande = Commande::findOrFail($request->commande_id);
@@ -98,6 +104,7 @@ class CommandeController extends Controller
         }
     }
 
+    // la fonction qui supprime la commande
     function destroy($id){
         Commande::where('id',$id)->delete();
         return redirect()->back()->with('success','La commande a été supprimée avec succès');

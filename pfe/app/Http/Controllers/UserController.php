@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\UploadedFile;
 use App\Models\Offre;
 use App\Models\User;
+
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -48,14 +49,11 @@ class UserController extends Controller
             'password' => 'required|min:8',
             'password_confirmation' => 'required|same:password',
         ]);
-
         $user = Auth::user();
-
         // Check if the current password is correct
         if (!Hash::check($request->current_password, $user->password)) {
             return redirect()->back()->with('error', 'Le mot de passe actuel est incorrect.');
         }
-
         try {
             $user->update(['password' => Hash::make($request->password)]);
             return redirect()->back()->with('success', 'La modification de mot de passe a été effectuée avec succès.');

@@ -60,21 +60,21 @@
             @method('POST')
             <div class="barreSearchser">
             <div class="formInputserv" >
-                <input type="text" name="nom" class="form-control" placeholder="Recherche par nom" value="{{ old('nom') }}">
-                <input type="text" name="email" class="form-control" placeholder="Recherche par email" value="{{ old('email') }}">
-                <select class="form-select" value="{{ old('type') }}" aria-label="Default select example" name="type" id="exampleFormControlSelect1">
+                <input type="text" name="nom" class="form-control" style="margin-right:2px" placeholder="Recherche par nom" value="{{ old('nom') }}">
+                <input type="text" name="email" class="form-control" style="margin-left:2px;margin-right:2px" placeholder="Recherche par email" value="{{ old('email') }}">
+                <select class="form-select" value="{{ old('type') }}" style="margin-left:2px;margin-right:2px" aria-label="Default select example" name="type" id="exampleFormControlSelect1">
                     <option value="">Recherche par type</option>
                     <option value="service">Service</option>
                     <option value="demande">Demande</option>
                 </select>
-                <select class="form-select" value="{{ old('statut') }}" aria-label="Default select example" name="statut" id="exampleFormControlSelect1">
+                <select class="form-select" value="{{ old('statut') }}" style="margin-left:2px;margin-right:2px" aria-label="Default select example" name="statut" id="exampleFormControlSelect1">
                     <option value="">Recherche par statut</option>
                     <option value="en_attente">En attent</option>
                     <option value="acceptee">Acceptée</option>
                     <option value="refusee">Refusée</option>
                 </select>
             </div>
-            <div class="form-group1" style="margin-top: 2px;">
+            <div class="form-group1" style="margin-top: 2px; " style="margin-left:2px">
                 <button type="submit" class="btn btn-primary" name="search">Rechercher</button>
                 <button type="submit" class="btn btn-danger" name="reset" style="margin-left: 10px">Réinitialiser</button>
             </div>
