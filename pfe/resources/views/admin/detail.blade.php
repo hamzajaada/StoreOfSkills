@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="{{ asset('css/ajouteOffre.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/detailOffre.css') }}">
     <title>StoreOfSkills - Détail d'offre</title>
 
     <!-- Fonts -->
@@ -27,8 +27,8 @@
     <section class="services-p">
         <section class="main-sec1">
             @extends('offres.fixeBarre')
-    <section class="AF" >
-        <h1 class="titre-Ajouteoffre">Détail <span style="color:rgb(44, 8, 247)">d'offre</span> </h1>
+    <section class="DF" >
+        <h1 class="titre-Detailoffre">Détail <span style="color:rgb(44, 8, 247)">d'offre</span> </h1>
         <center>
         <div class="info-compte" style="margin-left: 102px;width:70%">
         <form style="border-radius: 7px" class="row g-3" method="post" action="" enctype="multipart/form-data">
