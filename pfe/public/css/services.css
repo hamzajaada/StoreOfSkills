@@ -31,7 +31,8 @@
     margin-right: 21px;
  }
  #span-t3{
-  color:#ff3c74
+  /* color:#ff3c74; */
+  color:#4fdd36;
  }
  .search-container-services{
   display: flex;
@@ -64,16 +65,6 @@
     flex-direction: row;
         margin-left: 52px;
  }
- /*.but-post{
-   text-decoration: none;
-   color: #fafafa;
-   font-family: 'Open Sans', sans-serif;
-   font-size: 1.2em;
-   font-weight: 400;
-}
-.but-post:hover{
-   color: #fafafa;
-}*/
 
  article{
     width: 400px;

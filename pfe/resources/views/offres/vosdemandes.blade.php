@@ -70,14 +70,14 @@
     <section class="services-p">
         @extends('offres.fixeBarre')
         <section class="P-D">
-        <h2 class="titre-de-listeDemandes">Vos <span id="span-t2" style="color:#3cb626">demandes</span></h2>
+        <h2 class="titre-de-listeDemandes">Vos <span id="span-t2" style="color:#ff3c74">demandes</span></h2>
         <div class="search-container" style="margin-bottom: 50px;margin-top: -8px;">
             <form method="POST" action="{{ route('home.vosdemandes.search') }}" >
                 @csrf
                 @method('POST')
                 <div class="con">
                 <div class="form-group" style=" display:flex;">
-                    <select class="form-select" aria-label="Default select example" name="categorie" id="exampleFormControlSelect1">
+                    <select class="form-select" style="margin-left:2px;margin-right:2px" aria-label="Default select example" name="categorie" id="exampleFormControlSelect1">
                         <option value="">Recherche par catégorie</option>
                         <option value="Design graphique">Design graphique</option>
                         <option value="Développement web et mobile">Développement web et mobile</option>
