@@ -19,7 +19,7 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
     }
-
+// verification de data entrer par l'utilisateur
     protected function validator(array $data)
     {
         return Validator::make($data, [
@@ -31,12 +31,11 @@ class RegisterController extends Controller
             'image' => ['required', 'image', 'max:2048'],
         ]);
     }
-
+// return l'objet user
     protected function create(array $data)
     {
         $image = $data['image'];
         $imagePath = $image->storeAs('users', time() . '_' . $image->getClientOriginalName(), 'images');
-        // $imagePath = $data['image']->store('public/image/users');
         return User::create([
             'nom' => $data['nom'],
             'prenom' => $data['prenom'],
