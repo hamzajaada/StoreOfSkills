@@ -418,6 +418,13 @@
     .formInputserv{
       display: block;
     }
+    .input-barresea {
+      margin-top: 30px;
+      margin-left: -126px;
+      box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
+      padding: 8px;
+  }
+ 
     .form-group1{
       display: block;
       margin-left: 33px;
@@ -427,7 +434,7 @@
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
-      margin-left: -61px;
+      margin-left: 61px;
      }
     article{
       width: 300px;

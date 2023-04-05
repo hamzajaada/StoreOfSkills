@@ -118,6 +118,7 @@
     </section>
     <section class="P-2">
         <h2 class="titre-part3">Les dernières <span id="span-t2">demandes</span></h2>
+        <div class="box">
             <div class="services">
                 <article>
                     <div class="info-per">
@@ -171,6 +172,7 @@
                 @endif
                 class="texte-butser">Voir plus</a>
             </div></center>
+        </div>
     </section>
 
     <section class="P-3">

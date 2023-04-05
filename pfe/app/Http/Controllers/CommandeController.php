@@ -59,7 +59,7 @@ class CommandeController extends Controller
         return view('offres.commande', compact('userCommandes'));
     }
 
-    // la fonction qui return les commande que l'utilisateur a commander pour voir leur situation ou le supprimer
+    // la fonction qui return les commandes que l'utilisateur a commander pour voir leur situation ou le supprimer
     public function getUserReponses()
     {
         $userReponses = Commande::where('buyer_id', auth()->id())
