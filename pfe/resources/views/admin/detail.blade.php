@@ -23,16 +23,10 @@
     <section class="services-p">
         <section class="main-sec1">
             @extends('offres.fixeBarre')
-<<<<<<< HEAD
     <section class="DF" >
         <h1 class="titre-Detailoffre">Détail <span style="color:rgb(44, 8, 247)">d'offre</span> </h1>
         <center>
-        <div class="info-compte" style="margin-left: 102px;width:70%">
-=======
-    <section class="AF" >
-        <h1 class="titre-Ajouteoffre">Détail <span style="color:rgb(44, 8, 247)">d'offre</span></h1>
-        <div class="info-compte" style="margin-left: 102px;">
->>>>>>> c15040b696f68cc8ce6649726526f1cd547414b3
+        <div class="info-compte" style="">
         <form style="border-radius: 7px" class="row g-3" method="post" action="" enctype="multipart/form-data">
             @csrf
                 <div class="info-per" style="display:flex;">
@@ -44,39 +38,35 @@
                 <img src="{{asset('image/'.$offre->image_offre)}}" style="width:400px;height:200px">
             </center>
             <div class="form-group2" style="display: block">
-                <h4 for="exampleFormControlSelect1">Email:</h4>
+                <h4 for="exampleFormControlSelect1">Email</h4>
                 {{-- <p  name="email">{{ $offre->email }}</p> --}}
                 <input class="form-control" disabled style="background-color: white" name="email" value="{{ $offre->email }}" id="exampleFormControlSelect1">
             </div>
             <div class="form-group2" style="display: block">
-                <h4 for="exampleFormControlSelect1">Adresse:</h4>
+                <h4 for="exampleFormControlSelect1">Adresse</h4>
                 {{-- <p   name="location">{{ $offre->location }}</p> --}}
                 <input class="form-control" disabled style="background-color: white" name="location" value="{{ $offre->location }}" id="exampleFormControlSelect1">
             </div>
             <div class="form-group2" style="display: block">
-                <h4 for="exampleFormControlSelect1">Type:</h4>
+                <h4 for="exampleFormControlSelect1">Type</h4>
                 {{-- <p  name="type">{{ $offre->type }}</p> --}}
                 <input class="form-control" disabled style="background-color: white" name="type" value="{{ $offre->type }}" id="exampleFormControlSelect1">
             </div>
             <div class="form-group2" style="display: block">
-                <h4 for="exampleFormControlSelect1">Categorie:</h4>
+                <h4 for="exampleFormControlSelect1">Categorie</h4>
                 {{-- <p  name="categorie">{{ $offre->categorie }}</p> --}}
                 <input class="form-control" disabled style="background-color: white" value="{{ $offre->categorie }}" name="categorie" id="exampleFormControlSelect1">
             </div>
             <div class="form-group2" style="display: block">
-                <h4 for="exampleFormControlTextarea1">Offre:</h4>
+                <h4 for="exampleFormControlTextarea1">Offre</h4>
                 {{-- <p  name="offre">{{ $offre->offre }}</p> --}}
                 <textarea class="form-control" disabled name="offre" style="background-color: white" id="exampleFormControlTextarea1" rows="3">{{ $offre->offre }}</textarea>
             </div>
             <div class="form-group2" style="display: block">
-                <h4 for="exampleFormControlNember">Prix:</h4>
+                <h4 for="exampleFormControlNember">Prix</h4>
                 {{-- <p  name="prix">{{ $offre->prix }} DH</p> --}}
                 <input type="number" disabled value="{{ $offre->prix }}" style="background-color: white" class="form-control" name="prix" id="exampleFormControlNember">
             </div>
-            {{-- <div class="form-group2" style="display: block">
-                <h4 for="exampleFormControlNember">Image d'offre:</h4><br>
-                <img src="{{asset('image/'.$offre->image_offre)}}" style="width:200px;height:200px">
-            </div> --}}
         </form>
     </div>
 </section>

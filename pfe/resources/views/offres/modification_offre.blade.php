@@ -27,8 +27,6 @@
     <section class="services-p">
         <section class="main-sec1">
             @extends('offres.fixeBarre')
-
-
     <section class="AF" >
         <h1 class="titre-Ajouteoffre">Modification <span style="color:rgb(44, 8, 247)">d'offre</span> </h1>
         <div class="info-compte" style="margin-left: 102px;">

@@ -4,6 +4,15 @@
     text-align: center;
     margin-left: 110px;
 }
-.DF{
-    box-shadow: ;
+
+.info-compte{
+    box-shadow: 0 0 10px 5px rgb(55 74 97 / 10%);
+    width: 70%;
+    border-radius: 5px;
+    padding: 12px;
+    margin-bottom: 10px;
+    margin-left: 102px;
 }
+
+    /* margin-left: 102px;
+     */

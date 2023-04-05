@@ -64,7 +64,7 @@ class UserController extends Controller
 
     // la fonction qui return tout les utilisateurs dans la page user
     public function users(){
-        $users = User::all();
+        $users = User::where('id', '!=', auth()->user()->id)->get();
         return view('admin.user',compact('users'));
     }
 
