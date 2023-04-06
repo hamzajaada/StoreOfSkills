@@ -31,6 +31,7 @@ class UserController extends Controller
         $user->prenom = $request->input('prenom');
         $user->email = $request->input('email');
         $user->location = $request->input('location');
+        // le cas de ne veut pas updater l'image il va reste l'image ancien
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $filename = time() . '.' . $image->getClientOriginalExtension();
@@ -62,13 +63,13 @@ class UserController extends Controller
         }
     }
 
-    // la fonction qui return tout les utilisateurs dans la page user
+    // la fonction qui return tout les utilisateurs dans la page user par l'admin
     public function users(){
         $users = User::where('id', '!=', auth()->user()->id)->get();
         return view('admin.user',compact('users'));
     }
 
-    // la fonction qui return tout les offres dans la page offre
+    // la fonction qui return tout les offres dans la page offre par l'admin
     public function offres(){
         $offres = DB::table('offres')
             ->join('users', 'users.id', '=', 'offres.id_user')
