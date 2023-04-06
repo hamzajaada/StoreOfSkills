@@ -10,9 +10,6 @@ class Offre extends Model
 {
     use HasFactory;
 
-    // les offre si ils'ont supprimer il reste dans labase de données
-    use SoftDeletes;
-
     // les champs que l'on peut utiliser de la table offres
     protected $fillable=['type','categorie','offre','image_offre','prix'];
 
